@@ -33,8 +33,8 @@
       font-size: 14px;
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
-      padding-bottom: var(--player-h);
     }
+    body.player-sticky { padding-bottom: var(--player-h); }
 
     /* ─── Sección principal ────────────────────────────── */
     .timeline-section {
@@ -71,57 +71,6 @@
       margin-bottom: 32px;
     }
 
-    /* ─── Cargador de audio ─────────────────────────────── */
-    .audio-loader {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      background: var(--surface);
-      border: 1.5px dashed var(--border);
-      border-radius: 3px;
-      padding: 14px 18px;
-      margin-bottom: 32px;
-      transition: border-color 0.2s;
-    }
-    .audio-loader:hover { border-color: var(--ink-muted); }
-    .audio-loader.loaded {
-      border-style: solid;
-      border-color: var(--accent);
-      background: #fff9f9;
-    }
-    .audio-loader-icon {
-      font-size: 22px;
-      flex-shrink: 0;
-      line-height: 1;
-    }
-    .audio-loader-text { flex: 1; }
-    .audio-loader-title {
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--ink);
-      margin-bottom: 2px;
-    }
-    .audio-loader-hint {
-      font-size: 11px;
-      color: var(--ink-muted);
-    }
-    .audio-loader-btn {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 7px 14px;
-      border: 1.5px solid var(--ink);
-      border-radius: 2px;
-      cursor: pointer;
-      background: transparent;
-      color: var(--ink);
-      white-space: nowrap;
-      transition: background 0.15s, color 0.15s;
-    }
-    .audio-loader-btn:hover { background: var(--ink); color: white; }
-    #audio-file-input { display: none; }
 
     /* ─── Leyenda ───────────────────────────────────────── */
     .legend {
@@ -418,18 +367,25 @@
       margin-bottom: 14px;
     }
 
-    /* ─── Player sticky ──────────────────────────────────── */
+    /* ─── Player (inline → sticky) ──────────────────────── */
     #audio-player {
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
+      display: flex;
+      align-items: center;
+      gap: 16px;
       height: var(--player-h);
       background: var(--ink);
       color: white;
-      display: none;
-      z-index: 1000;
       padding: 0 24px;
+      border-radius: 3px;
+      margin-bottom: 32px;
     }
-    #audio-player.visible { display: flex; align-items: center; gap: 16px; }
+    #audio-player.sticky {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      z-index: 1000;
+    }
 
     /* Tema actual en el player */
     .player-tema {
@@ -540,18 +496,38 @@
   <p class="section-sub">Identificación y distribución de los grandes temas del mensaje presidencial a la Nación. Haz clic en cualquier bloque para ir directamente al audio.</p>
   <hr class="divider">
 
-  <!-- Cargador de audio -->
-  <div class="audio-loader" id="audio-loader">
-    <span class="audio-loader-icon">🎙</span>
-    <div class="audio-loader-text">
-      <div class="audio-loader-title" id="loader-title">Cargar audio del discurso</div>
-      <div class="audio-loader-hint" id="loader-hint">Sube el MP3 para habilitar la reproducción sincronizada con el timeline</div>
+  <!-- Player de audio -->
+  <div id="audio-player">
+    <div class="player-tema">
+      <span class="player-tema-label">Tema actual</span>
+      <span class="player-tema-name" id="player-tema-name">—</span>
     </div>
-    <button class="audio-loader-btn" id="loader-btn" onclick="document.getElementById('audio-file-input').click()">
-      Seleccionar archivo
-    </button>
-    <input type="file" id="audio-file-input" accept="audio/*">
+    <div class="player-controls">
+      <button class="btn-icon" title="−15 seg" onclick="seekRelative(-15)">
+        <svg viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8zm-1.1 11H10v-3.26L9 13.12V12.2l1.8-.65H11V16zm3.23 0h-1.5l1.5-2.06c-.36-.35-.59-.82-.59-1.36 0-1.02.82-1.58 1.64-1.58.82 0 1.63.56 1.63 1.58 0 .5-.21.97-.56 1.3l-1.58 2.12zm.14-2.62c.2 0 .39-.17.39-.38s-.19-.38-.39-.38-.39.17-.39.38.19.38.39.38z"/></svg>
+      </button>
+      <button class="btn-icon" id="btn-playpause" title="Play / Pausa" onclick="togglePlay()" style="transform:scale(1.2)">
+        <svg id="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        <svg id="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+      </button>
+      <button class="btn-icon" title="+15 seg" onclick="seekRelative(15)">
+        <svg viewBox="0 0 24 24"><path d="M18 13c0 3.31-2.69 6-6 6s-6-2.69-6-6 2.69-6 6-6v4l5-5-5-5v4c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8h-2zm-4.73 3H12v-3.26l-1 .38v-.92l1.8-.65h.47V16zm3.23 0h-1.5l1.5-2.06c-.36-.35-.59-.82-.59-1.36 0-1.02.82-1.58 1.64-1.58.82 0 1.63.56 1.63 1.58 0 .5-.21.97-.56 1.3l-1.58 2.12zm.14-2.62c.2 0 .39-.17.39-.38s-.19-.38-.39-.38-.39.17-.39.38.19.38.39.38z"/></svg>
+      </button>
+    </div>
+    <span class="player-time" id="player-current">0:00</span>
+    <div class="player-scrubber-wrap" id="scrubber-wrap">
+      <div class="player-scrubber-track">
+        <div class="player-scrubber-fill" id="scrubber-fill"></div>
+      </div>
+    </div>
+    <span class="player-time" id="player-total">—</span>
+    <button class="player-speed" id="btn-speed" title="Velocidad" onclick="cycleSpeed()">1×</button>
+    <div class="player-vol-wrap">
+      <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+      <input type="range" class="player-vol" id="player-vol" min="0" max="1" step="0.05" value="1">
+    </div>
   </div>
+  <div id="player-sentinel"></div>
 
   <!-- Leyenda -->
   <div class="legend" id="legend-temas">
@@ -607,57 +583,8 @@
 
 </section>
 
-<!-- ══════════════════════════════════════════════════════════ -->
-<!--  PLAYER STICKY                                            -->
-<!-- ══════════════════════════════════════════════════════════ -->
-<div id="audio-player">
-  <!-- Tema actual -->
-  <div class="player-tema">
-    <span class="player-tema-label">Tema actual</span>
-    <span class="player-tema-name" id="player-tema-name">—</span>
-  </div>
-
-  <!-- Controles -->
-  <div class="player-controls">
-    <!-- Retroceder 15s -->
-    <button class="btn-icon" title="−15 seg" onclick="seekRelative(-15)">
-      <svg viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8zm-1.1 11H10v-3.26L9 13.12V12.2l1.8-.65H11V16zm3.23 0h-1.5l1.5-2.06c-.36-.35-.59-.82-.59-1.36 0-1.02.82-1.58 1.64-1.58.82 0 1.63.56 1.63 1.58 0 .5-.21.97-.56 1.3l-1.58 2.12zm.14-2.62c.2 0 .39-.17.39-.38s-.19-.38-.39-.38-.39.17-.39.38.19.38.39.38z"/></svg>
-    </button>
-    <!-- Play / Pause -->
-    <button class="btn-icon" id="btn-playpause" title="Play / Pausa" onclick="togglePlay()" style="transform:scale(1.2)">
-      <svg id="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-      <svg id="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-    </button>
-    <!-- Adelantar 15s -->
-    <button class="btn-icon" title="+15 seg" onclick="seekRelative(15)">
-      <svg viewBox="0 0 24 24"><path d="M18 13c0 3.31-2.69 6-6 6s-6-2.69-6-6 2.69-6 6-6v4l5-5-5-5v4c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8h-2zm-4.73 3H12v-3.26l-1 .38v-.92l1.8-.65h.47V16zm3.23 0h-1.5l1.5-2.06c-.36-.35-.59-.82-.59-1.36 0-1.02.82-1.58 1.64-1.58.82 0 1.63.56 1.63 1.58 0 .5-.21.97-.56 1.3l-1.58 2.12zm.14-2.62c.2 0 .39-.17.39-.38s-.19-.38-.39-.38-.39.17-.39.38.19.38.39.38z"/></svg>
-    </button>
-  </div>
-
-  <!-- Tiempo -->
-  <span class="player-time" id="player-current">0:00</span>
-
-  <!-- Scrubber -->
-  <div class="player-scrubber-wrap" id="scrubber-wrap">
-    <div class="player-scrubber-track">
-      <div class="player-scrubber-fill" id="scrubber-fill"></div>
-    </div>
-  </div>
-
-  <span class="player-time" id="player-total">—</span>
-
-  <!-- Velocidad -->
-  <button class="player-speed" id="btn-speed" title="Velocidad" onclick="cycleSpeed()">1×</button>
-
-  <!-- Volumen -->
-  <div class="player-vol-wrap">
-    <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-    <input type="range" class="player-vol" id="player-vol" min="0" max="1" step="0.05" value="1">
-  </div>
-</div>
-
 <!-- Audio element (oculto) -->
-<audio id="audio-el" preload="metadata"></audio>
+<audio id="audio-el" src="audio/discurso.mp3" preload="auto"></audio>
 
 <!-- ══════════════════════════════════════════════════════════ -->
 <!--  JAVASCRIPT                                               -->
@@ -7619,7 +7546,7 @@ const DATA = {
 //  ESTADO GLOBAL
 // ─────────────────────────────────────────────────────────────
 const audio       = document.getElementById('audio-el');
-let audioLoaded   = false;
+let audioLoaded   = true;
 let selectedBlock = null;   // bloque con panel abierto
 let playingBlock  = null;   // bloque que está sonando ahora
 const SPEEDS      = [0.75, 1, 1.25, 1.5, 2];
@@ -7648,29 +7575,19 @@ function bloqueEnTiempo(t) {
 }
 
 // ─────────────────────────────────────────────────────────────
-//  AUDIO — carga de archivo
+//  AUDIO — precargado + player sticky
 // ─────────────────────────────────────────────────────────────
-document.getElementById('audio-file-input').addEventListener('change', function(e) {
-  const file = e.target.files[0];
-  if (!file) return;
-  audio.src = URL.createObjectURL(file);
-  audio.load();
-  audioLoaded = true;
+document.getElementById('btn-play-block').classList.remove('no-audio');
+document.getElementById('axis-hint').classList.add('visible');
 
-  // Actualizar UI del loader
-  const loader = document.getElementById('audio-loader');
-  loader.classList.add('loaded');
-  document.getElementById('loader-title').textContent = '🎙 ' + file.name;
-  document.getElementById('loader-hint').textContent = 'Audio listo. Haz clic en cualquier bloque del timeline para reproducir.';
-  document.getElementById('loader-btn').textContent = 'Cambiar';
-
-  // Mostrar player y habilitar botón del panel
-  document.getElementById('audio-player').classList.add('visible');
-  document.getElementById('btn-play-block').classList.remove('no-audio');
-
-  // Mostrar hint del eje
-  document.getElementById('axis-hint').classList.add('visible');
-});
+// Cuando el sentinel sale de la vista → player se fija abajo
+const playerEl   = document.getElementById('audio-player');
+const sentinelEl = document.getElementById('player-sentinel');
+new IntersectionObserver(([entry]) => {
+  const sticky = !entry.isIntersecting;
+  playerEl.classList.toggle('sticky', sticky);
+  document.body.classList.toggle('player-sticky', sticky);
+}, { threshold: 0 }).observe(sentinelEl);
 
 // ─────────────────────────────────────────────────────────────
 //  CONTROLES DEL PLAYER
@@ -8008,11 +7925,8 @@ function abrirDetalle(bloque, eventoFocus, seekAudio) {
   panel.classList.add('visible');
 
   // Seek al audio si se pide
-  if (seekAudio && audioLoaded) {
+  if (seekAudio) {
     seekTo(bloque.inicio);
-  } else if (seekAudio && !audioLoaded) {
-    // Guiar al usuario a cargar el audio
-    document.getElementById('audio-loader').style.animation = 'pulseLoader 0.5s ease 2';
   }
 
   if (seekAudio) {
