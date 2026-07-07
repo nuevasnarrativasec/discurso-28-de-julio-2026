@@ -7749,47 +7749,107 @@ document.addEventListener('keydown', e => {
   var colores = {};
   DATA.resumen_temas.forEach(function(t) { colores[t.tema] = t.color; });
 
-  var container = document.getElementById('modB-blocks');
-  if (!container) return;
+  // ── Carrusel interactivo ──────────────────────────────────
+  var stage    = document.getElementById('rz-slide-num');
+  if (!stage) return;
+  var elNum    = document.getElementById('rz-slide-num');
+  var elQuote  = document.getElementById('rz-slide-quote');
+  var elTitle  = document.getElementById('rz-float-title');
+  var elDesc   = document.getElementById('rz-float-desc');
+  var elAudio  = document.getElementById('rz-float-audio');
+  var elBadge  = document.getElementById('rz-time-badge');
+  var elDots   = document.getElementById('rz-dots');
+  var btnPrev  = document.getElementById('rz-prev');
+  var btnNext  = document.getElementById('rz-next');
+  var idx = 0;
 
-  NARRATIVA.forEach(function(bloque, idx) {
-    var div = document.createElement('div');
-    div.className = 'modB-block';
-
-    var dot = document.createElement('div');
-    dot.className = 'modB-dot';
-
-    var tags = bloque.temas.map(function(t) {
-      var c = colores[t] || '#999';
-      return '<span class="modB-tag"><span class="modB-tag-dot" style="background:' + c + '"></span>' + t + '</span>';
-    }).join('');
-
-    var footer =
-      '<div class="modB-card-footer">' +
-        '<button class="btn-play-block-sm" onclick="seekTo(' + bloque.inicio_seg + '); document.getElementById(\'timeline\').scrollIntoView({behavior:\'smooth\'})">▶ Ir al audio</button>' +
-        (bloque.anuncios > 0 ? '<span class="modB-anuncios"><strong>' + bloque.anuncios + '</strong> anuncios</span>' : '') +
-      '</div>';
-
-    var card = document.createElement('div');
-    card.className = 'modB-card';
-    card.innerHTML =
-      '<div class="modB-card-time">' +
-        '<span>' + bloque.tiempo + '</span>' +
-        (bloque.clave ? '<span class="modB-card-clave">Momento clave</span>' : '') +
-      '</div>' +
-      '<div class="modB-card-title">' + bloque.titulo + '</div>' +
-      '<p class="modB-card-desc">' + bloque.descripcion + '</p>' +
-      '<div class="modB-card-tags">' + tags + '</div>' +
-      footer;
-
-    var emptySide = document.createElement('div');
-    emptySide.className = 'modB-empty-side';
-
-    div.appendChild(dot);
-    div.appendChild(card);
-    div.appendChild(emptySide);
-    container.appendChild(div);
+  // Dots
+  NARRATIVA.forEach(function(_, i) {
+    var d = document.createElement('button');
+    d.className = 'rz-dot';
+    d.setAttribute('aria-label', 'Momento ' + (i + 1));
+    d.addEventListener('click', function() { go(i); });
+    elDots.appendChild(d);
   });
+
+  function render() {
+    var b = NARRATIVA[idx];
+    elNum.textContent   = idx + 1;
+    elQuote.textContent = b.descripcion;
+    elTitle.textContent = b.titulo;
+    elDesc.textContent  = b.temas.join(' · ');
+    elBadge.textContent = b.tiempo.replace(/—/g, '-');
+    elAudio.onclick = function() {
+      seekTo(b.inicio_seg);
+      document.getElementById('timeline').scrollIntoView({ behavior: 'smooth' });
+    };
+    Array.prototype.forEach.call(elDots.children, function(d, i) {
+      d.classList.toggle('is-active', i === idx);
+    });
+  }
+  function go(i) { idx = (i + NARRATIVA.length) % NARRATIVA.length; render(); }
+
+  btnPrev.addEventListener('click', function() { go(idx - 1); });
+  btnNext.addEventListener('click', function() { go(idx + 1); });
+
+  // Swipe táctil
+  var x0 = null;
+  stage.closest('.rz-carousel-stage').addEventListener('touchstart', function(e) { x0 = e.touches[0].clientX; }, { passive: true });
+  stage.closest('.rz-carousel-stage').addEventListener('touchend', function(e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 40) go(idx + (dx < 0 ? 1 : -1));
+    x0 = null;
+  }, { passive: true });
+
+  render();
+})();
+
+// ═══════════════════════════════════════════════════════════════
+//  MÓDULO A (rediseño) — barras de temas + animaciones al entrar
+// ═══════════════════════════════════════════════════════════════
+(function() {
+  var metrics = document.querySelector('.rz-metrics');
+  if (!metrics) return;
+
+  // Barras horizontales de temas ("Palabras que más se repiten")
+  var barsBox = document.getElementById('rz-theme-bars');
+  if (barsBox && window.DATA && DATA.resumen_temas) {
+    var temas = DATA.resumen_temas;
+    var max = Math.max.apply(null, temas.map(function(t) { return t.porcentaje; }));
+    temas.forEach(function(t) {
+      var esOtros = /^otros$/i.test(t.tema);
+      var nombre = t.tema.replace('Democracia e Instituciones', 'Democracia');
+      var w = (t.porcentaje / max * 100);
+      var row = document.createElement('div');
+      row.className = 'rz-tb-row';
+      row.innerHTML =
+        '<span class="rz-tb-name">' + nombre + '</span>' +
+        '<div class="rz-tb-track">' +
+          '<span class="rz-tb-fill' + (esOtros ? ' is-otros' : '') + '" data-w="' + w.toFixed(1) + '"></span>' +
+        '</div>';
+      barsBox.appendChild(row);
+    });
+  }
+
+  function animate() {
+    metrics.classList.add('is-in');
+    var donut = metrics.querySelector('.rz-donut');
+    if (donut) donut.classList.add('is-in');
+    metrics.querySelectorAll('.rz-ref-fill').forEach(function(el) {
+      el.style.width = (el.dataset.pct || 0) + '%';
+    });
+    metrics.querySelectorAll('.rz-tb-fill').forEach(function(el) {
+      el.style.width = (el.dataset.w || 0) + '%';
+    });
+  }
+
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { animate(); obs.disconnect(); }
+    });
+  }, { threshold: 0.15 });
+  obs.observe(metrics);
 })();
 
 // ═══════════════════════════════════════════════════════════════
