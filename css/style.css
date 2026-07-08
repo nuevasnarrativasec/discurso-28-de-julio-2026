@@ -1733,6 +1733,36 @@
     .modF-ausente-name { font-size: 15px; font-weight: 700; color: var(--ink); }
     .modF-importancia { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; }
 
+    /* ─── Metodología de análisis (bloque enmarcado) ─────── */
+    .metodo-section { max-width: 700px; margin: 0 auto; padding: 72px 24px 88px; }
+    .metodo-frame {
+      background: #e5e0d5;
+      padding: 10px;
+      border-radius: 3px;
+      box-shadow: 0 14px 34px rgba(0,0,0,0.06);
+    }
+    .metodo-inner {
+      background: #f7f4ed;
+      padding: 56px clamp(28px, 6vw, 72px) 64px;
+    }
+    .metodo-title {
+      font-family: "ivypresto-headline", 'Georgia', serif;
+      font-style: italic;
+      font-weight: 600;
+      font-size: clamp(26px, 3.4vw, 26px);
+      text-align: center;
+      color: var(--ink);
+      margin-bottom: 36px;
+    }
+    .metodo-body { max-width: 800px; margin: 0 auto; }
+    .metodo-text {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--ink);
+      margin: 0;
+    }
+    .metodo-text + .metodo-text { margin-top: 22px; }
+
     /* ═══════════════════════════════════════════════════════════
        REDISEÑO — Dashboard de métricas (Resumen Inmediato)
        ═══════════════════════════════════════════════════════════ */
