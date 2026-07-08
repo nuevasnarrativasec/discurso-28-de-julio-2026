@@ -7836,22 +7836,20 @@ document.addEventListener('keydown', e => {
   var metrics = document.querySelector('.rz-metrics');
   if (!metrics) return;
 
-  // Barras horizontales de temas ("Palabras que más se repiten")
+  // Distribución del tiempo por tema (barra por tema con % y color propio)
   var barsBox = document.getElementById('rz-theme-bars');
-  if (barsBox && window.DATA && DATA.resumen_temas) {
+  if (barsBox && typeof DATA !== 'undefined' && DATA.resumen_temas) {
     var temas = DATA.resumen_temas;
-    var max = Math.max.apply(null, temas.map(function(t) { return t.porcentaje; }));
     temas.forEach(function(t) {
-      var esOtros = /^otros$/i.test(t.tema);
       var nombre = t.tema.replace('Democracia e Instituciones', 'Democracia');
-      var w = (t.porcentaje / max * 100);
       var row = document.createElement('div');
       row.className = 'rz-tb-row';
       row.innerHTML =
         '<span class="rz-tb-name">' + nombre + '</span>' +
         '<div class="rz-tb-track">' +
-          '<span class="rz-tb-fill' + (esOtros ? ' is-otros' : '') + '" data-w="' + w.toFixed(1) + '"></span>' +
-        '</div>';
+          '<span class="rz-tb-fill" data-w="' + t.porcentaje + '" style="background:' + t.color + '"></span>' +
+        '</div>' +
+        '<span class="rz-tb-pct">' + t.porcentaje + '%</span>';
       barsBox.appendChild(row);
     });
   }

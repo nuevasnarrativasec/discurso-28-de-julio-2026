@@ -795,13 +795,14 @@
       font-weight: 400;
       color: #16130f;
       line-height: 1.2;
-      font-size: clamp(15px, 2.1vw, 27px);
+      font-size: clamp(15px, 2.1vw, 24px);
       margin-bottom: 16px;
     }
-    .hero-collage-sub em { font-style: italic; }
+    .hero-collage-sub em {     font-weight: bold;
+    font-style: normal; }
     .hero-collage-desc {
       font-family: var(--font-sans);
-      color: #6b665e;
+      color: #000;
       line-height: 1.6;
       font-size: clamp(11px, 1.15vw, 14px);
       max-width: 42ch;
@@ -1876,11 +1877,12 @@
 
     /* Barras de temas (JS) */
     .rz-theme-bars { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
-    .rz-tb-row { display: grid; grid-template-columns: 118px 1fr; align-items: center; gap: 12px; }
+    .rz-tb-row { display: grid; grid-template-columns: 118px 1fr auto; align-items: center; gap: 12px; }
     .rz-tb-name { font-size: 13px; color: var(--ink); text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .rz-tb-track { height: 12px; }
+    .rz-tb-track { height: 12px; background: rgba(0,0,0,0.06); border-radius: 2px; overflow: hidden; }
     .rz-tb-fill { display: block; height: 100%; width: 0; border-radius: 2px; background: var(--rz-blue); transition: width 1s cubic-bezier(0.16,1,0.3,1); }
     .rz-tb-fill.is-otros { background: var(--rz-red); }
+    .rz-tb-pct { font-size: 12px; color: var(--ink-muted); font-variant-numeric: tabular-nums; min-width: 36px; text-align: right; }
 
     /* ═══════════════════════════════════════════════════════════
        REDISEÑO — Carrusel "El discurso en 5 momentos"
