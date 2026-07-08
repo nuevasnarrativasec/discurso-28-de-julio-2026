@@ -31,6 +31,11 @@
 
     /* ─── Sección principal ────────────────────────────── */
     .timeline-section {
+      background-color: #FFFDFA;
+          margin-top: 50px;
+        border-top: 1px solid var(--border);
+    }
+    .ctn-timeline{
       max-width: 960px;
       margin: 0 auto;
       padding: 60px 24px 40px;
@@ -125,7 +130,7 @@
     .bar-pct { font-size: 11px; color: var(--ink-muted); font-variant-numeric: tabular-nums; }
 
     /* ─── Filtros ────────────────────────────────────────── */
-    .filter-section { margin: 0 0 24px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+    .filter-section { margin: 0 0 0; padding: 15px; border-bottom: 1px solid var(--border);  background-color: #f8f6f2; }
     .filter-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
     .filter-row:last-child { margin-bottom: 0; }
     .filter-label { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
@@ -152,7 +157,7 @@
     .event-marker.ev-hidden { opacity: 0 !important; pointer-events: none; transform: scaleY(0); }
 
     /* ─── Timeline Gantt ────────────────────────────────── */
-    .timeline-wrap { position: relative; }
+    .timeline-wrap { position: relative; background-color: #f8f6f2; }
 
     .time-axis {
       display: flex; justify-content: space-between;
@@ -172,6 +177,7 @@
       user-select: none;
     }
     .time-axis-hint {
+          background-color: #f8f6f2;
       font-size: 10px;
       color: var(--ink-faint);
       font-style: italic;
@@ -179,6 +185,8 @@
       margin-bottom: 12px;
       opacity: 0;
       transition: opacity 0.3s;
+      margin-bottom: 0;
+    padding: 20px 0 20px 50px;
     }
     .time-axis-hint.visible { opacity: 1; }
 
@@ -1950,6 +1958,11 @@
     /* ═══════════════════════════════════════════════════════════
        REDISEÑO — Carrusel "El discurso en 5 momentos"
        ═══════════════════════════════════════════════════════════ */
+      .main-momentos{
+        background-color: #FFFDFA;
+            border-bottom: 1px solid var(--border);
+        margin-bottom: 50px;
+      }
     .rz-momentos {
       display: grid;
       grid-template-columns: 300px 1fr;

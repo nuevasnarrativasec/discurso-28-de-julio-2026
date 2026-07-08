@@ -433,33 +433,35 @@
 <!--  El discurso en 5 momentos — carrusel interactivo          -->
 <!-- ══════════════════════════════════════════════════════════ -->
 <section>
-    <div class="rz-momentos" id="narrativa">
-      <div class="rz-momentos-left">
-        <div class="rz-momentos-rule"></div>
-        <h2 class="rz-momentos-title" style="font-style: italic;">El discurso<br>en 5 momentos</h2>
-        <p class="rz-momentos-sub">Síntesis narrativa con accesos rápidos a los momentos más importantes del mensaje presidencial.</p>
-        <p class="rz-momentos-desc" style="color: black;">Más allá de los datos, el discurso construye un relato. Esta sección identifica los cinco arcos narrativos centrales del mensaje, los momentos de mayor intensidad retórica y las transiciones entre los grandes bloques temáticos.</p>
-      </div>
-
-      <div class="rz-carousel">
-        <button class="rz-arrow rz-arrow--prev" id="rz-prev" aria-label="Momento anterior">‹</button>
-
-        <div class="rz-carousel-stage">
-          <div class="rz-swipe-hint">
-            <img src="./img/icon-desliza.png" alt="" width="100%" style="max-width: 15px;">
-            Desliza para interactuar
-          </div>
-
-          <div class="rz-slide-track" id="rz-track"><!-- paneles inyectados por JS --></div>
-
-          <div class="rz-time-track">
-            <span class="rz-time-start">Inicio discurso</span>
-            <span class="rz-time-badge" id="rz-time-badge"></span>
-          </div>
+    <div class="main-momentos">
+        <div class="rz-momentos" id="narrativa">
+        <div class="rz-momentos-left">
+            <div class="rz-momentos-rule"></div>
+            <h2 class="rz-momentos-title" style="font-style: italic;">El discurso<br>en 5 momentos</h2>
+            <p class="rz-momentos-sub">Síntesis narrativa con accesos rápidos a los momentos más importantes del mensaje presidencial.</p>
+            <p class="rz-momentos-desc" style="color: black;">Más allá de los datos, el discurso construye un relato. Esta sección identifica los cinco arcos narrativos centrales del mensaje, los momentos de mayor intensidad retórica y las transiciones entre los grandes bloques temáticos.</p>
         </div>
 
-        <button class="rz-arrow rz-arrow--next" id="rz-next" aria-label="Momento siguiente">›</button>
-      </div>
+        <div class="rz-carousel">
+            <button class="rz-arrow rz-arrow--prev" id="rz-prev" aria-label="Momento anterior">‹</button>
+
+            <div class="rz-carousel-stage">
+            <div class="rz-swipe-hint">
+                <img src="./img/icon-desliza.png" alt="" width="100%" style="max-width: 15px;">
+                Desliza para interactuar
+            </div>
+
+            <div class="rz-slide-track" id="rz-track"><!-- paneles inyectados por JS --></div>
+
+            <div class="rz-time-track">
+                <span class="rz-time-start">Inicio discurso</span>
+                <span class="rz-time-badge" id="rz-time-badge"></span>
+            </div>
+            </div>
+
+            <button class="rz-arrow rz-arrow--next" id="rz-next" aria-label="Momento siguiente">›</button>
+        </div>
+        </div>
     </div>
 </section>
 
@@ -488,104 +490,111 @@
   </div>
 </section>
 
+<div class="data-block-head">
+    <p class="data-block-text"><b>Dato cuenta algo interesante del discurso</b>, Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet</p>
+</div>
+
 <!-- ══════════════════════════════════════════════════════════ -->
 <!--  SECCIÓN TIMELINE                                         -->
 <!-- ══════════════════════════════════════════════════════════ -->
 <section class="timeline-section" id="timeline" style="border-bottom:1px solid var(--border)">
-  <!-- nav offset fix -->
-  <div style="position:relative; top:-52px; visibility:hidden; height:0" id="timeline-anchor"></div>
 
-  <div class="tl-header-centered">
-    <span class="tl-header-rule"></span>
-    <h2 class="tl-title-centered">Timeline interactivo</h2>
-  </div>
-  <p class="mod-sub tl-sub-bold">Distribución de los grandes temas del mensaje presidencial, minuto a minuto. Haz clic en cualquier bloque para ir directamente al audio.</p>
-  <p class="mod-intro tl-intro-plain">El timeline sincronizado permite seguir el desarrollo cronológico del mensaje. Cada bloque representa un segmento temático con duración proporcional al tiempo dedicado, vinculado al audio oficial para una escucha guiada y precisa.</p>
+    <div class="ctn-timeline">
+        <!-- nav offset fix -->
+        <div style="position:relative; top:-52px; visibility:hidden; height:0" id="timeline-anchor"></div>
 
-  <!-- Player de audio -->
-  <div id="audio-player">
-    <div class="player-tema">
-      <span class="player-tema-label">Tema actual</span>
-      <span class="player-tema-name" id="player-tema-name">—</span>
-    </div>
-    <div class="player-controls">
-      <button class="btn-icon" title="−15 seg" onclick="seekRelative(-15)">
-        <svg viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8zm-1.1 11H10v-3.26L9 13.12V12.2l1.8-.65H11V16zm3.23 0h-1.5l1.5-2.06c-.36-.35-.59-.82-.59-1.36 0-1.02.82-1.58 1.64-1.58.82 0 1.63.56 1.63 1.58 0 .5-.21.97-.56 1.3l-1.58 2.12zm.14-2.62c.2 0 .39-.17.39-.38s-.19-.38-.39-.38-.39.17-.39.38.19.38.39.38z"/></svg>
-      </button>
-      <button class="btn-icon" id="btn-playpause" title="Play / Pausa" onclick="togglePlay()" style="transform:scale(1.2)">
-        <svg id="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-        <svg id="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-      </button>
-      <button class="btn-icon" title="+15 seg" onclick="seekRelative(15)">
-        <svg viewBox="0 0 24 24"><path d="M18 13c0 3.31-2.69 6-6 6s-6-2.69-6-6 2.69-6 6-6v4l5-5-5-5v4c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8h-2zm-4.73 3H12v-3.26l-1 .38v-.92l1.8-.65h.47V16zm3.23 0h-1.5l1.5-2.06c-.36-.35-.59-.82-.59-1.36 0-1.02.82-1.58 1.64-1.58.82 0 1.63.56 1.63 1.58 0 .5-.21.97-.56 1.3l-1.58 2.12zm.14-2.62c.2 0 .39-.17.39-.38s-.19-.38-.39-.38-.39.17-.39.38.19.38.39.38z"/></svg>
-      </button>
-    </div>
-    <span class="player-time" id="player-current">0:00</span>
-    <div class="player-scrubber-wrap" id="scrubber-wrap">
-      <div class="player-scrubber-track">
-        <div class="player-scrubber-fill" id="scrubber-fill"></div>
-      </div>
-    </div>
-    <span class="player-time" id="player-total">—</span>
-    <button class="player-speed" id="btn-speed" title="Velocidad" onclick="cycleSpeed()">1×</button>
-    <div class="player-vol-wrap">
-      <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-      <input type="range" class="player-vol" id="player-vol" min="0" max="1" step="0.05" value="1">
-    </div>
-  </div>
-  <div id="player-sentinel"></div>
-
-  <!-- Leyenda -->
-  <div class="legend" id="legend-temas">
-    <span class="legend-group-label">Temas</span>
-    <span class="legend-group-label" style="margin-top:4px">Eventos en el discurso</span>
-    <span class="legend-dot-item"><span class="legend-dot" style="background:#c0392b"></span>Evento destacado</span>
-  </div>
-
-  <!-- Barras de porcentaje -->
-  <div class="bars-section">
-    <p class="bars-section-label">Distribución del tiempo por tema</p>
-    <div id="bars-container"></div>
-  </div>
-
-  <!-- Filtros de tema -->
-  <div class="filter-section" id="filter-section">
-    <div class="filter-row">
-      <span class="filter-label">Seleccionar tema:</span>
-      <div class="filter-chips" id="filter-chips-tema"></div>
-      <button class="chip-reset" id="chip-reset-tema">✕ Todo</button>
-    </div>
-  </div>
-
-  <!-- Hint del eje clickeable -->
-  <p class="time-axis-hint" id="axis-hint">↑ Haz clic sobre el eje para saltar a ese minuto</p>
-
-  <!-- Timeline Gantt -->
-  <div class="timeline-wrap">
-    <div class="time-axis" id="time-axis-wrap">
-      <div style="width:var(--label-w); flex-shrink:0"></div>
-      <div class="time-axis-track" id="time-axis"></div>
-    </div>
-    <div class="timeline-rows" id="timeline-rows">
-      <!-- Cabezal de reproducción -->
-      <div id="playhead"><span id="playhead-time"></span></div>
-    </div>
-  </div>
-
-  <!-- Panel de detalle -->
-  <div class="detail-panel" id="detail-panel">
-    <div class="detail-header">
-      <div>
-        <div class="detail-tema" id="d-tema"></div>
-        <div class="detail-time-row">
-          <span class="detail-time" id="d-time"></span>
-          <button class="btn-play-block no-audio" id="btn-play-block">▶ Ir al audio</button>
+        <div class="tl-header-centered">
+            <span class="tl-header-rule"></span>
+            <h2 class="tl-title-centered">Timeline interactivo</h2>
         </div>
-      </div>
-      <button class="detail-close" onclick="cerrarDetalle()">×</button>
+        <p class="mod-sub tl-sub-bold">Distribución de los grandes temas del mensaje presidencial, minuto a minuto. Haz clic en cualquier bloque para ir directamente al audio.</p>
+        <p class="mod-intro tl-intro-plain">El timeline sincronizado permite seguir el desarrollo cronológico del mensaje. Cada bloque representa un segmento temático con duración proporcional al tiempo dedicado, vinculado al audio oficial para una escucha guiada y precisa.</p>
+
+        <!-- Player de audio -->
+        <div id="audio-player">
+            <div class="player-tema">
+            <span class="player-tema-label">Tema actual</span>
+            <span class="player-tema-name" id="player-tema-name">—</span>
+            </div>
+            <div class="player-controls">
+            <button class="btn-icon" title="−15 seg" onclick="seekRelative(-15)">
+                <svg viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8zm-1.1 11H10v-3.26L9 13.12V12.2l1.8-.65H11V16zm3.23 0h-1.5l1.5-2.06c-.36-.35-.59-.82-.59-1.36 0-1.02.82-1.58 1.64-1.58.82 0 1.63.56 1.63 1.58 0 .5-.21.97-.56 1.3l-1.58 2.12zm.14-2.62c.2 0 .39-.17.39-.38s-.19-.38-.39-.38-.39.17-.39.38.19.38.39.38z"/></svg>
+            </button>
+            <button class="btn-icon" id="btn-playpause" title="Play / Pausa" onclick="togglePlay()" style="transform:scale(1.2)">
+                <svg id="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <svg id="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+            </button>
+            <button class="btn-icon" title="+15 seg" onclick="seekRelative(15)">
+                <svg viewBox="0 0 24 24"><path d="M18 13c0 3.31-2.69 6-6 6s-6-2.69-6-6 2.69-6 6-6v4l5-5-5-5v4c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8h-2zm-4.73 3H12v-3.26l-1 .38v-.92l1.8-.65h.47V16zm3.23 0h-1.5l1.5-2.06c-.36-.35-.59-.82-.59-1.36 0-1.02.82-1.58 1.64-1.58.82 0 1.63.56 1.63 1.58 0 .5-.21.97-.56 1.3l-1.58 2.12zm.14-2.62c.2 0 .39-.17.39-.38s-.19-.38-.39-.38-.39.17-.39.38.19.38.39.38z"/></svg>
+            </button>
+            </div>
+            <span class="player-time" id="player-current">0:00</span>
+            <div class="player-scrubber-wrap" id="scrubber-wrap">
+            <div class="player-scrubber-track">
+                <div class="player-scrubber-fill" id="scrubber-fill"></div>
+            </div>
+            </div>
+            <span class="player-time" id="player-total">—</span>
+            <button class="player-speed" id="btn-speed" title="Velocidad" onclick="cycleSpeed()">1×</button>
+            <div class="player-vol-wrap">
+            <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+            <input type="range" class="player-vol" id="player-vol" min="0" max="1" step="0.05" value="1">
+            </div>
+        </div>
+        <div id="player-sentinel"></div>
+
+        <!-- Leyenda -->
+        <div class="legend" id="legend-temas">
+            <span class="legend-group-label">Temas</span>
+            <span class="legend-group-label" style="margin-top:4px">Eventos en el discurso</span>
+            <span class="legend-dot-item"><span class="legend-dot" style="background:#c0392b"></span>Evento destacado</span>
+        </div>
+
+        <!-- Barras de porcentaje -->
+        <div class="bars-section">
+            <p class="bars-section-label">Distribución del tiempo por tema</p>
+            <div id="bars-container"></div>
+        </div>
+
+        <!-- Filtros de tema -->
+        <div class="filter-section" id="filter-section">
+            <div class="filter-row">
+            <span class="filter-label">Seleccionar tema:</span>
+            <div class="filter-chips" id="filter-chips-tema"></div>
+            <button class="chip-reset" id="chip-reset-tema">✕ Todo</button>
+            </div>
+        </div>
+
+        <!-- Hint del eje clickeable -->
+        <p class="time-axis-hint" id="axis-hint">↑ Haz clic sobre el eje para saltar a ese minuto</p>
+
+        <!-- Timeline Gantt -->
+        <div class="timeline-wrap">
+            <div class="time-axis" id="time-axis-wrap">
+            <div style="width:var(--label-w); flex-shrink:0"></div>
+            <div class="time-axis-track" id="time-axis"></div>
+            </div>
+            <div class="timeline-rows" id="timeline-rows">
+            <!-- Cabezal de reproducción -->
+            <div id="playhead"><span id="playhead-time"></span></div>
+            </div>
+        </div>
+
+        <!-- Panel de detalle -->
+        <div class="detail-panel" id="detail-panel">
+            <div class="detail-header">
+            <div>
+                <div class="detail-tema" id="d-tema"></div>
+                <div class="detail-time-row">
+                <span class="detail-time" id="d-time"></span>
+                <button class="btn-play-block no-audio" id="btn-play-block">▶ Ir al audio</button>
+                </div>
+            </div>
+            <button class="detail-close" onclick="cerrarDetalle()">×</button>
+            </div>
+            <p class="detail-extracto" id="d-extracto"></p>
+        </div>
     </div>
-    <p class="detail-extracto" id="d-extracto"></p>
-  </div>
 
 </section>
 <!-- /timeline -->
