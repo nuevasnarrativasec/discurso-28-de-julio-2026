@@ -494,13 +494,19 @@
     }
     .explorer-inner { }
 
+    /* Cuerpo con regla vertical izquierda */
+    .exp-body {
+      /*border-left: 1px solid var(--border);*/
+      padding-left: 28px;
+    }
+
     /* Filtros explorador */
     .exp-filters {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 3px;
-      padding: 20px 24px;
-      margin-bottom: 28px;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      padding: 4px 0 0;
+      margin-bottom: 20px;
     }
     .exp-search-row {
       margin-bottom: 18px;
@@ -1094,12 +1100,12 @@
       font-family: "ivypresto-headline", 'Georgia', serif;
       font-style: italic;
       font-weight: 600;
-      font-size: clamp(30px, 4.4vw, 46px);
+      font-size: clamp(30px, 4.4vw, 28px);
       color: var(--ink);
       line-height: 1.05;
     }
-    .tl-sub-bold { font-weight: 700; color: var(--ink); max-width: 760px; }
-    .tl-intro-plain { border-left: none; padding-left: 0; max-width: 760px; }
+    .tl-sub-bold { font-weight: 700; color: var(--ink); max-width: 600px; margin: 0 auto 10px;}
+    .tl-intro-plain { border-left: none; padding-left: 0; max-width: 600px; margin: 0 auto 40px;}
 
     /* Rediseño de puntos: ocultar leyenda y barras de porcentaje */
     .timeline-section #legend-temas,
@@ -1228,7 +1234,7 @@
 
     /* Bloque de texto */
     .emo-text {
-      max-width: 900px;
+      max-width: 600px;
       margin: 0 auto 8px;
       text-align: left;
     }
@@ -1740,8 +1746,8 @@
     .rz-summary-rule { width: 110px; height: 1px; background: #c7c4bb; margin: 0 auto 30px; }
     .rz-summary-title {
       font-family: var(--font-serif);
-      font-size: clamp(28px, 3.6vw, 40px);
-      font-weight: 700;
+      font-size: clamp(28px, 3.6vw, 28px);
+      font-weight: 600;
       color: var(--ink);
       line-height: 1.15;
       margin-bottom: 18px;
