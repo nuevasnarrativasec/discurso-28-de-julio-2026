@@ -7930,10 +7930,10 @@ document.addEventListener('keydown', e => {
 // ═══════════════════════════════════════════════════════════════
 (function() {
   var EDITORES = [
-    { handle: '@NombreUsuario', categoria: 'Política',  avatar: './img/editores/politica.jpg',  video: './video/editores/politica.mp4'  },
-    { handle: '@NombreUsuario', categoria: 'Economía',  avatar: './img/editores/economia.jpg',  video: './video/editores/economia.mp4'  },
-    { handle: '@NombreUsuario', categoria: 'ECData',    avatar: './img/editores/ecdata.jpg',    video: './video/editores/ecdata.mp4'    },
-    { handle: '@NombreUsuario', categoria: 'Nacional',  avatar: './img/editores/nacional.jpg',  video: './video/editores/nacional.mp4'  }
+    { handle: 'Hector Villalobos', categoria: 'Política',  avatar: './img/editores/politica.jpg',  video: './video/editores/politica.mp4'  },
+    { handle: 'Maro Villalobos', categoria: 'Economía',  avatar: './img/editores/economia.jpg',  video: './video/editores/economia.mp4'  },
+    { handle: 'Ariana Lira', categoria: 'ECData',    avatar: './img/editores/ecdata.jpg',    video: './video/editores/ecdata.mp4'    },
+    { handle: 'Juan Pablo León', categoria: 'Nacional',  avatar: './img/editores/nacional.jpg',  video: './video/editores/nacional.mp4'  }
   ];
   var FALLBACK_SECS = 6;    // duración de la barra si el video no carga
   var HOLD_MS = 220;        // umbral para distinguir "tap" de "mantener presionado"
@@ -7956,7 +7956,7 @@ document.addEventListener('keydown', e => {
         '<span class="story-avatar-fallback">' + inicial + '</span>' +
       '</span></span>' +
       '<span class="story-caption"><span class="story-handle">' + e.handle +
-      '</span> / <span class="story-cat">' + e.categoria + '</span></span>';
+      '</span>  <span class="story-cat">' + e.categoria + '</span></span>';
     btn.addEventListener('click', function() { open(i); });
     row.appendChild(btn);
   });
