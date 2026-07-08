@@ -1181,6 +1181,98 @@
       letter-spacing: 1px;
     }
 
+    /* ─── Sección "Análisis de emociones" ────────────────── */
+    .emo-section {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 60px 24px 64px;
+    }
+    .emo-hint {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 0 0 44px;
+    }
+    .emo-hint svg { width: 20px; height: 20px; }
+
+    /* Fila de caritas */
+    .emo-faces {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 26px;
+      margin-bottom: 56px;
+    }
+    .emo-face-item {
+      width: clamp(112px, 14.5vw, 120px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      overflow: hidden;
+      padding: 0;
+      border: none;
+      background: #5b8fc7;
+      cursor: pointer;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+    }
+    .emo-face-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .emo-face-item:hover {
+      transform: translateY(-4px) scale(1.045);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.16);
+      background: #b7a44f;
+    }
+    .emo-face-item:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+    /* Bloque de texto */
+    .emo-text {
+      max-width: 900px;
+      margin: 0 auto 8px;
+      text-align: left;
+    }
+    .emo-text .data-block-text + .data-block-text { margin-top: 16px; }
+
+    /* Expresividad facial */
+    .emo-stats-title {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 48px 0 30px;
+    }
+    .emo-stats {
+      display: flex;
+      justify-content: center;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .emo-stat { flex: 1; text-align: center; padding: 0 24px; }
+    .emo-stat + .emo-stat { border-left: 1px solid var(--border); }
+    .emo-stat-pct {
+      font-family: "ivypresto-headline", 'Georgia', serif;
+      font-weight: 700;
+      font-size: 46px;
+      line-height: 1;
+      color: var(--ink);
+    }
+    .emo-emoji { width: 86px; height: 86px; display: block; margin: 12px auto 16px; }
+    .emo-ring-track { fill: none; stroke: var(--border); stroke-width: 3; }
+    .emo-ring-prog {
+      fill: none; stroke: #9db8d6; stroke-width: 3; stroke-linecap: round;
+      transform: rotate(-90deg); transform-origin: 50% 50%;
+    }
+    .emo-head  { fill: none; stroke: var(--ink); stroke-width: 2.4; }
+    .emo-mouth { fill: none; stroke: var(--ink); stroke-width: 2.4; stroke-linecap: round; }
+    .emo-dot   { fill: var(--ink); }
+    .emo-stat-label { font-size: 13px; color: var(--ink-muted); margin-top: 2px; }
+
+    @media (max-width: 640px) {
+      .emo-stats { flex-direction: column; gap: 28px; }
+      .emo-stat + .emo-stat { border-left: none; border-top: 1px solid var(--border); padding-top: 28px; }
+    }
+
     /* ─── Módulo A — Resumen Inmediato ───────────────────────── */
     .modA-section {
       background: #f9f6f1;
