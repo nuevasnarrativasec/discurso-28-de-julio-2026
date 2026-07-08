@@ -248,54 +248,64 @@
       font-size: 12px; font-weight: 500; color: var(--ink);
       text-align: right; padding-right: 14px; line-height: 1.2;
     }
-    .tema-track { position: relative; height: 24px; }
+    .tema-track { position: relative; height: 26px; }
 
-    /* Bloque de tema */
+    /* Cápsula de agrupación (puntos cercanos) */
+    .tema-cluster {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 15px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: rgba(0,0,0,0.02);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Punto de bloque (antes barra) */
     .tema-block {
       position: absolute;
-      top: 50%; transform: translateY(-50%);
-      height: var(--track-h);
-      border-radius: 3px;
+      top: 50%; left: 0;
+      transform: translate(-50%, -50%);
+      width: 8px; height: 8px;
+      border-radius: 50%;
       cursor: pointer;
-      transition: height 0.15s ease, opacity 0.2s ease, filter 0.15s ease, box-shadow 0.15s ease;
-      z-index: 2;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      z-index: 4;
     }
-    .tema-block:hover { height: 16px; filter: brightness(1.12); z-index: 10; }
+    .tema-block:hover { transform: translate(-50%, -50%) scale(1.55); z-index: 30; }
 
     /* Estado: bloque activo (panel abierto) */
     .tema-block.selected {
-      height: 16px;
-      filter: brightness(1.1);
-      box-shadow: 0 0 0 2px white, 0 0 0 3.5px currentColor;
-      z-index: 10;
+      box-shadow: 0 0 0 2px var(--bg), 0 0 0 3.5px currentColor;
+      z-index: 30;
     }
 
     /* Estado: reproduciendo dentro de este bloque */
     .tema-block.playing {
-      height: 18px;
-      filter: brightness(1.15);
-      box-shadow: 0 0 0 2px white, 0 0 0 3.5px var(--accent);
-      z-index: 15;
+      box-shadow: 0 0 0 2px var(--bg), 0 0 0 3.5px var(--accent);
+      z-index: 35;
       animation: pulse-block 1.8s ease-in-out infinite;
     }
     @keyframes pulse-block {
-      0%, 100% { box-shadow: 0 0 0 2px white, 0 0 0 3.5px var(--accent); }
-      50%       { box-shadow: 0 0 0 2px white, 0 0 0 5px var(--accent); }
+      0%, 100% { box-shadow: 0 0 0 2px var(--bg), 0 0 0 3.5px var(--accent); }
+      50%       { box-shadow: 0 0 0 2px var(--bg), 0 0 0 5px var(--accent); }
     }
 
-    /* Marcadores de eventos */
+    /* Puntos de eventos */
     .event-marker {
-      position: absolute; top: 50%;
+      position: absolute; top: 50%; left: 0;
       transform: translate(-50%, -50%);
-      width: 8px; height: 8px;
+      width: 7px; height: 7px;
       border-radius: 50%;
-      border: 1.5px solid white;
+      background: var(--accent);
+      border: 1px solid var(--bg);
       cursor: pointer;
       z-index: 20;
       transition: transform 0.15s ease;
     }
-    .event-marker:hover { transform: translate(-50%, -50%) scale(1.5); }
-    .event-marker { background: var(--accent); }
+    .event-marker:hover { transform: translate(-50%, -50%) scale(1.6); z-index: 30; }
 
     /* ─── Panel de detalle ──────────────────────────────── */
     .detail-panel {
@@ -1071,6 +1081,29 @@
       border-left: 2px solid var(--border);
       padding-left: 20px;
     }
+
+    /* ─── Timeline: encabezado centrado (rediseño de puntos) ── */
+    .tl-header-centered { text-align: center; margin-bottom: 26px; }
+    .tl-header-rule {
+      display: inline-block;
+      width: 64px; height: 1px;
+      background: var(--ink-faint);
+      margin-bottom: 22px;
+    }
+    .tl-title-centered {
+      font-family: "ivypresto-headline", 'Georgia', serif;
+      font-style: italic;
+      font-weight: 600;
+      font-size: clamp(30px, 4.4vw, 46px);
+      color: var(--ink);
+      line-height: 1.05;
+    }
+    .tl-sub-bold { font-weight: 700; color: var(--ink); max-width: 760px; }
+    .tl-intro-plain { border-left: none; padding-left: 0; max-width: 760px; }
+
+    /* Rediseño de puntos: ocultar leyenda y barras de porcentaje */
+    .timeline-section #legend-temas,
+    .timeline-section .bars-section { display: none; }
 
     /* ─── Módulo A — Resumen Inmediato ───────────────────────── */
     .modA-section {

@@ -7181,7 +7181,7 @@ for (let i = 0; i < TICKS; i++) {
 }
 
 // ─────────────────────────────────────────────────────────────
-//  RENDER — Gantt rows
+//  RENDER — Timeline de puntos (dot-strip)
 // ─────────────────────────────────────────────────────────────
 const temaMap = {};
 DATA.bloques.forEach(b => {
@@ -7190,8 +7190,10 @@ DATA.bloques.forEach(b => {
 });
 
 const rowsContainer = document.getElementById('timeline-rows');
+const CLUSTER_GAP = DURACION * 0.009;   // separación máx. entre puntos de un grupo
+const CLUSTER_PAD = DURACION * 0.0045;  // margen horizontal de la cápsula
 
-DATA.resumen_temas.forEach(({ tema }) => {
+DATA.resumen_temas.forEach(({ tema, color }) => {
   const bloques = temaMap[tema];
   if (!bloques) return;
 
@@ -7206,30 +7208,58 @@ DATA.resumen_temas.forEach(({ tema }) => {
   const track = document.createElement('div');
   track.className = 'tema-track';
 
+  // 1) Reunir los puntos: un punto de bloque (color del tema) y, si el
+  //    bloque contiene eventos, un punto de evento (rojo) representativo.
+  const dots = [];
   bloques.forEach(bloque => {
-    // ── Barra del bloque ──────────────────────
-    const block = document.createElement('div');
-    block.className = 'tema-block';
-    block.dataset.id = bloque.id;
-    block.style.cssText = `left:${pct(bloque.inicio)}; width:${pct(bloque.fin - bloque.inicio)}; background:${bloque.color};`;
-    block.title = `${bloque.tema} · ${bloque.inicio_fmt} → ${bloque.fin_fmt}\nClic para ir al audio`;
-    block.addEventListener('click', () => abrirDetalle(bloque, null, true));
-    track.appendChild(block);
+    dots.push({ x: bloque.inicio, kind: 'block', bloque });
+    if (bloque.eventos && bloque.eventos.length) {
+      const mid = bloque.inicio + (bloque.fin - bloque.inicio) * 0.5;
+      dots.push({ x: Math.min(mid, bloque.fin - 1), kind: 'event', bloque, ev: bloque.eventos[0] });
+    }
+  });
+  dots.sort((a, b) => a.x - b.x);
 
-    // ── Marcadores de eventos ─────────────────
-    bloque.eventos.forEach((ev, idx) => {
-      const markerSeg = Math.min(bloque.inicio + 45 + idx * 55, bloque.fin - 20);
-      const marker = document.createElement('div');
-      marker.className = 'event-marker';
-      marker.dataset.tipo = ev.tipo;
-      marker.style.left = pct(markerSeg);
-      marker.title = ev.descripcion + '\nClic para ir al audio';
-      marker.addEventListener('click', e => {
+  // 2) Cápsulas para grupos de puntos cercanos (>= 2)
+  let i = 0;
+  while (i < dots.length) {
+    let j = i;
+    while (j + 1 < dots.length && dots[j + 1].x - dots[j].x < CLUSTER_GAP) j++;
+    if (j > i) {
+      const minX = dots[i].x, maxX = dots[j].x;
+      const cap = document.createElement('div');
+      cap.className = 'tema-cluster';
+      cap.style.left  = pct(Math.max(0, minX - CLUSTER_PAD));
+      cap.style.width = pct((maxX - minX) + CLUSTER_PAD * 2);
+      track.appendChild(cap);
+    }
+    i = j + 1;
+  }
+
+  // 3) Puntos
+  dots.forEach(d => {
+    if (d.kind === 'block') {
+      const dot = document.createElement('div');
+      dot.className = 'tema-block';
+      dot.dataset.id = d.bloque.id;
+      dot.style.left = pct(d.x);
+      dot.style.background = color;
+      dot.style.color = color;
+      dot.title = `${d.bloque.tema} · ${d.bloque.inicio_fmt} → ${d.bloque.fin_fmt}\nClic para ir al audio`;
+      dot.addEventListener('click', () => abrirDetalle(d.bloque, null, true));
+      track.appendChild(dot);
+    } else {
+      const m = document.createElement('div');
+      m.className = 'event-marker';
+      m.dataset.tipo = d.ev.tipo;
+      m.style.left = pct(d.x);
+      m.title = d.ev.descripcion + '\nClic para ir al audio';
+      m.addEventListener('click', e => {
         e.stopPropagation();
-        abrirDetalle(bloque, ev, true);
+        abrirDetalle(d.bloque, d.ev, true);
       });
-      track.appendChild(marker);
-    });
+      track.appendChild(m);
+    }
   });
 
   row.appendChild(nameEl);
