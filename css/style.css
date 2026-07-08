@@ -1702,36 +1702,36 @@
     .modE-marco-desc { font-size: 12px; color: var(--ink-muted); line-height: 1.55; }
 
     /* ─── Módulo 06 — Verificación y Fact-Checking ─────────────── */
-    .modF-section { padding: 72px 24px; background: white; border-bottom: 1px solid var(--border); }
-    .modF-inner { max-width: 960px; margin: 0 auto; }
-    .modF-verdicts-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin: 32px 0 40px; }
+    .modF-section { padding: 60px 24px 72px; background: var(--bg); border-bottom: 1px solid var(--border); }
+    .modF-inner { max-width: 600px; margin: 0 auto; }
+    .modF-verdicts-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; margin: 40px 0 52px; }
     @media (max-width: 700px) { .modF-verdicts-grid { grid-template-columns: repeat(2,1fr); } }
-    .modF-verdict-card { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 22px 20px 18px; text-align: center; }
-    .modF-verdict-icon { font-size: 22px; margin-bottom: 8px; }
-    .modF-verdict-count { font-size: 36px; font-weight: 700; color: var(--ink); line-height: 1; margin-bottom: 8px; }
-    .modF-verdict-label { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); }
-    .modF-verdict-card.verde  { border-top: 3px solid #22c55e; }
-    .modF-verdict-card.amarillo { border-top: 3px solid #f59e0b; }
-    .modF-verdict-card.naranja { border-top: 3px solid #f97316; }
-    .modF-verdict-card.rojo   { border-top: 3px solid #ef4444; }
-    .modF-afirm-title { font-family: "ivypresto-headline",'Georgia',serif; font-size: 19px; font-weight: 700; color: var(--ink); margin-bottom: 16px; }
-    .modF-afirm-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
-    .modF-afirm-item { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 18px 20px; display: flex; align-items: center; gap: 16px; }
+    .modF-verdict-card { border: none; border-radius: 10px; padding: 28px 20px 22px; text-align: center; color: #fff; box-shadow: 0 12px 24px rgba(0,0,0,0.12); }
+    .modF-verdict-icon { display: none; }
+    .modF-verdict-count { font-family: "ivypresto-headline",'Georgia',serif; font-size: 54px; font-weight: 700; color: #fff; line-height: 1; margin-bottom: 10px; }
+    .modF-verdict-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.95); }
+    .modF-verdict-card.verde    { background: linear-gradient(180deg,#5cc161,#4bb051); }
+    .modF-verdict-card.amarillo { background: linear-gradient(180deg,#e7ac36,#d99a26); }
+    .modF-verdict-card.naranja  { background: linear-gradient(180deg,#e17138,#d55f29); }
+    .modF-verdict-card.rojo     { background: linear-gradient(180deg,#e35c54,#d54a44); }
+    .modF-afirm-title { font-family: "ivypresto-headline",'Georgia',serif; font-size: 22px; font-weight: 700; color: var(--ink); margin-bottom: 18px; }
+    .modF-afirm-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 40px; }
+    .modF-afirm-item { background: #efeae2; border: 1px solid #e6dfd5; border-radius: 10px; padding: 20px 24px; display: flex; align-items: center; gap: 16px; box-shadow: 0 4px 14px rgba(0,0,0,0.04); }
     .modF-afirm-body { flex: 1; }
-    .modF-afirm-claim { font-size: 14px; color: var(--ink); font-weight: 500; margin-bottom: 5px; }
+    .modF-afirm-claim { font-size: 15px; color: var(--ink); font-weight: 600; margin-bottom: 6px; }
     .modF-afirm-time { font-size: 12px; color: var(--ink-faint); }
-    .modF-badge { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; }
-    .modF-badge.verde    { background: #dcfce7; color: #166534; }
-    .modF-badge.amarillo { background: #fef9c3; color: #854d0e; }
-    .modF-badge.naranja  { background: #ffedd5; color: #9a3412; }
-    .modF-ausentes-card { background: #fff0f0; border: 1.5px solid #fca5a5; border-radius: 8px; padding: 28px; }
+    .modF-badge { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; }
+    .modF-badge.verde    { background: #dcefd8; color: #3d7a3a; }
+    .modF-badge.amarillo { background: #fbf3c9; color: #9a7b1e; }
+    .modF-badge.naranja  { background: #fbe6cf; color: #b45f26; }
+    .modF-ausentes-card { background: #fbeaea; border: 1.5px solid #f2c9c6; border-radius: 14px; padding: 30px; margin-top: 8px; }
     .modF-ausentes-header { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
-    .modF-ausentes-title { font-family: "ivypresto-headline",'Georgia',serif; font-size: 19px; font-weight: 700; color: #991b1b; }
-    .modF-ausentes-sub { font-size: 13px; color: #7f1d1d; margin-bottom: 20px; line-height: 1.5; }
-    .modF-ausentes-list { display: flex; flex-direction: column; gap: 10px; }
-    .modF-ausente-item { background: white; border: 1px solid #fca5a5; border-radius: 6px; padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-    .modF-ausente-name { font-size: 14px; font-weight: 600; color: var(--ink); }
-    .modF-importancia { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px; white-space: nowrap; flex-shrink: 0; }
+    .modF-ausentes-title { font-family: "ivypresto-headline",'Georgia',serif; font-size: 22px; font-weight: 700; color: #9a3324; }
+    .modF-ausentes-sub { font-size: 13px; color: #a04a3c; margin-bottom: 22px; line-height: 1.5; }
+    .modF-ausentes-list { display: flex; flex-direction: column; gap: 12px; }
+    .modF-ausente-item { background: #fff; border: 1px solid #f0d4d1; border-radius: 10px; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .modF-ausente-name { font-size: 15px; font-weight: 700; color: var(--ink); }
+    .modF-importancia { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; }
 
     /* ═══════════════════════════════════════════════════════════
        REDISEÑO — Dashboard de métricas (Resumen Inmediato)

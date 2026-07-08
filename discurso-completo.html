@@ -651,19 +651,46 @@
 <!-- /explorador -->
 
 <!-- ══════════════════════════════════════════════════════════ -->
+<!--  CITA DESTACADA — foto + quote + audio                     -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section class="rz-quote-feature" id="cita-destacada">
+  <div class="rz-quote-feature-inner">
+    <figure class="rz-quote-photo is-empty">
+      <img src="./img/bg-keiko-3.jpg" alt="Momento del discurso presidencial"
+           onload="this.closest('.rz-quote-photo').classList.remove('is-empty')"
+           onerror="this.closest('.rz-quote-photo').classList.add('is-empty')">
+      <figcaption class="rz-quote-photo-ph">Fotografía del discurso</figcaption>
+    </figure>
+
+    <div class="rz-quote-card">
+      <div class="rz-quote-rule"></div>
+      <p class="rz-quote-time">02:59 - 15:25</p>
+      <div class="rz-quote-rule"></div>
+      <blockquote class="rz-quote-text">“Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni…”</blockquote>
+      <div class="rz-quote-rule"></div>
+      <button class="rz-quote-audio" onclick="seekTo(179.3); document.getElementById('timeline').scrollIntoView({behavior:'smooth'})">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        ESCUCHAR AUDIO
+      </button>
+    </div>
+  </div>
+</section>
+
+<div class="data-block-head">
+      <p class="data-block-text"><b>Dato cuenta algo interesante del discurso</b>, Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
 <!--  MÓDULO 06 — VERIFICACIÓN Y FACT-CHECKING                  -->
 <!-- ══════════════════════════════════════════════════════════ -->
 <section class="modF-section" id="verificacion">
   <div class="modF-inner">
-    <div class="mod-header" style="margin-bottom:8px">
-      <div class="mod-accent-bar"></div>
-      <div>
-        <p class="mod-eyebrow">Módulo 06</p>
-        <h2 class="mod-title">Verificación y Fact-Checking</h2>
-      </div>
+    <div class="tl-header-centered">
+      <span class="tl-header-rule"></span>
+      <h2 class="tl-title-centered">Verificación y Fact-Checking</h2>
     </div>
-    <p class="mod-sub">Validación de la veracidad de las afirmaciones realizadas durante el mensaje presidencial.</p>
-    <p class="mod-intro">El fact-checking es una capa esencial del periodismo de datos. Esta sección contrasta las afirmaciones más relevantes del discurso con fuentes oficiales verificables, e identifica los temas que el presidente eligió no mencionar.</p>
+    <p class="mod-sub tl-sub-bold">Validación de la veracidad de las afirmaciones realizadas durante el mensaje presidencial.</p>
+    <p class="mod-intro tl-intro-plain">El fact-checking es una capa esencial del periodismo de datos. Esta sección contrasta las afirmaciones más relevantes del discurso con fuentes oficiales verificables, e identifica los temas que el presidente eligió no mencionar.</p>
 
     <!-- Resumen de veredictos -->
     <div class="modF-verdicts-grid">

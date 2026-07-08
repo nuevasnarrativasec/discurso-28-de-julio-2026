@@ -6988,14 +6988,8 @@ function bloqueEnTiempo(t) {
 document.getElementById('btn-play-block').classList.remove('no-audio');
 document.getElementById('axis-hint').classList.add('visible');
 
-// Cuando el sentinel sale de la vista → player se fija abajo
-const playerEl   = document.getElementById('audio-player');
-const sentinelEl = document.getElementById('player-sentinel');
-new IntersectionObserver(([entry]) => {
-  const sticky = !entry.isIntersecting;
-  playerEl.classList.toggle('sticky', sticky);
-  document.body.classList.toggle('player-sticky', sticky);
-}, { threshold: 0 }).observe(sentinelEl);
+// El player permanece únicamente dentro de la sección "Timeline interactivo"
+// (se eliminó el comportamiento sticky en el bottom de la landing).
 
 // ─────────────────────────────────────────────────────────────
 //  CONTROLES DEL PLAYER
