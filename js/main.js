@@ -7773,60 +7773,146 @@ document.addEventListener('keydown', e => {
   var colores = {};
   DATA.resumen_temas.forEach(function(t) { colores[t.tema] = t.color; });
 
-  // ── Carrusel interactivo ──────────────────────────────────
-  var stage    = document.getElementById('rz-slide-num');
-  if (!stage) return;
-  var elNum    = document.getElementById('rz-slide-num');
-  var elQuote  = document.getElementById('rz-slide-quote');
-  var elTitle  = document.getElementById('rz-float-title');
-  var elDesc   = document.getElementById('rz-float-desc');
-  var elAudio  = document.getElementById('rz-float-audio');
-  var elBadge  = document.getElementById('rz-time-badge');
-  var elDots   = document.getElementById('rz-dots');
-  var btnPrev  = document.getElementById('rz-prev');
-  var btnNext  = document.getElementById('rz-next');
-  var idx = 0;
+  // ── Carrusel: track horizontal fluido ─────────────────────
+  var track   = document.getElementById('rz-track');
+  if (!track) return;
+  var elBadge = document.getElementById('rz-time-badge');
+  var elStart = document.querySelector('.rz-time-start');
+  var btnPrev = document.getElementById('rz-prev');
+  var btnNext = document.getElementById('rz-next');
 
-  // Dots
-  NARRATIVA.forEach(function(_, i) {
-    var d = document.createElement('button');
-    d.className = 'rz-dot';
-    d.setAttribute('aria-label', 'Momento ' + (i + 1));
-    d.addEventListener('click', function() { go(i); });
-    elDots.appendChild(d);
+  // Límites de tiempo (seg) de cada momento, para extraer texto del discurso
+  var starts = NARRATIVA.map(function(m) { return m.inicio_seg; });
+  function escapeHtml(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+  // Párrafos reales del discurso dentro del rango temporal del momento
+  function momentoParrafos(i) {
+    var lo = starts[i];
+    var hi = (i + 1 < starts.length) ? starts[i + 1] : Infinity;
+    var bloques = (typeof DATA !== 'undefined' && DATA.bloques) ? DATA.bloques : [];
+    var seen = {}, out = [];
+    bloques.forEach(function(bl) {
+      if (bl.inicio >= lo && bl.inicio < hi) {
+        var t = (bl.extracto || '').trim().replace(/\s*\.{2,}$/, '…');
+        if (t.length < 30 || seen[t]) return;
+        seen[t] = 1;
+        out.push(t);
+      }
+    });
+    return out;
+  }
+
+  var AUDIO_SVG = '<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>';
+
+  // Construir los 5 paneles (uno por momento) dentro del track
+  NARRATIVA.forEach(function(b, i) {
+    var paras = momentoParrafos(i);
+    var quote = (paras.length ? paras : [b.descripcion])
+      .map(function(p) { return '<p class="rz-quote-p">' + escapeHtml(p) + '</p>'; })
+      .join('');
+    var panel = document.createElement('div');
+    panel.className = 'rz-slide-panel';
+    panel.innerHTML =
+      '<div class="rz-slide-num">' + (i + 1) + '</div>' +
+      '<div class="rz-slide-quote">' + quote + '</div>' +
+      '<div class="rz-float-card">' +
+        '<div class="rz-float-rule"></div>' +
+        '<h4 class="rz-float-title">' + escapeHtml(b.titulo) + '</h4>' +
+        '<p class="rz-float-desc">' + escapeHtml(b.descripcion) + '</p>' +
+        '<div class="rz-float-rule"></div>' +
+        '<button class="rz-float-audio" type="button">' + AUDIO_SVG + ' ESCUCHAR AUDIO</button>' +
+      '</div>';
+    panel.querySelector('.rz-float-audio').addEventListener('click', function() {
+      seekTo(b.inicio_seg);
+      var tl = document.getElementById('timeline');
+      if (tl) tl.scrollIntoView({ behavior: 'smooth' });
+    });
+    track.appendChild(panel);
   });
 
-  function render() {
-    var b = NARRATIVA[idx];
-    elNum.textContent   = idx + 1;
-    elQuote.textContent = b.descripcion;
-    elTitle.textContent = b.titulo;
-    elDesc.textContent  = b.temas.join(' · ');
-    elBadge.textContent = b.tiempo.replace(/—/g, '-');
-    elAudio.onclick = function() {
-      seekTo(b.inicio_seg);
-      document.getElementById('timeline').scrollIntoView({ behavior: 'smooth' });
-    };
-    Array.prototype.forEach.call(elDots.children, function(d, i) {
-      d.classList.toggle('is-active', i === idx);
-    });
+  var idx = 0, snapTimer = null;
+  // Paso = ancho de un panel + gap entre paneles (medido en vivo)
+  function stepW() {
+    var ps = track.querySelectorAll('.rz-slide-panel');
+    if (ps.length > 1) return ps[1].offsetLeft - ps[0].offsetLeft;
+    return track.clientWidth || 1;
   }
-  function go(i) { idx = (i + NARRATIVA.length) % NARRATIVA.length; render(); }
+  function currentIndex(){ return Math.round(track.scrollLeft / stepW()); }
+  function setBadge(i)   {
+    var b = NARRATIVA[i]; if (b) elBadge.textContent = b.tiempo.replace(/—/g, '-');
+    if (elStart) elStart.classList.toggle('is-hidden', i !== 0);  // solo en el 1er momento
+  }
 
-  btnPrev.addEventListener('click', function() { go(idx - 1); });
-  btnNext.addEventListener('click', function() { go(idx + 1); });
+  function goTo(i, smooth) {
+    idx = Math.max(0, Math.min(NARRATIVA.length - 1, i));
+    if (smooth) {
+      // Snap desactivado durante la animación para que sea suave y no dé tirón;
+      // se reactiva al terminar (ya alineado, sin salto).
+      track.style.scrollSnapType = 'none';
+      clearTimeout(snapTimer);
+      snapTimer = setTimeout(function() { track.style.scrollSnapType = ''; }, 550);
+    }
+    track.scrollTo({ left: idx * stepW(), behavior: smooth ? 'smooth' : 'auto' });
+    setBadge(idx);
+  }
 
-  // Swipe táctil
-  var x0 = null;
-  stage.closest('.rz-carousel-stage').addEventListener('touchstart', function(e) { x0 = e.touches[0].clientX; }, { passive: true });
-  stage.closest('.rz-carousel-stage').addEventListener('touchend', function(e) {
-    if (x0 === null) return;
-    var dx = e.changedTouches[0].clientX - x0;
-    if (Math.abs(dx) > 40) go(idx + (dx < 0 ? 1 : -1));
-    x0 = null;
+  btnPrev.addEventListener('click', function() { goTo(currentIndex() - 1, true); });
+  btnNext.addEventListener('click', function() { goTo(currentIndex() + 1, true); });
+
+  // Actualiza el badge de tiempo mientras se desplaza (throttle con rAF)
+  var ticking = false;
+  track.addEventListener('scroll', function() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function() {
+      var i = currentIndex();
+      if (i !== idx) { idx = i; setBadge(idx); }
+      ticking = false;
+    });
   }, { passive: true });
 
-  render();
+  // ── Arrastre con mouse mantenido (fluido). En táctil el scroll es nativo ──
+  var down = false, decided = false, horiz = false, sx = 0, sy = 0, startLeft = 0;
+  track.addEventListener('pointerdown', function(e) {
+    if (e.pointerType !== 'mouse') return;           // táctil/pen → scroll nativo
+    if (e.button !== 0) return;
+    if (e.target.closest('button')) return;          // flechas / audio
+    down = true; decided = false; horiz = false;
+    sx = e.clientX; sy = e.clientY; startLeft = track.scrollLeft;
+  });
+  track.addEventListener('pointermove', function(e) {
+    if (!down) return;
+    if (e.buttons === 0) { down = false; return; }
+    var dx = e.clientX - sx, dy = e.clientY - sy;
+    if (!decided) {
+      if (Math.abs(dx) < 6 && Math.abs(dy) < 6) return;
+      decided = true;
+      horiz = Math.abs(dx) > Math.abs(dy);           // vertical → scroll del texto
+      if (horiz) {
+        try { track.setPointerCapture(e.pointerId); } catch (_) {}
+        track.classList.add('is-dragging');
+        track.style.scrollSnapType = 'none';         // desactivar snap mientras se arrastra
+        clearTimeout(snapTimer);
+      }
+    }
+    if (horiz) { track.scrollLeft = startLeft - dx; e.preventDefault(); }
+  });
+  function endDrag() {
+    if (!down) return;
+    down = false;
+    if (horiz) {
+      track.classList.remove('is-dragging');
+      goTo(currentIndex(), true);                    // ajuste suave al más cercano
+    }
+    decided = false; horiz = false;
+  }
+  track.addEventListener('pointerup', endDrag);
+  track.addEventListener('pointercancel', endDrag);
+
+  window.addEventListener('resize', function() { goTo(idx, false); });
+
+  setBadge(0);
 })();
 
 // ═══════════════════════════════════════════════════════════════
@@ -7863,6 +7949,11 @@ document.addEventListener('keydown', e => {
     });
     metrics.querySelectorAll('.rz-tb-fill').forEach(function(el) {
       el.style.width = (el.dataset.w || 0) + '%';
+    });
+    metrics.querySelectorAll('.rz-face-arc').forEach(function(el) {
+      var full = el.getTotalLength();
+      var dash = parseFloat(el.dataset.dash || 0);
+      el.style.strokeDasharray = dash + ' ' + full;
     });
   }
 
