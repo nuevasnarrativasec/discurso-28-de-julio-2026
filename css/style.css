@@ -706,54 +706,60 @@
       position: sticky;
       top: 0;
       z-index: 200;
-      background: var(--ink);
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
       display: flex;
       align-items: center;
-      padding: 0 24px;
-      height: 52px;
-      gap: 0;
+      justify-content: space-between;
+      padding: 0 40px;
+      height: 66px;
+      gap: 24px;
     }
     .nav-brand {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
+    .nav-link {
+      position: relative;
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-      margin-right: auto;
-      white-space: nowrap;
-    }
-    .nav-brand strong {
-      color: white;
-    }
-    .nav-links {
-      display: flex;
-      gap: 0;
-    }
-    .nav-link {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.45);
+      color: var(--ink);
       text-decoration: none;
-      padding: 0 16px;
-      height: 52px;
-      display: flex;
-      align-items: center;
-      transition: color 0.15s, background 0.15s;
-      border-bottom: 2px solid transparent;
+      padding: 6px 20px;
+      transition: color 0.15s;
+    }
+    /* separador de punto entre items */
+    .nav-link + .nav-link::before {
+      content: "·";
+      position: absolute;
+      left: -2px;
+      color: #b9a86a;
+      font-weight: 400;
     }
     .nav-link:hover {
-      color: white;
-      background: rgba(255,255,255,0.06);
+      color: var(--accent);
     }
     .nav-link.active {
-      color: white;
-      border-bottom-color: var(--accent);
+      color: var(--accent);
+    }
+    @media (max-width: 860px) {
+      .main-nav { padding: 0 20px; }
+      .nav-link { padding: 6px 12px; font-size: 10px; letter-spacing: 0.08em; }
     }
     @media (max-width: 600px) {
       .nav-links { display: none; }
-      .nav-brand { font-size: 10px; }
+      .nav-brand { font-size: 18px; }
     }
 
     /* ─── Hero collage ──────────────────────────────────────── */
@@ -775,9 +781,9 @@
     }
     .hero-collage-text {
       position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translate(-50%, -15%);
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, -5%);
       width: min(46%, 520px);
       text-align: center;
     }
@@ -807,6 +813,11 @@
       font-size: clamp(11px, 1.15vw, 14px);
       max-width: 42ch;
       margin: 0 auto;
+    }
+    p.update{
+      color: #a3a19a;
+      font-size: 12px;
+      margin: 5px auto;
     }
     /* Móvil: apila imagen + texto en flujo normal */
     @media (max-width: 640px) {

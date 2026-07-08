@@ -7878,7 +7878,7 @@ document.addEventListener('keydown', e => {
 //  NAV — active link al hacer scroll
 // ═══════════════════════════════════════════════════════════════
 (function() {
-  var sections = ['inicio','resumen','timeline','narrativa','explorador','perfil','verificacion'];
+  var sections = ['inicio','resumen','narrativa','timeline','datos','emociones','explorador','verificacion'];
   var links = {};
   sections.forEach(function(id) {
     links[id] = document.querySelector('.nav-link[href="#' + id + '"]');
