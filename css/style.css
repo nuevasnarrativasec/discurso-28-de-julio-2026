@@ -1105,6 +1105,82 @@
     .timeline-section #legend-temas,
     .timeline-section .bars-section { display: none; }
 
+    /* ─── Sección "Discurso en data" ─────────────────────── */
+    .data-section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 60px 24px 64px;
+    }
+    .data-block { margin-bottom: 72px; }
+    .data-block:last-child { margin-bottom: 8px; }
+    .data-block-head {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .data-block-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .data-block-text {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--ink-muted);
+      margin-bottom: 0;
+    }
+
+    /* Contenedor del gráfico (placeholder de imagen) */
+    .chart-ph { margin: 40px 0 0; }
+    .chart-ph-title {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+    .chart-ph-sub {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 0 0 18px;
+    }
+    .chart-ph-title + .chart-ph-box { margin-top: 18px; }
+    .chart-ph-box {
+      max-width: 640px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        repeating-linear-gradient(
+          45deg,
+          rgba(0,0,0,0.015) 0, rgba(0,0,0,0.015) 10px,
+          transparent 10px, transparent 20px
+        ),
+        var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: 4px;
+    }
+    .chart-ph-bar     { min-height: 300px; }
+    .chart-ph-hbar    { min-height: 380px; }
+    .chart-ph-network { min-height: 480px; }
+    .chart-ph-hint {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: var(--ink-faint);
+    }
+    .chart-ph-ico {
+      font-size: 15px;
+      color: var(--border);
+      letter-spacing: 1px;
+    }
+
     /* ─── Módulo A — Resumen Inmediato ───────────────────────── */
     .modA-section {
       background: #f9f6f1;
