@@ -2017,9 +2017,11 @@
       flex: 0 0 100%; width: 100%;
       scroll-snap-align: start;
       min-height: 350px;
-      display: flex; align-items: flex-start; gap: 20px;
+      display: flex; align-items: stretch; gap: 20px;
       padding-right: 46%;              /* reserva para la cita flotante */
     }
+    /* Columna marcador: número + línea vertical del color del círculo */
+    .rz-slide-marker { flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; }
     .rz-slide-num {
       flex: 0 0 auto;
       width: 46px; height: 46px;
@@ -2028,30 +2030,52 @@
       background: #4f86b8; color: #fff;
       font-family: var(--font-serif); font-weight: 700; font-size: 21px; line-height: 1;
     }
-    .rz-slide-quote {
-      flex: 1 1 auto; min-width: 0;
-      font-size: 13px; color: var(--ink-muted); line-height: 1.75;
-      max-height: 300px; overflow-y: auto; overflow-x: hidden;
-      padding-right: 14px; cursor: auto; touch-action: pan-y;
-      overscroll-behavior: contain;
-      scrollbar-width: thin; scrollbar-color: #c7c4bb transparent;
+    .rz-slide-line { flex: 1 1 auto; width: 2px; min-height: 40px; margin-top: 12px; background: #4f86b8; }
+
+    .rz-slide-main { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; }
+    .rz-slide-time {
+      align-self: flex-start;
+      background: #fdf3c4; border: 1px solid #ecd98a;
+      font-size: 11px; font-weight: 600; color: #7a6a1f;
+      padding: 3px 10px; border-radius: 3px; white-space: nowrap;
+      font-variant-numeric: tabular-nums; margin-bottom: 14px;
     }
-    .rz-slide-quote::-webkit-scrollbar { width: 6px; }
-    .rz-slide-quote::-webkit-scrollbar-thumb { background: #c7c4bb; border-radius: 3px; }
-    .rz-slide-quote::-webkit-scrollbar-track { background: transparent; }
-    .rz-quote-p { margin: 0 0 12px; }
-    .rz-quote-p:last-child { margin-bottom: 0; }
-    @media (max-width: 620px) { .rz-slide-quote { max-height: 240px; } }
+    .rz-slide-quote {
+      font-size: 14px; color: var(--ink-muted); line-height: 1.75;
+    }
+    .rz-quote-p { margin: 0; }
+    .rz-mark { background: #fae9a0; padding: 0 3px; border-radius: 2px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .rz-slide-main .rz-float-audio { margin-top: 22px; }
+    /* Reproductor de clip por momento: oculto hasta pulsar "Escuchar audio" */
+    .rz-slide-audio-wrap { margin-top: 22px; width: 100%; }
+    .rz-slide-main .rz-slide-audio-wrap .rz-float-audio { margin-top: 0; }
+    .rz-slide-player { display: none; width: 100%; max-width: 360px; margin-top: 4px; }
+    .rz-slide-audio-wrap.is-playing .rz-slide-audio { display: none; }
+    .rz-slide-audio-wrap.is-playing .rz-slide-player { display: block; }
 
     .rz-float-card {
       position: absolute; top: 8px; right: 0; width: 44%;
-      background: #fff; border: 1px solid var(--ink);
+      background: #fff; border: 1.5px solid var(--ink);
       padding: 26px 26px 24px; border-radius: 2px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+    /* Colita tipo globo apuntando al párrafo (borde + relleno) */
+    .rz-float-card::before, .rz-float-card::after {
+      content: ""; position: absolute; width: 0; height: 0;
+      border-style: solid; border-color: transparent;
+    }
+    .rz-float-card::before {
+      top: 70px; right: 100%;
+      border-width: 13px 13px 13px 0; border-right-color: var(--ink);
+    }
+    .rz-float-card::after {
+      top: 71px; right: calc(100% - 1px);
+      border-width: 12px 12px 12px 0; border-right-color: #fff;
     }
     @media (max-width: 620px) {
       .rz-slide-panel { flex-wrap: wrap; padding-right: 0; }
       .rz-float-card { position: static; flex: 1 0 100%; width: 100%; margin-top: 24px; }
+      .rz-float-card::before, .rz-float-card::after { display: none; }
     }
     .rz-float-rule { height: 1px; background: var(--ink); width: 44px; }
     .rz-float-title { font-family: var(--font-serif); font-size: 17px; font-weight: 700; color: var(--ink); line-height: 1.3; margin: 16px 0 12px; }

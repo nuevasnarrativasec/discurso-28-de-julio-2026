@@ -7722,53 +7722,10 @@ document.addEventListener('keydown', e => {
 //  MÓDULO B — narrativa en 5 momentos
 // ═══════════════════════════════════════════════════════════════
 (function() {
-  var NARRATIVA = [
-    {
-      tiempo: '00:01 — 02:46',
-      inicio_seg: 1.3,
-      titulo: 'Apertura y balance del primer año',
-      descripcion: 'El presidente abre el mensaje con el protocolo ante las autoridades del Estado y traza un balance del primer año de gobierno, reconociendo las dificultades heredadas y los logros alcanzados.',
-      temas: ['Democracia e Instituciones', 'Otros'],
-      anuncios: 0,
-      clave: false
-    },
-    {
-      tiempo: '02:59 — 15:27',
-      inicio_seg: 179.3,
-      titulo: 'Defensa del mandato y principios constitucionales',
-      descripcion: 'El discurso pasa a un tono más combativo: el presidente defiende la legitimidad de su mandato, rechaza acusaciones y reafirma el principio constitucional de igualdad ante la ley.',
-      temas: ['Democracia e Instituciones', 'Anticorrupción'],
-      anuncios: 2,
-      clave: true
-    },
-    {
-      tiempo: '15:28 — 21:39',
-      inicio_seg: 928.6,
-      titulo: 'Crisis económica y medidas de austeridad',
-      descripcion: 'La sección económica aborda el impacto de la pandemia y la inflación global en las familias peruanas. Se anuncian exoneraciones de IGV, subsidios y se rinde cuenta del manejo del Fondo de Estabilización Fiscal.',
-      temas: ['Economía', 'Agricultura'],
-      anuncios: 8,
-      clave: true
-    },
-    {
-      tiempo: '21:40 — 44:25',
-      inicio_seg: 1300.9,
-      titulo: 'Salud, educación y protección social',
-      descripcion: 'El bloque más extenso: avances en vacunación, reforma de programas sociales, metas en educación y logros en seguridad ciudadana. Se destacan las cifras de cobertura y los compromisos futuros.',
-      temas: ['Salud', 'Educación', 'Seguridad', 'Agricultura'],
-      anuncios: 15,
-      clave: false
-    },
-    {
-      tiempo: '44:26 — 110:35',
-      inicio_seg: 2666.4,
-      titulo: 'Regiones, infraestructura y cierre',
-      descripcion: 'El tramo final recorre inversiones en infraestructura pesquera, hídrica y vial en todo el territorio. El discurso cierra con menciones a múltiples regiones y un llamado a la unidad nacional.',
-      temas: ['Regiones', 'Infraestructura', 'Política Exterior'],
-      anuncios: 22,
-      clave: true
-    }
-  ];
+  // El contenido editable de los 5 momentos vive en ./js/momentos.js
+  // (se carga ANTES que este archivo y define window.MOMENTOS).
+  var NARRATIVA = (window.MOMENTOS && window.MOMENTOS.length) ? window.MOMENTOS : [];
+  if (!NARRATIVA.length) return;
 
   var colores = {};
   DATA.resumen_temas.forEach(function(t) { colores[t.tema] = t.color; });
@@ -7776,7 +7733,6 @@ document.addEventListener('keydown', e => {
   // ── Carrusel: track horizontal fluido ─────────────────────
   var track   = document.getElementById('rz-track');
   if (!track) return;
-  var elBadge = document.getElementById('rz-time-badge');
   var elStart = document.querySelector('.rz-time-start');
   var btnPrev = document.getElementById('rz-prev');
   var btnNext = document.getElementById('rz-next');
@@ -7786,47 +7742,96 @@ document.addEventListener('keydown', e => {
   function escapeHtml(s) {
     return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
-  // Párrafos reales del discurso dentro del rango temporal del momento
-  function momentoParrafos(i) {
+  // Cita (una sola, concisa) real del discurso dentro del rango del momento
+  function momentoCita(i) {
+    if (NARRATIVA[i].cita) return NARRATIVA[i].cita;
     var lo = starts[i];
     var hi = (i + 1 < starts.length) ? starts[i + 1] : Infinity;
     var bloques = (typeof DATA !== 'undefined' && DATA.bloques) ? DATA.bloques : [];
-    var seen = {}, out = [];
-    bloques.forEach(function(bl) {
+    var pick = '';
+    for (var k = 0; k < bloques.length; k++) {
+      var bl = bloques[k];
       if (bl.inicio >= lo && bl.inicio < hi) {
-        var t = (bl.extracto || '').trim().replace(/\s*\.{2,}$/, '…');
-        if (t.length < 30 || seen[t]) return;
-        seen[t] = 1;
-        out.push(t);
+        var t = (bl.extracto || '').trim();
+        if (t.length > 120) { pick = t; break; }
+        if (!pick) pick = t;
       }
-    });
-    return out;
+    }
+    return pick.replace(/\s*\.{2,}$/, '…');
+  }
+  // Envuelve la frase a analizar en <mark> (texto ya escapado)
+  function conResaltado(textoEsc, frase) {
+    if (!frase) return textoEsc;
+    var f = escapeHtml(frase);
+    var pos = textoEsc.indexOf(f);
+    if (pos < 0) return textoEsc;
+    return textoEsc.slice(0, pos) + '<mark class="rz-mark">' + f + '</mark>' + textoEsc.slice(pos + f.length);
   }
 
   var AUDIO_SVG = '<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>';
 
+  // Reproductores de clip por momento. Solo uno puede sonar a la vez.
+  var players = [];
+  function pausarOtros(excepto) {
+    // Pausa el audio del discurso general…
+    if (typeof audio !== 'undefined' && audio && audio !== excepto) {
+      try { audio.pause(); } catch (e) {}
+    }
+    // …y cualquier otro clip de momento.
+    players.forEach(function(p) { if (p !== excepto) p.pause(); });
+  }
+  function pausarTodosLosClips() { players.forEach(function(p) { p.pause(); }); }
+  // Si arranca el audio general, callar los clips.
+  if (typeof audio !== 'undefined' && audio) {
+    audio.addEventListener('play', pausarTodosLosClips);
+  }
+
   // Construir los 5 paneles (uno por momento) dentro del track
   NARRATIVA.forEach(function(b, i) {
-    var paras = momentoParrafos(i);
-    var quote = (paras.length ? paras : [b.descripcion])
-      .map(function(p) { return '<p class="rz-quote-p">' + escapeHtml(p) + '</p>'; })
-      .join('');
+    var cita  = momentoCita(i) || b.descripcion;
+    var quote = conResaltado(escapeHtml(cita), b.resaltar);
+    var tiempo = escapeHtml(b.tiempo.replace(/—/g, '-'));
     var panel = document.createElement('div');
     panel.className = 'rz-slide-panel';
     panel.innerHTML =
-      '<div class="rz-slide-num">' + (i + 1) + '</div>' +
-      '<div class="rz-slide-quote">' + quote + '</div>' +
+      '<div class="rz-slide-marker">' +
+        '<div class="rz-slide-num">' + (i + 1) + '</div>' +
+        '<div class="rz-slide-line"></div>' +
+      '</div>' +
+      '<div class="rz-slide-main">' +
+        '<span class="rz-slide-time">' + tiempo + '</span>' +
+        '<div class="rz-slide-quote"><p class="rz-quote-p">' + quote + '</p></div>' +
+        '<div class="rz-slide-audio-wrap">' +
+          '<button class="rz-slide-audio rz-float-audio" type="button">' + AUDIO_SVG + ' ESCUCHAR AUDIO</button>' +
+          '<audio class="rz-slide-player" controls preload="none"></audio>' +
+        '</div>' +
+      '</div>' +
       '<div class="rz-float-card">' +
         '<div class="rz-float-rule"></div>' +
         '<h4 class="rz-float-title">' + escapeHtml(b.titulo) + '</h4>' +
         '<p class="rz-float-desc">' + escapeHtml(b.descripcion) + '</p>' +
         '<div class="rz-float-rule"></div>' +
-        '<button class="rz-float-audio" type="button">' + AUDIO_SVG + ' ESCUCHAR AUDIO</button>' +
       '</div>';
-    panel.querySelector('.rz-float-audio').addEventListener('click', function() {
-      seekTo(b.inicio_seg);
-      var tl = document.getElementById('timeline');
-      if (tl) tl.scrollIntoView({ behavior: 'smooth' });
+
+    var wrap   = panel.querySelector('.rz-slide-audio-wrap');
+    var player = panel.querySelector('.rz-slide-player');
+    if (b.audio) player.src = b.audio;
+    players.push(player);
+    // Refuerzo: al reproducir un clip, callar todos los demás audios.
+    player.addEventListener('play', function() { pausarOtros(player); });
+
+    panel.querySelector('.rz-slide-audio').addEventListener('click', function() {
+      if (b.audio) {
+        // Clip propio del momento → mostrar su player inline y reproducir.
+        pausarOtros(player);
+        wrap.classList.add('is-playing');
+        player.play().catch(function() {});
+      } else {
+        // Aún no hay clip: reproducir el audio general en su segundo.
+        seekTo(b.inicio_seg);
+        var tl = document.getElementById('timeline');
+        if (tl) tl.scrollIntoView({ behavior: 'smooth' });
+      }
     });
     track.appendChild(panel);
   });
@@ -7840,8 +7845,7 @@ document.addEventListener('keydown', e => {
   }
   function currentIndex(){ return Math.round(track.scrollLeft / stepW()); }
   function setBadge(i)   {
-    var b = NARRATIVA[i]; if (b) elBadge.textContent = b.tiempo.replace(/—/g, '-');
-    if (elStart) elStart.classList.toggle('is-hidden', i !== 0);  // solo en el 1er momento
+    if (elStart) elStart.classList.toggle('is-hidden', i !== 0);  // "Inicio discurso" solo en el 1er momento
   }
 
   function goTo(i, smooth) {
@@ -7867,7 +7871,7 @@ document.addEventListener('keydown', e => {
     ticking = true;
     requestAnimationFrame(function() {
       var i = currentIndex();
-      if (i !== idx) { idx = i; setBadge(idx); }
+      if (i !== idx) { idx = i; setBadge(idx); pausarTodosLosClips(); }  // al cambiar de momento, callar clips
       ticking = false;
     });
   }, { passive: true });
@@ -7911,6 +7915,18 @@ document.addEventListener('keydown', e => {
   track.addEventListener('pointercancel', endDrag);
 
   window.addEventListener('resize', function() { goTo(idx, false); });
+
+  // Si la sección sale de la vista al hacer scroll, pausar los clips.
+  if ('IntersectionObserver' in window) {
+    var seccion = track.closest('.rz-momentos') || track;
+    new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (!e.isIntersecting) pausarTodosLosClips(); });
+    }, { threshold: 0 }).observe(seccion);
+  }
+  // Respaldo: si la pestaña se oculta, también pausar.
+  document.addEventListener('visibilitychange', function() {
+    if (document.hidden) pausarTodosLosClips();
+  });
 
   setBadge(0);
 })();
