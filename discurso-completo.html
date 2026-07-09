@@ -101,7 +101,6 @@
           <div class="rz-wc-ticks"><span>100</span><span>500</span><span>1,000</span><span>5,000</span><span>10,000</span><span>20,000</span></div>
           <div class="rz-wc-bar"><span class="rz-wc-fill"></span></div>
         </div>
-        <p class="rz-wc-note"><strong>10.5% más largo</strong><br>que el año pasado</p>
       </div>
 
       <!-- Referencias -->
@@ -126,25 +125,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Nube de palabras -->
-      <div class="rz-cell rz-cell--divT rz-cell--pad">
-        <h3 class="rz-metric-title rz-metric-title--center">Palabras que más se repiten</h3>
-        <p class="rz-cloud-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
-        <figure class="rz-cloud is-empty">
-          <img src="./img/nube-palabras.jpg" alt="Nube de palabras del discurso"
-               onload="this.closest('.rz-cloud').classList.remove('is-empty')"
-               onerror="this.closest('.rz-cloud').classList.add('is-empty')">
-          <figcaption class="rz-cloud-ph">Nube de palabras del discurso</figcaption>
-        </figure>
-      </div>
-
-      <!-- Barras de temas -->
-      <div class="rz-cell rz-cell--divT rz-cell--divL rz-cell--pad">
-        <h3 class="rz-metric-title rz-metric-title--center">Distribución del tiempo por temas</h3>
-        <div id="rz-theme-bars" class="rz-theme-bars"></div>
-      </div>
-
 
       <!-- Mención a regiones -->
       <div class="rz-cell rz-cell--divT rz-cell--pad">
@@ -297,50 +277,14 @@
         </div>
       </div>
 
-      <!-- Expresividad facial -->
+      <!-- Barras de temas -->
       <div class="rz-cell rz-cell--divT rz-cell--divL rz-cell--pad">
-        <h3 class="rz-metric-title rz-metric-title--center">Expresividad facial</h3>
-        <div class="rz-faces">
-        <div class="rz-face rz-face--positivos">
-          <div class="rz-face-pct">67<span>%</span></div>
-          <svg class="rz-face-svg" viewBox="0 0 120 120" aria-hidden="true">
-            <circle class="rz-face-arc-bg" cx="60" cy="60" r="52"/>
-            <circle class="rz-face-arc" cx="60" cy="60" r="52" data-dash="218.9" style="stroke-dasharray:0 326.7"/>
-            <circle class="rz-face-outline" cx="60" cy="60" r="34"/>
-            <circle class="rz-face-eye" cx="49" cy="54" r="2.6"/>
-            <circle class="rz-face-eye" cx="71" cy="54" r="2.6"/>
-            <path class="rz-face-mouth" d="M45,71 Q60,84 75,71"/>
-          </svg>
-          <div class="rz-face-label">Gestos positivos</div>
-        </div>
-        <div class="rz-face rz-face--neutrales">
-          <div class="rz-face-pct">28<span>%</span></div>
-          <svg class="rz-face-svg" viewBox="0 0 120 120" aria-hidden="true">
-            <circle class="rz-face-arc-bg" cx="60" cy="60" r="52"/>
-            <circle class="rz-face-arc" cx="60" cy="60" r="52" data-dash="91.5" style="stroke-dasharray:0 326.7"/>
-            <circle class="rz-face-outline" cx="60" cy="60" r="34"/>
-            <circle class="rz-face-eye" cx="49" cy="54" r="2.6"/>
-            <circle class="rz-face-eye" cx="71" cy="54" r="2.6"/>
-            <line class="rz-face-mouth" x1="46" y1="74" x2="74" y2="74"/>
-          </svg>
-          <div class="rz-face-label">Gestos neutrales</div>
-        </div>
-        <div class="rz-face rz-face--negativos">
-          <div class="rz-face-pct">5<span>%</span></div>
-          <svg class="rz-face-svg" viewBox="0 0 120 120" aria-hidden="true">
-            <circle class="rz-face-arc-bg" cx="60" cy="60" r="52"/>
-            <circle class="rz-face-arc" cx="60" cy="60" r="52" data-dash="16.3" style="stroke-dasharray:0 326.7"/>
-            <circle class="rz-face-outline" cx="60" cy="60" r="34"/>
-            <circle class="rz-face-eye" cx="49" cy="54" r="2.6"/>
-            <circle class="rz-face-eye" cx="71" cy="54" r="2.6"/>
-            <path class="rz-face-mouth" d="M45,79 Q60,67 75,79"/>
-          </svg>
-          <div class="rz-face-label">Gestos negativos</div>
-        </div>
-        </div>
+        <h3 class="rz-metric-title rz-metric-title--center">Distribución del tiempo por temas</h3>
+        <div id="rz-theme-bars" class="rz-theme-bars"></div>
       </div>
 
-    </div><!-- /rz-metrics -->
+
+      </div><!-- /rz-metrics -->
 
     <div class="modE-top-grid" id="perfil">
           <!-- Perfil Discursivo -->
