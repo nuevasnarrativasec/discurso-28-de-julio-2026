@@ -1995,12 +1995,13 @@
       transition: background 0.15s, color 0.15s;
     }
     .rz-arrow:hover { background: var(--ink); color: #fff; }
-    .rz-carousel-stage { position: relative; flex: 1; min-width: 0; min-height: 420px; padding-bottom: 44px; }
-    .rz-swipe-hint { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--ink-muted); margin-bottom: 18px; }
+    .rz-carousel-stage { position: relative; flex: 1; min-width: 0; min-height: 420px; padding-bottom: 20px; display: flex; flex-direction: column; }
+    .rz-swipe-hint { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--ink-muted); margin-bottom: 18px; flex: 0 0 auto; }
 
     /* Track horizontal fluido */
     .rz-slide-track {
       display: flex;
+      flex: 1 1 auto;                 /* rellena el alto para que la línea llegue a la timeline */
       gap: 72px;
       overflow-x: auto; overflow-y: hidden;
       scroll-snap-type: x mandatory;
@@ -2030,7 +2031,7 @@
       background: #4f86b8; color: #fff;
       font-family: var(--font-serif); font-weight: 700; font-size: 21px; line-height: 1;
     }
-    .rz-slide-line { flex: 1 1 auto; width: 2px; min-height: 40px; margin-top: 12px; background: #4f86b8; }
+    .rz-slide-line { flex: 1 1 auto; width: 2px; min-height: 40px; /*margin-top: 12px;*/ background: #4f86b8; }
 
     .rz-slide-main { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; }
     .rz-slide-time {
@@ -2090,7 +2091,7 @@
     }
     .rz-float-audio:hover { background: var(--ink); color: #fff; }
 
-    .rz-time-track { position: absolute; left: 0; right: 0; bottom: 20px; height: 1px; background: var(--border); }
+    .rz-time-track { position: relative; flex: 0 0 auto; margin-top: 4px; height: 1px; background: var(--border); }
     .rz-time-start {
       position: absolute; left: 0; top: 50%; transform: translateY(-50%);
       background: var(--ink); color: #fff;
