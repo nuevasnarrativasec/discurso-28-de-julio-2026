@@ -21,14 +21,21 @@
 <!-- ══════════════════════════════════════════════════════════ -->
 <nav class="main-nav">
   <a class="nav-brand" href="#inicio">El discurso en datos</a>
-  <div class="nav-links">
-    <a class="nav-link" href="#resumen">Resumen</a>
-    <a class="nav-link" href="#narrativa">5 momentos</a>
-    <a class="nav-link" href="#timeline">Timeline</a>
-    <a class="nav-link" href="#datos">Data</a>
-    <!--<a class="nav-link" href="#emociones">Emociones</a>-->
-    <a class="nav-link" href="#explorador">Contenido</a>
-    <a class="nav-link" href="#verificacion">Verificación</a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a class="nav-link" href="#resumen">Resumen</a>
+      <a class="nav-link" href="#narrativa">5 momentos</a>
+      <a class="nav-link" href="#timeline">Timeline</a>
+      <a class="nav-link" href="#datos">Data</a>
+      <!--<a class="nav-link" href="#emociones">Emociones</a>-->
+      <a class="nav-link" href="#explorador">Contenido</a>
+      <a class="nav-link" href="#verificacion">Verificación</a>
+    </div>
+    <!-- Botón descargar discurso: reemplaza el href por la URL del PDF -->
+    <a class="nav-download" href="./data/discurso-pedro-castillo.pdf" target="_blank" rel="noopener">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Descargar discurso
+    </a>
   </div>
 </nav>
 
@@ -562,8 +569,8 @@
     </div>
     <figure class="chart-ph">
       <figcaption class="chart-ph-title">El país que imagina el discurso</figcaption>
-      <div class="chart-ph-box chart-ph-bar" data-chart="pais-imagina">
-        <img src="./img/grafico-pais-imagina.jpg" alt="" width="100%">
+      <div class="chart-ph-box is-chart chart-ph-bar" data-chart="pais-imagina">
+        <div class="g-chart" id="g-pais"></div>
       </div>
     </figure>
   </div>
@@ -576,8 +583,8 @@
     </div>
     <figure class="chart-ph">
       <figcaption class="chart-ph-title">Prioridades del discurso por eje temático</figcaption>
-      <div class="chart-ph-box chart-ph-hbar" data-chart="prioridades-ejes">
-        <img src="./img/grafico-prioridades-tematicas.jpg" alt="" width="100%">
+      <div class="chart-ph-box is-chart chart-ph-hbar" data-chart="prioridades-ejes">
+        <div class="g-chart" id="g-prioridades"></div>
       </div>
     </figure>
   </div>
@@ -591,8 +598,8 @@
     <figure class="chart-ph">
       <figcaption class="chart-ph-title">Mapa de conexiones temáticas</figcaption>
       <p class="chart-ph-sub">Temas que aparecen juntos en los mismos párrafos</p>
-      <div class="chart-ph-box chart-ph-network" data-chart="conexiones-tematicas">
-        <img src="./img/grafico-conexiones-tematicas.jpg" alt="" width="100%">
+      <div class="chart-ph-box is-chart chart-ph-network" data-chart="conexiones-tematicas">
+        <div class="g-chart" id="g-conexiones"></div>
       </div>
     </figure>
   </div>
@@ -924,5 +931,8 @@
 <script src="./js/momentos.js?v1"></script>
 <script src="./js/fact-checking.js?v1"></script>
 <script src="./js/main.js?v2"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="./js/datos-graficos.js?v1"></script>
+<script src="./js/graficos.js?v1"></script>
 </body>
 </html>
