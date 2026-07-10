@@ -1,22 +1,47 @@
 /* ═══════════════════════════════════════════════════════════════════
-   FACT-CHECKING — AFIRMACIONES VERIFICADAS (CONTENIDO EDITABLE)
-   ───────────────────────────────────────────────────────────────────
-   Un objeto {} por afirmación. Los contadores de los filtros
-   (VERDADERO / PARCIAL / EXAGERADO / FALSO) se calculan solos según
-   cuántas afirmaciones haya de cada tipo. No hay que tocar números.
-
-   Campos de cada afirmación:
-     tiempo       Marca de tiempo que se muestra arriba. Ej: '18:30'
-     afirmacion   La frase analizada (título del acordeón).
-     veredicto    Uno de: 'verdadero' | 'parcial' | 'exagerado' | 'falso'
-                  (en minúsculas, sin tildes). Define el color y el filtro.
-     descripcion  Texto que aparece al abrir el acordeón (el análisis).
-
-   Reglas:
-     • No borres comas, llaves {} ni corchetes [].
-     • Si el texto lleva un apóstrofo (') escríbelo así: \'
+   FACT-CHECKING — CALIFICACIONES + AFIRMACIONES (CONTENIDO EDITABLE)
    ═══════════════════════════════════════════════════════════════════ */
 
+/* ── 1) LAS 3 CALIFICACIONES ─────────────────────────────────────────
+   Son los recuadros de color (que además funcionan como filtros).
+   El contador de cada uno se calcula solo. Puedes editar 'label' y 'desc'.
+   NO cambies 'id' ni 'color' salvo que sepas lo que haces:
+     id     → valor que usarás en cada afirmación (campo 'veredicto').
+     color  → verde | naranja | rojo (define el color del recuadro/badge).
+     label  → texto grande en mayúsculas.
+     desc   → texto descriptivo que va DEBAJO, dentro del recuadro.
+──────────────────────────────────────────────────────────────────── */
+window.FACT_CALIFICACIONES = [
+  {
+    id:    'verdadero',
+    color: 'verde',
+    label: 'Verdadero',
+    desc:  'La afirmación está respaldada por datos oficiales.'
+  },
+  {
+    id:    'enganoso',
+    color: 'naranja',
+    label: 'Engañoso',
+    desc:  'Mezcla datos reales con omisiones o imprecisiones que distorsionan su significado.'
+  },
+  {
+    id:    'falso',
+    color: 'rojo',
+    label: 'Falso',
+    desc:  'Contradice información verificada.'
+  }
+];
+
+/* ── 2) LAS AFIRMACIONES (acordeones) ───────────────────────────────
+   Un objeto {} por afirmación. Campos:
+     tiempo       Marca de tiempo. Ej: '18:30'
+     afirmacion   La frase analizada (título del acordeón).
+     veredicto    Debe ser uno de los 'id' de arriba:
+                    'verdadero' | 'enganoso' | 'falso'
+     descripcion  Texto que aparece al abrir el acordeón (el análisis).
+
+   Reglas: no borres comas, llaves {} ni corchetes []. Apóstrofo → \'
+──────────────────────────────────────────────────────────────────── */
 window.FACTS = [
 
   {
@@ -28,8 +53,8 @@ window.FACTS = [
   {
     tiempo:      '29:15',
     afirmacion:  'Se han construido 30 hospitales en los últimos dos años',
-    veredicto:   'parcial',
-    descripcion: 'Se iniciaron obras en 30 establecimientos de salud, pero solo una parte está operativa a la fecha; el resto se encuentra en construcción o equipamiento.'
+    veredicto:   'enganoso',
+    descripcion: 'Se iniciaron obras en 30 establecimientos de salud, pero solo una parte está operativa a la fecha; presentar la cifra como hospitales terminados distorsiona el avance real.'
   },
   {
     tiempo:      '22:45',
@@ -40,8 +65,8 @@ window.FACTS = [
   {
     tiempo:      '56:20',
     afirmacion:  'El índice de pobreza se redujo en 5 puntos porcentuales',
-    veredicto:   'exagerado',
-    descripcion: 'Hubo una reducción de la pobreza, pero de menor magnitud que la mencionada. La cifra citada sobreestima el avance reportado por el INEI.'
+    veredicto:   'enganoso',
+    descripcion: 'Hubo una reducción de la pobreza, pero de menor magnitud; la cifra citada omite el margen de medición del INEI y sobreestima el avance.'
   },
   {
     tiempo:      '11:40',
@@ -52,8 +77,8 @@ window.FACTS = [
   {
     tiempo:      '48:05',
     afirmacion:  'Se entregaron becas a jóvenes en todas las regiones',
-    veredicto:   'parcial',
-    descripcion: 'El programa de becas tuvo cobertura nacional, pero la distribución fue desigual y algunas regiones recibieron un número marginal de beneficiarios.'
+    veredicto:   'enganoso',
+    descripcion: 'El programa tuvo cobertura nacional, pero la distribución fue muy desigual y algunas regiones recibieron un número marginal de beneficiarios.'
   },
   {
     tiempo:      '1:02:10',

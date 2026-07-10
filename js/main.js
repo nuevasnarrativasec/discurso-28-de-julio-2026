@@ -8297,32 +8297,36 @@ document.addEventListener('keydown', e => {
   function escapeHtml(s) {
     return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
-  // Veredicto → color (clase) + etiqueta
-  var META = {
-    verdadero: { cls: 'verde',    label: 'Verdadero' },
-    parcial:   { cls: 'amarillo', label: 'Parcial'   },
-    exagerado: { cls: 'naranja',  label: 'Exagerado' },
-    falso:     { cls: 'rojo',     label: 'Falso'     }
-  };
-  var ORDEN = ['verdadero', 'parcial', 'exagerado', 'falso'];
+  // Calificaciones (config editable en fact-checking.js)
+  var CALIF = (window.FACT_CALIFICACIONES && window.FACT_CALIFICACIONES.length)
+    ? window.FACT_CALIFICACIONES
+    : [
+        { id: 'verdadero', color: 'verde',   label: 'Verdadero', desc: '' },
+        { id: 'enganoso',  color: 'naranja', label: 'Engañoso',  desc: '' },
+        { id: 'falso',     color: 'rojo',    label: 'Falso',     desc: '' }
+      ];
+  var META = {};
+  CALIF.forEach(function(c) { META[c.id] = { cls: c.color, label: c.label, desc: c.desc || '' }; });
 
   // ── Filtros (con contadores calculados) ───────────────────
-  var counts = { verdadero: 0, parcial: 0, exagerado: 0, falso: 0 };
+  var counts = {};
+  CALIF.forEach(function(c) { counts[c.id] = 0; });
   FACTS.forEach(function(f) {
     var v = (f.veredicto || '').toLowerCase();
     if (counts[v] != null) counts[v]++;
   });
   var activo = null;   // veredicto filtrado actualmente (o null = todos)
 
-  ORDEN.forEach(function(v) {
-    var m = META[v];
+  CALIF.forEach(function(c) {
+    var v = c.id;
     var btn = document.createElement('button');
     btn.type = 'button';
-    btn.className = 'modF-filter ' + m.cls;
+    btn.className = 'modF-filter ' + c.color;
     btn.setAttribute('data-veredicto', v);
     btn.innerHTML =
       '<span class="modF-filter-count">' + counts[v] + '</span>' +
-      '<span class="modF-filter-label">' + m.label + '</span>';
+      '<span class="modF-filter-label">' + escapeHtml(c.label) + '</span>' +
+      (c.desc ? '<span class="modF-filter-desc">' + escapeHtml(c.desc) + '</span>' : '');
     btn.addEventListener('click', function() {
       activo = (activo === v) ? null : v;   // toggle
       aplicarFiltro();
@@ -8387,6 +8391,15 @@ document.addEventListener('keydown', e => {
         cerrar(item, item.querySelector('.modF-acc-body'), item.querySelector('.modF-acc-head'));
       }
     });
+    // Abrir por defecto el primer acordeón visible
+    listBox.querySelectorAll('.modF-acc-item.is-open').forEach(function(otro) {
+      cerrar(otro, otro.querySelector('.modF-acc-body'), otro.querySelector('.modF-acc-head'));
+    });
+    var visibles = Array.prototype.filter.call(
+      listBox.querySelectorAll('.modF-acc-item'),
+      function(it) { return it.style.display !== 'none'; }
+    );
+    if (visibles[0]) abrir(visibles[0], visibles[0].querySelector('.modF-acc-body'), visibles[0].querySelector('.modF-acc-head'));
   }
 
   // Abrir la primera afirmación por defecto
