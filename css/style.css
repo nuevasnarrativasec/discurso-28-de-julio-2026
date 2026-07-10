@@ -1811,14 +1811,27 @@
     .modF-acc-body-inner { padding: 20px 26px 6px; }
     .modF-acc-desc { font-size: 15px; line-height: 1.7; color: var(--ink-muted); margin: 0; }
 
-    .modF-ausentes-card { background: #fbeaea; border: 1.5px solid #f2c9c6; border-radius: 14px; padding: 30px; margin-top: 8px; }
-    .modF-ausentes-header { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
-    .modF-ausentes-title { font-family: "ivypresto-headline",'Georgia',serif; font-size: 22px; font-weight: 700; color: #9a3324; }
-    .modF-ausentes-sub { font-size: 13px; color: #a04a3c; margin-bottom: 22px; line-height: 1.5; }
-    .modF-ausentes-list { display: flex; flex-direction: column; gap: 12px; }
-    .modF-ausente-item { background: #fff; border: 1px solid #f0d4d1; border-radius: 10px; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-    .modF-ausente-name { font-size: 15px; font-weight: 700; color: var(--ink); }
-    .modF-importancia { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; }
+    /* ─── Temas ausentes de alta importancia ───────────────── */
+    .modF-ausentes { margin-top: 16px; }
+    .modF-ausentes-header { display: flex; align-items: center; gap: 12px; color: var(--accent); margin-bottom: 12px; }
+    .modF-ausentes-ico { flex: 0 0 auto; }
+    .modF-ausentes-title { font-family: var(--font-sans); font-size: 24px; font-weight: 800; color: var(--accent); line-height: 1.2; }
+    .modF-ausentes-sub { font-size: 15px; color: var(--ink-muted); margin-bottom: 42px; line-height: 1.5; }
+    .modF-ausentes-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .modF-ausente-col { text-align: center; padding: 8px 12px; }
+    .modF-ausente-col + .modF-ausente-col { border-left: 1px dashed #d6d1c6; }
+    .modF-ausente-fig { margin: 0 auto 22px; height: 160px; display: flex; align-items: center; justify-content: center; }
+    .modF-ausente-fig img { max-width: 55%; max-height: 160px; display: block; }
+    .modF-ausente-ph { display: none; }
+    .modF-ausente-fig.is-empty { width: 190px; border: 1px dashed var(--border); border-radius: 12px; background: #faf8f4; }
+    .modF-ausente-fig.is-empty img { display: none; }
+    .modF-ausente-fig.is-empty .modF-ausente-ph { display: block; font-size: 12px; color: var(--ink-faint); letter-spacing: 0.04em; }
+    .modF-ausente-name { font-family: var(--font-serif); font-size: 18px; font-weight: 700; color: var(--ink); line-height: 1.2; }
+    @media (max-width: 700px) {
+      .modF-ausentes-grid { grid-template-columns: 1fr; gap: 28px; }
+      .modF-ausente-col { padding: 0 12px; }
+      .modF-ausente-col + .modF-ausente-col { border-left: none; border-top: 1px dashed #d6d1c6; padding-top: 28px; }
+    }
 
     /* ─── Metodología de análisis (bloque enmarcado) ─────── */
     .metodo-section { max-width: 700px; margin: 0 auto; padding: 72px 24px 88px; }

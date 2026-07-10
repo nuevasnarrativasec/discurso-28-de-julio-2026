@@ -26,7 +26,7 @@
     <a class="nav-link" href="#narrativa">5 momentos</a>
     <a class="nav-link" href="#timeline">Timeline</a>
     <a class="nav-link" href="#datos">Data</a>
-    <a class="nav-link" href="#emociones">Emociones</a>
+    <!--<a class="nav-link" href="#emociones">Emociones</a>-->
     <a class="nav-link" href="#explorador">Contenido</a>
     <a class="nav-link" href="#verificacion">Verificación</a>
   </div>
@@ -845,25 +845,44 @@
     <!-- Afirmaciones verificadas (acordeones) -->
     <div class="modF-acc-list" id="modF-acc-list"><!-- acordeones inyectados por JS --></div>
 
-    <!-- Temas ausentes -->
-    <div class="modF-ausentes-card">
+    <!-- Temas ausentes de alta importancia -->
+    <div class="modF-ausentes">
       <div class="modF-ausentes-header">
-        <span style="font-size:20px">⚠</span>
-        <h3 class="modF-ausentes-title">Temas Ausentes</h3>
+        <svg class="modF-ausentes-ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <h3 class="modF-ausentes-title">Temas ausentes de alta importancia</h3>
       </div>
-      <p class="modF-ausentes-sub">Análisis crítico de temas relevantes que no fueron abordados en el mensaje presidencial.</p>
-      <div class="modF-ausentes-list">
-        <div class="modF-ausente-item">
-          <span class="modF-ausente-name">Fenómeno El Niño</span>
-          <span class="modF-importancia alta">Importancia: Alta</span>
+      <p class="modF-ausentes-sub">Análisis crítico de temas relevantes que no fueron abordados en el mensaje presidencial</p>
+
+      <div class="modF-ausentes-grid">
+        <!-- Coloca la ilustración reemplazando el src (SVG o PNG) en /img -->
+        <div class="modF-ausente-col">
+          <figure class="modF-ausente-fig is-empty">
+            <img src="./img/tema-ausente-1.png" alt="Fenómeno El Niño"
+                 onload="this.closest('.modF-ausente-fig').classList.remove('is-empty')"
+                 onerror="this.closest('.modF-ausente-fig').classList.add('is-empty')" width="100%">
+            <figcaption class="modF-ausente-ph">Ilustración</figcaption>
+          </figure>
+          <p class="modF-ausente-name">Fenómeno El Niño</p>
         </div>
-        <div class="modF-ausente-item">
-          <span class="modF-ausente-name">Seguridad ciudadana rural</span>
-          <span class="modF-importancia media">Importancia: Media</span>
+
+        <div class="modF-ausente-col">
+          <figure class="modF-ausente-fig is-empty">
+            <img src="./img/tema-ausente-2.png" alt="Seguridad ciudadana"
+                 onload="this.closest('.modF-ausente-fig').classList.remove('is-empty')"
+                 onerror="this.closest('.modF-ausente-fig').classList.add('is-empty')" width="100%">
+            <figcaption class="modF-ausente-ph">Ilustración</figcaption>
+          </figure>
+          <p class="modF-ausente-name">Seguridad ciudadana</p>
         </div>
-        <div class="modF-ausente-item">
-          <span class="modF-ausente-name">Crisis migratoria</span>
-          <span class="modF-importancia alta">Importancia: Alta</span>
+
+        <div class="modF-ausente-col">
+          <figure class="modF-ausente-fig is-empty">
+            <img src="./img/tema-ausente-3.png" alt="Crisis migratoria"
+                 onload="this.closest('.modF-ausente-fig').classList.remove('is-empty')"
+                 onerror="this.closest('.modF-ausente-fig').classList.add('is-empty')" width="100%">
+            <figcaption class="modF-ausente-ph">Ilustración</figcaption>
+          </figure>
+          <p class="modF-ausente-name">Crisis migratoria</p>
         </div>
       </div>
     </div>
