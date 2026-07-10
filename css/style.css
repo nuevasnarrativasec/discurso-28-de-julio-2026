@@ -498,11 +498,16 @@
 
     /* ─── Explorador del Discurso ───────────────────────── */
     .explorer-section {
-      max-width: 960px;
+      background: #FFFDFA;
+      border-bottom: 1px solid #CBCBCB;
+      border-top: 1px solid #CBCBCB;
+      margin-top: 60px;
+    }
+    .explorer-inner {
+        max-width: 700px;
       margin: 0 auto;
       padding: 60px 24px 80px;
-    }
-    .explorer-inner { }
+     }
 
     /* Cuerpo con regla vertical izquierda */
     .exp-body {
