@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿La IA potencia o atrofia el pensamiento?</title>
+
+  <!-- Ivy Presto (Typekit) para el headline -->
+  <link rel="stylesheet" href="https://use.typekit.net/otp2meg.css">
+  <!-- Roboto para el texto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#f8f6f1; --card:#ffffff; --ink:#111111; --muted:#555555;
+      --faint:#9a948a; --border:#e6e1d6; --accent:#c0392b; --accent-dark:#992d22;
+      --serif:"ivypresto-headline",'Georgia',serif;
+      --sans:'Roboto','Helvetica Neue',Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{background:transparent}
+    body{font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased;padding:16px}
+
+    .player-card{
+      max-width:680px;margin:0 auto;background:var(--card);
+      border:1px solid var(--border);border-radius:16px;
+      padding:30px 34px 26px;box-shadow:0 14px 34px rgba(0,0,0,0.06);
+    }
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:7px;
+      font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;
+      color:var(--accent);margin-bottom:16px;
+    }
+    .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+    .headline{
+      font-family:var(--serif);font-weight:700;
+      font-size:clamp(24px,4.4vw,32px);line-height:1.15;color:var(--ink);
+      margin-bottom:16px;
+    }
+    .desc{font-size:15px;line-height:1.65;color:var(--muted)}
+    .desc b{color:var(--ink);font-weight:500}
+
+    .player{
+      display:flex;align-items:center;gap:18px;
+      margin-top:26px;padding-top:24px;border-top:1px solid var(--border);
+    }
+    .play-btn{
+      flex:0 0 auto;width:56px;height:56px;border-radius:50%;border:none;cursor:pointer;
+      background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;
+      transition:background .15s,transform .1s;
+    }
+    .play-btn:hover{background:var(--accent-dark)}
+    .play-btn:active{transform:scale(.96)}
+    .play-btn svg{display:block}
+    .play-btn .icon-pause{display:none}
+    .player.is-playing .icon-play{display:none}
+    .player.is-playing .icon-pause{display:block}
+
+    .player-main{flex:1;min-width:0}
+    .scrubber{
+      position:relative;height:8px;border-radius:5px;background:#ece8df;cursor:pointer;
+      touch-action:none;
+    }
+    .scrubber-fill{
+      position:absolute;left:0;top:0;height:100%;width:0;border-radius:5px;background:var(--accent);
+    }
+    .scrubber-thumb{
+      position:absolute;top:50%;left:0;width:15px;height:15px;border-radius:50%;
+      background:#fff;border:2px solid var(--accent);transform:translate(-50%,-50%);
+      box-shadow:0 1px 4px rgba(0,0,0,.2);
+    }
+    .times{
+      display:flex;justify-content:space-between;
+      font-size:12px;color:var(--faint);margin-top:9px;font-variant-numeric:tabular-nums;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="player-card">
+
+    <h1 class="headline">¿La IA potencia o atrofia el pensamiento?</h1>
+
+    <p class="desc">Este debate fue generado con inteligencia artificial gracias a <b>NotebookLM de Google</b> a partir de la investigación de nuestros corresponsales escolares y documentos de UNICEF y UNESCO. Es un ejemplo de cómo la IA puede enriquecer el aprendizaje, abrir nuevas preguntas y fomentar el pensamiento crítico cuando se utiliza con responsabilidad y fuentes confiables.</p>
+
+    <div class="player" id="player">
+      <button class="play-btn" id="playBtn" type="button" aria-label="Reproducir">
+        <svg class="icon-play"  width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        <svg class="icon-pause" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+      </button>
+
+      <div class="player-main">
+        <div class="scrubber" id="scrubber">
+          <div class="scrubber-fill" id="fill"></div>
+          <div class="scrubber-thumb" id="thumb"></div>
+        </div>
+        <div class="times">
+          <span id="cur">0:00</span>
+          <span id="dur">0:00</span>
+        </div>
+      </div>
+
+      <audio id="audio" preload="metadata" src="audio/%C2%BFLa_IA_potencia_o_atrofia_el_pensamiento_.m4a"></audio>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var player   = document.getElementById('player');
+      var audio    = document.getElementById('audio');
+      var playBtn  = document.getElementById('playBtn');
+      var scrubber = document.getElementById('scrubber');
+      var fill     = document.getElementById('fill');
+      var thumb    = document.getElementById('thumb');
+      var curEl    = document.getElementById('cur');
+      var durEl    = document.getElementById('dur');
+
+      function fmt(s){
+        if(!isFinite(s)) return '0:00';
+        s=Math.floor(s);
+        var m=Math.floor(s/60), sec=s%60;
+        return m+':'+(sec<10?'0':'')+sec;
+      }
+      function setProgress(){
+        var d=audio.duration||0;
+        var p=d?(audio.currentTime/d)*100:0;
+        fill.style.width=p+'%';
+        thumb.style.left=p+'%';
+        curEl.textContent=fmt(audio.currentTime);
+      }
+
+      playBtn.addEventListener('click',function(){
+        if(audio.paused){ audio.play(); } else { audio.pause(); }
+      });
+      audio.addEventListener('play', function(){ player.classList.add('is-playing'); playBtn.setAttribute('aria-label','Pausar'); });
+      audio.addEventListener('pause',function(){ player.classList.remove('is-playing'); playBtn.setAttribute('aria-label','Reproducir'); });
+      audio.addEventListener('timeupdate', setProgress);
+      audio.addEventListener('loadedmetadata', function(){ durEl.textContent=fmt(audio.duration); setProgress(); });
+      audio.addEventListener('ended', function(){ player.classList.remove('is-playing'); });
+
+      function seek(e){
+        var r=scrubber.getBoundingClientRect();
+        var clientX=(e.touches&&e.touches[0])?e.touches[0].clientX:e.clientX;
+        var p=Math.max(0,Math.min(1,(clientX-r.left)/r.width));
+        if(audio.duration) audio.currentTime=p*audio.duration;
+      }
+      var dragging=false;
+      scrubber.addEventListener('pointerdown',function(e){dragging=true;try{scrubber.setPointerCapture(e.pointerId);}catch(_){ } seek(e);});
+      scrubber.addEventListener('pointermove',function(e){if(dragging)seek(e);});
+      scrubber.addEventListener('pointerup',function(){dragging=false;});
+      scrubber.addEventListener('pointercancel',function(){dragging=false;});
+    })();
+  </script>
+
+</body>
+</html>
