@@ -363,6 +363,7 @@
       transition: background 0.15s, color 0.15s;
     }
     .btn-play-block:hover { background: var(--accent); color: white; }
+    .btn-play-block.is-playing { background: var(--accent); color: white; }
     .btn-play-block.no-audio { opacity: 0.35; cursor: not-allowed; }
 
     .detail-close {

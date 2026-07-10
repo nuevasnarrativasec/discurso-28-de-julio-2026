@@ -7089,6 +7089,7 @@ audio.addEventListener('timeupdate', () => {
 
       // Auto-abrir panel si no hay ninguno seleccionado manualmente
       if (!selectedBlock) abrirDetalle(bloque, null, false);
+      updateBtnPlayLabel();
     }
   } else {
     if (playingBlock) {
@@ -7107,10 +7108,12 @@ audio.addEventListener('loadedmetadata', () => {
 audio.addEventListener('play',  () => {
   document.getElementById('icon-play').style.display  = 'none';
   document.getElementById('icon-pause').style.display = '';
+  updateBtnPlayLabel();
 });
 audio.addEventListener('pause', () => {
   document.getElementById('icon-play').style.display  = '';
   document.getElementById('icon-pause').style.display = 'none';
+  updateBtnPlayLabel();
 });
 audio.addEventListener('ended', () => {
   document.getElementById('icon-play').style.display  = '';
@@ -7336,6 +7339,15 @@ const dTime     = document.getElementById('d-time');
 const dExtracto = document.getElementById('d-extracto');
 const btnPlay   = document.getElementById('btn-play-block');
 
+// Refleja en el botón del panel si el bloque seleccionado está sonando
+function updateBtnPlayLabel() {
+  if (!btnPlay || !selectedBlock) return;
+  const enEste  = (bloqueEnTiempo(audio.currentTime) || {}).id === selectedBlock.id;
+  const sonando = !audio.paused && enEste;
+  btnPlay.classList.toggle('is-playing', sonando);
+  btnPlay.textContent = sonando ? '❚❚ Pausar audio' : '▶ Ir al audio';
+}
+
 function abrirDetalle(bloque, eventoFocus, seekAudio) {
   // Quitar selected anterior
   document.querySelectorAll('.tema-block.selected').forEach(el => el.classList.remove('selected'));
@@ -7351,8 +7363,18 @@ function abrirDetalle(bloque, eventoFocus, seekAudio) {
   dTime.textContent = `${bloque.inicio_fmt} — ${bloque.fin_fmt}`;
   dExtracto.textContent = bloque.extracto;
 
-  // Botón del panel
-  btnPlay.onclick = () => seekTo(bloque.inicio);
+  // Botón del panel — funciona como play / pausa del bloque
+  btnPlay.onclick = () => {
+    const enEsteBloque = (bloqueEnTiempo(audio.currentTime) || {}).id === bloque.id;
+    if (!audio.paused && enEsteBloque) {
+      audio.pause();
+    } else if (audio.paused && enEsteBloque) {
+      audio.play();
+    } else {
+      seekTo(bloque.inicio);
+    }
+  };
+  updateBtnPlayLabel();
 
   panel.classList.add('visible');
 
@@ -7382,6 +7404,18 @@ document.addEventListener('keydown', e => {
   if (e.code === 'ArrowLeft')  seekRelative(-15);
   if (e.code === 'ArrowRight') seekRelative(15);
 });
+
+// Pausa el audio si el usuario abandona la sección del timeline con el scroll
+(function () {
+  const tlSection = document.getElementById('timeline');
+  if (!tlSection || !('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting && !audio.paused) audio.pause();
+    });
+  }, { threshold: 0 });
+  io.observe(tlSection);
+})();
 
 
 // ═══════════════════════════════════════════════════════════════
