@@ -833,62 +833,17 @@
     <p class="mod-sub tl-sub-bold">Validación de la veracidad de las afirmaciones realizadas durante el mensaje presidencial.</p>
     <p class="mod-intro tl-intro-plain">El fact-checking es una capa esencial del periodismo de datos. Esta sección contrasta las afirmaciones más relevantes del discurso con fuentes oficiales verificables, e identifica los temas que el presidente eligió no mencionar.</p>
 
-    <!-- Resumen de veredictos -->
-    <div class="modF-verdicts-grid">
-      <div class="modF-verdict-card verde">
-        <div class="modF-verdict-icon">✓</div>
-        <div class="modF-verdict-count">2</div>
-        <div class="modF-verdict-label">Verdadero</div>
-      </div>
-      <div class="modF-verdict-card amarillo">
-        <div class="modF-verdict-icon">⚠</div>
-        <div class="modF-verdict-count">1</div>
-        <div class="modF-verdict-label">Parcial</div>
-      </div>
-      <div class="modF-verdict-card naranja">
-        <div class="modF-verdict-icon">!</div>
-        <div class="modF-verdict-count">1</div>
-        <div class="modF-verdict-label">Exagerado</div>
-      </div>
-      <div class="modF-verdict-card rojo">
-        <div class="modF-verdict-icon">✗</div>
-        <div class="modF-verdict-count">0</div>
-        <div class="modF-verdict-label">Falso</div>
-      </div>
+    <!-- Filtros por veredicto (contadores calculados por JS) -->
+    <div class="modF-filter-hint">
+      <img src="./img/icon-clic-bloque.png" alt="" width="100%" style="max-width: 15px;">
+      Selecciona para filtrar
     </div>
+    <div class="modF-filters" id="modF-filters"><!-- filtros inyectados por JS --></div>
 
-    <!-- Afirmaciones verificadas -->
-    <div class="modF-afirm-title">Afirmaciones Verificadas</div>
-    <div class="modF-afirm-list">
-      <div class="modF-afirm-item">
-        <div class="modF-afirm-body">
-          <p class="modF-afirm-claim">El PBI creció 4.5% en el último año</p>
-          <p class="modF-afirm-time">⏱ 18:30</p>
-        </div>
-        <span class="modF-badge verde">Verdadero</span>
-      </div>
-      <div class="modF-afirm-item">
-        <div class="modF-afirm-body">
-          <p class="modF-afirm-claim">Se han construido 30 hospitales en los últimos dos años</p>
-          <p class="modF-afirm-time">⏱ 29:15</p>
-        </div>
-        <span class="modF-badge amarillo">Parcialmente verdadero</span>
-      </div>
-      <div class="modF-afirm-item">
-        <div class="modF-afirm-body">
-          <p class="modF-afirm-claim">La inversión extranjera aumentó en un 35%</p>
-          <p class="modF-afirm-time">⏱ 22:45</p>
-        </div>
-        <span class="modF-badge verde">Verdadero</span>
-      </div>
-      <div class="modF-afirm-item">
-        <div class="modF-afirm-body">
-          <p class="modF-afirm-claim">El índice de pobreza se redujo en 5 puntos porcentuales</p>
-          <p class="modF-afirm-time">⏱ 56:20</p>
-        </div>
-        <span class="modF-badge naranja">Exagerado</span>
-      </div>
-    </div>
+    <div class="modF-divider"></div>
+
+    <!-- Afirmaciones verificadas (acordeones) -->
+    <div class="modF-acc-list" id="modF-acc-list"><!-- acordeones inyectados por JS --></div>
 
     <!-- Temas ausentes -->
     <div class="modF-ausentes-card">
@@ -939,6 +894,7 @@
 <!--  JAVASCRIPT                                               -->
 <!-- ══════════════════════════════════════════════════════════ -->
 <script src="./js/momentos.js?v1"></script>
+<script src="./js/fact-checking.js?v1"></script>
 <script src="./js/main.js?v2"></script>
 </body>
 </html>

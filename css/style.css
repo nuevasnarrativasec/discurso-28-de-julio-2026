@@ -1755,6 +1755,62 @@
     .modF-badge.verde    { background: #dcefd8; color: #3d7a3a; }
     .modF-badge.amarillo { background: #fbf3c9; color: #9a7b1e; }
     .modF-badge.naranja  { background: #fbe6cf; color: #b45f26; }
+    .modF-badge.rojo     { background: #f7d7d4; color: #b23b34; }
+
+    /* ─── Fact-checking: hint + filtros clicables ──────────── */
+    .modF-filter-hint { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 12px; color: var(--ink-muted); margin: 40px 0 18px; }
+    .modF-filters { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    @media (max-width: 700px) { .modF-filters { grid-template-columns: repeat(2, 1fr); } }
+    .modF-filter {
+      border: none; border-radius: 10px; padding: 26px 20px 20px;
+      text-align: center; color: #fff; cursor: pointer;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+      transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+    }
+    .modF-filter:hover { transform: translateY(-3px); box-shadow: 0 16px 30px rgba(0,0,0,0.16); }
+    .modF-filter-count { font-family: "ivypresto-headline",'Georgia',serif; font-size: 50px; font-weight: 700; line-height: 1; }
+    .modF-filter-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.95); }
+    .modF-filter.verde    { background: linear-gradient(180deg,#5cc161,#4bb051); }
+    .modF-filter.amarillo { background: linear-gradient(180deg,#e7ac36,#d99a26); }
+    .modF-filter.naranja  { background: linear-gradient(180deg,#e17138,#d55f29); }
+    .modF-filter.rojo     { background: linear-gradient(180deg,#e35c54,#d54a44); }
+    .modF-filter.is-active { transform: translateY(-2px); box-shadow: 0 0 0 3px var(--bg), 0 0 0 5px rgba(17,17,17,0.55), 0 14px 28px rgba(0,0,0,0.18); }
+    .modF-filter.is-dim { opacity: 0.4; }
+    .modF-filter.is-dim:hover { opacity: 0.7; }
+
+    .modF-divider { height: 1px; background: var(--border); margin: 36px 0 26px; }
+
+    /* ─── Acordeones de afirmaciones ───────────────────────── */
+    .modF-acc-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 40px; }
+    .modF-acc-item { border-radius: 12px; }
+    .modF-acc-head {
+      width: 100%; text-align: left; cursor: pointer;
+      display: flex; align-items: center; gap: 16px;
+      padding: 20px 24px; border-radius: 12px;
+      background: transparent; border: 1px solid var(--border);
+      transition: background 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+    .modF-acc-headtext { flex: 1; min-width: 0; }
+    .modF-acc-time { display: block; font-size: 12px; color: var(--ink-faint); margin-bottom: 6px; font-variant-numeric: tabular-nums; }
+    .modF-acc-claim { display: block; font-family: "ivypresto-headline",'Georgia',serif; font-size: 19px; font-weight: 700; line-height: 1.25; color: var(--ink-faint); transition: color 0.2s; }
+    .modF-acc-head:hover .modF-acc-claim { color: var(--ink-muted); }
+    /* Estado abierto → cabecera como tarjeta blanca elevada */
+    .modF-acc-item.is-open .modF-acc-head {
+      background: #fff; border-color: var(--ink);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+    }
+    .modF-acc-item.is-open .modF-acc-claim { color: var(--ink); }
+    /* Badge sólido cuando está abierto */
+    .modF-acc-item.is-open .modF-badge.verde    { background: #4bb051; color: #fff; }
+    .modF-acc-item.is-open .modF-badge.amarillo { background: #d99a26; color: #fff; }
+    .modF-acc-item.is-open .modF-badge.naranja  { background: #d55f29; color: #fff; }
+    .modF-acc-item.is-open .modF-badge.rojo     { background: #d54a44; color: #fff; }
+    /* Cuerpo desplegable */
+    .modF-acc-body { max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0.16,1,0.3,1); }
+    .modF-acc-body-inner { padding: 20px 26px 6px; }
+    .modF-acc-desc { font-size: 15px; line-height: 1.7; color: var(--ink-muted); margin: 0; }
+
     .modF-ausentes-card { background: #fbeaea; border: 1.5px solid #f2c9c6; border-radius: 14px; padding: 30px; margin-top: 8px; }
     .modF-ausentes-header { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
     .modF-ausentes-title { font-family: "ivypresto-headline",'Georgia',serif; font-size: 22px; font-weight: 700; color: #9a3324; }
