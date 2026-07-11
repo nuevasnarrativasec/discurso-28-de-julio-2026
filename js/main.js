@@ -7467,6 +7467,69 @@ document.addEventListener('keydown', e => {
   const elResults  = document.getElementById('exp-results');
   const elLoadMore = document.getElementById('exp-load-more');
 
+  // ── Reproducción de fragmentos en la misma tarjeta ────────────
+  const audioEl = document.getElementById('audio-el');
+  let fragActivo = null;   // { btn, fin } de la tarjeta que suena
+
+  function setBtnState(btn, playing) {
+    if (!btn) return;
+    btn.classList.toggle('is-playing', playing);
+    const lbl = btn.querySelector('.exp-play-label');
+    if (lbl) lbl.textContent = playing ? 'Pausar' : 'Escuchar';
+  }
+  // Observa la tarjeta activa: si sale del viewport, pausa
+  const cardObserver = ('IntersectionObserver' in window)
+    ? new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting && fragActivo && e.target === fragActivo.card && audioEl) {
+            audioEl.pause();
+            pararFragmento();
+          }
+        });
+      }, { threshold: 0 })
+    : null;
+
+  function pararFragmento() {
+    if (fragActivo) {
+      setBtnState(fragActivo.btn, false);
+      if (cardObserver && fragActivo.card) cardObserver.unobserve(fragActivo.card);
+      fragActivo = null;
+    }
+  }
+  function toggleFragmento(btn, inicio, fin) {
+    if (!audioEl) return;
+    if (fragActivo && fragActivo.btn === btn) {
+      // Misma tarjeta: alterna play/pausa
+      if (audioEl.paused) { audioEl.play(); setBtnState(btn, true); }
+      else { audioEl.pause(); setBtnState(btn, false); }
+      return;
+    }
+    // Otra tarjeta: resetea la anterior y arranca esta
+    if (fragActivo) {
+      setBtnState(fragActivo.btn, false);
+      if (cardObserver && fragActivo.card) cardObserver.unobserve(fragActivo.card);
+    }
+    const card = btn.closest('.exp-card');
+    fragActivo = { btn: btn, fin: isFinite(fin) ? fin : Infinity, card: card };
+    if (cardObserver && card) cardObserver.observe(card);   // pausar al salir del viewport
+    if (typeof seekTo === 'function') seekTo(inicio);       // busca y reproduce, sin scroll
+    else { audioEl.currentTime = inicio; audioEl.play(); }
+    setBtnState(btn, true);
+  }
+  if (audioEl) {
+    // Detener el fragmento al llegar a su fin
+    audioEl.addEventListener('timeupdate', function () {
+      if (fragActivo && audioEl.currentTime >= fragActivo.fin) {
+        audioEl.pause();
+        setBtnState(fragActivo.btn, false);
+        fragActivo = null;
+      }
+    });
+    // Si el audio se pausa desde otro control, refleja el botón
+    audioEl.addEventListener('pause', function () {
+      if (fragActivo) setBtnState(fragActivo.btn, false);
+    });
+  }
   // ── Helpers ───────────────────────────────────────────────────
   function escHtml(s) {
     return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
@@ -7502,6 +7565,8 @@ document.addEventListener('keydown', e => {
 
   // ── Renderizar resultados ─────────────────────────────────────
   function render() {
+    // Si sonaba un fragmento, se detiene al re-renderizar (la tarjeta cambia)
+    if (fragActivo && audioEl) { audioEl.pause(); pararFragmento(); }
     const resultados = filtrar();
     const total = resultados.length;
     const slice = resultados.slice(0, showing);
@@ -7547,9 +7612,10 @@ document.addEventListener('keydown', e => {
           <div class="exp-card-time">${b.inicio_fmt} — ${b.fin_fmt}</div>
         </div>
         <div class="exp-card-right">
-          <button class="exp-card-play" data-inicio="${b.inicio}">
-            <svg viewBox="0 0 10 10"><polygon points="0,0 10,5 0,10"/></svg>
-            Escuchar
+          <button class="exp-card-play" data-inicio="${b.inicio}" data-fin="${b.fin}">
+            <svg class="exp-play-ico-play" viewBox="0 0 10 10"><polygon points="0,0 10,5 0,10"/></svg>
+            <svg class="exp-play-ico-pause" viewBox="0 0 10 10"><rect x="0" y="0" width="3.5" height="10"/><rect x="6.5" y="0" width="3.5" height="10"/></svg>
+            <span class="exp-play-label">Escuchar</span>
           </button>
         </div>
       </div>`;
@@ -7576,10 +7642,7 @@ document.addEventListener('keydown', e => {
     elResults.querySelectorAll('.exp-card-play').forEach(btn => {
       btn.addEventListener('click', e => {
         e.stopPropagation();
-        const inicio = parseFloat(btn.dataset.inicio);
-        seekTo(inicio);
-        // Scroll al player
-        document.getElementById('audio-player').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        toggleFragmento(btn, parseFloat(btn.dataset.inicio), parseFloat(btn.dataset.fin));
       });
     });
   }

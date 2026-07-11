@@ -687,6 +687,9 @@
     }
     .exp-card-play:hover { opacity: 0.7; }
     .exp-card-play svg { width: 10px; height: 10px; fill: currentColor; }
+    .exp-card-play .exp-play-ico-pause { display: none; }
+    .exp-card-play.is-playing .exp-play-ico-play { display: none; }
+    .exp-card-play.is-playing .exp-play-ico-pause { display: inline-block; }
 
     .exp-load-more {
       display: block;
@@ -2273,14 +2276,14 @@
     .rz-quote-feature { background: var(--bg); overflow: hidden; }
     .rz-quote-feature-inner {
       position: relative;
-      max-width: 1200px; margin: 0 auto;
+      max-width: 1100px; margin: 0 auto;
       padding: 72px 24px;
       display: flex; align-items: center;
       min-height: 520px;
     }
     .rz-quote-photo {
       margin: 0 0 0 auto;
-      width: 66%;
+      width: 76%;
       aspect-ratio: 16 / 10;
       overflow: hidden;
       background: #e8e4dc;
@@ -2293,10 +2296,10 @@
 
     .rz-quote-card {
       position: absolute; z-index: 2;
-      left: 24px; top: 50%;
+      left: -20px; top: 50%;
       transform: translateY(-82%);
       width: min(400px, 40%);
-      filter: drop-shadow(0 16px 26px rgba(0,0,0,0.16));
+      /*filter: drop-shadow(0 16px 26px rgba(0,0,0,0.16));*/
     }
     /* Forma irregular con colita tipo banderín (abajo-derecha) */
     /* Cara blanca */
