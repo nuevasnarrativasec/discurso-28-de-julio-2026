@@ -1,89 +1,50 @@
 /* ═══════════════════════════════════════════════════════════════════
-   EL DISCURSO EN 5 MOMENTOS — CONTENIDO EDITABLE
-   ───────────────────────────────────────────────────────────────────
-   Este es el ÚNICO archivo que hay que tocar el día del discurso.
-   Un objeto {} por momento, en orden. Edita solo el texto entre comillas.
-
-   Campos de cada momento:
-     tiempo       Badge amarillo de minutos. Formato: 'MM:SS — MM:SS'
-     titulo       Título de la tarjeta de la derecha.
-     descripcion  Texto de la tarjeta de la derecha.
-     cita         Párrafo grande que se muestra a la izquierda.
-     resaltar     Fragmento de la 'cita' que se pinta de amarillo.
-                  ⚠ Debe estar escrito EXACTAMENTE igual que en la cita
-                    (mismas tildes y mayúsculas). Si no coincide, no se
-                    resalta pero el párrafo igual se ve. Déjalo en '' (vacío)
-                    si no quieres resaltar nada.
-     audio        Ruta al CLIP de audio propio de ese momento. Ej:
-                    audio: 'audio/momento-1.mp3'
-                  Coloca el archivo dentro de la carpeta /audio y pon aquí
-                  su ruta. Al pulsar "Escuchar audio" aparece el reproductor
-                  de ESE clip (no salta al audio del discurso completo).
-                  Si lo dejas en '' todavía no hay clip; mientras tanto el
-                  botón reproduce el audio general en el segundo 'inicio_seg'.
-     inicio_seg   Segundo del audio GENERAL al que salta si 'audio' está vacío.
-
-   Reglas:
-     • No borres las comas, llaves {} ni corchetes [].
-     • Si el texto lleva un apóstrofo (') escríbelo así: \'  (con la barra).
-     • Deben ser 5 momentos.
+   EL DISCURSO EN 5 MOMENTOS — generado por el Colab (editar textos)
    ═══════════════════════════════════════════════════════════════════ */
-
 window.MOMENTOS = [
-
-  // ── Momento 1 ──────────────────────────────────────────────────
   {
-    tiempo:      '00:01 — 02:46',
-    titulo:      'Apertura y balance del primer año',
-    descripcion: 'El presidente abre el mensaje con el protocolo ante las autoridades del Estado y traza un balance del primer año de gobierno, reconociendo las dificultades heredadas y los logros alcanzados.',
-    cita:        'Señora Presidenta del Congreso de la República, señoras y señores congresistas de la República, señores y señores ministros de Estado, señores miembros del Honorable Cuerpo Diplomático, dignas autoridades civiles, militares y religiosas, ilustres invitados, querido pueblo peruano. Hace 365 días, en…',
-    resaltar:    'querido pueblo peruano',
-    audio:       './audio/audio-test.mp3',
-    inicio_seg:  1.3
+    "tiempo": "22:28 — 24:22",
+    "titulo": "Informe sobre la pandemia en Perú",
+    "descripcion": "Se presenta el primer informe sobre cifras de la pandemia en Perú, realizado de manera progresiva durante el enfrentamiento al virus.",
+    "cita": "la pandemia. No hay nada que ocultar, por ello, a diferencia de otros países que hacen el recuento al final de la enfermedad, el Perú lo está haciendo a medida que enfrente el virus, por eso se acaba de presentar el primer informe sobre las cifras y así continuará hasta el final...",
+    "resaltar": "",
+    "audio": "",
+    "inicio_seg": 1348
   },
-
-  // ── Momento 2 ──────────────────────────────────────────────────
   {
-    tiempo:      '02:59 — 15:27',
-    titulo:      'Defensa del mandato y principios constitucionales',
-    descripcion: 'El discurso pasa a un tono más combativo: el presidente defiende la legitimidad de su mandato, rechaza acusaciones y reafirma el principio constitucional de igualdad ante la ley.',
-    cita:        'No importa que quienes deberían también informar hayan ocultado e ignoren nuestros logros y se dedican a difamar y a mentir, y que tenemos que probar nuestra inocencia…',
-    resaltar:    'probar nuestra inocencia',
-    audio:       './audio/audio-test.mp3',
-    inicio_seg:  179.3
+    "tiempo": "27:30 — 29:27",
+    "titulo": "Compromiso con el sistema de salud",
+    "descripcion": "Se destaca la importancia de fortalecer el sistema de salud para enfrentar retos futuros, con un compromiso que precede a la pandemia.",
+    "cita": "sistema de salud que nos permita afrontar en mejores condiciones los retos sanitarios del futuro. Nunca antes la salud ha estado de manera tan clara en el centro de nuestras preocupaciones y prioridades, pero nuestro compromiso no empezó con la pandemia del covid-diecinueve,...",
+    "resaltar": "",
+    "audio": "",
+    "inicio_seg": 1650
   },
-
-  // ── Momento 3 ──────────────────────────────────────────────────
   {
-    tiempo:      '15:28 — 21:39',
-    titulo:      'Crisis económica y medidas de austeridad',
-    descripcion: 'La sección económica aborda el impacto de la pandemia y la inflación global en las familias peruanas. Se anuncian exoneraciones de IGV, subsidios y se rinde cuenta del manejo del Fondo de Estabilización Fiscal.',
-    cita:        'Incluiremos a los trabajadores informales que bajo las condiciones actuales no pueden acceder a un sistema de pensiones. Aspiramos a que todos los peruanos puedan gozar de una pensión universal con primer piso de protección social.',
-    resaltar:    'pensión universal',
-    audio:       './audio/audio-test.mp3',
-    inicio_seg:  928.6
+    "tiempo": "32:21 — 33:30",
+    "titulo": "Salud como prioridad histórica",
+    "descripcion": "Se reconoce que la salud fue postergada durante décadas y se plantea la oportunidad de corregir este error histórico.",
+    "cita": "sistema de salud. Seamos conscientes, durante décadas la salud no ha sido una prioridad. Durante décadas la salud no ha estado en la agenda pública. Durante décadas la salud fue olvidada y postergada. Hoy tenemos la oportunidad de corregir ese error histórico y saldar la deuda...",
+    "resaltar": "",
+    "audio": "",
+    "inicio_seg": 1941
   },
-
-  // ── Momento 4 ──────────────────────────────────────────────────
   {
-    tiempo:      '21:40 — 44:25',
-    titulo:      'Salud, educación y protección social',
-    descripcion: 'El bloque más extenso: avances en vacunación, reforma de programas sociales, metas en educación y logros en seguridad ciudadana. Se destacan las cifras de cobertura y los compromisos futuros.',
-    cita:        'Estamos en la cuarta ola de la pandemia y se ha demostrado que la estrategia más efectiva para el control y prevención de esta enfermedad es la vacunación.',
-    resaltar:    'la vacunación',
-    audio:       './audio/audio-test.mp3',
-    inicio_seg:  1300.9
+    "tiempo": "1:13:02 — 1:14:50",
+    "titulo": "Impulso a la inversión minera",
+    "descripcion": "El gobierno trabaja en un nuevo reglamento para procedimientos mineros que promueva la inversión privada y el respeto a derechos.",
+    "cita": "inversión que tiene el Perú, después de veintiocho años, este gobierno asumió el reto y viene gestionando la aprobación de un nuevo reglamento de procedimientos mineros a fin de que brinden predictibilidad e impulso a la inversión privada, y promuevan el respeto a los derechos...",
+    "resaltar": "",
+    "audio": "",
+    "inicio_seg": 4382
   },
-
-  // ── Momento 5 ──────────────────────────────────────────────────
   {
-    tiempo:      '44:26 — 110:35',
-    titulo:      'Regiones, infraestructura y cierre',
-    descripcion: 'El tramo final recorre inversiones en infraestructura pesquera, hídrica y vial en todo el territorio. El discurso cierra con menciones a múltiples regiones y un llamado a la unidad nacional.',
-    cita:        'A través del Servicio Nacional de Meteorología e Hidrología del Perú, que registra los centros poblados que podrían verse afectados, contamos con 29 estaciones de monitoreo distribuidas en las regiones de Piura, La Libertad, Áncash, Lima, Pasco, Junín y Arequipa.',
-    resaltar:    '29 estaciones de monitoreo',
-    audio:       './audio/audio-test.mp3',
-    inicio_seg:  2666.4
+    "tiempo": "1:45:11 — 1:46:34",
+    "titulo": "Reflexión sobre el legado futuro",
+    "descripcion": "Se invita a reflexionar sobre el legado que se dejará, atendiendo las urgencias y necesidades actuales.",
+    "cita": "días, en este magno recinto, ninguno de los aquí presentes presencialmente o virtualmente ha sido un abono. Por lo que creo que este debe ser un momento de reflexión en el que además de atender las muchas urgencias y necesidades, pensemos cuál va a ser el legado que vamos a...",
+    "resaltar": "",
+    "audio": "",
+    "inicio_seg": 6311
   }
-
 ];

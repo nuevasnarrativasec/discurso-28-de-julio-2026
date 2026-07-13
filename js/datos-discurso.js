@@ -1,1388 +1,298 @@
 // ─────────────────────────────────────────────────────────────
-//  DATOS — Reemplaza con el JSON generado por el Colab
+//  DATOS — generado automáticamente por el Colab (timeline)
 // ─────────────────────────────────────────────────────────────
 const DATA = {
   "meta": {
-    "titulo": "Discurso Presidencial — 28 de julio de 2026",
-    "duracion_total_seg": 6636,
-    "duracion_total_fmt": "110:35",
-    "procesado": "2026-05-22T19:44:20.619517"
+    "titulo": "Mensaje a la Nación — 28 de julio de 2026",
+    "duracion_total_seg": 6821,
+    "duracion_total_fmt": "1:53:41",
+    "procesado": "2026-07-13T21:33:12"
   },
   "resumen_temas": [
     {
-      "tema": "Otros",
-      "porcentaje": 41.5,
-      "duracion_seg": 2756,
-      "color": "#666"
-    },
-    {
-      "tema": "Regiones",
-      "porcentaje": 26.9,
-      "duracion_seg": 1783,
-      "color": "#16a085"
-    },
-    {
       "tema": "Economía",
-      "porcentaje": 23.2,
-      "duracion_seg": 1540,
+      "porcentaje": 25.2,
+      "duracion_seg": 1717,
       "color": "#1a1a2e"
     },
     {
+      "tema": "Salud",
+      "porcentaje": 21.8,
+      "duracion_seg": 1486,
+      "color": "#2980b9"
+    },
+    {
+      "tema": "Otros",
+      "porcentaje": 16.9,
+      "duracion_seg": 1152,
+      "color": "#666"
+    },
+    {
       "tema": "Democracia e Instituciones",
-      "porcentaje": 22.0,
-      "duracion_seg": 1461,
+      "porcentaje": 12.8,
+      "duracion_seg": 872,
       "color": "#7f8c8d"
     },
     {
       "tema": "Infraestructura",
-      "porcentaje": 12.7,
-      "duracion_seg": 840,
+      "porcentaje": 7.8,
+      "duracion_seg": 532,
       "color": "#8e44ad"
     },
     {
-      "tema": "Educación",
-      "porcentaje": 10.3,
-      "duracion_seg": 682,
-      "color": "#27ae60"
-    },
-    {
       "tema": "Seguridad",
-      "porcentaje": 7.9,
-      "duracion_seg": 525,
+      "porcentaje": 5.2,
+      "duracion_seg": 354,
       "color": "#c0392b"
     },
     {
-      "tema": "Política Exterior",
-      "porcentaje": 7.8,
-      "duracion_seg": 518,
-      "color": "#2c3e50"
-    },
-    {
-      "tema": "Salud",
-      "porcentaje": 6.8,
-      "duracion_seg": 450,
-      "color": "#2980b9"
+      "tema": "Educación",
+      "porcentaje": 4.5,
+      "duracion_seg": 305,
+      "color": "#27ae60"
     },
     {
       "tema": "Agricultura",
-      "porcentaje": 6.3,
-      "duracion_seg": 419,
+      "porcentaje": 2.7,
+      "duracion_seg": 184,
       "color": "#d35400"
     },
     {
       "tema": "Anticorrupción",
-      "porcentaje": 5.3,
-      "duracion_seg": 353,
+      "porcentaje": 1.6,
+      "duracion_seg": 112,
       "color": "#e67e22"
+    },
+    {
+      "tema": "Regiones",
+      "porcentaje": 0.7,
+      "duracion_seg": 48,
+      "color": "#16a085"
     }
   ],
   "bloques": [
     {
       "id": 0,
       "tema": "Democracia e Instituciones",
-      "inicio": 1.3,
-      "fin": 167.5,
-      "inicio_fmt": "00:01",
-      "fin_fmt": "00:27",
-      "duracion_seg": 166.2,
-      "extracto": "Señora Presidenta del Congreso de la República, señoras y señores congresistas de la República, señores y señores ministros de Estado, señores miembros del Honorable Cuerpo Diplomático, dignas autoridades civiles, militares y religiosas, ilustres invitados, querido pueblo peruano. Hace 365 días, en...",
+      "inicio": 0.0,
+      "fin": 45.0,
+      "inicio_fmt": "00:00",
+      "fin_fmt": "00:45",
+      "duracion_seg": 45.0,
+      "extracto": "Señor Presidente del Congreso de la República, señoras y señores congresistas, señoras y señores ministros de Estado, compatriotas a lo largo y ancho del país, antes de dar inicio a mi mensaje a la Nación, quiero pedir al país que se una a nosotros en un minuto de silencio",
       "color": "#7f8c8d",
+      "eventos": []
+    },
+    {
+      "id": 1,
+      "tema": "Salud",
+      "inicio": 45.0,
+      "fin": 95.0,
+      "inicio_fmt": "00:45",
+      "fin_fmt": "01:35",
+      "duracion_seg": 50.0,
+      "extracto": "para honrar a los peruanos y peruanas que partieron a consecuencia de la pandemia, quienes estarán siempre en nuestro corazón y en nuestra memoria. Muchas gracias.",
+      "color": "#2980b9",
       "eventos": [
         {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
           "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Democracia e Instituciones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Democracia e Instituciones"
+          "descripcion": "De Democracia e Instituciones → Salud"
         }
       ]
     },
     {
-      "id": 1,
-      "tema": "Regiones",
-      "inicio": 45.4,
-      "fin": 92.1,
-      "inicio_fmt": "00:45",
-      "fin_fmt": "00:53",
-      "duracion_seg": 46.7,
-      "extracto": "Pero sí tenemos que hablar con la verdad, fue una independencia que hasta el día de hoy, gran parte de los peruanos y las peruanas la siguen esperando. A pesar de recibir un país que emerge de la pandemia con más de 230 mil peruanos fallecidos y del disgusto de quienes se creen dueños del país, segu...",
-      "color": "#16a085",
+      "id": 2,
+      "tema": "Otros",
+      "inicio": 112.0,
+      "fin": 213.0,
+      "inicio_fmt": "01:52",
+      "fin_fmt": "03:33",
+      "duracion_seg": 101.0,
+      "extracto": "Cuando los fundadores de nuestra República lograron hace 199 años la independencia del Perú, lo hicieron no sólo para construir una Nación libre y soberana por la voluntad general de los pueblos, sino para que las futuras generaciones pudiéramos enfrentar con el mismo temple y...",
+      "color": "#666",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Regiones"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"230 mil\""
-        },
+          "descripcion": "De Salud → Otros"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "tema": "Democracia e Instituciones",
+      "inicio": 213.0,
+      "fin": 244.0,
+      "inicio_fmt": "03:33",
+      "fin_fmt": "04:04",
+      "duracion_seg": 31.0,
+      "extracto": "Consciente de ese antecedente histórico, me dirijo a los peruanos desde la sede del Congreso de la República con un mensaje de renovación, de unidad, de esperanza. No puedo pasar por alto que este aniversario encuentra al país en una circunstancia difícil, desafiante, como...",
+      "color": "#7f8c8d",
+      "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Regiones"
+          "descripcion": "De Otros → Democracia e Instituciones"
         }
       ]
     },
     {
       "id": 4,
-      "tema": "Política Exterior",
-      "inicio": 142.2,
-      "fin": 156.4,
-      "inicio_fmt": "02:22",
-      "fin_fmt": "02:36",
-      "duracion_seg": 14.3,
-      "extracto": "Hoy, convencidos más que nunca, con la misma firmeza, venimos a informar a nuestro país el trabajo desplegado....",
-      "color": "#2c3e50",
+      "tema": "Otros",
+      "inicio": 244.0,
+      "fin": 324.0,
+      "inicio_fmt": "04:04",
+      "fin_fmt": "05:24",
+      "duracion_seg": 80.0,
+      "extracto": "Pero debemos tener claro que el Perú siempre ha salido adelante y esta vez no será la excepción. Quiero por ello ratificar mi confianza en que nuestro país logrará superar este nuevo desafío, por más difícil que sea, y continuará proyectándose como una Nación fuerte, justa,...",
+      "color": "#666",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Política Exterior"
+          "descripcion": "De Democracia e Instituciones → Otros"
         }
       ]
     },
     {
       "id": 5,
-      "tema": "Otros",
-      "inicio": 167.5,
-      "fin": 178.3,
-      "inicio_fmt": "02:47",
-      "fin_fmt": "02:58",
-      "duracion_seg": 10.8,
-      "extracto": "En este periodo, el que nos hemos tenido, no hemos tenido ningún minuto de tregua, vengo a informarles lo que hemos hecho y anunciarles lo que haremos....",
-      "color": "#666",
+      "tema": "Infraestructura",
+      "inicio": 324.0,
+      "fin": 350.0,
+      "inicio_fmt": "05:24",
+      "fin_fmt": "05:50",
+      "duracion_seg": 26.0,
+      "extracto": "Ese es el camino que hemos trazado desde el gobierno y que vengo a dar cuenta ante el país. Hace dos años, cuatro meses y cinco días que asumí la presidencia de la República en medio de una terrible crisis política e institucional que hoy aún está fresca en la memoria de los...",
+      "color": "#8e44ad",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
+          "descripcion": "De Otros → Infraestructura"
         }
       ]
     },
     {
       "id": 6,
-      "tema": "Anticorrupción",
-      "inicio": 179.3,
-      "fin": 199.8,
-      "inicio_fmt": "02:59",
-      "fin_fmt": "03:06",
-      "duracion_seg": 20.5,
-      "extracto": "No importa que quienes deberían también informar hayan ocultado e ignoren nuestros logros y se dedican a difamar y a mentir, Y que tenemos que probar nuestra inocencia....",
-      "color": "#e67e22",
+      "tema": "Otros",
+      "inicio": 350.0,
+      "fin": 385.0,
+      "inicio_fmt": "05:50",
+      "fin_fmt": "06:25",
+      "duracion_seg": 35.0,
+      "extracto": "Compatriotas, nada ha sido fácil en este tiempo. En este periodo hemos enfrentado juntos crisis complejas, nunca vistas en otros gobiernos. La crisis política en medio de la cual asumimos el mandato. La crisis de la corrupción por los audios de la vergüenza. La crisis de la...",
+      "color": "#666",
       "eventos": [
         {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
           "tipo": "cambio_tema",
-          "descripcion": "De Otros → Anticorrupción"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Anticorrupción"
+          "descripcion": "De Infraestructura → Otros"
         }
       ]
     },
     {
       "id": 7,
-      "tema": "Democracia e Instituciones",
-      "inicio": 187.3,
-      "fin": 217.8,
-      "inicio_fmt": "03:07",
-      "fin_fmt": "03:17",
-      "duracion_seg": 30.5,
-      "extracto": "acusándonos sin ninguna prueba y exigiéndonos en una perversa inversión de los principios elementales del derecho que problemas nuestra. Somos un país que se fundamenta en el principio constitucional de la igualdad de todos y de todas, ante la ley y dentro de la ley....",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "tema": "Otros",
-      "inicio": 218.6,
-      "fin": 229.8,
-      "inicio_fmt": "03:38",
-      "fin_fmt": "03:42",
-      "duracion_seg": 11.2,
-      "extracto": "Por lo que no se puede permitir privilegios que contraigan este principio. Este primer año he recibido una bofetada en una mejilla de aquellos que no aceptaron perder legítimamente....",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        }
-      ]
-    },
-    {
-      "id": 10,
-      "tema": "Regiones",
-      "inicio": 230.1,
-      "fin": 283.6,
-      "inicio_fmt": "03:50",
-      "fin_fmt": "04:19",
-      "duracion_seg": 53.6,
-      "extracto": "En las elecciones presidenciales con el voto consciente del pueblo peruano, pero en este segundo año no voy a poner la otra mejilla sino extenderle la mano para trabajar juntos en beneficio del pueblo a partir de los objetivos nacionales de desarrollo que espera nuestra patria en marco de la polític...",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "anuncio",
-          "descripcion": "Anuncio o compromiso"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 12,
-      "tema": "Anticorrupción",
-      "inicio": 283.6,
-      "fin": 312.8,
-      "inicio_fmt": "04:43",
-      "fin_fmt": "04:52",
-      "duracion_seg": 29.2,
-      "extracto": "Sin embargo, debo admitir que hemos cometido errores con algunas designaciones, así como brindar confianza. Quienes se aprovecharon y burlaron de ella, nada más opuesto y distante a mis valores, a mis principios, mi dignidad, son los actos que mis propios padres me han inculcado, tal como se ha regi...",
-      "color": "#e67e22",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Anticorrupción"
-        }
-      ]
-    },
-    {
-      "id": 13,
-      "tema": "Democracia e Instituciones",
-      "inicio": 312.8,
-      "fin": 339.6,
-      "inicio_fmt": "05:12",
-      "fin_fmt": "05:23",
-      "duracion_seg": 26.7,
-      "extracto": "Por ello, reconozco el trabajo que se hace desde el Ministerio Público y el Poder Judicial, pues en esta nuestra patria padecemos sed ancestral de justicia. La que debe impartirse por igual y sin distinción de ideologías y colores políticos. El gobierno del pueblo tiene ese objetivo muy claro y vamo...",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Democracia e Instituciones"
-        },
-        {
-          "tipo": "anuncio",
-          "descripcion": "Anuncio o compromiso"
-        }
-      ]
-    },
-    {
-      "id": 14,
-      "tema": "Seguridad",
-      "inicio": 340.1,
-      "fin": 351.2,
-      "inicio_fmt": "05:40",
-      "fin_fmt": "05:51",
-      "duracion_seg": 11.1,
-      "extracto": "Aún cuando desde los poderes fácticos y la oligarquía existe un empeño por minar al gobierno del pueblo sin dimensionar el daño inmenso que también le infringe al país....",
-      "color": "#c0392b",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Seguridad"
-        }
-      ]
-    },
-    {
-      "id": 15,
-      "tema": "Política Exterior",
-      "inicio": 351.2,
-      "fin": 363.8,
-      "inicio_fmt": "05:51",
-      "fin_fmt": "06:03",
-      "duracion_seg": 12.6,
-      "extracto": "He jurado por Dios y por la patria servir a mi país. Los insultos y las burlas no me harán retroceder, al contrario, me fortalecerán con férrea y con visión....",
-      "color": "#2c3e50",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Política Exterior"
-        }
-      ]
-    },
-    {
-      "id": 16,
-      "tema": "Economía",
-      "inicio": 363.9,
-      "fin": 381.1,
-      "inicio_fmt": "06:03",
-      "fin_fmt": "06:21",
-      "duracion_seg": 17.2,
-      "extracto": "Mi férrea y con visión de que nos recuperaremos de esta crisis que nos azota, porque ante todo está el interés del país y nuestros compatriotas....",
-      "color": "#1a1a2e",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Economía"
-        }
-      ]
-    },
-    {
-      "id": 17,
-      "tema": "Democracia e Instituciones",
-      "inicio": 381.1,
-      "fin": 415.4,
-      "inicio_fmt": "06:21",
-      "fin_fmt": "06:30",
-      "duracion_seg": 34.3,
-      "extracto": "Aún cuando se injuria a mi familia a diario y se ofende la majestad de la Presidencia de la República, me someto a la justicia. Por lo que corroboraré plenamente en el marco de nuestra Constitución....",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 18,
-      "tema": "Anticorrupción",
-      "inicio": 390.8,
-      "fin": 409.8,
-      "inicio_fmt": "06:30",
-      "fin_fmt": "06:49",
-      "duracion_seg": 18.9,
-      "extracto": "Para aclarar los delitos que se me pretenden imputar con respeto al debido proceso y no a la justicia mediática, mi deber es decir siempre la verdad, tal como me enseñaron mis padres....",
-      "color": "#e67e22",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Anticorrupción"
-        }
-      ]
-    },
-    {
-      "id": 19,
-      "tema": "Agricultura",
-      "inicio": 416.3,
-      "fin": 426.5,
-      "inicio_fmt": "06:56",
-      "fin_fmt": "07:06",
-      "duracion_seg": 10.2,
-      "extracto": "Propusimos la generación de bienestar y protección social con seguridad alimentaria, la reactivación económica y de actividades productivas con desarrollo agrario y rural....",
-      "color": "#d35400",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Agricultura"
-        }
-      ]
-    },
-    {
-      "id": 21,
-      "tema": "Seguridad",
-      "inicio": 436.4,
-      "fin": 454.5,
-      "inicio_fmt": "07:16",
-      "fin_fmt": "07:27",
-      "duracion_seg": 18.1,
-      "extracto": "Persistir en la descentralización, el fortalecimiento del sistema democrático, la recuperación de la seguridad ciudadana y la lucha contra la corrupción, el narcotráfico y el terrorismo. Propusimos igualmente la gestión eficiente de riesgos y amenazas a los derechos de las personas y su entorno....",
-      "color": "#c0392b",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Seguridad"
-        }
-      ]
-    },
-    {
-      "id": 22,
-      "tema": "Democracia e Instituciones",
-      "inicio": 454.5,
-      "fin": 492.1,
-      "inicio_fmt": "07:34",
-      "fin_fmt": "07:38",
-      "duracion_seg": 37.6,
-      "extracto": "Un gobierno y transformación digital con equidad. No olvidemos que intrínseco a todo ello también se encuentra comprendida una reforma política integral de las bases constitucionales que colisionan con las necesidades del cambio. De este modo, se propuso para que se consulte a la ciudadanía de todo...",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Democracia e Instituciones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 25,
-      "tema": "Otros",
-      "inicio": 492.1,
-      "fin": 510.5,
-      "inicio_fmt": "08:12",
-      "fin_fmt": "08:14",
-      "duracion_seg": 18.4,
-      "extracto": "Cuyo proyecto fue archivado. No obstante, como he dicho, los medios de comunicación, en su mayoría, se han encargado de que nos mantengamos y de mantenernos desinformados....",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        }
-      ]
-    },
-    {
-      "id": 26,
-      "tema": "Economía",
-      "inicio": 511.7,
-      "fin": 555.9,
-      "inicio_fmt": "08:31",
-      "fin_fmt": "08:34",
-      "duracion_seg": 44.2,
-      "extracto": "¿Acaso se difunden las informaciones del crecimiento económico del Perú? Muy pocos lo saben, pero en lo que va del año 2022, hemos crecido en 3.5%, como lo señala el BCE. Igualmente, entre los países emergentes, también superamos la proyección del 2.5% del crecimiento económico para el año 2022. Com...",
-      "color": "#1a1a2e",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"5%\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Economía"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"5%\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Economía"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        }
-      ]
-    },
-    {
-      "id": 29,
-      "tema": "Otros",
-      "inicio": 545.6,
-      "fin": 615.0,
-      "inicio_fmt": "09:05",
-      "fin_fmt": "09:07",
-      "duracion_seg": 69.3,
-      "extracto": "Eso no se comunica. ¿qué se entenderán? Llegando a un 2.6%. Para el año 2022, lo que es muy inferior a lo que alcanzaremos. Nada de esto se propala. Si se presenta la información, no existe la mínima ni la real valoración del impacto de estos hechos. Solo se emiten mentiras y noticias falsas de Pedr...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"6%\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Otros"
-        }
-      ]
-    },
-    {
-      "id": 32,
-      "tema": "Democracia e Instituciones",
-      "inicio": 594.4,
-      "fin": 606.5,
-      "inicio_fmt": "09:54",
-      "fin_fmt": "10:06",
-      "duracion_seg": 12.1,
-      "extracto": "No quieren mencionar que hemos crecido, porque eso es hablar bien del gobierno....",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 34,
-      "tema": "Regiones",
-      "inicio": 615.4,
-      "fin": 627.0,
-      "inicio_fmt": "10:15",
-      "fin_fmt": "10:21",
-      "duracion_seg": 11.6,
-      "extracto": "Y hoy, el día de hoy, contamos con un millón doscientos sesenta mil ciudadanos que son menos pobres. Y también han salido de la extrema pobreza trescientos nueve mil peruanos y peruanas....",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 35,
-      "tema": "Economía",
-      "inicio": 627.3,
-      "fin": 730.1,
-      "inicio_fmt": "10:27",
-      "fin_fmt": "10:29",
-      "duracion_seg": 102.8,
-      "extracto": "¿Acaso tener menos pobreza? Como lo es que hemos recuperado los niveles de empleo que en estos momentos superan los cinco punto cinco millones de puestos de trabajo. El empleo formal a nivel nacional aumentó en un seis punto nueve por ciento interanual a mayo de este año. Y se recuperaron con ello t...",
-      "color": "#1a1a2e",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Economía"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        }
-      ]
-    },
-    {
-      "id": 36,
-      "tema": "Otros",
-      "inicio": 629.4,
-      "fin": 687.4,
-      "inicio_fmt": "10:29",
-      "fin_fmt": "10:31",
-      "duracion_seg": 58.0,
-      "extracto": "¿No es bueno para el país? Debo enfatizar que con este resultado positivo se pone de relieve que se ha superado. Estas cifras sí son reales, como lo precisa el Banco Central de Reserva....",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
-        }
-      ]
-    },
-    {
-      "id": 38,
-      "tema": "Infraestructura",
-      "inicio": 730.1,
-      "fin": 782.8,
-      "inicio_fmt": "12:10",
-      "fin_fmt": "12:33",
-      "duracion_seg": 52.7,
-      "extracto": "Con la finalidad de dar un impulso significativo a la inversión privada, hemos fortalecido los mecanismos de obras por impuestos y las asociaciones público privadas para que permitan mejorar la gestión de los proyectos de infraestructura, ampliando su alcance para contribuir al cierre de brechas. Lo...",
-      "color": "#8e44ad",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Infraestructura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Infraestructura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Infraestructura"
-        }
-      ]
-    },
-    {
-      "id": 39,
-      "tema": "Democracia e Instituciones",
-      "inicio": 753.9,
-      "fin": 790.7,
-      "inicio_fmt": "12:33",
-      "fin_fmt": "12:38",
-      "duracion_seg": 36.8,
-      "extracto": "Asimismo, estamos trabajando en una agenda activa que destrabe la grandes. Además, debo destacar, tal como prometimos al asumir este gobierno, que hemos recuperado....",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 40,
-      "tema": "Otros",
-      "inicio": 758.2,
-      "fin": 773.0,
-      "inicio_fmt": "12:38",
-      "fin_fmt": "12:39",
-      "duracion_seg": 14.8,
-      "extracto": "Los grandes. En el caso de Chavimochi, en agosto quedará expedito para continuar sus operaciones paralizadas por años....",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Otros"
-        }
-      ]
-    },
-    {
-      "id": 41,
-      "tema": "Economía",
-      "inicio": 790.9,
-      "fin": 815.4,
-      "inicio_fmt": "13:10",
-      "fin_fmt": "13:35",
-      "duracion_seg": 24.5,
-      "extracto": "Las deudas tributarias de gobiernos anteriores que ellos no quisieron cobrarla a las empresas privadas por más de 5.400 millones de soles que son utilizadas para financiar obras en educación, en salud, agua y saneamiento que tanto demanda la población....",
-      "color": "#1a1a2e",
-      "eventos": [
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"5.400 millones\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Economía"
-        }
-      ]
-    },
-    {
-      "id": 42,
-      "tema": "Regiones",
-      "inicio": 815.4,
-      "fin": 865.6,
-      "inicio_fmt": "13:35",
-      "fin_fmt": "13:48",
-      "duracion_seg": 50.2,
-      "extracto": "Sin embargo, debemos señalar que la inversión privada nacional y extranjera, así como los derechos de propiedad y contractuales de todos los peruanos, están garantizados, como también la política de justicia. Es necesario contar con estos recursos porque miles de familias en las zonas altas de los c...",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Lima"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 43,
-      "tema": "Otros",
-      "inicio": 828.7,
-      "fin": 839.4,
-      "inicio_fmt": "13:48",
-      "fin_fmt": "13:59",
-      "duracion_seg": 10.7,
-      "extracto": "Vamos a continuar con acciones más eficientes y severas para cobrar los más de 30.000 millones de soles pendientes....",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "anuncio",
-          "descripcion": "Anuncio o compromiso"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"30.000 millones\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        }
-      ]
-    },
-    {
-      "id": 45,
-      "tema": "Economía",
-      "inicio": 873.2,
-      "fin": 897.7,
-      "inicio_fmt": "14:33",
-      "fin_fmt": "14:56",
-      "duracion_seg": 24.5,
-      "extracto": "Respecto a las pensiones, nuestras jubiladas y jubilados que aportaron durante toda su vida laboral reciben pensiones de miserias y otros en situaciones de pobreza pueden acceder a pensión 65, pero aproximadamente el 50% de adultos mayores de más de 65 años no reciben nada. Esta situación tiene que...",
-      "color": "#1a1a2e",
-      "eventos": [
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"50%\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Economía"
-        }
-      ]
-    },
-    {
-      "id": 46,
-      "tema": "Democracia e Instituciones",
-      "inicio": 897.7,
-      "fin": 918.7,
-      "inicio_fmt": "14:57",
-      "fin_fmt": "15:18",
-      "duracion_seg": 21.0,
-      "extracto": "Mediante decreto supremo, hemos creado una comisión que en seis meses emitirá un diagnóstico y propuestas normativas para realizar las modificaciones necesarias a los regímenes previsionales públicos y privados con el objetivo de mejorar la situación de nuestros adultos mayores....",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "anuncio",
-          "descripcion": "Anuncio o compromiso"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 47,
-      "tema": "Economía",
-      "inicio": 928.6,
-      "fin": 1016.9,
-      "inicio_fmt": "15:28",
-      "fin_fmt": "15:37",
-      "duracion_seg": 88.3,
-      "extracto": "Incluiremos a los trabajadores informales que bajo las condiciones actuales no pueden acceder a un sistema de pensiones y tampoco tendrán la posibilidad de obtener pensiones. Aspiramos a que todos los peruanos puedan gozar de una pensión universal con primer piso de protección social y brindar los i...",
-      "color": "#1a1a2e",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Economía"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Economía"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        }
-      ]
-    },
-    {
-      "id": 48,
-      "tema": "Anticorrupción",
-      "inicio": 953.3,
-      "fin": 968.7,
-      "inicio_fmt": "15:53",
-      "fin_fmt": "16:08",
-      "duracion_seg": 15.4,
-      "extracto": "Que el sistema pensionario brinde mejores pensiones a los jubilados y generar mayor competencia de modo que se puedan romper los oligopolios y las injusticias en beneficio de todos los aportantes y pensionistas....",
-      "color": "#e67e22",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Anticorrupción"
-        }
-      ]
-    },
-    {
-      "id": 50,
-      "tema": "Democracia e Instituciones",
-      "inicio": 1022.8,
-      "fin": 1037.2,
-      "inicio_fmt": "17:02",
-      "fin_fmt": "17:17",
-      "duracion_seg": 14.4,
-      "extracto": "Todo esto, como lo que se expresará adelante, trae por tierra todo lo que se ha anunciado y se anuncia apocalípticamente sobre lo que sería y es mi mandato gubernamental....",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 51,
-      "tema": "Anticorrupción",
-      "inicio": 1038.5,
-      "fin": 1055.5,
-      "inicio_fmt": "17:18",
-      "fin_fmt": "17:35",
-      "duracion_seg": 17.0,
-      "extracto": "Se estabilizan y reclaman la vacancia, no por falta de resultados o por inexistentes imputaciones que nunca aprobarán, sino por defender sus intereses privados y por evitar los cambios que mi gobierno se empeña en cumplir....",
-      "color": "#e67e22",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Anticorrupción"
-        }
-      ]
-    },
-    {
-      "id": 52,
-      "tema": "Economía",
-      "inicio": 1055.7,
-      "fin": 1250.1,
-      "inicio_fmt": "17:35",
-      "fin_fmt": "17:43",
-      "duracion_seg": 194.4,
-      "extracto": "Medidas frente al alza de precios. La vulnerabilidad económica que millones de compatriotas padecen como consecuencia de esta desgracia. Como consecuencia de la crisis global, los precios del petróleo, trigo, cereales han sufrido un alza afectando la canasta familiar. Especialmente a aquellos en sit...",
-      "color": "#1a1a2e",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Economía"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"99 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Economía"
-        }
-      ]
-    },
-    {
-      "id": 54,
-      "tema": "Otros",
-      "inicio": 1072.7,
-      "fin": 1140.5,
-      "inicio_fmt": "17:52",
-      "fin_fmt": "17:56",
-      "duracion_seg": 67.8,
-      "extracto": "Al dolor de las pérdidas humanas se debe añadir. Frente a esto, nos movilizamos y logramos que 12 millones y medio de peruanos recibieran de manera individual 350 soles para que pudieran cubrir sus necesidades básicas. Hasta la fecha, 3.530 ollas comunes se encuentran registradas en el sistema infor...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"12 mil\""
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"117 mil\""
-        }
-      ]
-    },
-    {
-      "id": 55,
-      "tema": "Otros",
-      "inicio": 1207.2,
-      "fin": 1237.3,
-      "inicio_fmt": "20:07",
-      "fin_fmt": "20:10",
-      "duracion_seg": 30.0,
-      "extracto": "de 1.950 millones de soles. ha significado un ahorro que benefició a los usuarios 1.000 millones de soles,...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"1.950 millones\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"1.000 millones\""
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
-        }
-      ]
-    },
-    {
-      "id": 57,
-      "tema": "Agricultura",
-      "inicio": 1250.1,
-      "fin": 1270.3,
-      "inicio_fmt": "20:50",
-      "fin_fmt": "21:10",
-      "duracion_seg": 20.2,
-      "extracto": "se exoneró temporalmente del impuesto general a las ventas a cinco productos, como son el pollo, huevos, pan, fideos y azúcar, y sus principales insumos,...",
-      "color": "#d35400",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Agricultura"
-        }
-      ]
-    },
-    {
-      "id": 58,
-      "tema": "Otros",
-      "inicio": 1270.3,
-      "fin": 1300.9,
-      "inicio_fmt": "21:10",
-      "fin_fmt": "21:15",
-      "duracion_seg": 30.5,
-      "extracto": "con el propósito de reducir los precios, como ocurrió con la gasolina de 90 octanos. Esta cifra reducida......",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
-        }
-      ]
-    },
-    {
-      "id": 59,
-      "tema": "Economía",
-      "inicio": 1275.7,
-      "fin": 1314.6,
-      "inicio_fmt": "21:15",
-      "fin_fmt": "21:28",
-      "duracion_seg": 38.9,
-      "extracto": "Sin embargo, se ha puesto en evidencia que las malas prácticas de algunos empresarios evitaron que estas medidas y esfuerzos fiscales no se vean reflejados en su verdadera dimensión. Damos cuenta ante el país que al inicio de mi gobierno encontramos en el Fondo de Estabilización Fiscal un monto de 2...",
-      "color": "#1a1a2e",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"1.500 millones\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Economía"
-        }
-      ]
-    },
-    {
-      "id": 60,
       "tema": "Salud",
-      "inicio": 1300.9,
-      "fin": 1416.5,
-      "inicio_fmt": "21:40",
-      "fin_fmt": "21:45",
-      "duracion_seg": 115.5,
-      "extracto": "...fue consecuencia del gasto que se efectuó por la pandemia. Control y prevención de la pandemia. Estamos en la cuarta ola de la pandemia y se ha demostrado que la estrategia más efectiva para el control y prevención de esta enfermedad es la vacunación. ¿Y quién en nuestras familias no ha sido afec...",
+      "inicio": 385.0,
+      "fin": 415.0,
+      "inicio_fmt": "06:25",
+      "fin_fmt": "06:55",
+      "duracion_seg": 30.0,
+      "extracto": "La crisis de la pandemia, la cual la seguimos viviendo. La crisis política puso en tela de juicio la continuidad democrática y planteó el desafío de conducir y garantizar una transición ordenada y pacífica, donde no exista espacio para experimentos ni tentaciones autoritarias....",
       "color": "#2980b9",
       "eventos": [
         {
           "tipo": "cambio_tema",
           "descripcion": "De Otros → Salud"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Salud"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Salud"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"80%\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Salud"
-        },
-        {
-          "tipo": "anuncio",
-          "descripcion": "Anuncio o compromiso"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Salud"
         }
       ]
     },
     {
-      "id": 61,
-      "tema": "Otros",
-      "inicio": 1339.2,
-      "fin": 1369.0,
-      "inicio_fmt": "22:19",
-      "fin_fmt": "22:20",
-      "duracion_seg": 29.8,
-      "extracto": "¿Quién en nuestras familias no ha sido afectado por este flagelo? Ello nos ha permitido pasar de 13.100.000 dosis aplicadas hasta julio del 2021 a más de 80 millones de dosis a la fecha. Nuestro compromiso a diciembre del presente año es alcanzar el 80% de la población mayor de 12 años......",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"80 mil\""
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"80%\""
-        }
-      ]
-    },
-    {
-      "id": 63,
-      "tema": "Agricultura",
-      "inicio": 1379.4,
-      "fin": 1402.3,
-      "inicio_fmt": "22:59",
-      "fin_fmt": "23:07",
-      "duracion_seg": 23.0,
-      "extracto": "En el más breve plazo, aprobaremos la nueva Política Nacional de Desarrollo e Inclusión Social... Con esta nueva mirada en la Política de Desarrollo e Inclusión Social, revaloremos los programas sociales......",
-      "color": "#d35400",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Agricultura"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Agricultura"
-        }
-      ]
-    },
-    {
-      "id": 67,
-      "tema": "Economía",
-      "inicio": 1433.7,
-      "fin": 1447.6,
-      "inicio_fmt": "23:53",
-      "fin_fmt": "24:07",
-      "duracion_seg": 13.9,
-      "extracto": "...en situación de vulnerabilidad y pobreza, invirtiendo más de 3.000 millones de soles y ejecutando a la fecha más del 55% del presupuesto institucional....",
-      "color": "#1a1a2e",
-      "eventos": [
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"3.000 millones\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Economía"
-        }
-      ]
-    },
-    {
-      "id": 68,
+      "id": 8,
       "tema": "Democracia e Instituciones",
-      "inicio": 1448.5,
-      "fin": 1495.4,
-      "inicio_fmt": "24:08",
-      "fin_fmt": "24:19",
-      "duracion_seg": 47.0,
-      "extracto": "Asimismo, en lo que va de mi Gobierno, en respuesta a los retos de la seguridad alimentaria y nutricional, mediante el decreto legislativo 1472 del programa Caliguarma... Atendiendo a la política del sector, el Congreso de la República aprobó la Ley 13.458 y el reglamento de la ley que reconoce las...",
+      "inicio": 415.0,
+      "fin": 441.0,
+      "inicio_fmt": "06:55",
+      "fin_fmt": "07:21",
+      "duracion_seg": 26.0,
+      "extracto": "debía canalizarse por la vía constitucional y así se hizo. Asumí el cargo para completar el periodo de gobierno, no para aprovecharme una oportunidad y pretender quedarme en el poder. Es por ello que he firmado el decreto que convoca a elecciones generales para el 11 de abril...",
       "color": "#7f8c8d",
       "eventos": [
         {
-          "tipo": "anuncio",
-          "descripcion": "Anuncio o compromiso"
-        },
-        {
           "tipo": "cambio_tema",
-          "descripcion": "De Economía → Democracia e Instituciones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Democracia e Instituciones"
+          "descripcion": "De Salud → Democracia e Instituciones"
         }
       ]
     },
     {
-      "id": 69,
-      "tema": "Otros",
-      "inicio": 1459.6,
-      "fin": 1557.5,
-      "inicio_fmt": "24:19",
-      "fin_fmt": "24:25",
-      "duracion_seg": 97.9,
-      "extracto": "...este programa entregó más de 26.000 toneladas. ...de 5 a 11 kilos de productos de primera necesidad para mitigar el hambre en los hogares más vulnerables del país. No obstante a lo anterior, mediante el decreto de urgencia número 017 del 2022, se han destinado 96.8 millones de soles para atender...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Otros"
-        },
-        {
-          "tipo": "anuncio",
-          "descripcion": "Anuncio o compromiso"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"96.8 millones\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Otros"
-        },
-        {
-          "tipo": "anuncio",
-          "descripcion": "Anuncio o compromiso"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
-        }
-      ]
-    },
-    {
-      "id": 70,
+      "id": 9,
       "tema": "Anticorrupción",
-      "inicio": 1465.2,
-      "fin": 1476.2,
-      "inicio_fmt": "24:25",
-      "fin_fmt": "24:36",
-      "duracion_seg": 11.0,
-      "extracto": "...a más de un millón de personas vulnerables, logrando entregar más de 2.500.000 canastas con alimentos que pasaron en mi Gobierno......",
+      "inicio": 441.0,
+      "fin": 454.0,
+      "inicio_fmt": "07:21",
+      "fin_fmt": "07:34",
+      "duracion_seg": 13.0,
+      "extracto": "La crisis de la corrupción puso en evidencia uno de los peores flagelos de nuestra sociedad y afectó la institucionalidad y la moral de los peruanos.",
       "color": "#e67e22",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Otros → Anticorrupción"
+          "descripcion": "De Democracia e Instituciones → Anticorrupción"
         }
       ]
     },
     {
-      "id": 73,
+      "id": 10,
+      "tema": "Anticorrupción",
+      "inicio": 454.0,
+      "fin": 474.0,
+      "inicio_fmt": "07:34",
+      "fin_fmt": "07:54",
+      "duracion_seg": 20.0,
+      "extracto": "Pero respondimos de manera resuelta y enérgica con una lucha frontal contra la corrupción y un conjunto de reformas para transformar desde la raíz las instituciones, que luego fueron apoyados de manera contundente en las urnas a través del referéndum.",
+      "color": "#e67e22",
+      "eventos": []
+    },
+    {
+      "id": 11,
+      "tema": "Democracia e Instituciones",
+      "inicio": 474.0,
+      "fin": 528.0,
+      "inicio_fmt": "07:54",
+      "fin_fmt": "08:48",
+      "duracion_seg": 54.0,
+      "extracto": "La crisis de la gobernabilidad llevó a extremos inaceptables la intolerancia, la arbitrariedad y los intereses subalternos y afectó profundamente la separación e independencia de poderes y la democracia. Las reformas que implementamos, representando el clamor ciudadano,...",
+      "color": "#7f8c8d",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Anticorrupción → Democracia e Instituciones"
+        }
+      ]
+    },
+    {
+      "id": 12,
       "tema": "Economía",
-      "inicio": 1531.8,
-      "fin": 1548.2,
-      "inicio_fmt": "25:31",
-      "fin_fmt": "25:40",
-      "duracion_seg": 16.4,
-      "extracto": "Para ello, en el año 2022, se logró incrementar el presupuesto de los comedores populares en 78 millones de soles... ...aumento del 67% del presupuesto que no se había dado en más de 30 años....",
+      "inicio": 528.0,
+      "fin": 556.0,
+      "inicio_fmt": "08:48",
+      "fin_fmt": "09:16",
+      "duracion_seg": 28.0,
+      "extracto": "que afecta la vida, la salud y la economía de todos los peruanos. Juntos hemos hecho frente a la adversidad y lo seguimos haciendo porque es la responsabilidad que tenemos ante nuestros hijos, nuestros padres, nuestros compatriotas y nuestro destino. Desde el primer día de mi...",
       "color": "#1a1a2e",
       "eventos": [
         {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"78 mil\""
-        },
-        {
           "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"67%\""
+          "descripcion": "De Democracia e Instituciones → Economía"
         }
       ]
     },
     {
-      "id": 75,
+      "id": 13,
       "tema": "Otros",
-      "inicio": 1559.1,
-      "fin": 1606.5,
-      "inicio_fmt": "25:59",
-      "fin_fmt": "26:11",
-      "duracion_seg": 47.4,
-      "extracto": "...en los próximos meses, otorgaremos un bono de apoyo alimentario a más de 6 millones de personas pobres y vulnerables con una inversión de 2.000 millones de soles. Esto ha representado la inclusión financiera de más de 2.2 millones de personas mediante las modalidades de pago, cuenta DNI y banca c...",
+      "inicio": 556.0,
+      "fin": 574.0,
+      "inicio_fmt": "09:16",
+      "fin_fmt": "09:34",
+      "duracion_seg": 18.0,
+      "extracto": "y por ello trazamos los cinco ejes que constituyen la base de nuestra gestión. 1. Integridad y lucha contra la corrupción. 2. Fortalecimiento institucional para la gobernabilidad.",
       "color": "#666",
       "eventos": [
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"2.000 millones\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"2.2 millones\""
-        },
         {
           "tipo": "cambio_tema",
           "descripcion": "De Economía → Otros"
@@ -1390,108 +300,45 @@ const DATA = {
       ]
     },
     {
-      "id": 76,
-      "tema": "Regiones",
-      "inicio": 1572.5,
-      "fin": 1588.4,
-      "inicio_fmt": "26:12",
-      "fin_fmt": "26:28",
-      "duracion_seg": 16.0,
-      "extracto": "Implementamos una medida pública de emergencia con eficacia en tiempo récord, destinando más de 5.000 millones de soles para la entrega del apoyo económico Yanapa y Perú a más de 13.500.000 de personas....",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"5.000 millones\""
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 78,
-      "tema": "Educación",
-      "inicio": 1606.5,
-      "fin": 1669.4,
-      "inicio_fmt": "26:46",
-      "fin_fmt": "26:57",
-      "duracion_seg": 62.9,
-      "extracto": "Para asegurar la atención alimentaria escolar, el programa Cali Warma atendió a 4.197.000 estudiantes en más de 64.000 instituciones educativas a nivel nacional... ...distribuyéndose más de 93.000 toneladas de alimentos para el consumo de los niveles de educación inicial, primaria y secundaria. De i...",
-      "color": "#27ae60",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Educación"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Educación"
-        }
-      ]
-    },
-    {
-      "id": 80,
+      "id": 14,
       "tema": "Economía",
-      "inicio": 1639.0,
-      "fin": 1651.0,
-      "inicio_fmt": "27:18",
-      "fin_fmt": "27:30",
-      "duracion_seg": 12.0,
-      "extracto": "El programa Pensión 65 se convertirá en una pensión del pueblo y se aumentará la subvención bimestral hasta 400 soles....",
+      "inicio": 574.0,
+      "fin": 607.0,
+      "inicio_fmt": "09:34",
+      "fin_fmt": "10:07",
+      "duracion_seg": 33.0,
+      "extracto": "3. Crecimiento económico, equitativo, competitivo y sostenible. 4. Desarrollo social y bienestar de la población. 5. Descentralización efectiva para el desarrollo. Estos lineamientos cobran mayor vigencia en la hora actual y constituyen objetivos transversales para todos los...",
       "color": "#1a1a2e",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Economía"
+          "descripcion": "De Otros → Economía"
         }
       ]
     },
     {
-      "id": 82,
-      "tema": "Seguridad",
-      "inicio": 1669.4,
-      "fin": 1681.3,
-      "inicio_fmt": "27:49",
-      "fin_fmt": "28:01",
-      "duracion_seg": 11.9,
-      "extracto": "En este marco del fortalecimiento y rediseño del Sistema Nacional de Focalización de Hogares y con el fin de visibilizar a los más vulnerables......",
-      "color": "#c0392b",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Seguridad"
-        }
-      ]
+      "id": 15,
+      "tema": "Economía",
+      "inicio": 607.0,
+      "fin": 617.0,
+      "inicio_fmt": "10:07",
+      "fin_fmt": "10:17",
+      "duracion_seg": 10.0,
+      "extracto": "Tenemos que ejecutar obras y promover inversiones si queremos lograr un crecimiento económico competitivo y sostenible.",
+      "color": "#1a1a2e",
+      "eventos": []
     },
     {
-      "id": 84,
+      "id": 16,
       "tema": "Democracia e Instituciones",
-      "inicio": 1688.3,
-      "fin": 1702.0,
-      "inicio_fmt": "28:08",
-      "fin_fmt": "28:09",
-      "duracion_seg": 13.7,
-      "extracto": "...públicas. En nuestro gobierno, respetamos los contratos vigentes....",
+      "inicio": 617.0,
+      "fin": 634.0,
+      "inicio_fmt": "10:17",
+      "fin_fmt": "10:34",
+      "duracion_seg": 17.0,
+      "extracto": "Y tenemos que seguir luchando contra la corrupción e impulsando las reformas si nuestra meta es fortalecer la democracia y las instituciones. Peruanos y peruanas, este ha sido un año de retos.",
       "color": "#7f8c8d",
       "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Democracia e Instituciones"
-        },
-        {
-          "tipo": "anuncio",
-          "descripcion": "Anuncio o compromiso"
-        },
         {
           "tipo": "cambio_tema",
           "descripcion": "De Economía → Democracia e Instituciones"
@@ -1499,151 +346,1110 @@ const DATA = {
       ]
     },
     {
-      "id": 86,
-      "tema": "Economía",
-      "inicio": 1696.3,
-      "fin": 1841.5,
-      "inicio_fmt": "28:16",
-      "fin_fmt": "28:17",
-      "duracion_seg": 145.1,
-      "extracto": "Energía y minas. Apoyamos el desarrollo de la actividad minera sostenible con integración multiactor. Aquí, los intereses de todos y todas apoyan el desarrollo del clúster minero productivo... ...generando un importante desarrollo económico en las regiones de nuestro país. Por ello, es importante re...",
-      "color": "#1a1a2e",
+      "id": 17,
+      "tema": "Salud",
+      "inicio": 634.0,
+      "fin": 721.0,
+      "inicio_fmt": "10:34",
+      "fin_fmt": "12:01",
+      "duracion_seg": 87.0,
+      "extracto": "Comenzaré por reseñar las acciones realizadas en el marco de la lucha contra la pandemia, así como los esfuerzos realizados por los sectores del Ejecutivo en beneficio del país. El 2020 trajo consigo un enemigo invisible pero letal para la humanidad, que ha generado pérdidas...",
+      "color": "#2980b9",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Economía"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Economía"
+          "descripcion": "De Democracia e Instituciones → Salud"
         },
         {
           "tipo": "cifra",
-          "descripcion": "Cifra: \"10%\""
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"15%\""
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"64%\""
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"5.242 millones\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"5.300 millones\""
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"5.600 millones\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
+          "descripcion": "Cifra: 32 mil"
         }
       ]
     },
     {
-      "id": 89,
+      "id": 18,
       "tema": "Otros",
-      "inicio": 1778.7,
-      "fin": 1813.5,
-      "inicio_fmt": "29:38",
-      "fin_fmt": "29:42",
-      "duracion_seg": 34.8,
-      "extracto": "Asimismo, el canon minero registró un récord histórico... ...sumando más de 7.844 millones de soles, reflejando un aumento significativo del 166% respecto a lo reportado en el año 2021. ...1.887 millones de dólares....",
+      "inicio": 721.0,
+      "fin": 759.0,
+      "inicio_fmt": "12:01",
+      "fin_fmt": "12:39",
+      "duracion_seg": 38.0,
+      "extracto": "Fuimos uno de los primeros países en tomar esta medida, la cual fue acatada mayoritariamente, lográndose una reducción de hasta el 84% de la movilidad social en las primeras semanas. Hoy puedo decir con la mayor certeza y convicción que la cuarentena permitió salvar muchas vidas...",
       "color": "#666",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
+          "descripcion": "De Salud → Otros"
         },
         {
           "tipo": "cifra",
-          "descripcion": "Cifra: \"7.844 millones\""
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"1.887 millones\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
+          "descripcion": "Cifra: 84%"
         }
       ]
     },
     {
-      "id": 90,
+      "id": 19,
+      "tema": "Salud",
+      "inicio": 759.0,
+      "fin": 785.0,
+      "inicio_fmt": "12:39",
+      "fin_fmt": "13:05",
+      "duracion_seg": 26.0,
+      "extracto": "En los 135 días de cuarentena, multiplicamos el número de camas de hospitalización, camas UCI, pruebas, laboratorios, sistemas de respuesta. Hemos avanzado en medio de la adversidad. Durante este tiempo hemos revertido décadas de abandono y de poca inversión en el sector.",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Salud"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "tema": "Salud",
+      "inicio": 785.0,
+      "fin": 853.0,
+      "inicio_fmt": "13:05",
+      "fin_fmt": "14:13",
+      "duracion_seg": 68.0,
+      "extracto": "Es un esfuerzo conjunto de las instituciones públicas de salud, los gobiernos regionales, el sector privado. Juntos logramos multiplicar por seis la disponibilidad de camas hospitalarias, pasando de 3.000 a 18.000 camas disponibles en la actualidad. De igual forma, hemos logrado...",
+      "color": "#2980b9",
+      "eventos": []
+    },
+    {
+      "id": 21,
+      "tema": "Educación",
+      "inicio": 853.0,
+      "fin": 861.0,
+      "inicio_fmt": "14:13",
+      "fin_fmt": "14:21",
+      "duracion_seg": 8.0,
+      "extracto": "como el Hospital de Emergencias de Ate, que se convertirá en el Instituto Nacional de Medicina Crítica,",
+      "color": "#27ae60",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Educación"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "tema": "Salud",
+      "inicio": 861.0,
+      "fin": 905.0,
+      "inicio_fmt": "14:21",
+      "fin_fmt": "15:05",
+      "duracion_seg": 44.0,
+      "extracto": "el Hospital Regional de Ayacucho, el Instituto Regional de Enfermedades Neoplásicas de Junín, el Hospital Regional de Moquegua, el Hospital de Macuzán y Empuno, y los centros de salud de Alto Guayaga y Alto Mayo en San Martín. Este mes dimos un paso fundamental, porque al...",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Educación → Salud"
+        },
+        {
+          "tipo": "mencion_regional",
+          "descripcion": "Menciona: Ayacucho"
+        },
+        {
+          "tipo": "mencion_regional",
+          "descripcion": "Menciona: Junín"
+        },
+        {
+          "tipo": "mencion_regional",
+          "descripcion": "Menciona: Moquegua"
+        }
+      ]
+    },
+    {
+      "id": 23,
       "tema": "Regiones",
-      "inicio": 1841.5,
-      "fin": 1860.4,
-      "inicio_fmt": "30:41",
-      "fin_fmt": "30:45",
-      "duracion_seg": 19.0,
-      "extracto": "...con presencia en toda la región. ...en la región de Arequipa, que produjo la pérdida de varias vidas humanas......",
+      "inicio": 905.0,
+      "fin": 917.0,
+      "inicio_fmt": "15:05",
+      "fin_fmt": "15:17",
+      "duracion_seg": 12.0,
+      "extracto": "en Ayacucho, Puno, Huancavelica, Huango, Cusco, Piura, Pasco, Junín, Lima, San Martín, beneficiando a más de un millón 655 mil peruanos.",
       "color": "#16a085",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Economía → Regiones"
+          "descripcion": "De Salud → Regiones"
+        },
+        {
+          "tipo": "mencion_regional",
+          "descripcion": "Menciona: Ayacucho"
+        },
+        {
+          "tipo": "mencion_regional",
+          "descripcion": "Menciona: Cusco"
+        },
+        {
+          "tipo": "mencion_regional",
+          "descripcion": "Menciona: Huancavelica"
+        },
+        {
+          "tipo": "cifra",
+          "descripcion": "Cifra: 655 mil"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "tema": "Salud",
+      "inicio": 918.0,
+      "fin": 1002.0,
+      "inicio_fmt": "15:18",
+      "fin_fmt": "16:42",
+      "duracion_seg": 84.0,
+      "extracto": "Asimismo, en los próximos meses entrarán en funcionamiento el Hospital de Pacasmayo en La Libertad, el Hospital de Putín en Puno, el Hospital de Chalhuahuacho en Apurima, los centros de salud de Akira, Cotabamba, el Centro de Salud de Machu Picchu en Cusco, entre muchos otros....",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Regiones → Salud"
+        },
+        {
+          "tipo": "mencion_regional",
+          "descripcion": "Menciona: Cusco"
+        },
+        {
+          "tipo": "mencion_regional",
+          "descripcion": "Menciona: La Libertad"
+        },
+        {
+          "tipo": "mencion_regional",
+          "descripcion": "Menciona: Puno"
+        },
+        {
+          "tipo": "cifra",
+          "descripcion": "Cifra: 750 mil"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "tema": "Economía",
+      "inicio": 1003.0,
+      "fin": 1035.0,
+      "inicio_fmt": "16:43",
+      "fin_fmt": "17:15",
+      "duracion_seg": 32.0,
+      "extracto": "La crisis de disponibilidad de oxígeno derivada del incremento de casos COVID-19 se ha acrecentado por la existencia de un mercado con múltiples fallas, donde inclusive se han configurado prácticas empresariales de abusos de posición de mercado, contrario a nuestra economía...",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Economía"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "tema": "Salud",
+      "inicio": 1035.0,
+      "fin": 1047.0,
+      "inicio_fmt": "17:15",
+      "fin_fmt": "17:27",
+      "duracion_seg": 12.0,
+      "extracto": "Meantre decretos de urgencia 066-2020, se declaró la producción y distribución de oxígeno medicinal a los establecimientos de salud de prioritaria atención",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Salud"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "tema": "Agricultura",
+      "inicio": 1047.0,
+      "fin": 1072.0,
+      "inicio_fmt": "17:27",
+      "fin_fmt": "17:52",
+      "duracion_seg": 25.0,
+      "extracto": "sobre la producción industrial por parte de los productores de oxígeno. Hemos adquirido 105 toneladas por día de oxígeno medicinal, con los cuales estamos cerrando gradualmente la brecha de déficit de oxígeno en el país para atender a todos los peruanos que lo necesiten.",
+      "color": "#d35400",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Agricultura"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "tema": "Otros",
+      "inicio": 1073.0,
+      "fin": 1085.0,
+      "inicio_fmt": "17:53",
+      "fin_fmt": "18:05",
+      "duracion_seg": 12.0,
+      "extracto": "Por otro lado, no puedo dejar de destacar la alianza estratégica con el sector privado que solidariamente ha puesto a disposición plantas de producción de oxígeno",
+      "color": "#666",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Agricultura → Otros"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "tema": "Regiones",
+      "inicio": 1085.0,
+      "fin": 1096.0,
+      "inicio_fmt": "18:05",
+      "fin_fmt": "18:16",
+      "duracion_seg": 11.0,
+      "extracto": "en diversas regiones del país, como Loreto, San Martín, La Libertad, Ancas, Arequipa, y ahora está haciendo esfuerzo también en otras regiones.",
+      "color": "#16a085",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Regiones"
         },
         {
           "tipo": "mencion_regional",
           "descripcion": "Menciona: Arequipa"
         },
         {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Regiones"
+          "tipo": "mencion_regional",
+          "descripcion": "Menciona: La Libertad"
+        },
+        {
+          "tipo": "mencion_regional",
+          "descripcion": "Menciona: Loreto"
         }
       ]
     },
     {
-      "id": 92,
+      "id": 30,
+      "tema": "Salud",
+      "inicio": 1097.0,
+      "fin": 1155.0,
+      "inicio_fmt": "18:17",
+      "fin_fmt": "19:15",
+      "duracion_seg": 58.0,
+      "extracto": "Para apoyar esta estrategia frente al COVID-19, se han sumado al gran equipo de profesionales de la salud 22.000 nuevos contratos para personal con mejores condiciones salariales y se ha extendido una bonificación mensual a miles de trabajadores de la salud. En nombre del...",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Regiones → Salud"
+        }
+      ]
+    },
+    {
+      "id": 31,
       "tema": "Economía",
-      "inicio": 1860.4,
-      "fin": 1922.5,
-      "inicio_fmt": "31:00",
-      "fin_fmt": "31:07",
-      "duracion_seg": 62.1,
-      "extracto": "...por esta situación, nuestro gobierno incorporó una causal de exclusión al proceso de formalización minera... ...inmersos en el proceso de formalización, a fin de que ejercen, ejecuten y proyecten el desarrollo de sus actividades mineras... ...Petro Perú continúa con el proceso de arranque gradual...",
+      "inicio": 1157.0,
+      "fin": 1180.0,
+      "inicio_fmt": "19:17",
+      "fin_fmt": "19:40",
+      "duracion_seg": 23.0,
+      "extracto": "Decenas de expertos y jóvenes científicos nos han demostrado que, pese a todas las adversidades, sí es posible realizar ciencia e investigación en nuestro país. Si bien es cierto, los propios expertos han sido claros al decir que aún hay muchas cosas que no sabemos de este virus,",
       "color": "#1a1a2e",
       "eventos": [
         {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Economía"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "tema": "Salud",
+      "inicio": 1180.0,
+      "fin": 1190.0,
+      "inicio_fmt": "19:40",
+      "fin_fmt": "19:50",
+      "duracion_seg": 10.0,
+      "extracto": "sí hay muchísimas otras que sabemos y que requieren de cuidado profesional y también del autocuidado con medidas de higiene y salud.",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Salud"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "tema": "Economía",
+      "inicio": 1190.0,
+      "fin": 1210.9,
+      "inicio_fmt": "19:50",
+      "fin_fmt": "20:11",
+      "duracion_seg": 20.9,
+      "extracto": "A la fecha, contamos con al menos ocho iniciativas de innovación tecnológica frente al COVID-19 en los campos de la vida. la vigilancia epidemiológica, pruebas moleculares rápidas, ventiladores mecánicos producidos aquí, en el Perú.",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Economía"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "tema": "Salud",
+      "inicio": 1211.0,
+      "fin": 1233.8,
+      "inicio_fmt": "20:11",
+      "fin_fmt": "20:34",
+      "duracion_seg": 22.8,
+      "extracto": "Traer la vacuna del COVID-19 al Perú, ni bien se encuentre disponible, es un objetivo nacional. Para ello, hemos creado la comisión multisectorial de coordinación y articulación de para acceder al desarrollo, producción, adquisición,",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Salud"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "tema": "Otros",
+      "inicio": 1233.9,
+      "fin": 1247.8,
+      "inicio_fmt": "20:34",
+      "fin_fmt": "20:48",
+      "duracion_seg": 13.9,
+      "extracto": "donación, y distribución de las vacunas contra el COVID. Vamos a multiplicar las gestiones externas en los ámbitos bilateral y multilateral para que el Perú acceda a la",
+      "color": "#666",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Otros"
+        },
+        {
           "tipo": "anuncio",
-          "descripcion": "Anuncio o compromiso"
-        },
+          "descripcion": "Anuncio de medida o inversión"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "tema": "Salud",
+      "inicio": 1247.9,
+      "fin": 1272.7,
+      "inicio_fmt": "20:48",
+      "fin_fmt": "21:13",
+      "duracion_seg": 24.8,
+      "extracto": "eventual vacuna y tratamiento contra esta enfermedad. Y que esta sea declarada bien La responsabilidad del estado es con todos los peruanos, en particular con las poblaciones vulnerables, pues están sujetas a especial protección. Por ello, aprobamos el decreto",
+      "color": "#2980b9",
+      "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Economía"
-        },
+          "descripcion": "De Otros → Salud"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "tema": "Otros",
+      "inicio": 1272.8,
+      "fin": 1281.7,
+      "inicio_fmt": "21:13",
+      "fin_fmt": "21:22",
+      "duracion_seg": 8.9,
+      "extracto": "de urgencia cero setenta y uno dos mil veinte que establece el plan de intervención para comunidades indígenas y centros",
+      "color": "#666",
+      "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Economía"
+          "descripcion": "De Salud → Otros"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "tema": "Regiones",
+      "inicio": 1281.8,
+      "fin": 1306.6,
+      "inicio_fmt": "21:22",
+      "fin_fmt": "21:47",
+      "duracion_seg": 24.8,
+      "extracto": "poblados rurales de la Amazonía frente a la emergencia del COVID-19. Plan que cuenta con un financiamiento de setenta y cuatro millones de soles y se encuentra dirigido a tres cientos cincuenta mil ciudadanos de comunidades indígenas en cinco mil tres cientos cincuenta y un...",
+      "color": "#16a085",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Regiones"
         },
+        {
+          "tipo": "mencion_regional",
+          "descripcion": "Menciona: Amazonía"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "tema": "Otros",
+      "inicio": 1306.7,
+      "fin": 1347.5,
+      "inicio_fmt": "21:47",
+      "fin_fmt": "22:28",
+      "duracion_seg": 40.8,
+      "extracto": "país. La muerte de cada peruana y peruano es una pérdida irreparable para el país y nos afecta a todos. Expreso una vez más nuestras más sentidas condolencias a sus familiares y sus seres queridos. Ningún compatriota que haya fallecido como consecuencia del COVID-19 debe quedar...",
+      "color": "#666",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Regiones → Otros"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "tema": "Salud",
+      "inicio": 1347.6,
+      "fin": 1462.2,
+      "inicio_fmt": "22:28",
+      "fin_fmt": "24:22",
+      "duracion_seg": 114.6,
+      "extracto": "la pandemia. No hay nada que ocultar, por ello, a diferencia de otros países que hacen el recuento al final de la enfermedad, el Perú lo está haciendo a medida que enfrente el virus, por eso se acaba de presentar el primer informe sobre las cifras y así continuará hasta el final...",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Salud"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "tema": "Otros",
+      "inicio": 1462.3,
+      "fin": 1514.2,
+      "inicio_fmt": "24:22",
+      "fin_fmt": "25:14",
+      "duracion_seg": 51.9,
+      "extracto": "Durante la cuarentena hemos seguido con el monitoreo y ya se reiniciaron las visitas domiciliarias a miles de niños menores de 36 meses para prevenir y tratar la anemia. Esta estrategia ya demostró su éxito, pues hace diez años el índice de anemia se mantenía constante, no...",
+      "color": "#666",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Otros"
+        },
+        {
+          "tipo": "cifra",
+          "descripcion": "Cifra: 43.5%"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "tema": "Salud",
+      "inicio": 1514.3,
+      "fin": 1536.2,
+      "inicio_fmt": "25:14",
+      "fin_fmt": "25:36",
+      "duracion_seg": 21.9,
+      "extracto": "derecho a la salud, promoviendo el acceso a información simple y de fácil comprensión sobre el contenido de azúcar, grasa saturada, grasas trans o sodio en los productos procesados que se encuentran a disposición de todos. Por ello, impulsamos y",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Salud"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "tema": "Otros",
+      "inicio": 1536.3,
+      "fin": 1563.1,
+      "inicio_fmt": "25:36",
+      "fin_fmt": "26:03",
+      "duracion_seg": 26.8,
+      "extracto": "promulgamos, a pesar de una férrea oposición, la ley de alimentación saludable que dispuso que en la publicidad del producto de los alimentos y bebidas no alcohólicas se consigne en forma clara, legible, destacada y comprensible las advertencias publicitarias a través de los...",
+      "color": "#666",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Otros"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "tema": "Economía",
+      "inicio": 1563.2,
+      "fin": 1585.1,
+      "inicio_fmt": "26:03",
+      "fin_fmt": "26:25",
+      "duracion_seg": 21.9,
+      "extracto": "nuevos hábitos de consumo en los peruanos, dándole a la población información de vital importancia para mantenerse saludables. En el último año hemos logrado proteger contra la zarampión, rubiola, parotiditis, y polio a",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Economía"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "tema": "Otros",
+      "inicio": 1585.2,
+      "fin": 1599.1,
+      "inicio_fmt": "26:25",
+      "fin_fmt": "26:39",
+      "duracion_seg": 13.9,
+      "extracto": "cuatro millones seiscientos mil niños menores de once años. La mayor cifra alcanzada por el país en los últimos veinte años. Asimismo, durante el año dos mil diecinueve, incorporamos la",
+      "color": "#666",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Otros"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "tema": "Salud",
+      "inicio": 1599.2,
+      "fin": 1626.1,
+      "inicio_fmt": "26:39",
+      "fin_fmt": "27:06",
+      "duracion_seg": 26.9,
+      "extracto": "vacuna contra la tos ferina y la vacuna contra el neumococo para adultos mayores. Este importante esfuerzo público hace que hoy nuestro país tenga el más completo calendario de vacunas en la región de las Américas, con diecisiete vacunas diferentes que protegen contra veintiséis...",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Salud"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "tema": "Economía",
+      "inicio": 1626.2,
+      "fin": 1650.1,
+      "inicio_fmt": "27:06",
+      "fin_fmt": "27:30",
+      "duracion_seg": 23.9,
+      "extracto": "con una inversión anual de cuatro millones de soles. Hemos dicho que las crisis representan al mismo tiempo una oportunidad, una oportunidad para fortalecer nuestra capacidad de respuesta, pero sobre todo para corregir las deficiencias históricas y continuar con la construcción...",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Economía"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "tema": "Salud",
+      "inicio": 1650.2,
+      "fin": 1767.1,
+      "inicio_fmt": "27:30",
+      "fin_fmt": "29:27",
+      "duracion_seg": 116.9,
+      "extracto": "sistema de salud que nos permita afrontar en mejores condiciones los retos sanitarios del futuro. Nunca antes la salud ha estado de manera tan clara en el centro de nuestras preocupaciones y prioridades, pero nuestro compromiso no empezó con la pandemia del covid-diecinueve,...",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Salud"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "tema": "Otros",
+      "inicio": 1767.2,
+      "fin": 1780.1,
+      "inicio_fmt": "29:27",
+      "fin_fmt": "29:40",
+      "duracion_seg": 12.9,
+      "extracto": "millones de afiliados a nivel nacional. Anuncio que para julio del dos mil veintiuno, todas las peruanas y peruanos estarán afiliados al",
+      "color": "#666",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Otros"
+        },
+        {
+          "tipo": "anuncio",
+          "descripcion": "Anuncio de medida o inversión"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "tema": "Salud",
+      "inicio": 1780.2,
+      "fin": 1812.4,
+      "inicio_fmt": "29:40",
+      "fin_fmt": "30:12",
+      "duracion_seg": 32.2,
+      "extracto": "seguro integral de salud, lo que significará un paso histórico para nuestro país, lograr el aseguramiento universal en salud representará el cierre de una brecha histórica, objetivo que los peruanos hemos perseguido durante décadas. Cerrar la brecha. la creación de población...",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Salud"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "tema": "Salud",
+      "inicio": 1812.5,
+      "fin": 1840.9,
+      "inicio_fmt": "30:12",
+      "fin_fmt": "30:41",
+      "duracion_seg": 28.4,
+      "extracto": "servicios de salud que serán el horizonte del nuevo sistema de salud para el bicentenario. Hoy nuestros ciudadanos se ven impedidos de ejercer plenamente los dos sistemas que trabajan bajo diferentes lógicas que no le permiten acceder a todos los servicios públicos disponibles....",
+      "color": "#2980b9",
+      "eventos": []
+    },
+    {
+      "id": 52,
+      "tema": "Otros",
+      "inicio": 1841.0,
+      "fin": 1851.9,
+      "inicio_fmt": "30:41",
+      "fin_fmt": "30:52",
+      "duracion_seg": 10.9,
+      "extracto": "demuestra que no es razonable mantener la fragmentación por eso hemos logrado unir esfuerzos y capacidades para que cientos de ciudadanos con cobertura de",
+      "color": "#666",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Otros"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "tema": "Salud",
+      "inicio": 1852.0,
+      "fin": 1893.9,
+      "inicio_fmt": "30:52",
+      "fin_fmt": "31:34",
+      "duracion_seg": 41.9,
+      "extracto": "salud sean atendidos por la amplia red de servicios primarios y de hospitalización de salud. Y viceversa, ciudadanos con cobertura del CIS sean atendidos por la red de servicios de alta especialidad de salud. No obstante ello, existen otros ciudadanos que no lograron ninguno de...",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Salud"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "tema": "Salud",
+      "inicio": 1894.0,
+      "fin": 1910.9,
+      "inicio_fmt": "31:34",
+      "fin_fmt": "31:51",
+      "duracion_seg": 17.0,
+      "extracto": "Salud, que va más allá de una mera articulación, hace necesario que el sistema de salud del bicentenario supere la fragmentación con la constitución de un sistema público unificado. Con la provisión universal de más y",
+      "color": "#2980b9",
+      "eventos": []
+    },
+    {
+      "id": 55,
+      "tema": "Salud",
+      "inicio": 1911.0,
+      "fin": 1941.0,
+      "inicio_fmt": "31:51",
+      "fin_fmt": "32:21",
+      "duracion_seg": 30.0,
+      "extracto": "mejores servicios de salud para todos los peruanos. Gracias. Queridos compatriotas, estimados congresistas, esta emergencia sanitaria, una de las peores de la historia, ha desnudado la precariedad y las graves deficiencias en nuestro",
+      "color": "#2980b9",
+      "eventos": []
+    },
+    {
+      "id": 56,
+      "tema": "Salud",
+      "inicio": 1941.0,
+      "fin": 2010.2,
+      "inicio_fmt": "32:21",
+      "fin_fmt": "33:30",
+      "duracion_seg": 69.2,
+      "extracto": "sistema de salud. Seamos conscientes, durante décadas la salud no ha sido una prioridad. Durante décadas la salud no ha estado en la agenda pública. Durante décadas la salud fue olvidada y postergada. Hoy tenemos la oportunidad de corregir ese error histórico y saldar la deuda...",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "anuncio",
+          "descripcion": "Anuncio de medida o inversión"
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "tema": "Economía",
+      "inicio": 2010.3,
+      "fin": 2049.2,
+      "inicio_fmt": "33:30",
+      "fin_fmt": "34:09",
+      "duracion_seg": 38.9,
+      "extracto": "presupuesto general de la república del dos mil veintiuno. Cerca de veinte mil millones de soles para que todos los peruanos accedan a servicios de calidad. El proyecto de presupuesto será presentado como corresponde antes que finalice el próximo mes de agosto. Aquí estoy...",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Economía"
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "tema": "Economía",
+      "inicio": 2049.2,
+      "fin": 2060.2,
+      "inicio_fmt": "34:09",
+      "fin_fmt": "34:20",
+      "duracion_seg": 10.9,
+      "extracto": "inversión en salud estará dirigida prioritariamente al primer nivel de atención a fin de ampliar la oferta de servicios de calidad para abordar",
+      "color": "#1a1a2e",
+      "eventos": []
+    },
+    {
+      "id": 59,
+      "tema": "Salud",
+      "inicio": 2060.2,
+      "fin": 2120.1,
+      "inicio_fmt": "34:20",
+      "fin_fmt": "35:20",
+      "duracion_seg": 59.9,
+      "extracto": "las necesidades de salud insatisfechas. También nos permitirá seguir fortaleciendo la capacidad de respuesta con más hospitales, más camas, medicamentos, laboratorios, equipos de protección personal, entre otros. El Perú debe salir de esta pandemia con un nuevo y sólido sistema...",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Salud"
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "tema": "Democracia e Instituciones",
+      "inicio": 2120.1,
+      "fin": 2131.1,
+      "inicio_fmt": "35:20",
+      "fin_fmt": "35:31",
+      "duracion_seg": 10.9,
+      "extracto": "derechos fundamentales. El covid-diecinueve a su llegada encontró un país fuerte pero con deficiencias que lo hicieron",
+      "color": "#7f8c8d",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Democracia e Instituciones"
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "tema": "Salud",
+      "inicio": 2131.2,
+      "fin": 2175.4,
+      "inicio_fmt": "35:31",
+      "fin_fmt": "36:15",
+      "duracion_seg": 44.2,
+      "extracto": "vulnerable ante la pandemia. La desigualdad y la informalidad son problemas estructurales que venimos sufriendo por décadas como sociedad y que pusieron en riesgo a miles de peruanos y peruanas a quienes los efectos de la emergencia sanitaria han impactado con mayor severidad....",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Democracia e Instituciones → Salud"
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "tema": "Otros",
+      "inicio": 2175.4,
+      "fin": 2201.4,
+      "inicio_fmt": "36:15",
+      "fin_fmt": "36:41",
+      "duracion_seg": 26.0,
+      "extracto": "fue allí cuando las debilidades se hicieron más notorias. La cuarentena se hacía insostenible para miles de peruanos en situación de pobreza y pobreza extrema. Miles de trabajadores independientes que día a día salían a buscar el pan para su familia, tuvieron que paralizar sus...",
+      "color": "#666",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Otros"
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "tema": "Salud",
+      "inicio": 2201.7,
+      "fin": 2211.1,
+      "inicio_fmt": "36:42",
+      "fin_fmt": "36:51",
+      "duracion_seg": 9.5,
+      "extracto": "muy grave antes de la pandemia. A fin de evitar la propagación del covid-diecinueve y aminorar los efectos de la paralización",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Salud"
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "tema": "Economía",
+      "inicio": 2211.2,
+      "fin": 2233.9,
+      "inicio_fmt": "36:51",
+      "fin_fmt": "37:14",
+      "duracion_seg": 22.7,
+      "extracto": "económica para miles de familias, el Perú desplegó una de las políticas de subsidio más agresivas de toda la región, invirtiendo más de cinco mil millones de soles en la entrega de diversos bonos llegando a atender a cerca de seis millones de personas, lo que representa a casi...",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Economía"
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "tema": "Otros",
+      "inicio": 2234.0,
+      "fin": 2261.6,
+      "inicio_fmt": "37:14",
+      "fin_fmt": "37:42",
+      "duracion_seg": 27.7,
+      "extracto": "por ciento del padrón general que teníamos en esa fecha. Este subsidio, que es de setecientos sesenta soles, atendió a hogares distribuidos en el bono yo me quedo en casa, benefició a dos millones setecientos mil hogares en situación de pobreza y pobreza extrema. Bono beneficio...",
+      "color": "#666",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Otros"
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "tema": "Agricultura",
+      "inicio": 2261.7,
+      "fin": 2299.5,
+      "inicio_fmt": "37:42",
+      "fin_fmt": "38:20",
+      "duracion_seg": 37.8,
+      "extracto": "independientes. El bono rural benefició a novecientos ochenta mil hogares del ámbito rural. Bono familia universal, benefició a un millón seiscientos mil hogares que aún no se encontraban como beneficiarios de los bonos aprobados previamente y que no contaban con algún miembro...",
+      "color": "#d35400",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Agricultura"
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "tema": "Democracia e Instituciones",
+      "inicio": 2299.6,
+      "fin": 2325.4,
+      "inicio_fmt": "38:20",
+      "fin_fmt": "38:45",
+      "duracion_seg": 25.8,
+      "extracto": "de RENIEC se ha recogido y actualizado la información de aquellos hogares que requiriendo un bono no estaban registrados en el padrón general de hogares. Así utilizando complementariamente otras fuentes de información como el de RENIEC se ha focalizado aproximadamente a dos...",
+      "color": "#7f8c8d",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Agricultura → Democracia e Instituciones"
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "tema": "Economía",
+      "inicio": 2325.4,
+      "fin": 2355.4,
+      "inicio_fmt": "38:45",
+      "fin_fmt": "39:15",
+      "duracion_seg": 29.9,
+      "extracto": "económico los cuales lo recibirán a partir de la próxima semana. En suma este subsidio ha sido recibido a la fecha por seis millones de hogares pero llegará a ocho millones y medio de hogares con una inversión de dos mil quinientos millones de soles. Asimismo, para quienes están...",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Democracia e Instituciones → Economía"
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "tema": "Seguridad",
+      "inicio": 2355.4,
+      "fin": 2384.4,
+      "inicio_fmt": "39:15",
+      "fin_fmt": "39:44",
+      "duracion_seg": 29.0,
+      "extracto": "la salud, policías, militares, les entregamos bonos en reconocimiento a su sacrificada labor. Para nuestros policías y militares destinamos más de ciento diecinueve millones de soles beneficiando a más de ciento noventa mil efectivos policiales, brindándonos seguridad durante el...",
+      "color": "#c0392b",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Seguridad"
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "tema": "Salud",
+      "inicio": 2384.5,
+      "fin": 2418.9,
+      "inicio_fmt": "39:44",
+      "fin_fmt": "40:19",
+      "duracion_seg": 34.5,
+      "extracto": "de salud. A la fecha se ha hecho una primera transferencia en beneficio de treinta y dos mil quinientos trabajadores de la salud. Por más de dieciocho millones de soles. En los siguientes días se publicarán los decretos supremos que de las competencias para alcanzar a todos los...",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Seguridad → Salud"
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "tema": "Educación",
+      "inicio": 2419.0,
+      "fin": 2442.9,
+      "inicio_fmt": "40:19",
+      "fin_fmt": "40:43",
+      "duracion_seg": 23.9,
+      "extracto": "para el sector de educación con el objetivo de mejorar el servicio generando avances en materia de acceso a la educación. Mejoras para el desempeño y calidad educativa. La llegada del covid-diecinueve nos planteó nuevos retos. La continuidad del servicio educativo durante la...",
+      "color": "#27ae60",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Educación"
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "tema": "Educación",
+      "inicio": 2442.9,
+      "fin": 2476.9,
+      "inicio_fmt": "40:43",
+      "fin_fmt": "41:17",
+      "duracion_seg": 33.9,
+      "extracto": "educativa pública para asegurar que pese a los impactos económicos, las niñas y niños puedan continuar con sus estudios. Para evitar exponer a nuestros niños y jóvenes al servicio educativo, decidimos suspender las clases presenciales. Sin embargo, esto no significó una...",
+      "color": "#27ae60",
+      "eventos": []
+    },
+    {
+      "id": 73,
+      "tema": "Educación",
+      "inicio": 2476.9,
+      "fin": 2485.9,
+      "inicio_fmt": "41:17",
+      "fin_fmt": "41:26",
+      "duracion_seg": 8.9,
+      "extracto": "Esta estrategia educativa está orientada al desarrollo de las competencias del currículo nacional con énfasis en el",
+      "color": "#27ae60",
+      "eventos": []
+    },
+    {
+      "id": 74,
+      "tema": "Salud",
+      "inicio": 2486.0,
+      "fin": 2512.9,
+      "inicio_fmt": "41:26",
+      "fin_fmt": "41:53",
+      "duracion_seg": 26.9,
+      "extracto": "cuidado de la salud, la convivencia en el hogar, y la ciudadanía, tal y como se requieren contextos como el que vivimos en la actualidad. Estos contenidos se elaboraron tanto en castellano como en nueve lenguas originarias, y vienen acompañados de una estrategia de monitoreo...",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Educación → Salud"
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "tema": "Seguridad",
+      "inicio": 2512.9,
+      "fin": 2531.9,
+      "inicio_fmt": "41:53",
+      "fin_fmt": "42:12",
+      "duracion_seg": 18.9,
+      "extracto": "territorio nacional. A la fecha, el noventa y seis por ciento de las familias peruanas han reportado que sus hijos acceden a aprendo en casa. Asimismo, para que nuestros jóvenes no detengan su futuro,",
+      "color": "#c0392b",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Seguridad"
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "tema": "Educación",
+      "inicio": 2531.9,
+      "fin": 2549.0,
+      "inicio_fmt": "42:12",
+      "fin_fmt": "42:29",
+      "duracion_seg": 17.0,
+      "extracto": "hemos creado la beca continuidad de estudios que financiará por un año los estudios de pregrado de diez mil estudiantes de alto rendimiento académico afectados por la pandemia. En este gobierno estamos convencidos que la",
+      "color": "#27ae60",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Seguridad → Educación"
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "tema": "Educación",
+      "inicio": 2549.0,
+      "fin": 2642.8,
+      "inicio_fmt": "42:29",
+      "fin_fmt": "44:03",
+      "duracion_seg": 93.8,
+      "extracto": "educación puede cambiar vidas. Hemos incrementado los beneficios de beca dieciocho en cincuenta y seis por ciento, solo entre el dos mil diecinueve y dos mil veinte, brindándole a nuestros jóvenes de menores recursos la oportunidad de acceder a educación superior de alta calidad...",
+      "color": "#27ae60",
+      "eventos": []
+    },
+    {
+      "id": 78,
+      "tema": "Infraestructura",
+      "inicio": 2642.9,
+      "fin": 2672.3,
+      "inicio_fmt": "44:03",
+      "fin_fmt": "44:32",
+      "duracion_seg": 29.4,
+      "extracto": "transporte. El transporte público es un servicio que impacta directamente en la calidad de vida de las personas. Por lo que el el estado debe garantizar un transporte accesible y seguro a todos los ciudadanos. Para ello se ha priorizado avanzar con el proceso de concesiones de...",
+      "color": "#8e44ad",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Educación → Infraestructura"
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "tema": "Economía",
+      "inicio": 2672.4,
+      "fin": 2682.8,
+      "inicio_fmt": "44:32",
+      "fin_fmt": "44:43",
+      "duracion_seg": 10.4,
+      "extracto": "bicentenario con empresas que cumplan con entregar un servicio seguro, eficiente, y ecológico. Este proceso contribuirá a la formalización",
+      "color": "#1a1a2e",
+      "eventos": [
         {
           "tipo": "cambio_tema",
           "descripcion": "De Infraestructura → Economía"
@@ -1651,14 +1457,162 @@ const DATA = {
       ]
     },
     {
-      "id": 97,
+      "id": 80,
+      "tema": "Infraestructura",
+      "inicio": 2682.9,
+      "fin": 2742.1,
+      "inicio_fmt": "44:43",
+      "fin_fmt": "45:42",
+      "duracion_seg": 59.2,
+      "extracto": "del sistema de transporte. En tal sentido, a través de la ATU, se aprobará este año el reglamento regulatorio para el funcionamiento del sistema integrado de transportes de Limicayao. De otro lado, como parte de la modernidad del sistema integrado de transporte Limicayao, se ha...",
+      "color": "#8e44ad",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Infraestructura"
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "tema": "Agricultura",
+      "inicio": 2742.2,
+      "fin": 2764.4,
+      "inicio_fmt": "45:42",
+      "fin_fmt": "46:04",
+      "duracion_seg": 22.2,
+      "extracto": "rural, bono de protección, entre otras modalidades. El año dos mil diecinueve, alcanzamos el récord histórico de construcción de setenta y cinco mil nuevas viviendas, y este año, a pesar de las dificultades, la meta es superar las ochenta mil viviendas construidas. Como parte de...",
+      "color": "#d35400",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Infraestructura → Agricultura"
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "tema": "Economía",
+      "inicio": 2764.5,
+      "fin": 2795.9,
+      "inicio_fmt": "46:04",
+      "fin_fmt": "46:36",
+      "duracion_seg": 31.4,
+      "extracto": "económica, hemos dispuesto quinientos treinta y cinco millones de soles adicionales para el aumento de la cobertura del bono habitacional familiar en las modalidades de construcción en sitio propio, y la adquisición de vivienda nueva. El cierre de las brechas de los servicios de...",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Agricultura → Economía"
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "tema": "Economía",
+      "inicio": 2796.0,
+      "fin": 2820.9,
+      "inicio_fmt": "46:36",
+      "fin_fmt": "47:01",
+      "duracion_seg": 24.9,
+      "extracto": "rural, con una inversión de mil ciento noventa y un millones de soles, beneficiando así a seiscientos ochenta mil habitantes. Para seguir impulsando la economía del país, transferimos cuatrocientos cuatro millones de soles a los gobiernos subnacionales para la ejecución de...",
+      "color": "#1a1a2e",
+      "eventos": []
+    },
+    {
+      "id": 84,
+      "tema": "Infraestructura",
+      "inicio": 2820.9,
+      "fin": 2845.9,
+      "inicio_fmt": "47:01",
+      "fin_fmt": "47:26",
+      "duracion_seg": 24.9,
+      "extracto": "obras en el ámbito urbano. La informalidad en sus diversas variantes ha afectado nuestra sociedad. Necesitamos más sanidad. Y esto ha quedado evidenciado en la reciente emergencia. No es posible que un peruano tenga que esperar por largos años para acceder a una",
+      "color": "#8e44ad",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Infraestructura"
+        }
+      ]
+    },
+    {
+      "id": 85,
       "tema": "Otros",
-      "inicio": 1922.5,
-      "fin": 2011.1,
-      "inicio_fmt": "32:02",
-      "fin_fmt": "32:09",
-      "duracion_seg": 88.6,
-      "extracto": "...la misma que ya ha iniciado pruebas de garantía de su unidad de destilación primaria. Asimismo, la empresa ya ha recibido de sus principales contratistas y licenciantes más de 10 unidades y plantas que conforman este moderno complejo refinero... ...por lo que permitirá su puesta en operación... ....",
+      "inicio": 2845.9,
+      "fin": 2861.9,
+      "inicio_fmt": "47:26",
+      "fin_fmt": "47:42",
+      "duracion_seg": 15.9,
+      "extracto": "propiedad o someterse a traficantes de terrenos para hacer realidad el sueño de la casa propia. Informalidad que inclusive afecta al propio estado cuyas instituciones ocupan terrenos que no están",
+      "color": "#666",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Infraestructura → Otros"
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "tema": "Economía",
+      "inicio": 2861.9,
+      "fin": 2876.8,
+      "inicio_fmt": "47:42",
+      "fin_fmt": "47:57",
+      "duracion_seg": 14.9,
+      "extracto": "saneados. La formalización de la propiedad predial que no solamente brinda seguridad jurídica a las familias, sino también facilita el emprendimiento de actividades económicas. Por ello, presentaremos ante este",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Economía"
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "tema": "Democracia e Instituciones",
+      "inicio": 2876.9,
+      "fin": 2885.8,
+      "inicio_fmt": "47:57",
+      "fin_fmt": "48:06",
+      "duracion_seg": 8.9,
+      "extracto": "congreso de la república el proyecto de ley que establece medidas complementarias y otorga facultades especiales a",
+      "color": "#7f8c8d",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Democracia e Instituciones"
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "tema": "Economía",
+      "inicio": 2885.9,
+      "fin": 2914.8,
+      "inicio_fmt": "48:06",
+      "fin_fmt": "48:35",
+      "duracion_seg": 28.9,
+      "extracto": "Cofopri para la formalización de la propiedad predial, ampliando el plazo de formalización de instituciones informales hasta el doce de julio del dos mil catorce con el objetivo de formalizar un millón de títulos de propiedad. También hay que destacar que un número importante de...",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Democracia e Instituciones → Economía"
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "tema": "Otros",
+      "inicio": 2914.9,
+      "fin": 2970.9,
+      "inicio_fmt": "48:35",
+      "fin_fmt": "49:31",
+      "duracion_seg": 55.9,
+      "extracto": "inclemencias de las heladas. Por ello, nuestro gobierno cambió la estrategia de entrega periódica a las zonas altoandinas. Cada vez que viene el invierno, gobiernos anteriores llevaban frazadas a las zonas frías que sirven de poca ayuda. La estrategia actual es construir...",
       "color": "#666",
       "eventos": [
         {
@@ -1666,17 +1620,77 @@ const DATA = {
           "descripcion": "De Economía → Otros"
         },
         {
+          "tipo": "anuncio",
+          "descripcion": "Anuncio de medida o inversión"
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "tema": "Economía",
+      "inicio": 2970.9,
+      "fin": 2987.9,
+      "inicio_fmt": "49:31",
+      "fin_fmt": "49:48",
+      "duracion_seg": 16.9,
+      "extracto": "un presupuesto de seiscientos setenta millones de soles. Y al próximo año, dos mil veintiuno, nos hemos propuesto llegar a la meta de cincuenta y cinco mil viviendas térmicas, para que puedan enfrentar las bajas temperaturas propias de las zonas altoandinas del país.",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
           "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
+          "descripcion": "De Otros → Economía"
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "tema": "Seguridad",
+      "inicio": 2991.0,
+      "fin": 3019.2,
+      "inicio_fmt": "49:51",
+      "fin_fmt": "50:19",
+      "duracion_seg": 28.2,
+      "extracto": "Sobre la violencia a la mujer, uno de los principales objetivos de mi gestión es desterrar la violencia contra la mujer y erradicar esa machista que tanto daño hace a nuestra sociedad. En ese sentido, este año se incrementó a 572 millones de soles el presupuesto para la...",
+      "color": "#c0392b",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Seguridad"
         },
         {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
+          "tipo": "cifra",
+          "descripcion": "Cifra: 572 mil"
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "tema": "Economía",
+      "inicio": 3019.2,
+      "fin": 3041.3,
+      "inicio_fmt": "50:19",
+      "fin_fmt": "50:41",
+      "duracion_seg": 22.1,
+      "extracto": "Diez veces más presupuesto del que recibía el Ministerio en años pasados. Este es un hecho histórico y una clara demostración del firme compromiso que tenemos como gestión para lograr una sociedad donde las mujeres no vivan amenazados por actos violentos. Asimismo, este año...",
+      "color": "#1a1a2e",
+      "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Otros"
-        },
+          "descripcion": "De Seguridad → Economía"
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "tema": "Otros",
+      "inicio": 3041.3,
+      "fin": 3058.9,
+      "inicio_fmt": "50:41",
+      "fin_fmt": "50:59",
+      "duracion_seg": 17.6,
+      "extracto": "en comisarías adicionales a los cincuenta implementados el año pasado, llegando a un total de 416 a nivel nacional. Lamentablemente, la violencia contra las mujeres no se detuvo ni siquiera",
+      "color": "#666",
+      "eventos": [
         {
           "tipo": "cambio_tema",
           "descripcion": "De Economía → Otros"
@@ -1684,361 +1698,379 @@ const DATA = {
       ]
     },
     {
-      "id": 99,
-      "tema": "Regiones",
-      "inicio": 1962.1,
-      "fin": 1977.6,
-      "inicio_fmt": "32:42",
-      "fin_fmt": "32:57",
-      "duracion_seg": 15.5,
-      "extracto": "...entre Petro Perú y Perú Petro marca el reingreso de Petro Perú a las actividades de explotación petrolera en la selva peruana......",
-      "color": "#16a085",
+      "id": 94,
+      "tema": "Salud",
+      "inicio": 3058.9,
+      "fin": 3071.1,
+      "inicio_fmt": "50:59",
+      "fin_fmt": "51:11",
+      "duracion_seg": 12.2,
+      "extracto": "durante la pandemia del COVID-19. Por eso, desde el primer día de la cuarentena, brindamos atención adecuada e ininterrumpida a las mujeres, niñas, niños y adolescentes, y personas adultas mayores",
+      "color": "#2980b9",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Regiones"
+          "descripcion": "De Otros → Salud"
         }
       ]
     },
     {
-      "id": 100,
-      "tema": "Infraestructura",
-      "inicio": 1987.8,
-      "fin": 2039.8,
-      "inicio_fmt": "33:07",
-      "fin_fmt": "33:13",
-      "duracion_seg": 52.0,
-      "extracto": "...fortaleciendo su desempeño cooperativo y competitividad dentro del sector hidrocarburos. ...entre otros beneficios que permita masificar el uso de estos vehículos de menores costos. Debido a que ya contamos con electrolineras instaladas en Lima, en Lima Metropolitana y en toda la Panamericana......",
-      "color": "#8e44ad",
+      "id": 95,
+      "tema": "Seguridad",
+      "inicio": 3071.1,
+      "fin": 3094.5,
+      "inicio_fmt": "51:11",
+      "fin_fmt": "51:34",
+      "duracion_seg": 23.4,
+      "extracto": "víctimas de violencia. Solo a través de la línea 100 atendimos más de setenta y cinco mil quinientas llamadas en ese periodo. Como parte del legado que queremos dejar a favor de las poblaciones más vulnerables a fin de mitigar las brechas existentes, este año culminaremos tres...",
+      "color": "#c0392b",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Otros → Infraestructura"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
+          "descripcion": "De Salud → Seguridad"
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "tema": "Otros",
+      "inicio": 3094.5,
+      "fin": 3138.8,
+      "inicio_fmt": "51:34",
+      "fin_fmt": "52:19",
+      "duracion_seg": 44.3,
+      "extracto": "La política nacional para la niñez y la adolescencia. La política nacional en discapacidad para el desarrollo. Y la política nacional para las personas adultas mayores. Estas políticas marcarán el tránsito hacia una sociedad inclusiva que asegure el ejercicio de sus derechos y...",
+      "color": "#666",
+      "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Economía → Infraestructura"
+          "descripcion": "De Seguridad → Otros"
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "tema": "Economía",
+      "inicio": 3138.8,
+      "fin": 3181.7,
+      "inicio_fmt": "52:19",
+      "fin_fmt": "53:02",
+      "duracion_seg": 42.9,
+      "extracto": "tecnología para garantizar el cumplimiento de los compromisos asumidos con los ciudadanos en transformación digital. Estamos en ese proceso. Pusimos en marcha la plataforma digital go.pe que ha llegado a la fecha a recibir más de novecientos millones de visitas de ciudadanos de...",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Economía"
         },
         {
           "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica, Lima"
+          "descripcion": "Menciona: Cajamarca"
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "tema": "Economía",
+      "inicio": 3181.7,
+      "fin": 3220.9,
+      "inicio_fmt": "53:02",
+      "fin_fmt": "53:41",
+      "duracion_seg": 39.2,
+      "extracto": "el laboratorio de gobierno y transformación digital que nos ha permitido impulsar decididamente el apoyo del sector privado para el desarrollo de soluciones digitales durante la emergencia. Este año conscientes de la importancia de la transformación digital promulgamos el...",
+      "color": "#1a1a2e",
+      "eventos": []
+    },
+    {
+      "id": 99,
+      "tema": "Economía",
+      "inicio": 3220.9,
+      "fin": 3252.9,
+      "inicio_fmt": "53:41",
+      "fin_fmt": "54:13",
+      "duracion_seg": 32.0,
+      "extracto": "Y es en el marco de la transformación digital del país que hemos publicado los datos de la pandemia en la plataforma nacional de datos abiertos. El Perú ha sido reconocido internacionalmente por dos años consecutivos en el ranking de los países con mayor influencia en gobierno...",
+      "color": "#1a1a2e",
+      "eventos": []
+    },
+    {
+      "id": 100,
+      "tema": "Economía",
+      "inicio": 3252.9,
+      "fin": 3274.6,
+      "inicio_fmt": "54:13",
+      "fin_fmt": "54:35",
+      "duracion_seg": 21.7,
+      "extracto": "en el indicador de datos abiertos a nivel mundial. Por ello seguiremos trabajando en el fortalecimiento del liderazgo del Perú en el mundo demostrando de esta forma nuestra transparencia como gobierno bajo este compromiso y anuncio que en 60 días aprobaremos la política nacional",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "anuncio",
+          "descripcion": "Anuncio de medida o inversión"
         }
       ]
     },
     {
       "id": 101,
       "tema": "Economía",
-      "inicio": 1996.9,
-      "fin": 2018.1,
-      "inicio_fmt": "33:16",
-      "fin_fmt": "33:25",
-      "duracion_seg": 21.2,
-      "extracto": "Mi gobierno, ante el alza de precios de los combustibles como alternativa de transporte barato, limpio y moderno para el sector público y privado... ...un proyecto de ley que brinde incentivos tributarios a la importación de vehículos eléctricos......",
+      "inicio": 3274.6,
+      "fin": 3299.6,
+      "inicio_fmt": "54:35",
+      "fin_fmt": "55:00",
+      "duracion_seg": 25.0,
+      "extracto": "de transformación digital para garantizar un sólido gobierno de datos y la ciudadanía digital de todos los peruanos. En el tema ambiental la cuarentena le dio un respiro al planeta que venía siendo azotado por altos índices de contaminación generada por el inadecuado desarrollo...",
       "color": "#1a1a2e",
+      "eventos": []
+    },
+    {
+      "id": 102,
+      "tema": "Salud",
+      "inicio": 3299.6,
+      "fin": 3320.2,
+      "inicio_fmt": "55:00",
+      "fin_fmt": "55:20",
+      "duracion_seg": 20.6,
+      "extracto": "La pandemia es un llamado de atención a nuestro comportamiento con el medio ambiente. Este gobierno consciente de ello desplegó una serie de medidas que contribuirán a la protección y a la sostenibilidad de nuestro entorno. En mayo de este año",
+      "color": "#2980b9",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
+          "descripcion": "De Economía → Salud"
         }
       ]
     },
     {
-      "id": 102,
-      "tema": "Regiones",
-      "inicio": 2039.8,
-      "fin": 2117.2,
-      "inicio_fmt": "33:59",
-      "fin_fmt": "34:06",
-      "duracion_seg": 77.4,
-      "extracto": "...desde Tumbes hasta Tacna, esta estrategia acompañará el proceso de masificación de gas natural... Una necesidad y esperanza de todos los peruanos y peruanas es que, a través de la nueva política de masificación del gas natural... ...descentralicemos este recurso energético y promovamos su uso int...",
-      "color": "#16a085",
+      "id": 103,
+      "tema": "Otros",
+      "inicio": 3320.2,
+      "fin": 3338.6,
+      "inicio_fmt": "55:20",
+      "fin_fmt": "55:39",
+      "duracion_seg": 18.4,
+      "extracto": "se aprobó el decreto legislativo número 1501 que modifica la legislación sobre residuos sólidos e incluye la separación de residuos en forma obligatoria para la ciudadanía que deberá separar los residuos desde sus hogares",
+      "color": "#666",
       "eventos": [
         {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica, Tacna, Tumbes"
-        },
-        {
           "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Regiones"
+          "descripcion": "De Salud → Otros"
         }
       ]
     },
     {
       "id": 104,
       "tema": "Economía",
-      "inicio": 2049.4,
-      "fin": 2106.1,
-      "inicio_fmt": "34:09",
-      "fin_fmt": "34:11",
-      "duracion_seg": 56.8,
-      "extracto": "...de la matriz energética de nuestro país. ...y contribuir a la reactivación económica nacional. Asimismo, con la implementación del programa Bono Gas del Fondo de Inclusión Social Energético......",
+      "inicio": 3338.6,
+      "fin": 3401.4,
+      "inicio_fmt": "55:39",
+      "fin_fmt": "56:41",
+      "duracion_seg": 62.8,
+      "extracto": "y centros de trabajo y entregarlos a asociaciones de recicladores empresas operadoras o a los municipios. Esto permitirá aprovechar mejor los residuos promover la formalización de los recicladores y generar mayores oportunidades de negocio a empresas dedicadas a esta actividad...",
       "color": "#1a1a2e",
       "eventos": [
         {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
           "tipo": "cambio_tema",
           "descripcion": "De Otros → Economía"
-        },
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "tema": "Economía",
+      "inicio": 3401.4,
+      "fin": 3425.8,
+      "inicio_fmt": "56:41",
+      "fin_fmt": "57:06",
+      "duracion_seg": 24.4,
+      "extracto": "Se lanzó la plataforma digital Huella de Carbono Perú herramienta para fomentar y reconocer el esfuerzo de las organizaciones públicas y privadas para contribuir a la meta nacional de 30% de reducción de emisiones de gases de efecto invernadero al 2030 los cuales son factores...",
+      "color": "#1a1a2e",
+      "eventos": [
         {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Economía"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Economía"
+          "tipo": "cifra",
+          "descripcion": "Cifra: 30%"
         }
       ]
     },
     {
       "id": 106,
+      "tema": "Salud",
+      "inicio": 3425.8,
+      "fin": 3446.6,
+      "inicio_fmt": "57:06",
+      "fin_fmt": "57:27",
+      "duracion_seg": 20.8,
+      "extracto": "La pandemia nos plantea la urgencia de mejorar nuestros servicios sociales nos plantea retos y nuevas medidas para la sociedad hemos dado grandes pasos sin embargo aún quedan muchos retos que como gobierno tenemos previsto abordar.",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Salud"
+        }
+      ]
+    },
+    {
+      "id": 107,
       "tema": "Otros",
-      "inicio": 2080.6,
-      "fin": 2096.1,
-      "inicio_fmt": "34:40",
-      "fin_fmt": "34:56",
-      "duracion_seg": 15.5,
-      "extracto": "El 28 de julio al 28 de junio del 2022 se cuenta con más de 1.600.000 usuarios conectados al servicio de gas natural residencial......",
+      "inicio": 3446.6,
+      "fin": 3468.4,
+      "inicio_fmt": "57:27",
+      "fin_fmt": "57:48",
+      "duracion_seg": 21.8,
+      "extracto": "Con mucho esfuerzo nuestro gobierno está llegando a 8 millones y medio de hogares con un subsidio de 760 soles que busca ayudar a soportar las consecuencias económicas que se generaron durante la cuarentena y la extensión de la misma.",
       "color": "#666",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
+          "descripcion": "De Salud → Otros"
+        },
+        {
+          "tipo": "cifra",
+          "descripcion": "Cifra: 8 mil"
         }
       ]
     },
     {
       "id": 108,
-      "tema": "Infraestructura",
-      "inicio": 2126.4,
-      "fin": 2157.3,
-      "inicio_fmt": "35:26",
-      "fin_fmt": "35:33",
-      "duracion_seg": 30.9,
-      "extracto": "En cuanto a la conversión de vehículos, se ha intensificado el programa Ahorro GNV... A la fecha del programa ha beneficiado la conversión de más de 38.000 vehículos. ...hemos asignado un presupuesto de 150 millones de soles para ejecutar el proyecto especial de infraestructura......",
-      "color": "#8e44ad",
+      "tema": "Economía",
+      "inicio": 3468.4,
+      "fin": 3495.2,
+      "inicio_fmt": "57:48",
+      "fin_fmt": "58:15",
+      "duracion_seg": 26.8,
+      "extracto": "El proceso gradual de la reactivación económica nos exige realizar un nuevo esfuerzo en beneficio de estos hogares por ello hoy anuncio la aprobación de un segundo bono de 760 soles para esos 8 millones y medio de hogares destinando 6.400 millones de soles para tal fin.",
+      "color": "#1a1a2e",
       "eventos": [
         {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
           "tipo": "cambio_tema",
-          "descripcion": "De Educación → Infraestructura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Infraestructura"
+          "descripcion": "De Otros → Economía"
         },
         {
           "tipo": "cifra",
-          "descripcion": "Cifra: \"150 mil\""
+          "descripcion": "Cifra: 760 soles"
         },
         {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Infraestructura"
+          "tipo": "anuncio",
+          "descripcion": "Anuncio de medida o inversión"
         }
       ]
     },
     {
       "id": 109,
-      "tema": "Regiones",
-      "inicio": 2133.2,
-      "fin": 2191.3,
-      "inicio_fmt": "35:33",
-      "fin_fmt": "35:39",
-      "duracion_seg": 58.1,
-      "extracto": "...el cual viene financiando la conversión de vehículos a gas natural vehicular en 9 regiones del país. ...para la masificación del gas natural en las regiones de Acucho, Cusco, Ucayali, Huancavelica, Apurímac, Puno y Junín. Esto nos permitirá llevar los beneficios del gas natural a las nuevas regio...",
-      "color": "#16a085",
+      "tema": "Otros",
+      "inicio": 3495.2,
+      "fin": 3528.6,
+      "inicio_fmt": "58:15",
+      "fin_fmt": "58:49",
+      "duracion_seg": 33.4,
+      "extracto": "Este bono será implementado entre agosto y octubre de este año vamos a llegar a atender a todas las familias vulnerables del país de acuerdo al nuevo padrón elaborado con este fin. Pension por orfandad",
+      "color": "#666",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Regiones"
+          "descripcion": "De Economía → Otros"
         },
         {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Apurímac, Cusco, Huancavelica"
-        },
+          "tipo": "anuncio",
+          "descripcion": "Anuncio de medida o inversión"
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "tema": "Salud",
+      "inicio": 3528.6,
+      "fin": 3553.1,
+      "inicio_fmt": "58:49",
+      "fin_fmt": "59:13",
+      "duracion_seg": 24.5,
+      "extracto": "la pandemia del COVID-19 como todos lo sentimos está generando angustia, dolor e incertidumbre en el país. La muerte de cada peruano nos afecta a todos entonces haremos nuestro esfuerzo para tratar de salvar las vidas.",
+      "color": "#2980b9",
+      "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
+          "descripcion": "De Otros → Salud"
         }
       ]
     },
     {
       "id": 111,
-      "tema": "Agricultura",
-      "inicio": 2178.0,
-      "fin": 2201.6,
-      "inicio_fmt": "36:17",
-      "fin_fmt": "36:18",
-      "duracion_seg": 23.7,
-      "extracto": "Electrificación rural. Desde agosto del 2021 a la fecha, el Ministerio de Energías y Minas ha concluido la ejecución de 20 obras de electrificación rural......",
-      "color": "#d35400",
+      "tema": "Otros",
+      "inicio": 3553.1,
+      "fin": 3599.3,
+      "inicio_fmt": "59:13",
+      "fin_fmt": "59:59",
+      "duracion_seg": 46.2,
+      "extracto": "Este virus ha dejado en luto a muchas familias pero sobre todo huérfanos a muchos niños que hoy están bajo el amparo de sus tíos abuelos o familiares cercanos nadie puede voltear la mirada frente a esa triste realidad. Muchos niños no solo han perdido a su padre o a su madre...",
+      "color": "#666",
       "eventos": [
         {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
           "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Agricultura"
+          "descripcion": "De Salud → Otros"
         },
         {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Agricultura"
+          "tipo": "cifra",
+          "descripcion": "Cifra: 200 soles"
         }
       ]
     },
     {
       "id": 112,
-      "tema": "Otros",
-      "inicio": 2178.9,
-      "fin": 2240.6,
-      "inicio_fmt": "36:18",
-      "fin_fmt": "36:25",
-      "duracion_seg": 61.6,
-      "extracto": "Se tienen 1.948 millones de soles financiando... ...por un monto de 102 millones de soles, electrificando 418 localidades y beneficiando a una población de más de 38.000 habitantes de 11 regiones del país. Asimismo... ...cuenten por primera vez con electricidad en sus viviendas....",
-      "color": "#666",
+      "tema": "Educación",
+      "inicio": 3600.0,
+      "fin": 3620.0,
+      "inicio_fmt": "1:00:00",
+      "fin_fmt": "1:00:20",
+      "duracion_seg": 20.0,
+      "extracto": "el proyecto educativo, hemos dado grandes pasos. Es nuestro compromiso dejar encauzada la senda que permita continuar cerrando brechas y asegurando una educación de calidad para los peruanos del futuro. Informo que luego de tres años de ardo trabajo, hemos",
+      "color": "#27ae60",
       "eventos": [
         {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"1.948 millones\""
-        },
-        {
           "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"102 mil\""
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
+          "descripcion": "De Otros → Educación"
         }
       ]
     },
     {
+      "id": 113,
+      "tema": "Educación",
+      "inicio": 3620.0,
+      "fin": 3642.0,
+      "inicio_fmt": "1:00:20",
+      "fin_fmt": "1:00:42",
+      "duracion_seg": 21.9,
+      "extracto": "publicado el proyecto educativo nacional al dos mil treinta y seis. Es una política de estado hecha sobre la base de una construcción que se alinea con la necesidad de la construcción democrática y del logro de la ciudadanía plena a partir del bicentenario. Y también",
+      "color": "#27ae60",
+      "eventos": []
+    },
+    {
       "id": 114,
-      "tema": "Regiones",
-      "inicio": 2222.6,
-      "fin": 2332.9,
-      "inicio_fmt": "37:02",
-      "fin_fmt": "37:16",
-      "duracion_seg": 110.3,
-      "extracto": "...que permitirán que 250.000 habitantes de las regiones de Amazonas, Ancash, Apurímac, Ayacucho, Cajamarca, Huánuco, La Libertad, Loreto, Puno, Piura y San Martín... ...por un monto de inversión de 463 millones de soles en 14 regiones del país que beneficiarán a 149.000 habitantes. ...que permitirá...",
-      "color": "#16a085",
+      "tema": "Otros",
+      "inicio": 3642.0,
+      "fin": 3661.0,
+      "inicio_fmt": "1:00:42",
+      "fin_fmt": "1:01:01",
+      "duracion_seg": 18.9,
+      "extracto": "informo que recientemente hemos aprobado la política nacional de cultura al dos mil treinta. Dejaremos un legado cultural inmaterial para las nuevas generaciones. Constituido con la apertura del museo nacional, con la construcción por los veinticinco parques",
+      "color": "#666",
       "eventos": [
         {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Amazonas, Ancash, Apurímac"
-        },
-        {
           "tipo": "cambio_tema",
-          "descripcion": "De Economía → Regiones"
+          "descripcion": "De Educación → Otros"
         },
         {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"463 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
+          "tipo": "anuncio",
+          "descripcion": "Anuncio de medida o inversión"
         }
       ]
     },
     {
       "id": 115,
       "tema": "Infraestructura",
-      "inicio": 2240.6,
-      "fin": 2254.7,
-      "inicio_fmt": "37:20",
-      "fin_fmt": "37:34",
-      "duracion_seg": 14.1,
-      "extracto": "Además, se han convocado 33 procesos de selección para la ejecución de proyectos......",
+      "inicio": 3661.0,
+      "fin": 3688.1,
+      "inicio_fmt": "1:01:01",
+      "fin_fmt": "1:01:28",
+      "duracion_seg": 27.0,
+      "extracto": "bicentenarios, además de obras en diversas regiones del país. Muchas de ellas simbólicas, como el monumento en la Pampa de Acucho, donde se selló nuestra independencia. Sobre desarrollo y reactivación económica. A fin de contener los efectos de la pandemia y retomar la senda",
       "color": "#8e44ad",
       "eventos": [
         {
@@ -2049,4146 +2081,149 @@ const DATA = {
     },
     {
       "id": 116,
-      "tema": "Agricultura",
-      "inicio": 2264.1,
-      "fin": 2339.7,
-      "inicio_fmt": "37:44",
-      "fin_fmt": "37:51",
-      "duracion_seg": 75.6,
-      "extracto": "En lo que resta del presente año, se tiene previsto concluir 22 proyectos de electrificación rural... En lo que resta del presente año, se tiene previsto concluir 22 proyectos de electrificación rural... Segunda reforma agraria. La agricultura es una política central de mi gestión. La segunda reform...",
-      "color": "#d35400",
+      "tema": "Economía",
+      "inicio": 3688.1,
+      "fin": 3715.1,
+      "inicio_fmt": "1:01:28",
+      "fin_fmt": "1:01:55",
+      "duracion_seg": 27.0,
+      "extracto": "del crecimiento y el progreso del Perú, diseñamos el plan económico de mayor tamaño de nuestra historia. Y uno de los más importantes y audaces de América Latina. El nuestro es un país en el que coexisten realidades diversas. El Perú es un país con una importante fortaleza y...",
+      "color": "#1a1a2e",
       "eventos": [
         {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
           "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Agricultura"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Agricultura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Agricultura"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Agricultura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Agricultura"
+          "descripcion": "De Infraestructura → Economía"
         }
       ]
     },
     {
-      "id": 122,
-      "tema": "Agricultura",
-      "inicio": 2350.7,
-      "fin": 2399.7,
-      "inicio_fmt": "39:10",
-      "fin_fmt": "39:19",
-      "duracion_seg": 49.1,
-      "extracto": "...el padrón de productores agrarios que crea la identidad digital de los productores y productoras del país... ...que permitirá acceder a créditos de agrobanco, la valoración económica del capital agropecuario... ...acceso a fertilizantes, semillas y guano de islas, información de precios, monitore...",
-      "color": "#d35400",
+      "id": 117,
+      "tema": "Otros",
+      "inicio": 3715.2,
+      "fin": 3729.2,
+      "inicio_fmt": "1:01:55",
+      "fin_fmt": "1:02:09",
+      "duracion_seg": 14.0,
+      "extracto": "social. Y al mismo tiempo, un país con una gran desigualdad social y una fuerte debilidad institucional. Que incluye al sistema de salud educativo y de",
+      "color": "#666",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Agricultura"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
+          "descripcion": "De Economía → Otros"
+        }
+      ]
+    },
+    {
+      "id": 118,
+      "tema": "Infraestructura",
+      "inicio": 3729.3,
+      "fin": 3746.4,
+      "inicio_fmt": "1:02:09",
+      "fin_fmt": "1:02:26",
+      "duracion_seg": 17.1,
+      "extracto": "conectividad. Entre otros. No hay dos Perú. Hay uno en el que conviven lo mejor y lo peor de nosotros. Hay un Perú que aún está en construcción. Que ha sido el mejor puesto ante la",
+      "color": "#8e44ad",
+      "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Otros → Agricultura"
-        },
+          "descripcion": "De Otros → Infraestructura"
+        }
+      ]
+    },
+    {
+      "id": 119,
+      "tema": "Salud",
+      "inicio": 3746.5,
+      "fin": 3766.4,
+      "inicio_fmt": "1:02:26",
+      "fin_fmt": "1:02:46",
+      "duracion_seg": 20.0,
+      "extracto": "pandemia. Y del que tenemos que hacernos cargo si queremos construir el país del bicentenario. La etapa de contención del plan económico frente al covid diecinueve, tenía por objetivo incrementar la capacidad de respuesta del sistema de salud en el corto plazo. Así como proveer...",
+      "color": "#2980b9",
+      "eventos": [
         {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"426 mil\""
+          "tipo": "cambio_tema",
+          "descripcion": "De Infraestructura → Salud"
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "tema": "Economía",
+      "inicio": 3766.5,
+      "fin": 3846.1,
+      "inicio_fmt": "1:02:46",
+      "fin_fmt": "1:04:06",
+      "duracion_seg": 79.6,
+      "extracto": "alivio económico a las familias y empresas durante la cuarentena. Con la finalidad de dar soporte a las familias, con un impacto equivalente a veinticuatro mil millones de soles. Que incluyeron un subsidio a los hogares en situación vulnerable. Medidas de alivio tributario y...",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Economía"
+        }
+      ]
+    },
+    {
+      "id": 121,
+      "tema": "Economía",
+      "inicio": 3846.2,
+      "fin": 3882.2,
+      "inicio_fmt": "1:04:06",
+      "fin_fmt": "1:04:42",
+      "duracion_seg": 36.0,
+      "extracto": "la economía por más de sesenta mil millones de soles. Equivalente al ocho por ciento del PBI. Y han permitido dar financiamiento a más de dos cientas mil empresas. De las cuarenta y cinco por ciento son Mipes. Estos préstamos otorgados a tasas mínimas, históricas, permitieron...",
+      "color": "#1a1a2e",
+      "eventos": []
+    },
+    {
+      "id": 122,
+      "tema": "Anticorrupción",
+      "inicio": 3882.3,
+      "fin": 3904.9,
+      "inicio_fmt": "1:04:42",
+      "fin_fmt": "1:05:05",
+      "duracion_seg": 22.6,
+      "extracto": "transparencia en información para los ciudadanos con todas las listas de beneficiados Dado el éxito de estos programas, hace pocas semanas hemos lanzado dos fondos más de apoyo empresarial. Estos de carácter sectorial. El Fondo Empresarial para atender al turismo y el Fondo de...",
+      "color": "#e67e22",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Anticorrupción"
         }
       ]
     },
     {
       "id": 123,
-      "tema": "Otros",
-      "inicio": 2377.4,
-      "fin": 2421.2,
-      "inicio_fmt": "39:37",
-      "fin_fmt": "39:40",
-      "duracion_seg": 43.7,
-      "extracto": "...todas estas ventajas digitalizan... ...en 900 centros de empadronamiento, con una proyección de lograr un millón de productores empadronados a fines del 2022. Esta información nos permitirá tener un diagnóstico individual de las necesidades y potencialidades de cada productor... ...y servirá para...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Otros"
-        }
-      ]
-    },
-    {
-      "id": 125,
       "tema": "Agricultura",
-      "inicio": 2430.2,
-      "fin": 2532.1,
-      "inicio_fmt": "40:30",
-      "fin_fmt": "40:37",
-      "duracion_seg": 101.9,
-      "extracto": "En el contexto de la emergencia mundial por la escasez de fertilizantes, hemos tomado las medidas pertinentes. La compra e importación de fertilizantes, que concluirá a fines de julio, garantiza el abastecimiento de los agricultores con precios subsidiados. Estos fertilizantes llegarán... En tal raz...",
-      "color": "#d35400",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Agricultura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Agricultura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Agricultura"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Agricultura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Agricultura"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"30 mil\""
-        }
-      ]
-    },
-    {
-      "id": 127,
-      "tema": "Economía",
-      "inicio": 2460.4,
-      "fin": 2514.6,
-      "inicio_fmt": "41:00",
-      "fin_fmt": "41:17",
-      "duracion_seg": 54.2,
-      "extracto": "A través del Fondo Agro Perú, se destinaron 960 millones de soles en créditos con condiciones accesibles... Con ello, se ayuda a mejorar su productividad. se han destinado 60 millones de soles al cofinanciamiento de 540 planes de negocios asociados al agro....",
-      "color": "#1a1a2e",
-      "eventos": [
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"960 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Economía"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Economía"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"60 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Economía"
-        }
-      ]
-    },
-    {
-      "id": 129,
-      "tema": "Otros",
-      "inicio": 2493.5,
-      "fin": 2519.6,
-      "inicio_fmt": "41:33",
-      "fin_fmt": "41:39",
-      "duracion_seg": 26.1,
-      "extracto": "Disponemos de 1.400 millones para las próximas acciones. Así se beneficia a 21.273....",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"1.400 millones\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
-        }
-      ]
-    },
-    {
-      "id": 131,
-      "tema": "Agricultura",
-      "inicio": 2540.9,
-      "fin": 2578.9,
-      "inicio_fmt": "42:20",
-      "fin_fmt": "42:35",
-      "duracion_seg": 38.0,
-      "extracto": "La siembra, cosecha, crianza de agua desde las cuencas vienen recibiendo y recibirán todo el impulso... ...en la política agropecuaria. Se dará inicio a la política de agricultura urbana y periurbana articulada a los productores y las municipalidades. Con el MINEDO se viene desarrollando la incorpor...",
+      "inicio": 3905.0,
+      "fin": 3939.2,
+      "inicio_fmt": "1:05:05",
+      "fin_fmt": "1:05:39",
+      "duracion_seg": 34.2,
+      "extracto": "Empresarial Agrario que apuntan a amortiguar los efectos negativos de la crisis en estos sectores. El FAE Agro de dos mil millones de soles permitirá atender principalmente a productores de la agricultura familiar. Quienes fueron los principales abastecedores de alimentos...",
       "color": "#d35400",
       "eventos": [
         {
           "tipo": "cambio_tema",
           "descripcion": "De Anticorrupción → Agricultura"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
         }
       ]
     },
     {
-      "id": 133,
-      "tema": "Regiones",
-      "inicio": 2580.6,
-      "fin": 2594.4,
-      "inicio_fmt": "43:00",
-      "fin_fmt": "43:06",
-      "duracion_seg": 13.8,
-      "extracto": "Mi gobierno ha encontrado un territorio con ríos contaminados, botadero de residuos sólidos, grandes áreas deterioradas y con pérdida de bosques y derrame de petróleo en el mar y en la Amazonía....",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 134,
-      "tema": "Otros",
-      "inicio": 2594.4,
-      "fin": 2640.4,
-      "inicio_fmt": "43:14",
-      "fin_fmt": "43:19",
-      "duracion_seg": 46.0,
-      "extracto": "En cuanto al derrame de petróleo en el mar de Ventanilla causado por Repsol, se le ha impuesto multas por un monto de 7.7 millones de soles Por ello, hemos desarrollado por primera vez el evento de Ciencia y Tecnología Ambiental 2022,...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"7.7 millones\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        }
-      ]
-    },
-    {
-      "id": 135,
-      "tema": "Democracia e Instituciones",
-      "inicio": 2604.8,
-      "fin": 2633.4,
-      "inicio_fmt": "43:24",
-      "fin_fmt": "43:29",
-      "duracion_seg": 28.6,
-      "extracto": "y se continúa con ocho procedimientos administrativos sancionadores. El gobierno del pueblo invierte en ciencia, tecnología e innovación....",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 137,
-      "tema": "Infraestructura",
-      "inicio": 2616.6,
-      "fin": 2651.2,
-      "inicio_fmt": "43:36",
-      "fin_fmt": "43:40",
-      "duracion_seg": 34.6,
-      "extracto": "contaminación ambiental contra Repsol y quienes resulten responsables. para enfrentar la crisis ambiental y climática....",
-      "color": "#8e44ad",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Infraestructura"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Infraestructura"
-        }
-      ]
-    },
-    {
-      "id": 141,
-      "tema": "Democracia e Instituciones",
-      "inicio": 2666.4,
-      "fin": 2687.2,
-      "inicio_fmt": "44:26",
-      "fin_fmt": "44:33",
-      "duracion_seg": 20.8,
-      "extracto": "Tecnología e Innovación, que en la segunda legislatura no fue agendada. de información sistematizada e integrada,...",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 142,
-      "tema": "Regiones",
-      "inicio": 2673.9,
-      "fin": 2777.7,
-      "inicio_fmt": "44:33",
-      "fin_fmt": "44:40",
-      "duracion_seg": 103.8,
-      "extracto": "A través del Servicio Nacional de Meteorología y Hidrología de Perú, que registra los centros poblados que podrían verse afectados ubicado en el distrito de Sachaca, Arequipa, a través de 29 estaciones de monitoreo distribuidas en las regiones de Piura, La Libertad, Ancash, Lima, Pasco, Junín, Arequ...",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Arequipa, Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Piura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ancash, Arequipa, Cusco"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 143,
-      "tema": "Infraestructura",
-      "inicio": 2680.3,
-      "fin": 2730.1,
-      "inicio_fmt": "44:40",
-      "fin_fmt": "44:44",
-      "duracion_seg": 49.8,
-      "extracto": "CENAMI se ha implementado la plataforma hidrológica de información, a causa de la escrecía de los ríos y su posible activación de quebradas, de los niveles de los contaminantes que se miden en tiempo real a nivel nacional...",
-      "color": "#8e44ad",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Infraestructura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Infraestructura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Infraestructura"
-        }
-      ]
-    },
-    {
-      "id": 145,
-      "tema": "Otros",
-      "inicio": 2698.2,
-      "fin": 2824.2,
-      "inicio_fmt": "44:58",
-      "fin_fmt": "45:01",
-      "duracion_seg": 125.9,
-      "extracto": "El Instituto Geofísico del Perú, este 8 de agosto, va a inaugurar el Observatorio Vulcanológico del Sur, con una inversión de casi 19 millones de soles. CENFA ha puesto en servicio la plataforma de visualización que este primer año ha beneficiado a más de 7.000 familias Asimismo, se invertirá 78 mil...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"19 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"78 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"127 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"28 mil\""
-        }
-      ]
-    },
-    {
-      "id": 147,
-      "tema": "Infraestructura",
-      "inicio": 2781.2,
-      "fin": 2791.8,
-      "inicio_fmt": "46:21",
-      "fin_fmt": "46:31",
-      "duracion_seg": 10.6,
-      "extracto": "se modernizó la infraestructura de los desembarcaderos pesqueros ubicados en Yaxila y Cabo Blanco en la región Piura,...",
-      "color": "#8e44ad",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica, Piura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Infraestructura"
-        }
-      ]
-    },
-    {
-      "id": 149,
-      "tema": "Infraestructura",
-      "inicio": 2824.2,
-      "fin": 2897.9,
-      "inicio_fmt": "47:04",
-      "fin_fmt": "47:11",
-      "duracion_seg": 73.7,
-      "extracto": "Al 2026, se habilitarán 34 infraestructuras pesqueras artesanales y acuícolas, en la sostenibilidad de las actividades pesqueras y acuícolas, la Autoridad Marítima, la Autoridad Ambiental, para garantizar el desarrollo sostenible de la actividad pesquera. los recursos hidrobiológicos a precios econó...",
-      "color": "#8e44ad",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Infraestructura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Infraestructura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Infraestructura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Infraestructura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Infraestructura"
-        }
-      ]
-    },
-    {
-      "id": 150,
-      "tema": "Regiones",
-      "inicio": 2831.1,
-      "fin": 2893.5,
-      "inicio_fmt": "47:11",
-      "fin_fmt": "47:17",
-      "duracion_seg": 62.4,
-      "extracto": "con proyección estratégica a los ámbitos amazónicos y altoandinos. de fiscalización en el territorio nacional y más de 2 mil operativos especiales regionales y locales en más de 30 provincias del ámbito marítimo y 10 provincias del ámbito continental, El Programa Nacional a Comer Pescado lleva a las...",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Regiones"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"2 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 151,
-      "tema": "Democracia e Instituciones",
-      "inicio": 2837.5,
-      "fin": 2869.3,
-      "inicio_fmt": "47:17",
-      "fin_fmt": "47:22",
-      "duracion_seg": 31.8,
-      "extracto": "Es un compromiso firme de mi Gobierno mantener un equilibrio económico, social y ambiental, En lo que va de mi periodo gubernamental, se han realizado más de 145 mil acciones con la participación de las Fiscalías especializadas en temas ambientales,...",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"145 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 154,
-      "tema": "Otros",
-      "inicio": 2897.9,
-      "fin": 2974.8,
-      "inicio_fmt": "48:17",
-      "fin_fmt": "48:22",
-      "duracion_seg": 76.9,
-      "extracto": "con una proyección de comercialización al 2026 de 15 mil 500 toneladas, de pescado y 11 millones de conservas, a fin de reducir la desnutrición y la anemia, por 68 millones 200 mil soles, 37 MIPES por 44.8 millones de soles Al 2026 se espera atender una demanda de 1.150 millones de soles en benefici...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"15 mil\""
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"11 mil\""
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"68 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"44.8 millones\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"1.150 millones\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"800 mil\""
-        }
-      ]
-    },
-    {
-      "id": 155,
+      "id": 124,
       "tema": "Economía",
-      "inicio": 2911.3,
-      "fin": 2965.1,
-      "inicio_fmt": "48:31",
-      "fin_fmt": "48:34",
-      "duracion_seg": 53.8,
-      "extracto": "y promover la reactivación económica. para producción de bienes para entidades estatales, generando de forma indirecta 27.300 puestos de trabajo formal. Se creó el Fondo de Apoyo Empresarial para el Sistema Económico,...",
+      "inicio": 3939.3,
+      "fin": 3972.1,
+      "inicio_fmt": "1:05:39",
+      "fin_fmt": "1:06:12",
+      "duracion_seg": 32.8,
+      "extracto": "de nuestra economía, el FAE Turismo será clave, ya que permitirá garantizar créditos de trabajo de aproximadamente veinte mil MIPES que realizan actividades involucradas al sector. Como parte de esta reactivación económica, estamos impulsando la realización de inversiones...",
       "color": "#1a1a2e",
       "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        }
-      ]
-    },
-    {
-      "id": 160,
-      "tema": "Otros",
-      "inicio": 2978.9,
-      "fin": 3054.9,
-      "inicio_fmt": "49:38",
-      "fin_fmt": "49:43",
-      "duracion_seg": 76.0,
-      "extracto": "brindan servicios tecnológicos para el desarrollo de productos innovadores. tales como Cite Agroindustrial Brian con 12.8 millones de soles, Agroindustrial Ica con 59 millones de soles. En mi primer año de gestión suman más de 52.300 las familias Gracias al Bono Techo Propio y al Crédito Mi Vivienda...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"12.8 millones\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"59 mil\""
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"1.500 millones\""
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"116 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"504 mil\""
-        }
-      ]
-    },
-    {
-      "id": 162,
-      "tema": "Infraestructura",
-      "inicio": 3000.0,
-      "fin": 3025.6,
-      "inicio_fmt": "50:00",
-      "fin_fmt": "50:05",
-      "duracion_seg": 25.5,
-      "extracto": "Vivienda digna, agua y saneamiento. En nuestro gobierno una preocupación fundamental ha sido llevar vivienda digna y segura que han podido cumplir el sueño de la casa propia en las zonas urbanas del país....",
-      "color": "#8e44ad",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Infraestructura"
-        },
-        {
-          "tipo": "anuncio",
-          "descripcion": "Anuncio o compromiso"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Infraestructura"
-        }
-      ]
-    },
-    {
-      "id": 165,
-      "tema": "Regiones",
-      "inicio": 3054.9,
-      "fin": 3075.3,
-      "inicio_fmt": "50:54",
-      "fin_fmt": "50:58",
-      "duracion_seg": 20.4,
-      "extracto": "En las zonas rurales, donde las brechas sociales son más grandes hemos construido cerca de 14.700 viviendas bioclimáticas Sumahuasi, casitas calientes, a las familias de las zonas más pobres del país...",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 166,
-      "tema": "Otros",
-      "inicio": 3058.4,
-      "fin": 3088.8,
-      "inicio_fmt": "50:58",
-      "fin_fmt": "51:00",
-      "duracion_seg": 30.4,
-      "extracto": "y las condiciones de vida son más duras, que ahora protegen de los efectos de las heladas y el friaje y les brinda seguridad y confort térmico. Ello ha significado una inversión de alrededor de 404 millones de soles. Sabemos que esto no es suficiente. Por esto, vamos a continuar llevando...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"404 mil\""
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "anuncio",
-          "descripcion": "Anuncio o compromiso"
-        }
-      ]
-    },
-    {
-      "id": 167,
-      "tema": "Infraestructura",
-      "inicio": 3088.8,
-      "fin": 3119.3,
-      "inicio_fmt": "51:28",
-      "fin_fmt": "51:33",
-      "duracion_seg": 30.5,
-      "extracto": "más viviendas seguras y de calidad a nuestros hermanos y hermanas A fines del 2023, esperamos construir más de 25.000 viviendas Sumahuasi. financiamos más de 450 proyectos de agua y saneamiento y de mejoramiento,...",
-      "color": "#8e44ad",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Infraestructura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Infraestructura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Infraestructura"
-        }
-      ]
-    },
-    {
-      "id": 169,
-      "tema": "Regiones",
-      "inicio": 3106.5,
-      "fin": 3173.6,
-      "inicio_fmt": "51:46",
-      "fin_fmt": "51:51",
-      "duracion_seg": 67.1,
-      "extracto": "Para mejorar la calidad de vida de las familias peruanas durante este primer año de gobierno, estas obras son ejecutadas directamente por las municipalidades y los gobiernos regionales de todo el país, beneficiando a los habitantes de las 24 regiones. Mi gobierno conduce a través del Minsetur la rea...",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 170,
-      "tema": "Otros",
-      "inicio": 3119.7,
-      "fin": 3196.5,
-      "inicio_fmt": "51:59",
-      "fin_fmt": "52:05",
-      "duracion_seg": 76.7,
-      "extracto": "con una inversión de más de 2.700 millones de soles. Toda su cadena de valor propició, al mes de julio, la llegada de un millón de turistas de todas las partes del mundo, A nivel de turismo interno, se han realizado 20.300.000 viajes cerca de 500 recursos turísticos inventariados. hemos adicionado 1...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"2.700 millones\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        }
-      ]
-    },
-    {
-      "id": 171,
-      "tema": "Economía",
-      "inicio": 3125.1,
-      "fin": 3208.0,
-      "inicio_fmt": "52:05",
-      "fin_fmt": "52:11",
-      "duracion_seg": 82.9,
-      "extracto": "En el Plan de Reactivación Económica por Inversión Pública Perú en Marcha 1 y 2, que dejaron divisas al país por un valor de 6.000 millones de soles. logrando un movimiento económico superior a los 8.000 millones de soles. Otro indicador de reactivación es el ingreso al país...",
-      "color": "#1a1a2e",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"6.000 millones\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"8.000 millones\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Economía"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
         {
           "tipo": "cambio_tema",
           "descripcion": "De Agricultura → Economía"
-        }
-      ]
-    },
-    {
-      "id": 173,
-      "tema": "Democracia e Instituciones",
-      "inicio": 3179.5,
-      "fin": 3189.8,
-      "inicio_fmt": "52:59",
-      "fin_fmt": "53:01",
-      "duracion_seg": 10.3,
-      "extracto": "Recibimos del gobierno anterior, Nosotros, en trabajo conjunto con gobernadores y alcaldes,...",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 176,
-      "tema": "Otros",
-      "inicio": 3215.3,
-      "fin": 3280.3,
-      "inicio_fmt": "53:35",
-      "fin_fmt": "53:37",
-      "duracion_seg": 65.0,
-      "extracto": "Hace solo un año, Restaurantes, hoteles, alojamientos diversos, Para atenuar el grave impacto, destinamos 700 millones de soles Se dieron 200 millones de soles, y hoy se tiene a disposición otros 400 millones de soles para continuar su reactivación. con las ollas y cucharones....",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"700 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"200 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"400 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        }
-      ]
-    },
-    {
-      "id": 178,
-      "tema": "Regiones",
-      "inicio": 3220.1,
-      "fin": 3277.8,
-      "inicio_fmt": "53:40",
-      "fin_fmt": "53:42",
-      "duracion_seg": 57.7,
-      "extracto": "de los operadores turísticos de todo el país. organizaciones comunales, guías turísticos, artesanos. en subvenciones a más de 7.700 operadores turísticos. en microcréditos, al FAE Turismo, Compatriotas, ser reconocido como el mejor destino culinario del mundo dice mucho de este binomio de biodiversi...",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 180,
-      "tema": "Política Exterior",
-      "inicio": 3280.3,
-      "fin": 3348.0,
-      "inicio_fmt": "54:40",
-      "fin_fmt": "54:44",
-      "duracion_seg": 67.8,
-      "extracto": "La ley que regula los juegos a distancia y apuestas deportivas Respecto al comercio exterior de bienes y servicios, En esa línea hemos logrado el ingreso del Perú a gran acuerdo comercial en el Tratado Integral y Progresista de Asociación Transpacífico Es un acierto haber suscrito como país el Trata...",
-      "color": "#2c3e50",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Política Exterior"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Política Exterior"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Política Exterior"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Política Exterior"
-        }
-      ]
-    },
-    {
-      "id": 182,
-      "tema": "Economía",
-      "inicio": 3293.1,
-      "fin": 3319.9,
-      "inicio_fmt": "54:53",
-      "fin_fmt": "54:57",
-      "duracion_seg": 26.8,
-      "extracto": "Gracias a esta norma, el país recaudará 160 millones de soles anuales. hemos obtenido un crecimiento continuo entre julio de 2021 y del 2022, logrando un récord de exportaciones superior a los 62.000 millones de dólares, así como disponer de 5.000 productores exportados a España. así como disponer d...",
-      "color": "#1a1a2e",
-      "eventos": [
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"160 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Economía"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Economía"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"62.000 millones\""
-        }
-      ]
-    },
-    {
-      "id": 184,
-      "tema": "Otros",
-      "inicio": 3334.4,
-      "fin": 3375.6,
-      "inicio_fmt": "55:34",
-      "fin_fmt": "55:37",
-      "duracion_seg": 41.2,
-      "extracto": "que entró en vigor en el mes de septiembre del 2021. en comparación con el histórico de los últimos cinco años. Hemos llegado a más de 310 millones de soles al cierre del primer semestre,...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"310 mil\""
-        }
-      ]
-    },
-    {
-      "id": 185,
-      "tema": "Salud",
-      "inicio": 3353.5,
-      "fin": 3441.2,
-      "inicio_fmt": "55:53",
-      "fin_fmt": "55:55",
-      "duracion_seg": 87.7,
-      "extracto": "Salud para el Perú. Proyecto de inversión en salud. Desde el Ministerio de Salud se han habilitado y transformado un total de 257 millones de soles para inversiones en salud montos para la continuidad de inversiones en Centro de Salud de Pugliura, Centro de Salud Pichari y en los hospitales de apoyo...",
-      "color": "#2980b9",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Salud"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Salud"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"257 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Salud"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: San Martín"
-        }
-      ]
-    },
-    {
-      "id": 186,
-      "tema": "Economía",
-      "inicio": 3358.6,
-      "fin": 3395.1,
-      "inicio_fmt": "55:58",
-      "fin_fmt": "56:06",
-      "duracion_seg": 36.5,
-      "extracto": "En el primer semestre del 2022, el Ministerio de Salud ha ejecutado más recursos de inversiones lo cual implica una ejecución de un 32% más respecto al primer semestre del 2021. que no contaban con presupuesto al 2022,...",
-      "color": "#1a1a2e",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Economía"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"32%\""
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Economía"
-        }
-      ]
-    },
-    {
-      "id": 187,
-      "tema": "Regiones",
-      "inicio": 3395.8,
-      "fin": 3416.7,
-      "inicio_fmt": "56:35",
-      "fin_fmt": "56:42",
-      "duracion_seg": 20.9,
-      "extracto": "de los cuales 237 millones de soles corresponden a inversiones en las regiones de Loreto, Ayacucho, Amazonas, Cajamarca, Huancabelica, Huánuco, Cusco, Apurima, Lambayeque y La Libertad. Dada la importancia que tiene para mí el desarrollo de la zona del Braem,...",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"237 mil\""
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Loreto"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Amazonas, Ayacucho, Cajamarca"
-        }
-      ]
-    },
-    {
-      "id": 188,
-      "tema": "Otros",
-      "inicio": 3416.7,
-      "fin": 3475.0,
-      "inicio_fmt": "56:56",
-      "fin_fmt": "56:58",
-      "duracion_seg": 58.3,
-      "extracto": "se ha incluido montos... se han destinado 3 millones y medio de soles para la elaboración del expediente técnico del Hospital San Juan del Urigancho. La culminación se estima para diciembre del presente año. cuya inversión representa más de 620 millones de soles,...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"3 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"620 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        }
-      ]
-    },
-    {
-      "id": 189,
-      "tema": "Democracia e Instituciones",
-      "inicio": 3442.1,
-      "fin": 3469.8,
-      "inicio_fmt": "57:22",
-      "fin_fmt": "57:24",
-      "duracion_seg": 27.7,
-      "extracto": "Acorde al compromiso al asumir la presidencia, Previniéndose el inicio de la ejecución de la obra para el segundo semestre del año 2023,...",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 190,
-      "tema": "Salud",
-      "inicio": 3475.0,
-      "fin": 3558.2,
-      "inicio_fmt": "57:54",
-      "fin_fmt": "58:03",
-      "duracion_seg": 83.2,
-      "extracto": "que contará con 280 camas hospitalarias, 35 camas UCI, 43 camas de observación de emergencia, 10 salas de operaciones y 2 salas de partos, Hospital San Juan del Urigancho. el cual recogerá las recomendaciones de buenas prácticas internacionales para la implementación de hospitales. con un hospital e...",
-      "color": "#2980b9",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Salud"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Salud"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Salud"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Lima"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Salud"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Cusco"
-        }
-      ]
-    },
-    {
-      "id": 191,
-      "tema": "Regiones",
-      "inicio": 3486.9,
-      "fin": 3509.9,
-      "inicio_fmt": "58:06",
-      "fin_fmt": "58:12",
-      "duracion_seg": 23.0,
-      "extracto": "en beneficio de más de un millón de habitantes residentes en el distrito más poblado del país. Bajo la modalidad gobierno a gobierno, el Ministerio de Salud, a través del PRONIS, en el distrito de Comas, en Lima,...",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Lima"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 193,
-      "tema": "Otros",
-      "inicio": 3518.0,
-      "fin": 3532.3,
-      "inicio_fmt": "58:37",
-      "fin_fmt": "58:45",
-      "duracion_seg": 14.3,
-      "extracto": "En el primer trimestre del 2023 se iniciará la ejecución física de las obras tempranas, bajo el enfoque FACS-TRAC, con el objetivo de contar con un plazo de aproximadamente dos años...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Otros"
-        }
-      ]
-    },
-    {
-      "id": 194,
-      "tema": "Infraestructura",
-      "inicio": 3558.2,
-      "fin": 3578.2,
-      "inicio_fmt": "59:18",
-      "fin_fmt": "59:24",
-      "duracion_seg": 20.0,
-      "extracto": "En el presente mes se han reiniciado las obras de demolición, desmontaje, y reforzamiento de la infraestructura existente, en atención a las recomendaciones recibidas. Cabe resaltar que la construcción se desarrollará bajo un enfoque moderno y ágil, que permite ejecutar físicamente la obra,...",
-      "color": "#8e44ad",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Infraestructura"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        }
-      ]
-    },
-    {
-      "id": 197,
-      "tema": "Otros",
-      "inicio": 3590.9,
-      "fin": 3687.2,
-      "inicio_fmt": "59:50",
-      "fin_fmt": "59:55",
-      "duracion_seg": 96.3,
-      "extracto": "hemos aprobado la continuidad de 59.160, que son los 276 trabajadores contratados con el régimen CAS-COVID, con pase a CAS regular. Tal medida permite pasar de tener 34.700 profesionales de salud en el 2019, a 40.600. Se va a iniciar el proceso de nombramiento para 54.800 trabajadores de salud, Se v...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Otros"
-        },
-        {
-          "tipo": "anuncio",
-          "descripcion": "Anuncio o compromiso"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"3 mil\""
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        }
-      ]
-    },
-    {
-      "id": 200,
-      "tema": "Regiones",
-      "inicio": 3652.3,
-      "fin": 3665.2,
-      "inicio_fmt": "60:52",
-      "fin_fmt": "61:05",
-      "duracion_seg": 12.8,
-      "extracto": "ha logrado que 25.400.000 peruanos, que representan el 99.4% de la población objetivo, se encuentren afiliados al CIS....",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"4%\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 203,
-      "tema": "Economía",
-      "inicio": 3694.8,
-      "fin": 3705.9,
-      "inicio_fmt": "61:34",
-      "fin_fmt": "61:45",
-      "duracion_seg": 11.0,
-      "extracto": "por un valor de más de 18 millones de soles, incrementando el 75%....",
-      "color": "#1a1a2e",
-      "eventos": [
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"75%\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Economía"
-        }
-      ]
-    },
-    {
-      "id": 204,
-      "tema": "Otros",
-      "inicio": 3706.5,
-      "fin": 3721.8,
-      "inicio_fmt": "61:46",
-      "fin_fmt": "61:54",
-      "duracion_seg": 15.3,
-      "extracto": "Las compras de medicamentos respecto al año 2021, y en el 100% al 2020. Retorno a la presencialidad....",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"100%\""
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Otros"
-        }
-      ]
-    },
-    {
-      "id": 205,
-      "tema": "Educación",
-      "inicio": 3716.1,
-      "fin": 3888.7,
-      "inicio_fmt": "61:56",
-      "fin_fmt": "61:59",
-      "duracion_seg": 172.6,
-      "extracto": "Fortalecimiento del sistema educativo y recuperación de los aprendizajes. La educación es uno de los pilares fundamentales para lograr la igualdad de oportunidades para la niñez y la juventud peruana. Por ello, durante el mes de marzo del 2022, se completó el retorno a la presencialidad del 100% de...",
-      "color": "#27ae60",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Educación"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Educación"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"100%\""
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"8 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Educación"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Educación"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Educación"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Educación"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Educación"
-        }
-      ]
-    },
-    {
-      "id": 206,
-      "tema": "Otros",
-      "inicio": 3768.0,
-      "fin": 3802.8,
-      "inicio_fmt": "62:48",
-      "fin_fmt": "62:51",
-      "duracion_seg": 34.8,
-      "extracto": "la cual tiene un avance del 70% a la fecha, Beca para los jóvenes. A través de PRONAVEG, desde agosto de 2021,...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"70%\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Otros"
-        }
-      ]
-    },
-    {
-      "id": 208,
-      "tema": "Economía",
-      "inicio": 3852.2,
-      "fin": 3903.7,
-      "inicio_fmt": "64:12",
-      "fin_fmt": "64:19",
-      "duracion_seg": 51.5,
-      "extracto": "Para ello, se ha previsto 195 millones de soles en el presupuesto público del año 2023. Mejora de condiciones remunerativas y demás beneficios laborales. se están implementando mejoras remunerativas y beneficios laborales. Igualmente, se vienen trabajando políticas remunerativas con proyección al añ...",
-      "color": "#1a1a2e",
-      "eventos": [
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"195 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Economía"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Economía"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Economía"
-        }
-      ]
-    },
-    {
-      "id": 210,
-      "tema": "Otros",
-      "inicio": 3903.9,
-      "fin": 3962.1,
-      "inicio_fmt": "65:03",
-      "fin_fmt": "65:05",
-      "duracion_seg": 58.2,
-      "extracto": "para la primera escala magisterial. una bonificación excepcional por única vez de 950 soles, se le otorgará una bonificación excepcional de 500 soles por única vez y 50 soles mensuales de soporte alimentario a partir del 2023....",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Otros"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        }
-      ]
-    },
-    {
-      "id": 211,
-      "tema": "Educación",
-      "inicio": 3905.9,
-      "fin": 4010.4,
-      "inicio_fmt": "65:05",
-      "fin_fmt": "65:12",
-      "duracion_seg": 104.5,
-      "extracto": "Para ello, se propone un aumento progresivo de la remuneración del docente nombrado y contratado. A partir del presente año, los docentes y auxiliares contratados de educación básica y técnico-productiva perciben bonificación por escolaridad. los docentes y auxiliares de educación básica, tanto cont...",
-      "color": "#27ae60",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Educación"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Educación"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Educación"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Educación"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Educación"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Educación"
-        },
-        {
-          "tipo": "anuncio",
-          "descripcion": "Anuncio o compromiso"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"110.000 millones\""
-        }
-      ]
-    },
-    {
-      "id": 216,
-      "tema": "Infraestructura",
-      "inicio": 4010.4,
-      "fin": 4074.8,
-      "inicio_fmt": "66:50",
-      "fin_fmt": "66:57",
-      "duracion_seg": 64.4,
-      "extracto": "En el 2021, hemos realizado un total de 484 intervenciones de mitigación, reconstrucción También se culminó la construcción de otras 23 obras de infraestructura educativa en convenio de infraestructura....",
-      "color": "#8e44ad",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Infraestructura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Infraestructura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Infraestructura"
-        }
-      ]
-    },
-    {
-      "id": 217,
-      "tema": "Educación",
-      "inicio": 4017.8,
-      "fin": 4127.5,
-      "inicio_fmt": "66:57",
-      "fin_fmt": "67:07",
-      "duracion_seg": 109.7,
-      "extracto": "y mejoramiento de instituciones educativas de los 1.114 programados, alcanzando un 72% de la meta prevista y beneficiando a más de 230.000 estudiantes de educación básica. benefician a 17.000 estudiantes. favor de 6.715 estudiantes. educativa. educativa en 288 instituciones educativas a nivel nacion...",
-      "color": "#27ae60",
-      "eventos": [
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"72%\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Educación"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Educación"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Educación"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Educación"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Educación"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"4.250 millones\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Educación"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Educación"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        }
-      ]
-    },
-    {
-      "id": 218,
-      "tema": "Otros",
-      "inicio": 4033.6,
-      "fin": 4095.7,
-      "inicio_fmt": "67:13",
-      "fin_fmt": "67:14",
-      "duracion_seg": 62.1,
-      "extracto": "Asimismo, Para el año 2023, proyectamos invertir cerca de 600 millones de soles en infraestructura Para el año 2023, proyectamos invertir cerca de 600 millones de soles en infraestructura Pero estaacamil sería un párrafo estereotipo efitivo que permite que los profesionales de...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"600 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"600 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Otros"
-        }
-      ]
-    },
-    {
-      "id": 219,
-      "tema": "Economía",
-      "inicio": 4034.3,
-      "fin": 4085.0,
-      "inicio_fmt": "67:14",
-      "fin_fmt": "67:21",
-      "duracion_seg": 50.7,
-      "extracto": "el MINEDO construyó 20 obras directas con una inversión de 228 millones de soles que con los gobiernos regionales y locales, con una inversión de 222 millones de soles en del MINEDO se ejecutarán 75 proyectos de inversión....",
-      "color": "#1a1a2e",
-      "eventos": [
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"228 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"222 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Economía"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Economía"
-        }
-      ]
-    },
-    {
-      "id": 220,
-      "tema": "Regiones",
-      "inicio": 4127.5,
-      "fin": 4194.4,
-      "inicio_fmt": "68:47",
-      "fin_fmt": "68:57",
-      "duracion_seg": 66.8,
-      "extracto": "aprobado y comprometido que el 2023 el Perú sea sede del Mundial de Fútbol de la Sub-17, así como sede de los Juegos Bolivarianos del Bicentenario Ayacucho 2024, colocando al Perú en la vitrina del mundo. Cultura y Pueblos Originarios. Política Nacional de la Lectura. el hábito lector, mientras que...",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ayacucho"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"7%\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 222,
-      "tema": "Educación",
-      "inicio": 4166.3,
-      "fin": 4201.5,
-      "inicio_fmt": "69:26",
-      "fin_fmt": "69:32",
-      "duracion_seg": 35.2,
-      "extracto": "la Lectura, el Libro y las Bibliotecas al 2030, la cual reviste especial importancia de estudiantes del segundo grado de educación, el 16.7% de estudiantes del segundo grado de educación primaria del ámbito rural lograron niveles satisfactorios en lectura, mientras...",
-      "color": "#27ae60",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Educación"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"7%\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Educación"
-        }
-      ]
-    },
-    {
-      "id": 226,
-      "tema": "Regiones",
-      "inicio": 4208.5,
-      "fin": 4234.1,
-      "inicio_fmt": "70:08",
-      "fin_fmt": "70:15",
-      "duracion_seg": 25.5,
-      "extracto": "primera vez en el Perú es una prioridad. Nuestra diversidad cultural. Todos los aquí una patria donde cada peruano, sin importar su condición económica, origen, etnia o género, pueda acceder a los mismos derechos y oportunidades. Para ello resulta...",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 231,
-      "tema": "Salud",
-      "inicio": 4257.6,
-      "fin": 4287.4,
-      "inicio_fmt": "70:57",
-      "fin_fmt": "71:04",
-      "duracion_seg": 29.7,
-      "extracto": "y el pueblo afroperuano. En esa línea, como primera tarea, nos propusimos llevar la vacunación han aplicado más de 1.239.000 dosis en las propias comunidades ubicadas en los rincones más recónditos del país....",
-      "color": "#2980b9",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Salud"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Salud"
-        }
-      ]
-    },
-    {
-      "id": 232,
-      "tema": "Regiones",
-      "inicio": 4264.3,
-      "fin": 4311.9,
-      "inicio_fmt": "71:04",
-      "fin_fmt": "71:10",
-      "duracion_seg": 47.6,
-      "extracto": "contra la COVID-19 a todos los pueblos indígenas u originarios de nuestro país. Gracias a los gestores interculturales del Ministerio de Cultura y el personal médico del MINSA, quienes a la fecha aprobamos la Política Nacional del Pueblo Afroperuano 2030, cuyas acciones garantizarán el ejercicio de...",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        }
-      ]
-    },
-    {
-      "id": 233,
-      "tema": "Otros",
-      "inicio": 4287.6,
-      "fin": 4357.9,
-      "inicio_fmt": "71:27",
-      "fin_fmt": "71:36",
-      "duracion_seg": 70.2,
-      "extracto": "Asimismo, en agradecimiento a su contribución y como muestra de reivindicación histórica, el 4 de junio los golpeó duramente y para recuperarse requieren de nuestro apoyo. Para ellos, hemos aprobado el que a todos nos orgulliza....",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        }
-      ]
-    },
-    {
-      "id": 235,
-      "tema": "Anticorrupción",
-      "inicio": 4318.5,
-      "fin": 4340.6,
-      "inicio_fmt": "71:58",
-      "fin_fmt": "72:05",
-      "duracion_seg": 22.0,
-      "extracto": "Otro grupo con quien tenemos una gran deuda son nuestros hermanos del arte. Sabemos que la pandemia Plan de Recuperación de las Industrias Culturales, por el cual se otorgarán más de 29 millones de...",
-      "color": "#e67e22",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Anticorrupción"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"29 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Anticorrupción"
-        }
-      ]
-    },
-    {
-      "id": 238,
-      "tema": "Salud",
-      "inicio": 4358.1,
-      "fin": 4420.1,
-      "inicio_fmt": "72:38",
-      "fin_fmt": "72:46",
-      "duracion_seg": 62.0,
-      "extracto": "Mujer y poblaciones vulnerables. adolescentes, beneficiando a 19.000 huérfanos y huérfanas por la pandemia, a 638 huérfanos cuyas madres fueron víctimas de feminicidio. La Red Alivia de Conadis atendió 6.348 personas con discapacidad para el acceso a la salud,...",
-      "color": "#2980b9",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Salud"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Salud"
-        }
-      ]
-    },
-    {
-      "id": 242,
-      "tema": "Democracia e Instituciones",
-      "inicio": 4420.1,
-      "fin": 4481.4,
-      "inicio_fmt": "73:40",
-      "fin_fmt": "73:49",
-      "duracion_seg": 61.2,
-      "extracto": "al empleo, a la justicia, a la educación y a la protección social. Este gobierno ha reconocido cuatro nuevas modalidades de fortaleciendo el sistema nacional. cumplimos con entregar al Congreso el proyecto de ley que crea el sistema nacional de cuidados para fortalecer la autonomía de las mujeres. H...",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 243,
-      "tema": "Seguridad",
-      "inicio": 4429.1,
-      "fin": 4460.2,
-      "inicio_fmt": "73:49",
-      "fin_fmt": "73:58",
-      "duracion_seg": 31.1,
-      "extracto": "violencia contra las mujeres e integrantes del grupo familiar. La explotación sexual de niñas, niños y adolescentes, la violencia en los servicios de salud sexual y reproductiva, el acoso a través del proceso judicial y la desaparición por particulares. Continuaremos En el proyecto especializado de...",
-      "color": "#c0392b",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Seguridad"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Seguridad"
-        }
-      ]
-    },
-    {
-      "id": 244,
-      "tema": "Educación",
-      "inicio": 4481.5,
-      "fin": 4495.4,
-      "inicio_fmt": "74:41",
-      "fin_fmt": "74:55",
-      "duracion_seg": 13.8,
-      "extracto": "Alianzar políticas públicas de igualdad y desarrollo y decir que luego de 12 años cumplimos con listar los trabajos y actividades peligrosas o nocivas para nuestras adolescentes que trabajan....",
-      "color": "#27ae60",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Educación"
-        }
-      ]
-    },
-    {
-      "id": 245,
-      "tema": "Economía",
-      "inicio": 4495.4,
-      "fin": 4605.1,
-      "inicio_fmt": "74:55",
-      "fin_fmt": "75:10",
-      "duracion_seg": 109.8,
-      "extracto": "Trabajo y promoción del empleo. En el sector trabajo, nuestro gobierno ha generado más de 225 mil empleos temporales a través del programa Lurawi Perú. De igual manera, se ha capacitado y certificado a más de 204 mil personas por el portal Empleos Perú y el Programa Nacional de Empleabilidad y se ha...",
-      "color": "#1a1a2e",
-      "eventos": [
-        {
-          "tipo": "anuncio",
-          "descripcion": "Anuncio o compromiso"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"225 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Economía"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"2.6 millones\""
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"100 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"8.139 millones\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Economía"
-        }
-      ]
-    },
-    {
-      "id": 248,
-      "tema": "Otros",
-      "inicio": 4605.1,
-      "fin": 4694.4,
-      "inicio_fmt": "76:45",
-      "fin_fmt": "76:50",
-      "duracion_seg": 89.2,
-      "extracto": "Se está coordinando con las empresas para que se reinicien. Con el concesionario del Aeropuerto Internacional, Jorge Chávez. Y a la fecha se culmine la culminación, sea en enero del 2025, según el contrato de concesión suscrito. Se ha concluido la modificación del expediente técnico de la obra. Puen...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Otros"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"470 mil\""
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Callao"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"642 mil\""
-        }
-      ]
-    },
-    {
-      "id": 249,
-      "tema": "Política Exterior",
-      "inicio": 4610.2,
-      "fin": 4621.4,
-      "inicio_fmt": "76:50",
-      "fin_fmt": "77:01",
-      "duracion_seg": 11.2,
-      "extracto": "Y se culminen estas obras, convocando a las embajadas extranjeras como aliadas para mejorar la gestión de estas empresas y sean culminadas....",
-      "color": "#2c3e50",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Política Exterior"
-        }
-      ]
-    },
-    {
-      "id": 251,
-      "tema": "Infraestructura",
-      "inicio": 4637.7,
-      "fin": 4667.9,
-      "inicio_fmt": "77:17",
-      "fin_fmt": "77:22",
-      "duracion_seg": 30.2,
-      "extracto": "Se ha concertado para que se ejecute la construcción de un solo terminal. Impulso a las inversiones de infraestructura de transportes. Se encuentran construidas 125 kilómetros de carreteras y se vienen ejecutando 11 obras para continuar con la pavimentación de 538 kilómetros....",
-      "color": "#8e44ad",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Infraestructura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Infraestructura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Infraestructura"
-        }
-      ]
-    },
-    {
-      "id": 253,
-      "tema": "Democracia e Instituciones",
-      "inicio": 4694.8,
-      "fin": 4715.1,
-      "inicio_fmt": "78:14",
-      "fin_fmt": "78:22",
-      "duracion_seg": 20.2,
-      "extracto": "Igualmente se convocará a la contratación para ejecutar el eje Vial 4 bajo la modalidad de gobierno a gobierno. Proyecto sobre el cual hemos remitido la propuesta de ley al Congreso de la República junto con otros 15 proyectos para que su ejecución sea declarada de necesidad pública e interés nacion...",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Democracia e Instituciones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        }
-      ]
-    },
-    {
-      "id": 254,
-      "tema": "Otros",
-      "inicio": 4715.1,
-      "fin": 4727.3,
-      "inicio_fmt": "78:35",
-      "fin_fmt": "78:47",
-      "duracion_seg": 12.2,
-      "extracto": "Se está convocando al proceso de selección para la ejecución de la obra Checa Mazo Cruz con un monto de 184 millones de soles....",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"184 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        }
-      ]
-    },
-    {
-      "id": 255,
-      "tema": "Infraestructura",
-      "inicio": 4728.0,
-      "fin": 4862.6,
-      "inicio_fmt": "78:47",
-      "fin_fmt": "78:54",
-      "duracion_seg": 134.6,
-      "extracto": "Y se va a iniciar la ejecución de la obra de acceso al aeropuerto de Chincheros por un monto de 410 millones de soles. En lo que respecta a la conservación de la red nacional hemos alcanzado el mantenimiento rutinario de 8.150 kilómetros de carreteras pavimentadas, 4.440 kilómetros de mantenimiento...",
-      "color": "#8e44ad",
-      "eventos": [
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"470 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Infraestructura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Infraestructura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Infraestructura"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: La Libertad, Loreto"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Infraestructura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Infraestructura"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"605 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Infraestructura"
-        }
-      ]
-    },
-    {
-      "id": 256,
-      "tema": "Otros",
-      "inicio": 4767.0,
-      "fin": 4780.1,
-      "inicio_fmt": "79:26",
-      "fin_fmt": "79:30",
-      "duracion_seg": 13.1,
-      "extracto": "No concesionadas con conservación por niveles de servicio. Todo esto puede compararse y constatarse....",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Otros"
-        }
-      ]
-    },
-    {
-      "id": 257,
-      "tema": "Regiones",
-      "inicio": 4794.1,
-      "fin": 4818.9,
-      "inicio_fmt": "79:54",
-      "fin_fmt": "79:57",
-      "duracion_seg": 24.8,
-      "extracto": "Choquehuanca en Puno, Junín, Ayacucho, Cusco, principalmente en las regiones de Puno, Huánuco, Cusco, Ancash, Junín y Ayacucho....",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ayacucho, Cusco, Junín"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ancash, Ayacucho, Cusco"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 260,
-      "tema": "Regiones",
-      "inicio": 4862.6,
-      "fin": 4897.9,
-      "inicio_fmt": "81:02",
-      "fin_fmt": "81:06",
-      "duracion_seg": 35.3,
-      "extracto": "para la integración geográfica territorial de todos los gobiernos. Esta obra colocará al Perú a la altura de las naciones,...",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 262,
-      "tema": "Otros",
-      "inicio": 4875.5,
-      "fin": 4950.9,
-      "inicio_fmt": "81:15",
-      "fin_fmt": "81:23",
-      "duracion_seg": 75.4,
-      "extracto": "en el planeamiento de las inversiones chinas relacionadas con el megapuerto de Changkai. y que ahora se proyecta a 3.200 millones de dólares. Antepuerto del Callao. Se iniciará en el presente año la ejecución de obras en el antepuerto del Callao Ferrocarriles. En este último tramo ya se registra ava...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Otros"
-        },
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"3.200 millones\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Callao"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Otros"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Callao"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Otros"
-        }
-      ]
-    },
-    {
-      "id": 263,
-      "tema": "Economía",
-      "inicio": 4883.8,
-      "fin": 4908.8,
-      "inicio_fmt": "81:23",
-      "fin_fmt": "81:29",
-      "duracion_seg": 25.0,
-      "extracto": "Plataforma logística que comprende una inversión inicial de 1.200 millones de dólares y mejorará sustancialmente los niveles de intercambio comercial...",
-      "color": "#1a1a2e",
-      "eventos": [
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"1.200 millones\""
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Economía"
-        }
-      ]
-    },
-    {
-      "id": 264,
-      "tema": "Infraestructura",
-      "inicio": 4898.1,
-      "fin": 4964.7,
-      "inicio_fmt": "81:38",
-      "fin_fmt": "81:41",
-      "duracion_seg": 66.6,
-      "extracto": "de mayor infraestructura portuaria del Pacífico Sur para transformar 20 hectáreas para ordenar el ingreso al puerto Chalaco y descongestionar las avenidas aledañas. Se está preparando la intervención de dos tramos del tren Grau, Lima-Barranca y Lima-Ica. Se ha aprobado el diseño conceptual del ferro...",
-      "color": "#8e44ad",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Infraestructura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Infraestructura"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica, Lima"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Infraestructura"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Cusco"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Infraestructura"
-        }
-      ]
-    },
-    {
-      "id": 268,
-      "tema": "Democracia e Instituciones",
-      "inicio": 4968.0,
-      "fin": 4989.9,
-      "inicio_fmt": "82:48",
-      "fin_fmt": "82:49",
-      "duracion_seg": 21.9,
-      "extracto": "a través de la ley de inversiones de la Corte Constitucional. por la modalidad de obra pública,...",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Democracia e Instituciones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 269,
-      "tema": "Otros",
-      "inicio": 4970.0,
-      "fin": 5013.0,
-      "inicio_fmt": "82:50",
-      "fin_fmt": "82:54",
-      "duracion_seg": 43.0,
-      "extracto": "para el financiamiento del expediente técnico en el 2023. Asimismo, se ha concertado el acompañamiento técnico Se convocará el ferrocarril Huancayo-Huancavelica Se encuentra en elaboración, el mismo que concluirá en abril de 2023. Sin embargo, es de destacar que ya se está recibiendo cartas de inten...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Otros"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Huancavelica, Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        }
-      ]
-    },
-    {
-      "id": 271,
-      "tema": "Economía",
-      "inicio": 4990.5,
-      "fin": 5016.4,
-      "inicio_fmt": "83:10",
-      "fin_fmt": "83:14",
-      "duracion_seg": 25.8,
-      "extracto": "siendo una primera etapa su reactivación a través de cuatro inversiones menores para su financiamiento vía inversión privada....",
-      "color": "#1a1a2e",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Economía"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Economía"
-        }
-      ]
-    },
-    {
-      "id": 273,
-      "tema": "Regiones",
-      "inicio": 5000.4,
-      "fin": 5065.6,
-      "inicio_fmt": "83:20",
-      "fin_fmt": "83:24",
-      "duracion_seg": 65.1,
-      "extracto": "el perfil técnico del ferrocarril Andahuaylas-San Juan de Marcona, al 2.090 centros poblados de Acucho, Huancabelica, Apurímac, Cusco, Lambayeque, Lima y Loreto. Se inició el servicio de Internet satelital en 1.026 centros poblados de Amazonas, Loreto, Ucayali y Madre de Dios. Beneficiando a un tota...",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Apurímac, Cusco, Ica"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Amazonas"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Loreto, Madre de Dios, Ucayali"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Apurímac, Ayacucho, Cusco"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 278,
-      "tema": "Infraestructura",
-      "inicio": 5065.8,
-      "fin": 5110.2,
-      "inicio_fmt": "84:25",
-      "fin_fmt": "84:36",
-      "duracion_seg": 44.4,
-      "extracto": "Se están impulsando los centros de acceso digital del Plan Todos Conectados trabajamos de manera conjunta un programa de transferencia de tecnología para avanzar hacia la puesta en servicio de un sistema con capacidad...",
-      "color": "#8e44ad",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Infraestructura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Infraestructura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Infraestructura"
-        }
-      ]
-    },
-    {
-      "id": 279,
-      "tema": "Regiones",
-      "inicio": 5076.9,
-      "fin": 5182.2,
-      "inicio_fmt": "84:36",
-      "fin_fmt": "84:45",
-      "duracion_seg": 105.4,
-      "extracto": "que brindará un millón de becas para los ciudadanos de Ayacucho, Huancabelica, Apurímac, Lambayeque, Cusco y Lima. de cubrir el territorio peruano y mejorar la conectividad. Como contribución para enfrentar los retos económicos, sociales y de gobernabilidad que reconoce los esfuerzos hechos por el P...",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Apurímac, Ayacucho, Cusco"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 280,
-      "tema": "Política Exterior",
-      "inicio": 5086.1,
-      "fin": 5198.0,
-      "inicio_fmt": "84:46",
-      "fin_fmt": "84:51",
-      "duracion_seg": 111.9,
-      "extracto": "Con el Ministerio de Ciencia, Tecnología e Innovación de la hermana República de Argentina En materia de fabricación satelital, tanto de observación como de comunicaciones para lanzamiento de órbita geoestacionaria Relaciones exteriores. en junio se inició el proceso de adhesión a la Organización pa...",
-      "color": "#2c3e50",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Política Exterior"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Política Exterior"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Política Exterior"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Política Exterior"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Política Exterior"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Política Exterior"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Política Exterior"
-        }
-      ]
-    },
-    {
-      "id": 281,
-      "tema": "Democracia e Instituciones",
-      "inicio": 5130.2,
-      "fin": 5174.8,
-      "inicio_fmt": "85:30",
-      "fin_fmt": "85:30",
-      "duracion_seg": 44.6,
-      "extracto": "y la Comunicación. para incorporar mejores prácticas en sus políticas públicas. políticas públicas implementadas en el marco de la ODE se fijan en base a estándares elevados...",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Democracia e Instituciones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Democracia e Instituciones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 282,
-      "tema": "Economía",
-      "inicio": 5131.2,
-      "fin": 5167.4,
-      "inicio_fmt": "85:31",
-      "fin_fmt": "85:36",
-      "duracion_seg": 36.2,
-      "extracto": "Y el desarrollo económico OCDE, con la adopción de la hoja de ruta de análisis, discusión y difusión de experiencias en políticas sociales y económicas. Las...",
-      "color": "#1a1a2e",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Economía"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Economía"
-        }
-      ]
-    },
-    {
-      "id": 284,
-      "tema": "Educación",
-      "inicio": 5182.6,
-      "fin": 5206.0,
-      "inicio_fmt": "86:22",
-      "fin_fmt": "86:30",
-      "duracion_seg": 23.4,
-      "extracto": "servicios públicos, educación, ambiente y administración pública. Además, la adhesión contactos en diversos temas, tales como educación, ambiente, asuntos fiscales, comercio, inversión,...",
-      "color": "#27ae60",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Educación"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Educación"
-        }
-      ]
-    },
-    {
-      "id": 286,
-      "tema": "Regiones",
-      "inicio": 5213.0,
-      "fin": 5248.1,
-      "inicio_fmt": "86:53",
-      "fin_fmt": "86:59",
-      "duracion_seg": 35.1,
-      "extracto": "de este gobierno el Perú sea un miembro de la ODE, para lo cual requerimos el trabajo El Perú será sede del 52 periodo ordinario de sesiones de la Asamblea General de la OEA, con el lema Juntos contra la Desigualdad y la Discriminación. Durante el presente año,...",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 287,
-      "tema": "Democracia e Instituciones",
-      "inicio": 5219.4,
-      "fin": 5252.1,
-      "inicio_fmt": "86:59",
-      "fin_fmt": "87:00",
-      "duracion_seg": 32.7,
-      "extracto": "conjunto del Ejecutivo y de la ODE. el país asumirá también la presidencia,...",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 288,
-      "tema": "Política Exterior",
-      "inicio": 5252.1,
-      "fin": 5282.7,
-      "inicio_fmt": "87:32",
-      "fin_fmt": "87:45",
-      "duracion_seg": 30.6,
-      "extracto": "protémpore de la Alianza del Pacífico y de la Comunidad Andina. En el 2024 será sede del Foro de Cooperación Económica hacia Pacífico y ejercerá su presidencia. Asimismo, reforzaremos el reconocimiento internacional a la gobernabilidad democrática del país, así como el apoyo...",
-      "color": "#2c3e50",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Política Exterior"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        }
-      ]
-    },
-    {
-      "id": 289,
-      "tema": "Regiones",
-      "inicio": 5282.7,
-      "fin": 5334.9,
-      "inicio_fmt": "88:02",
-      "fin_fmt": "88:23",
-      "duracion_seg": 52.2,
-      "extracto": "de los peruanos en el exterior, sector interior. Durante mi gestión se han ejecutado 762.300 En el próximo año, el Perú será sede del Perú, con el lema Juntos contra la Desigualdad como el apoyo de los peruanos en el exterior, sector interior, sector interior, sector interior,...",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 290,
-      "tema": "Seguridad",
-      "inicio": 5303.9,
-      "fin": 5357.9,
-      "inicio_fmt": "88:23",
-      "fin_fmt": "88:32",
-      "duracion_seg": 54.1,
-      "extracto": "actos desplegados a nivel nacional, logrando la detención en flagrancia de 231.800 personas al margen de la ley, así como desarticulación de 211 organizaciones criminales, 10.000 bandas delictivas, captura de 61.000 requisitoreados, decomiso de más de 35 toneladas de pasta básica de cocaína, más de...",
-      "color": "#c0392b",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Seguridad"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Seguridad"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Seguridad"
-        }
-      ]
-    },
-    {
-      "id": 293,
-      "tema": "Democracia e Instituciones",
-      "inicio": 5364.4,
-      "fin": 5388.4,
-      "inicio_fmt": "89:24",
-      "fin_fmt": "89:28",
-      "duracion_seg": 24.0,
-      "extracto": "pueblos y a nuestra comunidad. Esta iniciativa ha realizado un esfuerzo en una audiencia El equipo de deuda ha realizado una consulta, para la cual el Consejo Nacional de Seguridad También ha presentado una consulta con el Partido Popular, donde, en las largas citas...",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 294,
-      "tema": "Anticorrupción",
-      "inicio": 5368.5,
-      "fin": 5383.9,
-      "inicio_fmt": "89:28",
-      "fin_fmt": "89:33",
-      "duracion_seg": 15.4,
-      "extracto": "a la que el carente ha estado a punto con la administración del equipo de deuda. de la deuda....",
-      "color": "#e67e22",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Anticorrupción"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Anticorrupción"
-        }
-      ]
-    },
-    {
-      "id": 296,
-      "tema": "Regiones",
-      "inicio": 5379.4,
-      "fin": 5422.8,
-      "inicio_fmt": "89:39",
-      "fin_fmt": "89:42",
-      "duracion_seg": 43.4,
-      "extracto": "en vuestra región para la capacitación de los peruanos para la desigualdad y la desigualdad del Perú, han respondido más de 2.000 exigentes de afectos contra la seguridad de nuestros pueblos y nuestras comunidades. El Consejo General del Perú se ha presentado tres całyos programas de relación entre...",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 298,
-      "tema": "Seguridad",
-      "inicio": 5401.9,
-      "fin": 5476.9,
-      "inicio_fmt": "90:01",
-      "fin_fmt": "90:03",
-      "duracion_seg": 75.0,
-      "extracto": "policiales y derechohabientes. Se crearán las brigadas especiales contra el crimen en los distritos con mayor incidencia delictiva, iniciando como piloto en los distritos de San Juan del Urigancho, San Martín de policial. 4. Estableceremos los mecanismos de defensa legal hacia el nivel de divisiones...",
-      "color": "#c0392b",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Seguridad"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Seguridad"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: San Martín"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Seguridad"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Seguridad"
-        }
-      ]
-    },
-    {
-      "id": 300,
-      "tema": "Democracia e Instituciones",
-      "inicio": 5422.8,
-      "fin": 5449.8,
-      "inicio_fmt": "90:22",
-      "fin_fmt": "90:29",
-      "duracion_seg": 27.0,
-      "extracto": "3. Restableceremos de manera definitiva el principio de autoridad y respeto a la función En mi condición de Presidente de la República y Director de la Política General del Gobierno,...",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Democracia e Instituciones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 302,
-      "tema": "Regiones",
-      "inicio": 5449.8,
-      "fin": 5468.5,
-      "inicio_fmt": "90:49",
-      "fin_fmt": "90:54",
-      "duracion_seg": 18.7,
-      "extracto": "a fin de unir los esfuerzos desplegados a través de los programas comunitarios, desarrollados en el ámbito de la Estrategia Vecindario Seguro y la Política Multisectorial Barrio Seguro, que se desarrollarán junto con las actividades de los gobiernos regionales y locales....",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        }
-      ]
-    },
-    {
-      "id": 303,
-      "tema": "Economía",
-      "inicio": 5476.9,
-      "fin": 5505.9,
-      "inicio_fmt": "91:16",
-      "fin_fmt": "91:23",
-      "duracion_seg": 29.0,
-      "extracto": "Industrial de la Marina, contribuyen al desarrollo económico del país, mediante las iniciativas Asimismo, hemos establecido la nueva escala porcentual de asignación económica para...",
-      "color": "#1a1a2e",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Economía"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Economía"
-        }
-      ]
-    },
-    {
-      "id": 307,
-      "tema": "Otros",
-      "inicio": 5505.9,
-      "fin": 5519.2,
-      "inicio_fmt": "91:45",
-      "fin_fmt": "91:54",
-      "duracion_seg": 13.3,
-      "extracto": "el personal del servicio militar acuartelado e incremento en la asignación por alimentación diaria al personal de las Fuerzas Armadas, de 8 a 12 soles....",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
-        }
-      ]
-    },
-    {
-      "id": 309,
-      "tema": "Democracia e Instituciones",
-      "inicio": 5525.5,
-      "fin": 5603.4,
-      "inicio_fmt": "92:05",
-      "fin_fmt": "92:12",
-      "duracion_seg": 77.9,
-      "extracto": "un proyecto de ley para que un porcentaje de los recursos determinados se dedique a estos Justicia Eficiente. Justicia y Derechos Humanos. En el caso de la ciudad de Trujillo, el proyecto de ley de justicia es un proyecto de ley implementado por el Poder Judicial, cuyo proyecto piloto se puso en fun...",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Democracia e Instituciones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Trujillo"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Democracia e Instituciones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Democracia e Instituciones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 310,
-      "tema": "Seguridad",
-      "inicio": 5532.2,
-      "fin": 5559.2,
-      "inicio_fmt": "92:12",
-      "fin_fmt": "92:27",
-      "duracion_seg": 27.0,
-      "extracto": "fines. A fin de combatir la delincuencia común e implementar un servicio de justicia célere...",
-      "color": "#c0392b",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Seguridad"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Seguridad"
-        }
-      ]
-    },
-    {
-      "id": 311,
-      "tema": "Otros",
-      "inicio": 5559.2,
-      "fin": 5606.3,
-      "inicio_fmt": "92:39",
-      "fin_fmt": "92:46",
-      "duracion_seg": 47.1,
-      "extracto": "y eficiente, venimos participando activamente en la implementación de las unidades de flagrancia, ZUNAR ha fortalecido sus sistemas a fin de brindar sus servicios en línea, es decir, tiempo y evitando aglomeraciones....",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        }
-      ]
-    },
-    {
-      "id": 315,
-      "tema": "Democracia e Instituciones",
-      "inicio": 5613.6,
-      "fin": 5673.1,
-      "inicio_fmt": "93:33",
-      "fin_fmt": "93:39",
-      "duracion_seg": 59.5,
-      "extracto": "la cual cualquier ciudadano puede ingresar de manera gratuita para realizar consultas de personas jurídicas. acceso a la justicia. El Ministerio de Justicia y Desarrollo Humano, cumpliendo con el compromiso de promover el en los procesos judiciales....",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Democracia e Instituciones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 317,
-      "tema": "Anticorrupción",
-      "inicio": 5627.1,
-      "fin": 5638.4,
-      "inicio_fmt": "93:47",
-      "fin_fmt": "93:58",
-      "duracion_seg": 11.3,
-      "extracto": "De otro lado, ZUNAR ha otorgado 618.500 certificados de publicidad registral que otorgan seguridad...",
-      "color": "#e67e22",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Anticorrupción"
-        }
-      ]
-    },
-    {
-      "id": 318,
-      "tema": "Seguridad",
-      "inicio": 5638.4,
-      "fin": 5737.5,
-      "inicio_fmt": "93:58",
-      "fin_fmt": "94:05",
-      "duracion_seg": 99.1,
-      "extracto": "jurídica a la población, los mismos que se expiden mediante agente automatizado a acceso a la justicia, en especial de la población más vulnerable, brinda el servicio de asistencia legal a la ciudadanía en temas de derechos de familia y el patrocinio legal de las víctimas Reparaciones colectivas de...",
-      "color": "#c0392b",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Seguridad"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Seguridad"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Seguridad"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Seguridad"
-        }
-      ]
-    },
-    {
-      "id": 319,
-      "tema": "Otros",
-      "inicio": 5645.9,
-      "fin": 5689.5,
-      "inicio_fmt": "94:05",
-      "fin_fmt": "94:11",
-      "duracion_seg": 43.6,
-      "extracto": "través del servicio publicidad registral en línea a nivel nacional, promoviendo el En esta labor, durante el periodo comprendido entre el 28 de julio de 2021 al 6 de julio de 2022, se han atendido 294.900 consultas y 74.800 patrocinios....",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        }
-      ]
-    },
-    {
-      "id": 321,
-      "tema": "Infraestructura",
-      "inicio": 5699.4,
-      "fin": 5720.8,
-      "inicio_fmt": "94:59",
-      "fin_fmt": "95:05",
-      "duracion_seg": 21.4,
-      "extracto": "Como medida de reparación colectiva del Plan Integral de Reparaciones entre agosto de 2021 para la ejecución de proyectos productivos y de infraestructura de 22.000 familias integrantes...",
-      "color": "#8e44ad",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Infraestructura"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Infraestructura"
-        }
-      ]
-    },
-    {
-      "id": 322,
-      "tema": "Regiones",
-      "inicio": 5705.2,
-      "fin": 5723.8,
-      "inicio_fmt": "95:05",
-      "fin_fmt": "95:13",
-      "duracion_seg": 18.6,
-      "extracto": "y julio de 2022, se benefició con la transferencia de 49 millones de soles a 14 gobiernos locales de 490 colectivos....",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"49 mil\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 323,
-      "tema": "Otros",
-      "inicio": 5738.7,
-      "fin": 5812.9,
-      "inicio_fmt": "95:38",
-      "fin_fmt": "95:45",
-      "duracion_seg": 74.3,
-      "extracto": "De julio de 2021 a junio de 2022, se dio respuesta a los familiares sobre la suerte De ellas, 225 corresponden a restituciones y entierros dignos. Tres a personas desaparecidas halladas con vida que se han reencontrado con sus familias en la región de Ayacucho, se realizó el acto de restitución de r...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Otros"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ayacucho"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Otros"
-        }
-      ]
-    },
-    {
-      "id": 325,
-      "tema": "Regiones",
-      "inicio": 5766.0,
-      "fin": 5776.1,
-      "inicio_fmt": "96:06",
-      "fin_fmt": "96:08",
-      "duracion_seg": 10.0,
-      "extracto": "y nueve a cierres administrativos. Se debe destacar que en el mes de mayo de 2022, en la Plaza Central del Distrito de Acomarca,...",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 326,
-      "tema": "Democracia e Instituciones",
-      "inicio": 5787.2,
-      "fin": 5826.1,
-      "inicio_fmt": "96:27",
-      "fin_fmt": "96:30",
-      "duracion_seg": 38.9,
-      "extracto": "Esta entrega es representativa. del Ministerio de Justicia. De otro lado, la Secretaría Ejecutiva de la Comisión Multisectorial de Alto Nivel,...",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 329,
-      "tema": "Otros",
-      "inicio": 5826.1,
-      "fin": 5887.6,
-      "inicio_fmt": "97:06",
-      "fin_fmt": "97:17",
-      "duracion_seg": 61.5,
-      "extracto": "develó una placa de conmemoración a las víctimas en el marco del Plan Integral de Reparaciones de la Ley 28.592. que modifica la conformación del mecanismo intersectorial. Si bien tenemos el compromiso de defender y proteger la vida de todos los defensores ambientales, ambiente y cultura, nos permit...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        }
-      ]
-    },
-    {
-      "id": 330,
-      "tema": "Seguridad",
-      "inicio": 5837.7,
-      "fin": 5865.4,
-      "inicio_fmt": "97:17",
-      "fin_fmt": "97:22",
-      "duracion_seg": 27.7,
-      "extracto": "Protección de las personas defensoras de derechos humanos. Para la protección de las personas defensoras de derechos humanos, a fin de incluir a de vida....",
-      "color": "#c0392b",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Seguridad"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Seguridad"
-        }
-      ]
-    },
-    {
-      "id": 333,
-      "tema": "Democracia e Instituciones",
-      "inicio": 5870.4,
-      "fin": 5895.6,
-      "inicio_fmt": "97:50",
-      "fin_fmt": "97:59",
-      "duracion_seg": 25.2,
-      "extracto": "creemos que las medidas del mecanismo a constituir el trabajo conjunto entre el sector interior, Asimismo, hemos aprobado el proyecto de ley, de defensa y asistencia para los dirigentes comunales defensores de los derechos humanos,...",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 334,
-      "tema": "Seguridad",
-      "inicio": 5895.6,
-      "fin": 5907.0,
-      "inicio_fmt": "98:15",
-      "fin_fmt": "98:24",
-      "duracion_seg": 11.4,
-      "extracto": "transformando las cárceles en espacios productivos de resocialización, cárceles productivas....",
-      "color": "#c0392b",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Seguridad"
-        }
-      ]
-    },
-    {
-      "id": 335,
-      "tema": "Infraestructura",
-      "inicio": 5907.0,
-      "fin": 5922.8,
-      "inicio_fmt": "98:27",
-      "fin_fmt": "98:34",
-      "duracion_seg": 15.8,
-      "extracto": "Tiene por finalidad reparar o preparar a los internos para su reinserción laboral y al mismo tiempo permitirles obtener ingresos para el pago de sus reparaciones civiles y sus gastos de internamiento....",
-      "color": "#8e44ad",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Infraestructura"
-        }
-      ]
-    },
-    {
-      "id": 336,
-      "tema": "Otros",
-      "inicio": 5922.8,
-      "fin": 5938.8,
-      "inicio_fmt": "98:42",
-      "fin_fmt": "98:43",
-      "duracion_seg": 16.0,
-      "extracto": "En efecto, 22.925 internas e internos vienen desempeñándose en talleres productivos y actividades grupales e individuales....",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Otros"
-        }
-      ]
-    },
-    {
-      "id": 339,
-      "tema": "Democracia e Instituciones",
-      "inicio": 5948.8,
-      "fin": 5981.2,
-      "inicio_fmt": "99:08",
-      "fin_fmt": "99:13",
-      "duracion_seg": 32.4,
-      "extracto": "así como eventos en identidades como el Ministerio de Justicia, Derechos Humanos, el Poder Judicial y el Ministerio de Cultura. Proyecto de ley. para posibilitar mayor eficacia a la justicia. incorpora una nueva conducta referida a aquellas personas que ceden a terceros su autorización...",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Democracia e Instituciones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 340,
-      "tema": "Seguridad",
-      "inicio": 5959.4,
-      "fin": 6004.1,
-      "inicio_fmt": "99:19",
-      "fin_fmt": "99:22",
-      "duracion_seg": 44.7,
-      "extracto": "La minería ilegal. El proyecto de ley sobre minería ilegal define mejor el tipo delictivo sancionándose dicha conducta de dos años de prisión preventiva de libertad. se agrega la agravante de organización criminal para el agente que comete delito de minería ilegal aplicándose ahora penas de 8 a 20 a...",
-      "color": "#c0392b",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Seguridad"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Seguridad"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Seguridad"
-        }
-      ]
-    },
-    {
-      "id": 341,
-      "tema": "Política Exterior",
-      "inicio": 5974.2,
-      "fin": 5990.1,
-      "inicio_fmt": "99:34",
-      "fin_fmt": "99:35",
-      "duracion_seg": 15.9,
-      "extracto": "De otro lado, De otro lado,...",
-      "color": "#2c3e50",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Política Exterior"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Política Exterior"
-        }
-      ]
-    },
-    {
-      "id": 342,
-      "tema": "Otros",
-      "inicio": 5981.2,
-      "fin": 6015.1,
-      "inicio_fmt": "99:41",
-      "fin_fmt": "99:43",
-      "duracion_seg": 33.9,
-      "extracto": "de manera irregular, Asimismo, se establece la inhabilitación de 2 a 12 años para el tipo base e inhabilitación perpetua...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Otros"
-        }
-      ]
-    },
-    {
-      "id": 346,
-      "tema": "Democracia e Instituciones",
-      "inicio": 6023.3,
-      "fin": 6064.4,
-      "inicio_fmt": "100:23",
-      "fin_fmt": "100:26",
-      "duracion_seg": 41.1,
-      "extracto": "Este proyecto de ley establece plena efectiva Proyectos de ley pendientes en el Congreso de la República. Igualmente se encuentran pendientes de aprobación en el Congreso 45 proyectos de ley de distinta materia...",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Democracia e Instituciones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 347,
-      "tema": "Seguridad",
-      "inicio": 6026.3,
-      "fin": 6047.3,
-      "inicio_fmt": "100:26",
-      "fin_fmt": "100:28",
-      "duracion_seg": 21.0,
-      "extracto": "para los delitos de hurto y receptación Se incorpora a la vez que el hurto de dichos equipos informáticos sea considerado como un agravante de hurto. se disminuye el valor del bien del delito de hurto simple,...",
-      "color": "#c0392b",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Seguridad"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Seguridad"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Seguridad"
-        }
-      ]
-    },
-    {
-      "id": 350,
-      "tema": "Otros",
-      "inicio": 6047.3,
-      "fin": 6081.4,
-      "inicio_fmt": "100:47",
-      "fin_fmt": "100:51",
-      "duracion_seg": 34.0,
-      "extracto": "al 50% de una remuneración mínima vital. que oportunamente hicimos llegar. seguridad alimentaria y energética,...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cifra",
-          "descripcion": "Cifra: \"50%\""
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Otros"
-        }
-      ]
-    },
-    {
-      "id": 351,
-      "tema": "Educación",
-      "inicio": 6066.4,
-      "fin": 6077.4,
-      "inicio_fmt": "101:06",
-      "fin_fmt": "101:09",
-      "duracion_seg": 11.0,
-      "extracto": "Varios de ellos que están comprendidos educación,...",
-      "color": "#27ae60",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Educación"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Educación"
-        }
-      ]
-    },
-    {
-      "id": 354,
-      "tema": "Anticorrupción",
-      "inicio": 6077.4,
-      "fin": 6113.8,
-      "inicio_fmt": "101:17",
-      "fin_fmt": "101:18",
-      "duracion_seg": 36.5,
-      "extracto": "lucha contra la corrupción, seguridad social, para garantizar los bienes,...",
-      "color": "#e67e22",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Anticorrupción"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Anticorrupción"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Anticorrupción"
-        }
-      ]
-    },
-    {
-      "id": 355,
-      "tema": "Democracia e Instituciones",
-      "inicio": 6084.4,
-      "fin": 6131.1,
-      "inicio_fmt": "101:24",
-      "fin_fmt": "101:25",
-      "duracion_seg": 46.8,
-      "extracto": "justicia, y administración de justicia. Presidencia del Consejo de Ministros Modernización y fortalecimiento institucional En el Gobierno del Pueblo se aprobó la Política Nacional de Modernización de la Gestión Pública al 2030, lo cual se continuará implementando en todas las entidades del Poder Eje...",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Democracia e Instituciones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Democracia e Instituciones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 358,
-      "tema": "Regiones",
-      "inicio": 6109.8,
-      "fin": 6218.2,
-      "inicio_fmt": "101:49",
-      "fin_fmt": "101:51",
-      "duracion_seg": 108.4,
-      "extracto": "los gobiernos regionales y municipalidades, necesidades a la ciudadanía, con un enfoque territorial. de cuatro nuevos Centros de Mejor Atención al Ciudadano, Centros MAC en Cajamarca, Loreto, Huánuco y Moquegua, en los departamentos de San Martín, Tacna, Tumbes, Huánuco y Lima, mediante el cual la c...",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Cajamarca, Huánuco, Loreto"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Huánuco, Lima, San Martín"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 359,
-      "tema": "Otros",
-      "inicio": 6117.8,
-      "fin": 6205.2,
-      "inicio_fmt": "101:57",
-      "fin_fmt": "101:59",
-      "duracion_seg": 87.4,
-      "extracto": "respondan a las expectativas, mejorando la calidad de vida y los que se sumarán, a los siete Centros MAC que ya existen, Además, se han implementado cinco MAC Express a nivel nacional a más de 40 trámites y servicios virtualizados, A la fecha se cuenta con un total de 71 MAC Express y distritales,...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        }
-      ]
-    },
-    {
-      "id": 362,
-      "tema": "Democracia e Instituciones",
-      "inicio": 6207.2,
-      "fin": 6237.6,
-      "inicio_fmt": "103:27",
-      "fin_fmt": "103:29",
-      "duracion_seg": 30.4,
-      "extracto": "congresistas de la República de la sociedad civil, donde han podido expresar sus principales preocupaciones y demandas. para abordar problemáticas específicas...",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Democracia e Instituciones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 363,
-      "tema": "Política Exterior",
-      "inicio": 6224.2,
-      "fin": 6276.7,
-      "inicio_fmt": "103:44",
-      "fin_fmt": "103:48",
-      "duracion_seg": 52.5,
-      "extracto": "Ahora se está haciendo el seguimiento de los acuerdos adoptados entre otras, en el ámbito nacional. interdistritales, interprovinciales e interdepartamentales del país...",
-      "color": "#2c3e50",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Política Exterior"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Política Exterior"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Infraestructura → Política Exterior"
-        }
-      ]
-    },
-    {
-      "id": 364,
-      "tema": "Regiones",
-      "inicio": 6228.2,
-      "fin": 6268.7,
-      "inicio_fmt": "103:48",
-      "fin_fmt": "103:50",
-      "duracion_seg": 40.5,
-      "extracto": "de estos espacios. en provincias y distritos y en los ámbitos territoriales Cusco, El Bráen, Amazonas, y Arequipa, mediante las Agendas para el Desarrollo Territorial, atienden las prioridades territoriales Ordenamiento Territorial. La PCM y los gobiernos regionales vienen trabajando en la implement...",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Cusco"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
         },
         {
           "tipo": "mencion_regional",
@@ -6199,504 +2234,228 @@ const DATA = {
           "descripcion": "Menciona: Arequipa"
         },
         {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Regiones"
+          "tipo": "mencion_regional",
+          "descripcion": "Menciona: Ica"
         }
       ]
     },
     {
-      "id": 365,
+      "id": 125,
+      "tema": "Economía",
+      "inicio": 3972.2,
+      "fin": 3997.0,
+      "inicio_fmt": "1:06:12",
+      "fin_fmt": "1:06:37",
+      "duracion_seg": 24.9,
+      "extracto": "Lima, y Puno, con una inversión total de ciento cuarenta y dos millones de soles, que beneficiará a más de un millón de visitantes nacionales y extranjeros. Después de dos meses difíciles en el tema laboral, abril y mayo, en junio se se observó un aumento neto de alrededor de...",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "mencion_regional",
+          "descripcion": "Menciona: Lima"
+        },
+        {
+          "tipo": "mencion_regional",
+          "descripcion": "Menciona: Puno"
+        }
+      ]
+    },
+    {
+      "id": 126,
+      "tema": "Economía",
+      "inicio": 3997.1,
+      "fin": 4018.0,
+      "inicio_fmt": "1:06:37",
+      "fin_fmt": "1:06:58",
+      "duracion_seg": 20.9,
+      "extracto": "puestos de trabajo en la planilla electrónica. Y la información al respecto. Vimos ciento veintinueve mil nuevos puestos de trabajo que se incrementaron. Vamos gradualmente por el camino de la recuperación del empleo en el país, privilegiando las garantías para salvaguardar la",
+      "color": "#1a1a2e",
+      "eventos": []
+    },
+    {
+      "id": 127,
+      "tema": "Salud",
+      "inicio": 4018.0,
+      "fin": 4056.0,
+      "inicio_fmt": "1:06:58",
+      "fin_fmt": "1:07:36",
+      "duracion_seg": 38.0,
+      "extracto": "vida y salud de los trabajadores. El reinicio de las actividades en los sectores que aún tienen restricciones, permitirá incorporar a grupos de trabajadores que se han visto afectados por las medidas de vacunación en las próximas semanas. En los sectores productivos, los...",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Salud"
+        }
+      ]
+    },
+    {
+      "id": 128,
+      "tema": "Agricultura",
+      "inicio": 4056.1,
+      "fin": 4077.1,
+      "inicio_fmt": "1:07:36",
+      "fin_fmt": "1:07:57",
+      "duracion_seg": 21.1,
+      "extracto": "del Ministerio de Agricultura, de la chacra a la olla, para recuperar los mercados, crear espacios de venta, y disminuir la aglomeración de los focos de contagio. En veinticuatro regiones, beneficiando a casi un millón de familias. Asimismo, estamos reactivando los núcleos...",
+      "color": "#d35400",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Agricultura"
+        }
+      ]
+    },
+    {
+      "id": 129,
       "tema": "Otros",
-      "inicio": 6230.6,
-      "fin": 6258.6,
-      "inicio_fmt": "103:50",
-      "fin_fmt": "103:52",
-      "duracion_seg": 28.0,
-      "extracto": "También se han constituido de Apurímac, Loreto, Ayacucho, Huancavelica Estas metas, mediante acciones inmediatas....",
+      "inicio": 4077.2,
+      "fin": 4092.3,
+      "inicio_fmt": "1:07:57",
+      "fin_fmt": "1:08:12",
+      "duracion_seg": 15.1,
+      "extracto": "creación de treinta mil empleos temporales diarios en limpieza de canales y drenes. Estas medidas se suman a un conjunto de políticas que hemos venido implementando con el objetivo de incrementar la infraestructura",
       "color": "#666",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Apurímac"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Loreto"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ayacucho"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Huancavelica, Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
+          "descripcion": "De Agricultura → Otros"
         }
       ]
     },
     {
-      "id": 366,
-      "tema": "Educación",
-      "inicio": 6232.6,
-      "fin": 6265.7,
-      "inicio_fmt": "103:52",
-      "fin_fmt": "103:54",
-      "duracion_seg": 33.1,
-      "extracto": "20 Mesas Técnicas de Desarrollo según sus competencias...",
-      "color": "#27ae60",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Educación"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Educación"
-        }
-      ]
-    },
-    {
-      "id": 368,
-      "tema": "Democracia e Instituciones",
-      "inicio": 6276.7,
-      "fin": 6371.2,
-      "inicio_fmt": "104:36",
-      "fin_fmt": "104:46",
-      "duracion_seg": 94.5,
-      "extracto": "a través de la búsqueda de consensos. hemos presentado ante el Congreso de la República cinco propuestas normativas y una ley para fortalecer la investigación, el procesamiento y la sanción a las personas jurídicas la implementación en todos los contratos suscritos por el Estado por parte de funcion...",
-      "color": "#7f8c8d",
+      "id": 130,
+      "tema": "Agricultura",
+      "inicio": 4092.4,
+      "fin": 4119.7,
+      "inicio_fmt": "1:08:12",
+      "fin_fmt": "1:08:40",
+      "duracion_seg": 27.3,
+      "extracto": "hidráulica para riego, la prevención de desastres, el desarrollo de capacidades productivas y comerciales para los agricultores, así como acceso al financiamiento con el FAE agrícola. El sector agropecuario enfrenta grandes retos, estas acciones buscan garantizar su...",
+      "color": "#d35400",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Democracia e Instituciones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Democracia e Instituciones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Democracia e Instituciones"
+          "descripcion": "De Otros → Agricultura"
         },
         {
           "tipo": "anuncio",
-          "descripcion": "Anuncio o compromiso"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Democracia e Instituciones"
+          "descripcion": "Anuncio de medida o inversión"
         }
       ]
     },
     {
-      "id": 369,
-      "tema": "Anticorrupción",
-      "inicio": 6286.9,
-      "fin": 6368.2,
-      "inicio_fmt": "104:46",
-      "fin_fmt": "104:49",
-      "duracion_seg": 81.2,
-      "extracto": "Lucha contra la corrupción. en materia de integridad y lucha contra la corrupción. otra para prevenir conflictos de intereses y posibles actos de corrupción en el sector público de cláusulas anticorrupción la corrupción asociada a la extorsión sexual que aprobó la estrategia de integridad para la pr...",
-      "color": "#e67e22",
+      "id": 131,
+      "tema": "Infraestructura",
+      "inicio": 4119.7,
+      "fin": 4141.7,
+      "inicio_fmt": "1:08:40",
+      "fin_fmt": "1:09:02",
+      "duracion_seg": 22.0,
+      "extracto": "proyectos de infraestructura. Como ejemplo, les informamos que después de meses de negociación entre el gobierno nacional y el gobierno regional de la libertad, hemos podido destrabar finalmente el proyecto de la tercera etapa del proyecto Chahimoche. Proyecto que permitirá...",
+      "color": "#8e44ad",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Anticorrupción"
+          "descripcion": "De Agricultura → Infraestructura"
         },
         {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Anticorrupción"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Anticorrupción"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Anticorrupción"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Anticorrupción"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Anticorrupción"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Anticorrupción"
+          "tipo": "mencion_regional",
+          "descripcion": "Menciona: La Libertad"
         }
       ]
     },
     {
-      "id": 370,
-      "tema": "Otros",
-      "inicio": 6289.7,
-      "fin": 6357.2,
-      "inicio_fmt": "104:49",
-      "fin_fmt": "104:51",
-      "duracion_seg": 67.5,
-      "extracto": "En noviembre del año pasado, como parte de los 100 primeros días de gestión, Se aprobó tres de ellas con una votación contundente, Quedan pendientes otras dos propuestas que buscan, primero, A fines del año pasado,...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        }
-      ]
-    },
-    {
-      "id": 372,
+      "id": 132,
       "tema": "Seguridad",
-      "inicio": 6321.7,
-      "fin": 6340.4,
-      "inicio_fmt": "105:21",
-      "fin_fmt": "105:24",
-      "duracion_seg": 18.6,
-      "extracto": "que incurran en estos delitos. y medidas que sancionan drásticamente...",
+      "inicio": 4141.7,
+      "fin": 4157.1,
+      "inicio_fmt": "1:09:02",
+      "fin_fmt": "1:09:17",
+      "duracion_seg": 15.3,
+      "extracto": "frontera agrícola de nuestro país, desarrollando el sector agrícola que tanto éxito ha generado en los últimos años, generando decenas, si no centenas de miles de puestos de trabajo. Confiamos que de igual forma, en el sur del país, se",
       "color": "#c0392b",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Seguridad"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Seguridad"
+          "descripcion": "De Infraestructura → Seguridad"
         }
       ]
     },
     {
-      "id": 375,
-      "tema": "Anticorrupción",
-      "inicio": 6377.2,
-      "fin": 6389.2,
-      "inicio_fmt": "106:17",
-      "fin_fmt": "106:20",
+      "id": 133,
+      "tema": "Infraestructura",
+      "inicio": 4157.1,
+      "fin": 4182.6,
+      "inicio_fmt": "1:09:17",
+      "fin_fmt": "1:09:43",
+      "duracion_seg": 25.5,
+      "extracto": "sigue el mismo camino con el proyecto Majes, que es de igual importancia. El sector pesca es el más dinámico en medio de la crisis, y ha superado los niveles de producción del año pasado, con una primera temporada de pesca exitosa, que ha alcanzado el noventa por ciento de la...",
+      "color": "#8e44ad",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Seguridad → Infraestructura"
+        }
+      ]
+    },
+    {
+      "id": 134,
+      "tema": "Otros",
+      "inicio": 4182.7,
+      "fin": 4191.1,
+      "inicio_fmt": "1:09:43",
+      "fin_fmt": "1:09:51",
+      "duracion_seg": 8.4,
+      "extracto": "éxito de la primera temporada nos hace prever una exitosa segunda temporada. Durante este año hemos trabajado en promover",
+      "color": "#666",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Infraestructura → Otros"
+        }
+      ]
+    },
+    {
+      "id": 135,
+      "tema": "Economía",
+      "inicio": 4191.2,
+      "fin": 4215.5,
+      "inicio_fmt": "1:09:51",
+      "fin_fmt": "1:10:16",
+      "duracion_seg": 24.4,
+      "extracto": "la innovación en el sector, y nos hemos mantenido firmes en la lucha contra la pesca ilegal. A través del Programa Nacional de Innovación en y agropecuaria, pesca, y acuicultura, se vienen ejecutando mil ciento sesenta proyectos de innovación. Con una inversión de doscientos...",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Economía"
+        }
+      ]
+    },
+    {
+      "id": 136,
+      "tema": "Economía",
+      "inicio": 4215.5,
+      "fin": 4247.6,
+      "inicio_fmt": "1:10:16",
+      "fin_fmt": "1:10:48",
+      "duracion_seg": 32.0,
+      "extracto": "empresas, asociaciones, y centros de investigación a nivel nacional. Para julio de dos mil veintiuno tenemos la meta de adjudicar dos mil proyectos en total con una inversión de trescientos veintiocho millones de soles para veinticinco mil usuarios. Hemos fortalecido la...",
+      "color": "#1a1a2e",
+      "eventos": []
+    },
+    {
+      "id": 137,
+      "tema": "Otros",
+      "inicio": 4247.6,
+      "fin": 4259.6,
+      "inicio_fmt": "1:10:48",
+      "fin_fmt": "1:11:00",
       "duracion_seg": 12.0,
-      "extracto": "de la ciudadanía en materia de transparencia, probidad e integridad pública. contra la Corrupción...",
-      "color": "#e67e22",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Anticorrupción"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Anticorrupción"
-        }
-      ]
-    },
-    {
-      "id": 376,
-      "tema": "Otros",
-      "inicio": 6383.2,
-      "fin": 6425.9,
-      "inicio_fmt": "106:23",
-      "fin_fmt": "106:25",
-      "duracion_seg": 42.7,
-      "extracto": "Cabe resaltar también son seguros y progresivos, y nos compromete a todos. que solo favorecen a unos pocos,...",
+      "extracto": "trescientos cincuenta y nueve operativos y acciones que permiten la sostenibilidad y preservación de nuestros recursos hidro biológicos. La",
       "color": "#666",
       "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        }
-      ]
-    },
-    {
-      "id": 377,
-      "tema": "Política Exterior",
-      "inicio": 6385.2,
-      "fin": 6416.9,
-      "inicio_fmt": "106:25",
-      "fin_fmt": "106:27",
-      "duracion_seg": 31.7,
-      "extracto": "la suscripción del Convenio Internacional de trabajar juntos...",
-      "color": "#2c3e50",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Política Exterior"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Política Exterior"
-        }
-      ]
-    },
-    {
-      "id": 378,
-      "tema": "Democracia e Instituciones",
-      "inicio": 6389.2,
-      "fin": 6446.4,
-      "inicio_fmt": "106:29",
-      "fin_fmt": "106:31",
-      "duracion_seg": 57.2,
-      "extracto": "con la Organización de Estados Americanos. señores congresistas, hasta aquí las líneas de políticas generales de mi Gobierno y que este Gobierno ha implementado. que nos han elegido, no para discutir temas a lograr que se respeten los derechos...",
-      "color": "#7f8c8d",
-      "eventos": [
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Democracia e Instituciones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Democracia e Instituciones"
-        }
-      ]
-    },
-    {
-      "id": 379,
-      "tema": "Regiones",
-      "inicio": 6393.6,
-      "fin": 6455.3,
-      "inicio_fmt": "106:33",
-      "fin_fmt": "106:35",
-      "duracion_seg": 61.7,
-      "extracto": "Querido pueblo peruano, pero son los que el país necesita Es hora, lo demanda el Perú, a favor de las peruanas y peruanos sino para ayudar a cada compatriota a lo largo y ancho de nuestro territorio, un país mejor y más próspero,...",
-      "color": "#16a085",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        }
-      ]
-    },
-    {
-      "id": 381,
-      "tema": "Educación",
-      "inicio": 6430.9,
-      "fin": 6466.7,
-      "inicio_fmt": "107:10",
-      "fin_fmt": "107:12",
-      "duracion_seg": 35.8,
-      "extracto": "a mejorar sus vidas, a brindarles educación a sus hijas e hijos, para crear trabajo, a expresarse y prosperar. y oportunidades para todos....",
-      "color": "#27ae60",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Educación"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Salud → Educación"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Educación"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Educación"
-        }
-      ]
-    },
-    {
-      "id": 383,
-      "tema": "Otros",
-      "inicio": 6446.4,
-      "fin": 6486.6,
-      "inicio_fmt": "107:26",
-      "fin_fmt": "107:28",
-      "duracion_seg": 40.2,
-      "extracto": "de todos y todas, En suma, los convoco a construir juntos de ninguna índole, hace 201 años, el sueño de nuestros grandes próceres, héroes y pensadores, Por eso,...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Otros"
-        }
-      ]
-    },
-    {
-      "id": 385,
-      "tema": "Política Exterior",
-      "inicio": 6456.3,
-      "fin": 6485.6,
-      "inicio_fmt": "107:36",
-      "fin_fmt": "107:38",
-      "duracion_seg": 29.3,
-      "extracto": "inclusivo y solidario, un país sin discriminación la patria que esperamos ustedes y nosotros, solo unidos lo podremos lograr....",
-      "color": "#2c3e50",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Política Exterior"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Política Exterior"
-        }
-      ]
-    },
-    {
-      "id": 389,
-      "tema": "Otros",
-      "inicio": 6488.6,
-      "fin": 6509.3,
-      "inicio_fmt": "108:08",
-      "fin_fmt": "108:10",
-      "duracion_seg": 20.7,
-      "extracto": "que les conviene incluso y moderno, no le sirve a nadie. Por ello,...",
-      "color": "#666",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Otros"
-        },
         {
           "tipo": "cambio_tema",
           "descripcion": "De Economía → Otros"
@@ -6704,246 +2463,1572 @@ const DATA = {
       ]
     },
     {
-      "id": 391,
-      "tema": "Política Exterior",
-      "inicio": 6492.6,
-      "fin": 6517.8,
-      "inicio_fmt": "108:12",
-      "fin_fmt": "108:15",
-      "duracion_seg": 25.2,
-      "extracto": "En este mundo globalizado me dirijo a ustedes, compatriotas, a las fuerzas sanas del país,...",
-      "color": "#2c3e50",
+      "id": 138,
+      "tema": "Economía",
+      "inicio": 4259.6,
+      "fin": 4304.7,
+      "inicio_fmt": "1:11:00",
+      "fin_fmt": "1:11:45",
+      "duracion_seg": 45.0,
+      "extracto": "minería constituye un componente esencial para el crecimiento económico del país. Necesitamos un sector minero fortalecido y competitivo, pero a su vez responsable con el medio ambiente y cuya actividad se desarrolla en armonía con los derechos de las comunidades y las personas....",
+      "color": "#1a1a2e",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Política Exterior"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Política Exterior"
+          "descripcion": "De Otros → Economía"
         }
       ]
     },
     {
-      "id": 395,
+      "id": 139,
+      "tema": "Economía",
+      "inicio": 4304.7,
+      "fin": 4341.7,
+      "inicio_fmt": "1:11:45",
+      "fin_fmt": "1:12:22",
+      "duracion_seg": 37.1,
+      "extracto": "Queyabeco, con una inversión de más de cinco mil millones de dólares, que generará miles de millones de millones de dólares en agua y dinamizará la economía a nivel nacional. Como este proyecto, existe cuarenta y ocho en cartera que representan una inversión de cincuenta y siete...",
+      "color": "#1a1a2e",
+      "eventos": []
+    },
+    {
+      "id": 140,
       "tema": "Otros",
-      "inicio": 6511.8,
-      "fin": 6584.6,
-      "inicio_fmt": "108:31",
-      "fin_fmt": "108:33",
-      "duracion_seg": 72.8,
-      "extracto": "con humildad, ante los hombres y mujeres de corazón limpio, que no han perdido sus sueños A todos les pido aquí presentes, es mucho más grande que sus problemas, como dijo Basadre. nuestros prejuicios, simpatías o antagonismos. hagamos historia, tengamos todas las mismas oportunidades y podamos lega...",
+      "inicio": 4341.7,
+      "fin": 4353.7,
+      "inicio_fmt": "1:12:22",
+      "fin_fmt": "1:12:34",
+      "duracion_seg": 12.0,
+      "extracto": "Optimización Inmaculada, Integración Corco Huayco, que ya se encuentran en etapas avanzadas. Es un escenario alentador, que nos permite ver como optimismo el futuro",
       "color": "#666",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
+          "descripcion": "De Economía → Otros"
         }
       ]
     },
     {
-      "id": 396,
+      "id": 141,
+      "tema": "Economía",
+      "inicio": 4353.7,
+      "fin": 4381.8,
+      "inicio_fmt": "1:12:34",
+      "fin_fmt": "1:13:02",
+      "duracion_seg": 28.0,
+      "extracto": "económico de nuestro país. Siendo una actividad prioritaria la minería, fue una de las primeras en reanudar actividades, y hoy ya estamos viendo sus efectos positivos con la generación de más de ciento cuarenta y un mil empleos directos a nivel nacional, que permiten a miles de...",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Economía"
+        }
+      ]
+    },
+    {
+      "id": 142,
+      "tema": "Economía",
+      "inicio": 4381.8,
+      "fin": 4489.9,
+      "inicio_fmt": "1:13:02",
+      "fin_fmt": "1:14:50",
+      "duracion_seg": 108.1,
+      "extracto": "inversión que tiene el Perú, después de veintiocho años, este gobierno asumió el reto y viene gestionando la aprobación de un nuevo reglamento de procedimientos mineros a fin de que brinden predictibilidad e impulso a la inversión privada, y promuevan el respeto a los derechos...",
+      "color": "#1a1a2e",
+      "eventos": []
+    },
+    {
+      "id": 143,
+      "tema": "Otros",
+      "inicio": 4489.9,
+      "fin": 4499.9,
+      "inicio_fmt": "1:14:50",
+      "fin_fmt": "1:15:00",
+      "duracion_seg": 10.0,
+      "extracto": "desarrolladas. Con este mecanismo que exige que toda fusión empresarial con impacto en los mercados cuente con autorización previa de INDECOPI, el Estado",
+      "color": "#666",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Otros"
+        }
+      ]
+    },
+    {
+      "id": 144,
+      "tema": "Seguridad",
+      "inicio": 4499.9,
+      "fin": 4519.9,
+      "inicio_fmt": "1:15:00",
+      "fin_fmt": "1:15:20",
+      "duracion_seg": 20.0,
+      "extracto": "fortalece el sistema de defensa de la competencia, con el fin de prevenir posibles abusos de monopolios u monopolios que perjudiquen al consumidor. Para promover la competencia en los mercados, vamos a trabajar en estudios permanentes de monitoreo del comportamiento de mercados",
+      "color": "#c0392b",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Seguridad"
+        },
+        {
+          "tipo": "anuncio",
+          "descripcion": "Anuncio de medida o inversión"
+        }
+      ]
+    },
+    {
+      "id": 145,
+      "tema": "Otros",
+      "inicio": 4519.9,
+      "fin": 4546.0,
+      "inicio_fmt": "1:15:20",
+      "fin_fmt": "1:15:46",
+      "duracion_seg": 26.0,
+      "extracto": "con la finalidad de detectar acciones contrarias a la competencia. Asimismo, vamos a trabajar en el desarrollo de una política nacional de la competencia. Por ello, en los próximos meses fortaleceremos a INDECOPI a fin que pueda tener todos los recursos para garantizar la libre...",
+      "color": "#666",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Seguridad → Otros"
+        },
+        {
+          "tipo": "anuncio",
+          "descripcion": "Anuncio de medida o inversión"
+        }
+      ]
+    },
+    {
+      "id": 146,
+      "tema": "Economía",
+      "inicio": 4546.0,
+      "fin": 4554.0,
+      "inicio_fmt": "1:15:46",
+      "fin_fmt": "1:15:54",
+      "duracion_seg": 8.0,
+      "extracto": "mercado y los derechos de los consumidores. Arranca Perú, sin bajar la guardia",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Economía"
+        }
+      ]
+    },
+    {
+      "id": 147,
+      "tema": "Salud",
+      "inicio": 4554.0,
+      "fin": 4562.0,
+      "inicio_fmt": "1:15:54",
+      "fin_fmt": "1:16:02",
+      "duracion_seg": 8.0,
+      "extracto": "en la lucha contra la pandemia, vamos a impulsar con mayor velocidad y determinación la reactivación para encender",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Salud"
+        },
+        {
+          "tipo": "anuncio",
+          "descripcion": "Anuncio de medida o inversión"
+        }
+      ]
+    },
+    {
+      "id": 148,
+      "tema": "Economía",
+      "inicio": 4562.0,
+      "fin": 4584.0,
+      "inicio_fmt": "1:16:02",
+      "fin_fmt": "1:16:24",
+      "duracion_seg": 22.0,
+      "extracto": "los motores de nuestra economía, generar empleos y enrumbar al país por la senda del crecimiento y el progreso que todos queremos. La reactivación es un objetivo nacional. No hay salud sin economía y no hay economía sin salud. Por eso, este es",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Economía"
+        }
+      ]
+    },
+    {
+      "id": 149,
+      "tema": "Economía",
+      "inicio": 4584.0,
+      "fin": 4614.1,
+      "inicio_fmt": "1:16:24",
+      "fin_fmt": "1:16:54",
+      "duracion_seg": 30.0,
+      "extracto": "un trabajo en el que están comprometidas el sector público y privado con estabilidad jurídica, confianza y reglas claras. La responsabilidad que le corresponde al Estado está delineada y lo va a cumplir. Precisamente por ello hemos puesto en marcha el programa Arranca Perú con...",
+      "color": "#1a1a2e",
+      "eventos": []
+    },
+    {
+      "id": 150,
+      "tema": "Economía",
+      "inicio": 4614.1,
+      "fin": 4636.1,
+      "inicio_fmt": "1:16:54",
+      "fin_fmt": "1:17:16",
+      "duracion_seg": 22.0,
+      "extracto": "de trabajo en todo el país que se darán a partir de agosto del segundo semestre de este año. Las políticas a implementarse en el marco de este programa tienen como pilares la generación y recuperación de empleos, obras que beneficiarán directamente a los ciudadanos y un nuevo...",
+      "color": "#1a1a2e",
+      "eventos": []
+    },
+    {
+      "id": 151,
+      "tema": "Economía",
+      "inicio": 4636.1,
+      "fin": 4654.1,
+      "inicio_fmt": "1:17:16",
+      "fin_fmt": "1:17:34",
+      "duracion_seg": 18.0,
+      "extracto": "a la inversión pública. En el sector transportes y comunicaciones, el programa contempla una ambiciosa inversión de tres mil ochocientos noventa y siete millones de soles para el mantenimiento de once mil setecientos",
+      "color": "#1a1a2e",
+      "eventos": []
+    },
+    {
+      "id": 152,
+      "tema": "Infraestructura",
+      "inicio": 4654.1,
+      "fin": 4678.2,
+      "inicio_fmt": "1:17:34",
+      "fin_fmt": "1:17:58",
+      "duracion_seg": 24.0,
+      "extracto": "noventa kilómetros de vías nacionales y escuchen cuarenta y ocho mil ochocientos cincuenta y ocho kilómetros de caminos vecinales para lo cual en tiempo récord las ciento noventa municipalidades provinciales ya han convocado los procesos para adjudicar los tramos de viajes bajo...",
+      "color": "#8e44ad",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Infraestructura"
+        }
+      ]
+    },
+    {
+      "id": 153,
+      "tema": "Economía",
+      "inicio": 4678.2,
+      "fin": 4686.2,
+      "inicio_fmt": "1:17:58",
+      "fin_fmt": "1:18:06",
+      "duracion_seg": 8.0,
+      "extracto": "Esta inversión permitirá generar más de quinientos setenta mil empleos y entregar",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Infraestructura → Economía"
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "tema": "Infraestructura",
+      "inicio": 4686.2,
+      "fin": 4706.2,
+      "inicio_fmt": "1:18:06",
+      "fin_fmt": "1:18:26",
+      "duracion_seg": 20.0,
+      "extracto": "vías de comunicación de primer nivel para los peruanos en especial de los pueblos más alejados de nuestro país donde antes la presencia del Estado era casi inexistente En el sector vivienda y construcción se destinan quinientos",
+      "color": "#8e44ad",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Infraestructura"
+        }
+      ]
+    },
+    {
+      "id": 155,
+      "tema": "Otros",
+      "inicio": 4706.2,
+      "fin": 4730.2,
+      "inicio_fmt": "1:18:26",
+      "fin_fmt": "1:18:50",
+      "duracion_seg": 24.0,
+      "extracto": "treinta y cinco millones de soles para financiar bonos adicionales para el impulso de veinte mil nuevas viviendas y llegar a las ochenta mil que nos hemos puesto como meta para el presente año generando ochenta mil nuevos empleos con esto buscamos asegurar que las familias...",
+      "color": "#666",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Infraestructura → Otros"
+        }
+      ]
+    },
+    {
+      "id": 156,
+      "tema": "Economía",
+      "inicio": 4730.2,
+      "fin": 4762.3,
+      "inicio_fmt": "1:18:50",
+      "fin_fmt": "1:19:22",
+      "duracion_seg": 32.1,
+      "extracto": "sus fuentes de ingresos se han visto asimismo se destinan novecientos treinta y siete millones para la construcción y mejoramiento de los proyectos de pistas y veredas con los municipios distitales y provinciales sesenta y cuatro intervenciones en espacios públicos y nueve...",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Economía"
+        }
+      ]
+    },
+    {
+      "id": 157,
+      "tema": "Agricultura",
+      "inicio": 4762.3,
+      "fin": 4778.3,
+      "inicio_fmt": "1:19:22",
+      "fin_fmt": "1:19:38",
+      "duracion_seg": 16.0,
+      "extracto": "en el sector agricultura se han destinado trescientos setenta y tres millones para el mantenimiento de canales de riego y drenes a nivel nacional y otros sesenta y siete millones de soles para el mejoramiento de los sistemas de captación de agua de igual manera",
+      "color": "#d35400",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Agricultura"
+        }
+      ]
+    },
+    {
+      "id": 158,
+      "tema": "Economía",
+      "inicio": 4778.3,
+      "fin": 4790.3,
+      "inicio_fmt": "1:19:38",
+      "fin_fmt": "1:19:50",
+      "duracion_seg": 12.0,
+      "extracto": "el Ministerio de Trabajo a través del programa Trabaja Perú generará más de doscientos mil empleos temporales a través de la ejecución",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Agricultura → Economía"
+        }
+      ]
+    },
+    {
+      "id": 159,
+      "tema": "Infraestructura",
+      "inicio": 4790.3,
+      "fin": 4824.0,
+      "inicio_fmt": "1:19:50",
+      "fin_fmt": "1:20:24",
+      "duracion_seg": 33.7,
+      "extracto": "de obras en novecientos treinta distritos del país de veinticinco regiones entre otras características Estas regiones concentran la mayor cantidad de la población en situación de pobreza. Este año, a través de Compras Mi Perú, se ha beneficiado a 3.348 microempresas, 10 veces...",
+      "color": "#8e44ad",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Infraestructura"
+        }
+      ]
+    },
+    {
+      "id": 160,
+      "tema": "Economía",
+      "inicio": 4825.0,
+      "fin": 4872.0,
+      "inicio_fmt": "1:20:25",
+      "fin_fmt": "1:21:12",
+      "duracion_seg": 47.0,
+      "extracto": "generando puestos de trabajo para más de 250 mil peruanos. El Estado tiene la obligación de respaldar e incentivar a las MIPES, que en los últimos años se han convertido en fuentes de emprendimiento y generadoras de empleo. Por eso, destinaremos 736 millones de soles para más...",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Infraestructura → Economía"
+        },
+        {
+          "tipo": "cifra",
+          "descripcion": "Cifra: 250 mil"
+        },
+        {
+          "tipo": "anuncio",
+          "descripcion": "Anuncio de medida o inversión"
+        }
+      ]
+    },
+    {
+      "id": 161,
+      "tema": "Infraestructura",
+      "inicio": 4873.0,
+      "fin": 4893.0,
+      "inicio_fmt": "1:21:13",
+      "fin_fmt": "1:21:33",
+      "duracion_seg": 20.0,
+      "extracto": "el cierre de brechas de infraestructura es un objetivo en el que trabajaremos hasta el último día, porque estamos convencidos de su impacto positivo en la vida de los ciudadanos, con el acceso a servicios públicos de calidad. Sin embargo, en los últimos años, como todos sabemos,",
+      "color": "#8e44ad",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Infraestructura"
+        }
+      ]
+    },
+    {
+      "id": 162,
+      "tema": "Economía",
+      "inicio": 4894.0,
+      "fin": 4924.0,
+      "inicio_fmt": "1:21:34",
+      "fin_fmt": "1:22:04",
+      "duracion_seg": 30.0,
+      "extracto": "la inversión pública ha estado influenciada por los vaivenes del cambio de autoridades y problemas de capacidad, lo cual ha hecho que, a pesar del crecimiento ininterrumpido del presupuesto público, los niveles de ejecución de la inversión no hayan mejorado significativamente....",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Infraestructura → Economía"
+        }
+      ]
+    },
+    {
+      "id": 163,
+      "tema": "Infraestructura",
+      "inicio": 4925.0,
+      "fin": 4938.0,
+      "inicio_fmt": "1:22:05",
+      "fin_fmt": "1:22:18",
+      "duracion_seg": 13.0,
+      "extracto": "que nos permitan ejecutar las obras que necesita el pueblo. Los recursos públicos, que son de todos los peruanos, deben ser invertidos con velocidad, eficiencia y transparencia,",
+      "color": "#8e44ad",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Infraestructura"
+        }
+      ]
+    },
+    {
+      "id": 164,
+      "tema": "Infraestructura",
+      "inicio": 4938.0,
+      "fin": 4972.0,
+      "inicio_fmt": "1:22:18",
+      "fin_fmt": "1:22:52",
+      "duracion_seg": 34.0,
+      "extracto": "no más elefantes blancos, no más obras inconclusas o abandonadas a mitad de camino por razones burocráticas o políticas. Una emergencia sin precedentes como la que vivimos hoy exige respuestas extraordinarias. Los Juegos Panamericanos del año pasado 2019, realizados en nuestra...",
+      "color": "#8e44ad",
+      "eventos": []
+    },
+    {
+      "id": 165,
+      "tema": "Otros",
+      "inicio": 4973.0,
+      "fin": 4981.0,
+      "inicio_fmt": "1:22:53",
+      "fin_fmt": "1:23:01",
+      "duracion_seg": 8.0,
+      "extracto": "y el espíritu acogedor de los peruanos, sino también demostraron la capacidad de organización en sedes deportivas",
+      "color": "#666",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Infraestructura → Otros"
+        }
+      ]
+    },
+    {
+      "id": 166,
+      "tema": "Infraestructura",
+      "inicio": 4982.0,
+      "fin": 5004.0,
+      "inicio_fmt": "1:23:02",
+      "fin_fmt": "1:23:24",
+      "duracion_seg": 22.0,
+      "extracto": "e infraestructura de primer nivel, construidas con velocidad y eficiencia. El mecanismo de gobierno a gobierno, utilizado con éxito en los Juegos Panamericanos, ahora ya se está aplicando en la reconstrucción del norte, con una inversión de más de 7 mil millones de soles",
+      "color": "#8e44ad",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Infraestructura"
+        },
+        {
+          "tipo": "cifra",
+          "descripcion": "Cifra: 7 mil"
+        }
+      ]
+    },
+    {
+      "id": 167,
+      "tema": "Infraestructura",
+      "inicio": 5005.0,
+      "fin": 5023.0,
+      "inicio_fmt": "1:23:25",
+      "fin_fmt": "1:23:43",
+      "duracion_seg": 18.0,
+      "extracto": "para la ejecución de grandes obras que nuestros ciudadanos esperan desde hace tres años. Pero tenemos que seguir avanzando, porque la brecha de infraestructura y las necesidades de los peruanos son enormes. Vamos a mejorar la eficiencia de la gestión pública.",
+      "color": "#8e44ad",
+      "eventos": [
+        {
+          "tipo": "anuncio",
+          "descripcion": "Anuncio de medida o inversión"
+        }
+      ]
+    },
+    {
+      "id": 168,
+      "tema": "Infraestructura",
+      "inicio": 5024.0,
+      "fin": 5068.0,
+      "inicio_fmt": "1:23:44",
+      "fin_fmt": "1:24:28",
+      "duracion_seg": 44.0,
+      "extracto": "Sin embargo, si bien hay miles de obras a cargo del gobierno central, los gobiernos regionales y los gobiernos locales, hemos seleccionado algunas que por su nivel de importancia se van a ejecutar mediante la modalidad de gobierno a gobierno. Anuncio que la línea 3 y la línea 4...",
+      "color": "#8e44ad",
+      "eventos": [
+        {
+          "tipo": "mencion_regional",
+          "descripcion": "Menciona: Lima"
+        },
+        {
+          "tipo": "cifra",
+          "descripcion": "Cifra: 30 mil"
+        },
+        {
+          "tipo": "anuncio",
+          "descripcion": "Anuncio de medida o inversión"
+        }
+      ]
+    },
+    {
+      "id": 169,
+      "tema": "Infraestructura",
+      "inicio": 5075.0,
+      "fin": 5114.0,
+      "inicio_fmt": "1:24:35",
+      "fin_fmt": "1:25:14",
+      "duracion_seg": 39.0,
+      "extracto": "Lancia la carretera central, que nuestros hermanos de las regiones de la Sierra Central y gran parte de la selva, y todos los peruanos, hemos esperado durante décadas, será también una realidad mediante el mecanismo de obra, de proyecto de gobierno a gobierno. Adicionalmente,...",
+      "color": "#8e44ad",
+      "eventos": [
+        {
+          "tipo": "cifra",
+          "descripcion": "Cifra: 3 mil"
+        }
+      ]
+    },
+    {
+      "id": 170,
+      "tema": "Economía",
+      "inicio": 5115.0,
+      "fin": 5150.0,
+      "inicio_fmt": "1:25:15",
+      "fin_fmt": "1:25:50",
+      "duracion_seg": 35.0,
+      "extracto": "con una inversión que supera los 3 mil millones de soles, y 24 proyectos de saneamiento, agua potable para la población que aún no la tiene, por 5 mil millones de soles, para que empaquetarlos y sacarme ante esta modalidad. Seguridad y orden. Ante la pandemia que estamos...",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Infraestructura → Economía"
+        },
+        {
+          "tipo": "cifra",
+          "descripcion": "Cifra: 3 mil"
+        }
+      ]
+    },
+    {
+      "id": 171,
+      "tema": "Seguridad",
+      "inicio": 5150.0,
+      "fin": 5191.0,
+      "inicio_fmt": "1:25:50",
+      "fin_fmt": "1:26:31",
+      "duracion_seg": 41.0,
+      "extracto": "tanto así como de los efectivos de la Policía Nacional del Perú, como de las Fuerzas Armadas, que en momentos difíciles nos no dudaron en trabajar en la primera línea de acción para atender y dar seguridad a los ciudadanos durante el estado de emergencia. Así se desplegaron 70...",
+      "color": "#c0392b",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Seguridad"
+        },
+        {
+          "tipo": "mencion_regional",
+          "descripcion": "Menciona: Tumbes"
+        },
+        {
+          "tipo": "cifra",
+          "descripcion": "Cifra: 70 mil"
+        }
+      ]
+    },
+    {
+      "id": 172,
+      "tema": "Salud",
+      "inicio": 5192.0,
+      "fin": 5216.0,
+      "inicio_fmt": "1:26:32",
+      "fin_fmt": "1:26:56",
+      "duracion_seg": 24.0,
+      "extracto": "pusieron todos sus recursos a disposición de la salud y la vida de todos los peruanos. Así sus aeronaves pudieron trasladar a más de 8 mil personas que realizaban labores médicas, y 1.400 toneladas de equipos como ventiladores mecánicos, plantas generadoras, balones de oxígeno,...",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Seguridad → Salud"
+        },
+        {
+          "tipo": "cifra",
+          "descripcion": "Cifra: 8 mil"
+        }
+      ]
+    },
+    {
+      "id": 173,
+      "tema": "Seguridad",
+      "inicio": 5217.0,
+      "fin": 5239.0,
+      "inicio_fmt": "1:26:57",
+      "fin_fmt": "1:27:19",
+      "duracion_seg": 22.0,
+      "extracto": "Desde el inicio del estado de emergencia, las Fuerzas del Orden no dudaron en atender y proteger a la población pese al riesgo que esto conlleva. En esta labor muchos se enfermaron por la exposición al virus, incluso algunos perdieron la vida. Por ello, hemos hecho una mejora...",
+      "color": "#c0392b",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Seguridad"
+        }
+      ]
+    },
+    {
+      "id": 174,
+      "tema": "Salud",
+      "inicio": 5240.0,
+      "fin": 5273.0,
+      "inicio_fmt": "1:27:20",
+      "fin_fmt": "1:27:53",
+      "duracion_seg": 33.0,
+      "extracto": "a la familia policial y militar en sus principales establecimientos de salud, aumentando su capacidad de atención. Así nos aseguraremos de cuidar las vidas de quienes resguardan la vida de la nación. Pese al momento difícil por el que pasamos, no descuidamos ni un segundo la...",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Seguridad → Salud"
+        }
+      ]
+    },
+    {
+      "id": 175,
+      "tema": "Seguridad",
+      "inicio": 5274.0,
+      "fin": 5314.0,
+      "inicio_fmt": "1:27:54",
+      "fin_fmt": "1:28:34",
+      "duracion_seg": 40.0,
+      "extracto": "El último año, la Policía Nacional ha venido trabajando intensamente en la lucha contra la delincuencia. Así se han realizado más de 500 mil operativos a nivel nacional y se han desarticulado alrededor de 7 mil bandas de criminales. No daremos respiro a la delincuencia. Por...",
+      "color": "#c0392b",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Seguridad"
+        },
+        {
+          "tipo": "cifra",
+          "descripcion": "Cifra: 500 mil"
+        }
+      ]
+    },
+    {
+      "id": 176,
       "tema": "Educación",
-      "inicio": 6521.8,
-      "fin": 6544.4,
-      "inicio_fmt": "108:41",
-      "fin_fmt": "108:43",
-      "duracion_seg": 22.6,
-      "extracto": "ante los jóvenes con la humildad que aprendí de mis padres...",
+      "inicio": 5315.0,
+      "fin": 5350.0,
+      "inicio_fmt": "1:28:35",
+      "fin_fmt": "1:29:10",
+      "duracion_seg": 35.0,
+      "extracto": "de cerca de 5 mil alumnos de las escuelas de educación superior técnico y de la escuela de oficiales, para que se sumen a partir del próximo mes en las labores realizadas diariamente por más de 137 mil efectivos policiales desplegados en todo el país. La tranquilidad y la...",
       "color": "#27ae60",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Otros → Educación"
+          "descripcion": "De Seguridad → Educación"
         },
         {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Educación"
+          "tipo": "cifra",
+          "descripcion": "Cifra: 5 mil"
         }
       ]
     },
     {
-      "id": 397,
-      "tema": "Regiones",
-      "inicio": 6525.8,
-      "fin": 6597.1,
-      "inicio_fmt": "108:45",
-      "fin_fmt": "108:47",
-      "duracion_seg": 71.3,
-      "extracto": "y ansían un país mejor. de continuar con los cambios que el país necesita. para que no defraudemos a los peruanos y peruanas y batallemos juntos, porque el Perú y así logremos que estas tierras generaciones un país podamos los peruanos de todos los colores...",
-      "color": "#16a085",
+      "id": 177,
+      "tema": "Seguridad",
+      "inicio": 5351.0,
+      "fin": 5390.0,
+      "inicio_fmt": "1:29:11",
+      "fin_fmt": "1:29:50",
+      "duracion_seg": 39.0,
+      "extracto": "La lucha contra el crimen organizado es ardua, y en esta labor existe un constante apoyo y coordinación entre las fuerzas del orden con la finalidad de desarticular las acciones ilegales del narcotráfico, hasta la fecha también se llevaron a cabo 11 mil operativos contra el...",
+      "color": "#c0392b",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
+          "descripcion": "De Educación → Seguridad"
         },
         {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
+          "tipo": "cifra",
+          "descripcion": "Cifra: 11 mil"
         }
       ]
     },
     {
-      "id": 398,
-      "tema": "Política Exterior",
-      "inicio": 6529.8,
-      "fin": 6574.6,
-      "inicio_fmt": "108:49",
-      "fin_fmt": "108:51",
-      "duracion_seg": 44.8,
-      "extracto": "que nos acompañen en esta cruzada por encima de nuestras diferencias, Los invoco a trabajar unidos,...",
-      "color": "#2c3e50",
+      "id": 178,
+      "tema": "Economía",
+      "inicio": 5391.0,
+      "fin": 5414.3,
+      "inicio_fmt": "1:29:51",
+      "fin_fmt": "1:30:14",
+      "duracion_seg": 23.3,
+      "extracto": "con la finalidad de erradicar la minería ilegal en la zona de La Pampa, en Tambopata, en la región de Madre Dios. donde como dijimos llegamos para quedarnos durante el mes de agosto del 2019 a junio del 2020 hemos logrado que la deforestación se reduzca en un 90%",
+      "color": "#1a1a2e",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Otros → Política Exterior"
+          "descripcion": "De Seguridad → Economía"
         },
         {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Política Exterior"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Política Exterior"
+          "tipo": "cifra",
+          "descripcion": "Cifra: 90%"
         }
       ]
     },
     {
-      "id": 399,
+      "id": 179,
+      "tema": "Otros",
+      "inicio": 5414.3,
+      "fin": 5425.3,
+      "inicio_fmt": "1:30:14",
+      "fin_fmt": "1:30:25",
+      "duracion_seg": 11.0,
+      "extracto": "en relación a años anteriores y la recuperación de gran parte de la zona de amortiguamiento del río Tambopata así como el desalojo de 391 campamentos",
+      "color": "#666",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Otros"
+        }
+      ]
+    },
+    {
+      "id": 180,
+      "tema": "Seguridad",
+      "inicio": 5425.3,
+      "fin": 5445.0,
+      "inicio_fmt": "1:30:25",
+      "fin_fmt": "1:30:45",
+      "duracion_seg": 19.7,
+      "extracto": "de mineros ilegales nuestras fuerzas armadas y la policía reafirman la presencia del estado en esta zona no vamos a permitir que estas actividades ilegales perjudiquen y reduzcan nuestros espacios naturales y la salud de los peruanos nuestras fuerzas armadas seguirán",
+      "color": "#c0392b",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Seguridad"
+        },
+        {
+          "tipo": "anuncio",
+          "descripcion": "Anuncio de medida o inversión"
+        }
+      ]
+    },
+    {
+      "id": 181,
+      "tema": "Salud",
+      "inicio": 5445.0,
+      "fin": 5463.6,
+      "inicio_fmt": "1:30:45",
+      "fin_fmt": "1:31:04",
+      "duracion_seg": 18.6,
+      "extracto": "trabajando en el control de la epidemia y la atención de los más necesitados con entrega de alimentos y medicinas cuidamos la salud ayudamos a los más pobres y velamos por la seguridad de todas y todos nuestras",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Seguridad → Salud"
+        }
+      ]
+    },
+    {
+      "id": 182,
+      "tema": "Seguridad",
+      "inicio": 5463.6,
+      "fin": 5488.3,
+      "inicio_fmt": "1:31:04",
+      "fin_fmt": "1:31:28",
+      "duracion_seg": 24.7,
+      "extracto": "fuerzas armadas seguirán en las calles sumando esfuerzos con la policía se reforzará la estrategia de patrullaje más efectivos en las calles para enfrentar no solamente al virus al COVID-19 sino para enfrentar juntos la delincuencia común y organizada por esto anuncio que este...",
+      "color": "#c0392b",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Seguridad"
+        },
+        {
+          "tipo": "anuncio",
+          "descripcion": "Anuncio de medida o inversión"
+        }
+      ]
+    },
+    {
+      "id": 183,
+      "tema": "Seguridad",
+      "inicio": 5488.3,
+      "fin": 5498.5,
+      "inicio_fmt": "1:31:28",
+      "fin_fmt": "1:31:38",
+      "duracion_seg": 10.2,
+      "extracto": "fuerzas armadas y policía que ha dado buenos resultados se mantendrá hasta fines de este año para garantizar la contención de estos focos de",
+      "color": "#c0392b",
+      "eventos": []
+    },
+    {
+      "id": 184,
       "tema": "Democracia e Instituciones",
-      "inicio": 6535.8,
-      "fin": 6568.1,
-      "inicio_fmt": "108:55",
-      "fin_fmt": "108:57",
-      "duracion_seg": 32.3,
-      "extracto": "Ante ustedes, señoras y señores congresistas, que me otorgó el pueblo con su voto, los invoco Este es el momento de conversar y entendernos posturas políticas, ideologías,...",
+      "inicio": 5498.5,
+      "fin": 5506.7,
+      "inicio_fmt": "1:31:38",
+      "fin_fmt": "1:31:47",
+      "duracion_seg": 8.2,
+      "extracto": "criminalidad siempre dentro del marco de la constitución y del respeto de los derechos humanos",
       "color": "#7f8c8d",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Democracia e Instituciones"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Otros → Democracia e Instituciones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Democracia e Instituciones"
+          "descripcion": "De Seguridad → Democracia e Instituciones"
         }
       ]
     },
     {
-      "id": 401,
+      "id": 185,
+      "tema": "Anticorrupción",
+      "inicio": 5507.6,
+      "fin": 5518.5,
+      "inicio_fmt": "1:31:48",
+      "fin_fmt": "1:31:58",
+      "duracion_seg": 10.8,
+      "extracto": "la lucha frontal contra la corrupción y las reformas judicial y política para transformar nuestras instituciones han sido son y seguirán siendo el sello",
+      "color": "#e67e22",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Democracia e Instituciones → Anticorrupción"
+        }
+      ]
+    },
+    {
+      "id": 186,
+      "tema": "Democracia e Instituciones",
+      "inicio": 5518.5,
+      "fin": 5590.9,
+      "inicio_fmt": "1:31:58",
+      "fin_fmt": "1:33:11",
+      "duracion_seg": 72.4,
+      "extracto": "distintivo de este gobierno nuestra democracia está seriamente afectada y necesitamos fortalecer sobre la reforma judicial y política necesitamos una justicia en la que podamos confiar y para ello es indispensable que la selección la ratificación y en general la permanencia de...",
+      "color": "#7f8c8d",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Anticorrupción → Democracia e Instituciones"
+        }
+      ]
+    },
+    {
+      "id": 187,
+      "tema": "Democracia e Instituciones",
+      "inicio": 5590.9,
+      "fin": 5640.4,
+      "inicio_fmt": "1:33:11",
+      "fin_fmt": "1:34:00",
+      "duracion_seg": 49.5,
+      "extracto": "Junta Nacional de Justicia los resultados de la reforma constitucional aprobada en el referéndum ya los estamos viendo la Junta Nacional de Justicia por decisión unánime de sus miembros ha suspendido a diversos fiscales supremos y jueces supremos por estar en cursos en presuntas...",
+      "color": "#7f8c8d",
+      "eventos": []
+    },
+    {
+      "id": 188,
+      "tema": "Salud",
+      "inicio": 5640.4,
+      "fin": 5675.4,
+      "inicio_fmt": "1:34:00",
+      "fin_fmt": "1:34:35",
+      "duracion_seg": 35.0,
+      "extracto": "prueba que lo demuestre esta pandemia exhibe descarnadamente que la ciudadanía necesita estar liderada por políticos que no sólo sean ejemplo de honradez sino también de idoneidad en el ejercicio del cargo es inaceptable que teniendo los recursos disponibles algunas autoridades...",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Democracia e Instituciones → Salud"
+        }
+      ]
+    },
+    {
+      "id": 189,
+      "tema": "Democracia e Instituciones",
+      "inicio": 5675.4,
+      "fin": 5726.6,
+      "inicio_fmt": "1:34:35",
+      "fin_fmt": "1:35:27",
+      "duracion_seg": 51.2,
+      "extracto": "demostrar por qué es urgente avanzar en la reforma política debemos honrar el mandato del pueblo no más impunidad de los políticos señores congresistas renuevo mi disposición para trabajar juntos para impulsar la reforma de la justicia y en consolidar la reforma de la política...",
+      "color": "#7f8c8d",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Democracia e Instituciones"
+        }
+      ]
+    },
+    {
+      "id": 190,
+      "tema": "Anticorrupción",
+      "inicio": 5726.6,
+      "fin": 5736.1,
+      "inicio_fmt": "1:35:27",
+      "fin_fmt": "1:35:36",
+      "duracion_seg": 9.5,
+      "extracto": "libre corrupción en el ámbito político en agosto del 2019 promulgamos reformas sobre inscripción y cancelación de partidos",
+      "color": "#e67e22",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Democracia e Instituciones → Anticorrupción"
+        }
+      ]
+    },
+    {
+      "id": 191,
+      "tema": "Democracia e Instituciones",
+      "inicio": 5736.1,
+      "fin": 5761.2,
+      "inicio_fmt": "1:35:36",
+      "fin_fmt": "1:36:01",
+      "duracion_seg": 25.1,
+      "extracto": "políticos democracia al interior de los partidos paridad y alternancia en la composición de listas al congreso y el delito de financiamiento de organizaciones partidarias fue un avance significativo pero aún falta mucho por hacer hace unas semanas siguiendo con nuestros...",
+      "color": "#7f8c8d",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Anticorrupción → Democracia e Instituciones"
+        }
+      ]
+    },
+    {
+      "id": 192,
+      "tema": "Democracia e Instituciones",
+      "inicio": 5761.2,
+      "fin": 5788.1,
+      "inicio_fmt": "1:36:01",
+      "fin_fmt": "1:36:28",
+      "duracion_seg": 26.9,
+      "extracto": "este proceso de leyes aprobadas por el actual congreso la paridad y alternancia iguales mujeres y hombres en la lista de candidatos ubicadas de manera alternada aplicaría desde las elecciones del año 2021 anteriormente lo aprobado derivada que fuera progresiva y que recién esa...",
+      "color": "#7f8c8d",
+      "eventos": []
+    },
+    {
+      "id": 193,
+      "tema": "Democracia e Instituciones",
+      "inicio": 5788.1,
+      "fin": 5860.3,
+      "inicio_fmt": "1:36:28",
+      "fin_fmt": "1:37:40",
+      "duracion_seg": 72.2,
+      "extracto": "suspender las elecciones primarias con participación de toda la ciudadanía pero quiero ser enfático esto no implica que debamos desistir del mecanismo que promuevan la más amplia participación que permitan que candidatos y candidatas idóneos puedan postular en unas elecciones...",
+      "color": "#7f8c8d",
+      "eventos": []
+    },
+    {
+      "id": 194,
+      "tema": "Democracia e Instituciones",
+      "inicio": 5860.3,
+      "fin": 5935.2,
+      "inicio_fmt": "1:37:40",
+      "fin_fmt": "1:38:55",
+      "duracion_seg": 74.9,
+      "extracto": "libres de corrupción como base de la democracia este congreso fue elegido con un claro mandato ciudadano el de continuar las reformas no dar marcha atrás no bloquearlas no distorsionarlas la reforma tiene que ser integral sustantiva de forma y de fondo apreciados congresistas me...",
+      "color": "#7f8c8d",
+      "eventos": []
+    },
+    {
+      "id": 195,
+      "tema": "Economía",
+      "inicio": 5935.2,
+      "fin": 6011.6,
+      "inicio_fmt": "1:38:55",
+      "fin_fmt": "1:40:12",
+      "duracion_seg": 76.4,
+      "extracto": "y acciones producto de este trabajo conjunto la defensa de los derechos humanos es un factor clave para una sociedad justa y democrática por ello junto a más de 120 instituciones del estado el sector empresarial la sociedad civil los pueblos indígenas y los sindicatos venimos...",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Democracia e Instituciones → Economía"
+        }
+      ]
+    },
+    {
+      "id": 196,
+      "tema": "Economía",
+      "inicio": 6011.7,
+      "fin": 6035.3,
+      "inicio_fmt": "1:40:12",
+      "fin_fmt": "1:40:35",
+      "duracion_seg": 23.6,
+      "extracto": "crecimiento, y el progreso del Perú. Como dije al inicio, nada ha sido fácil durante este tiempo, en que tengo el honor de servir a mi patria. Hemos enfrentado juntos, varias crisis devastadoras, y nuestro país está demostrando que puede luchar. Gracias a la madurez y a la...",
+      "color": "#1a1a2e",
+      "eventos": []
+    },
+    {
+      "id": 197,
       "tema": "Otros",
-      "inicio": 6589.1,
-      "fin": 6633.3,
-      "inicio_fmt": "109:49",
-      "fin_fmt": "109:51",
-      "duracion_seg": 44.2,
-      "extracto": "se miren como hermanos. Y como soñaba el amauta José María Arguedas, y de todas las sangres, No quiero terminar sin antes hacer dos pedidos. Entrega lo mucho de mí....",
+      "inicio": 6035.3,
+      "fin": 6049.3,
+      "inicio_fmt": "1:40:35",
+      "fin_fmt": "1:40:49",
+      "duracion_seg": 13.9,
+      "extracto": "peruano, pudimos garantizar la continuidad institucional, y exactamente, en un año, entregaremos la aposta al nuevo presidente que los ciudadanos elijan. La lucha frontal contra",
+      "color": "#666",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Otros"
+        },
+        {
+          "tipo": "anuncio",
+          "descripcion": "Anuncio de medida o inversión"
+        }
+      ]
+    },
+    {
+      "id": 198,
+      "tema": "Anticorrupción",
+      "inicio": 6049.3,
+      "fin": 6063.9,
+      "inicio_fmt": "1:40:49",
+      "fin_fmt": "1:41:04",
+      "duracion_seg": 14.6,
+      "extracto": "la corrupción avanzó, a pesar de algunos obstáculos y resistencias, pero hoy el país entero es consciente de la necesidad de erradicar por nosotros. Tras la crisis que derivó en la disolución del",
+      "color": "#e67e22",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Anticorrupción"
+        }
+      ]
+    },
+    {
+      "id": 199,
+      "tema": "Democracia e Instituciones",
+      "inicio": 6064.0,
+      "fin": 6091.6,
+      "inicio_fmt": "1:41:04",
+      "fin_fmt": "1:41:32",
+      "duracion_seg": 27.6,
+      "extracto": "congreso, los peruanos fuimos capaces de renovar la representación parlamentaria en elecciones limpias y transparentes. La reforma judicial y política también están encaminadas para construir instituciones sólidas, legítimas, y representativas para fortalecer nuestra democracia....",
+      "color": "#7f8c8d",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Anticorrupción → Democracia e Instituciones"
+        }
+      ]
+    },
+    {
+      "id": 200,
+      "tema": "Salud",
+      "inicio": 6091.6,
+      "fin": 6107.6,
+      "inicio_fmt": "1:41:32",
+      "fin_fmt": "1:41:48",
+      "duracion_seg": 15.9,
+      "extracto": "frente a la pandemia, para proteger la vida y la salud de los peruanos, para amparar a los que más necesitan y recuperar nuestra economía. Para que haya más trabajo, más producción, una salud para",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Democracia e Instituciones → Salud"
+        }
+      ]
+    },
+    {
+      "id": 201,
+      "tema": "Educación",
+      "inicio": 6107.6,
+      "fin": 6129.2,
+      "inicio_fmt": "1:41:48",
+      "fin_fmt": "1:42:09",
+      "duracion_seg": 21.6,
+      "extracto": "todos, una mejor educación, y más oportunidades para los peruanos de costa, sierra, y selva. Al reafirmar en este momento la grandeza de nuestra nación, debemos saber todos que esa grandeza no es fruto del azar. Nuestra historia es una historia de esfuerzo y",
+      "color": "#27ae60",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Educación"
+        }
+      ]
+    },
+    {
+      "id": 202,
+      "tema": "Otros",
+      "inicio": 6129.3,
+      "fin": 6143.2,
+      "inicio_fmt": "1:42:09",
+      "fin_fmt": "1:42:23",
+      "duracion_seg": 13.9,
+      "extracto": "sacrificio, donde los que nos antecidieron pusieron todo de sí para construir un país fuerte, viable, y próspero. Han sido nuestros grandes héroes quienes nos han impulsado en",
       "color": "#666",
       "eventos": [
         {
           "tipo": "cambio_tema",
           "descripcion": "De Educación → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Democracia e Instituciones → Otros"
-        },
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Otros"
         }
       ]
     },
     {
-      "id": 402,
+      "id": 203,
+      "tema": "Infraestructura",
+      "inicio": 6143.3,
+      "fin": 6155.3,
+      "inicio_fmt": "1:42:23",
+      "fin_fmt": "1:42:35",
+      "duracion_seg": 12.1,
+      "extracto": "este largo y ardo camino. Y que han superado el enorme desafío de avanzar hacia esa meta. El setenta por ciento de los peruanos que contrajeron la",
+      "color": "#8e44ad",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Infraestructura"
+        }
+      ]
+    },
+    {
+      "id": 204,
+      "tema": "Salud",
+      "inicio": 6155.4,
+      "fin": 6164.8,
+      "inicio_fmt": "1:42:35",
+      "fin_fmt": "1:42:45",
+      "duracion_seg": 9.4,
+      "extracto": "enfermedad la han superado. Y hacemos enormes esfuerzos para que todos la puedan vencer. Hemos comenzado la",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Infraestructura → Salud"
+        }
+      ]
+    },
+    {
+      "id": 205,
+      "tema": "Economía",
+      "inicio": 6164.9,
+      "fin": 6182.5,
+      "inicio_fmt": "1:42:45",
+      "fin_fmt": "1:43:02",
+      "duracion_seg": 17.6,
+      "extracto": "recuperación económica gracias al esfuerzo de trabajadores y empresarios, grandes, medianos, pequeños. Nuestros niños, jóvenes, maestros, y padres de niños, somos comprometidos en mantener la educación. Nuestros profesionales de la salud,",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Economía"
+        }
+      ]
+    },
+    {
+      "id": 206,
+      "tema": "Seguridad",
+      "inicio": 6182.5,
+      "fin": 6205.5,
+      "inicio_fmt": "1:43:03",
+      "fin_fmt": "1:43:25",
+      "duracion_seg": 22.9,
+      "extracto": "policías, militares, bomberos, serenazgos, continúan en la primera línea de esta cruzada por el Perú. A pesar de la adversidad, tenemos lo que necesitamos para salir adelante. Seguimos siendo un país milenario, rico y biodiverso. Nuestra ilimitada capacidad de respuesta y de...",
+      "color": "#c0392b",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Seguridad"
+        }
+      ]
+    },
+    {
+      "id": 207,
+      "tema": "Otros",
+      "inicio": 6205.5,
+      "fin": 6222.1,
+      "inicio_fmt": "1:43:25",
+      "fin_fmt": "1:43:42",
+      "duracion_seg": 16.6,
+      "extracto": "poder emprendedor de nuestra población, la fuerza creativa de nuestra juventud, todo ello significa que el Perú, como dijo Basade, es también una hermosa posibilidad. Pero este potencial solo será realidad si",
+      "color": "#666",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Seguridad → Otros"
+        }
+      ]
+    },
+    {
+      "id": 208,
       "tema": "Democracia e Instituciones",
-      "inicio": 6599.1,
-      "fin": 6628.7,
-      "inicio_fmt": "109:59",
-      "fin_fmt": "110:01",
-      "duracion_seg": 29.7,
-      "extracto": "vivir juntos con dignidad y justicia. Hacer una lucha frontal contra la revolución y que el Congreso de la República trabaje los proyectos de ley en este acto...",
+      "inicio": 6222.2,
+      "fin": 6271.5,
+      "inicio_fmt": "1:43:42",
+      "fin_fmt": "1:44:31",
+      "duracion_seg": 49.3,
+      "extracto": "nuestra democracia funciona. Solo si la política recupera su verdadero sentido. Solo si todos nosotros, independientemente de las ideologicas y políticas, contribuimos a restaurar el sentido de propósito común que tanto necesitamos en este momento. La democracia es apertura,...",
       "color": "#7f8c8d",
       "eventos": [
         {
           "tipo": "cambio_tema",
           "descripcion": "De Otros → Democracia e Instituciones"
-        },
+        }
+      ]
+    },
+    {
+      "id": 209,
+      "tema": "Otros",
+      "inicio": 6271.5,
+      "fin": 6289.5,
+      "inicio_fmt": "1:44:32",
+      "fin_fmt": "1:44:49",
+      "duracion_seg": 17.9,
+      "extracto": "las disputas mezquinas y a las recriminaciones infundadas que durante tanto tiempo han sofocado nuestra política. En ocho meses y once días, dos millones de jóvenes peruanos votarán por primera vez en las",
+      "color": "#666",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Democracia e Instituciones → Otros"
+        }
+      ]
+    },
+    {
+      "id": 210,
+      "tema": "Democracia e Instituciones",
+      "inicio": 6289.5,
+      "fin": 6311.2,
+      "inicio_fmt": "1:44:50",
+      "fin_fmt": "1:45:11",
+      "duracion_seg": 21.6,
+      "extracto": "elecciones generales que ya hemos convocado. Son los nuevos jóvenes del país que están observando hoy nuestros gestos, nuestras acciones, nuestras decisiones. Como consecuencia de ese proceso electoral, dentro de trescientos sesenta y cinco",
+      "color": "#7f8c8d",
+      "eventos": [
         {
           "tipo": "cambio_tema",
           "descripcion": "De Otros → Democracia e Instituciones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Ica"
-        },
+        }
+      ]
+    },
+    {
+      "id": 211,
+      "tema": "Otros",
+      "inicio": 6311.2,
+      "fin": 6394.4,
+      "inicio_fmt": "1:45:11",
+      "fin_fmt": "1:46:34",
+      "duracion_seg": 83.2,
+      "extracto": "días, en este magno recinto, ninguno de los aquí presentes presencialmente o virtualmente ha sido un abono. Por lo que creo que este debe ser un momento de reflexión en el que además de atender las muchas urgencias y necesidades, pensemos cuál va a ser el legado que vamos a...",
+      "color": "#666",
+      "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Política Exterior → Democracia e Instituciones"
+          "descripcion": "De Democracia e Instituciones → Otros"
+        },
+        {
+          "tipo": "anuncio",
+          "descripcion": "Anuncio de medida o inversión"
+        }
+      ]
+    },
+    {
+      "id": 212,
+      "tema": "Democracia e Instituciones",
+      "inicio": 6394.5,
+      "fin": 6422.2,
+      "inicio_fmt": "1:46:34",
+      "fin_fmt": "1:47:02",
+      "duracion_seg": 27.7,
+      "extracto": "Como dije ante el congreso hace dos años, y lo reitero hoy, no estamos aquí solo para ocupar un cargo, estamos para brindar un servicio que pasa por generar instituciones sólidas, representativas, y confiables, productivos, y sostenibles. Así lograremos cerrar brechas sociales y...",
+      "color": "#7f8c8d",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Democracia e Instituciones"
+        }
+      ]
+    },
+    {
+      "id": 213,
+      "tema": "Infraestructura",
+      "inicio": 6422.3,
+      "fin": 6443.1,
+      "inicio_fmt": "1:47:02",
+      "fin_fmt": "1:47:23",
+      "duracion_seg": 20.8,
+      "extracto": "un camino largo que debemos transitar juntos. En ese sentido, los miembros de las instituciones más importantes del país, reunidas en el último consejo de estado, coincidimos en construir una agenda para el bicentenario. Una hoja de ruta",
+      "color": "#8e44ad",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Democracia e Instituciones → Infraestructura"
+        }
+      ]
+    },
+    {
+      "id": 214,
+      "tema": "Democracia e Instituciones",
+      "inicio": 6443.1,
+      "fin": 6472.9,
+      "inicio_fmt": "1:47:23",
+      "fin_fmt": "1:47:53",
+      "duracion_seg": 29.8,
+      "extracto": "que surja del diálogo, no solo de quienes hoy venimos trabajando arduamente por dejar un país encaminado, sino también de los actores políticos que van a ser los protagonistas en el próximo gobierno. En unos meses se elegirá un nuevo presidente y un nuevo congreso. Y estos...",
+      "color": "#7f8c8d",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Infraestructura → Democracia e Instituciones"
+        }
+      ]
+    },
+    {
+      "id": 215,
+      "tema": "Economía",
+      "inicio": 6473.0,
+      "fin": 6494.0,
+      "inicio_fmt": "1:47:53",
+      "fin_fmt": "1:48:14",
+      "duracion_seg": 21.0,
+      "extracto": "demanda ciudadana de unidad, es que quiero aprovechar este momento para convocar a todas las fuerzas políticas a construir un nuevo acuerdo básico. El pacto Perú. Este pacto debe ayudarnos a todos los peruanos a transitar este proceso de transición en paz.",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Democracia e Instituciones → Economía"
+        }
+      ]
+    },
+    {
+      "id": 216,
+      "tema": "Otros",
+      "inicio": 6494.0,
+      "fin": 6512.9,
+      "inicio_fmt": "1:48:14",
+      "fin_fmt": "1:48:33",
+      "duracion_seg": 18.9,
+      "extracto": "Con acuerdos mínimos que den el debate necesario que se dará en la próxima campaña electoral. No queremos ningún intromisión en una campaña que debe ser limpia, con reglas claras y transparentes. La iniciativa que hoy planteo tiene como",
+      "color": "#666",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Otros"
+        }
+      ]
+    },
+    {
+      "id": 217,
+      "tema": "Democracia e Instituciones",
+      "inicio": 6513.0,
+      "fin": 6535.9,
+      "inicio_fmt": "1:48:33",
+      "fin_fmt": "1:48:56",
+      "duracion_seg": 22.9,
+      "extracto": "objetivo generar un diálogo que vaya más allá de esta coyuntura de crisis, que dé certezas necesarias para los peruanos. Los invito a construir un pacto que, independientemente de quién sea elegido como el próximo presidente, siente las bases de un Perú con consensos básicos que...",
+      "color": "#7f8c8d",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Democracia e Instituciones"
+        }
+      ]
+    },
+    {
+      "id": 218,
+      "tema": "Democracia e Instituciones",
+      "inicio": 6536.0,
+      "fin": 6566.9,
+      "inicio_fmt": "1:48:56",
+      "fin_fmt": "1:49:27",
+      "duracion_seg": 30.9,
+      "extracto": "democracia, encauzar el debate político, y permitirnos avanzar como país después del bicentenario. Si no lo hacemos, corremos el riesgo de llegar al bicentenario sumidos en desgastantes enfrentamientos y pugnas que van a impedirnos el desarrollo de la enorme agenda país que...",
+      "color": "#7f8c8d",
+      "eventos": []
+    },
+    {
+      "id": 219,
+      "tema": "Economía",
+      "inicio": 6566.9,
+      "fin": 6587.8,
+      "inicio_fmt": "1:49:27",
+      "fin_fmt": "1:49:48",
+      "duracion_seg": 20.9,
+      "extracto": "demanda a gritos. Tenemos la oportunidad de mostrarle a todos los peruanos que somos capaces de dejar de lado los intereses coyunturales en pos del bien común. Construyamos el pacto Perú. Demos ese paso. Para dar paso, vamos a convocar a representantes de cada uno de",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Democracia e Instituciones → Economía"
+        },
+        {
+          "tipo": "anuncio",
+          "descripcion": "Anuncio de medida o inversión"
+        }
+      ]
+    },
+    {
+      "id": 220,
+      "tema": "Democracia e Instituciones",
+      "inicio": 6587.9,
+      "fin": 6598.9,
+      "inicio_fmt": "1:49:48",
+      "fin_fmt": "1:49:59",
+      "duracion_seg": 10.9,
+      "extracto": "los partidos políticos. A fin de generar algunos acuerdos básicos. Es fundamental, por ejemplo, llegar a un acuerdo para la construcción de un",
+      "color": "#7f8c8d",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Democracia e Instituciones"
+        }
+      ]
+    },
+    {
+      "id": 221,
+      "tema": "Salud",
+      "inicio": 6598.9,
+      "fin": 6614.6,
+      "inicio_fmt": "1:49:59",
+      "fin_fmt": "1:50:15",
+      "duracion_seg": 15.6,
+      "extracto": "sistema unificado de salud. que garantice la prestación universal de este servicio para los peruanos de manera eficiente, transparente, e igualitaria. Un segundo punto que merece que generemos un entendimiento para seguir avanzando es",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Democracia e Instituciones → Salud"
+        }
+      ]
+    },
+    {
+      "id": 222,
+      "tema": "Educación",
+      "inicio": 6614.6,
+      "fin": 6635.7,
+      "inicio_fmt": "1:50:15",
+      "fin_fmt": "1:50:36",
+      "duracion_seg": 21.1,
+      "extracto": "el de garantizar una calidad educativa eliminando la brecha entre la educación urbana y la educación rural con accesibilidad a la educación virtual en todos los niveles de la educación pública y privada con una adecuada regulación del Estado.",
+      "color": "#27ae60",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Educación"
+        }
+      ]
+    },
+    {
+      "id": 223,
+      "tema": "Economía",
+      "inicio": 6635.7,
+      "fin": 6663.3,
+      "inicio_fmt": "1:50:36",
+      "fin_fmt": "1:51:03",
+      "duracion_seg": 27.6,
+      "extracto": "Un tercer punto de esta agenda de debate que planteo es promover el crecimiento económico sostenible y las inversiones y proponer políticas que mejoren la capacidad del Estado para detectar y desmantelar prácticas anticompetitivas. Necesitamos que la economía social de mercado...",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Educación → Economía"
+        }
+      ]
+    },
+    {
+      "id": 224,
+      "tema": "Democracia e Instituciones",
+      "inicio": 6663.3,
+      "fin": 6675.4,
+      "inicio_fmt": "1:51:03",
+      "fin_fmt": "1:51:15",
+      "duracion_seg": 12.1,
+      "extracto": "Otro punto central es, como lo hemos dicho, la continuidad de la reforma política y del sistema de administración de justicia para poder seguir avanzando en la democratización",
+      "color": "#7f8c8d",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Democracia e Instituciones"
+        }
+      ]
+    },
+    {
+      "id": 225,
+      "tema": "Anticorrupción",
+      "inicio": 6675.4,
+      "fin": 6697.2,
+      "inicio_fmt": "1:51:15",
+      "fin_fmt": "1:51:37",
+      "duracion_seg": 21.8,
+      "extracto": "de nuestro país y en la lucha contra la corrupción. Y un quinto desafío, pero no menos importante, es la impostergable lucha contra la pobreza y pobreza extrema que implica cerrar de una vez por todas brechas sociales históricas y avanzar en la construcción de un país más justo...",
+      "color": "#e67e22",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Democracia e Instituciones → Anticorrupción"
+        }
+      ]
+    },
+    {
+      "id": 226,
+      "tema": "Democracia e Instituciones",
+      "inicio": 6697.2,
+      "fin": 6736.9,
+      "inicio_fmt": "1:51:37",
+      "fin_fmt": "1:52:17",
+      "duracion_seg": 39.7,
+      "extracto": "Sé que esta agenda de cinco puntos es ambiciosa, pero tengo la convicción que vale la pena intentarlo, y estoy dispuesto a generar el espacio para que los dirigentes políticos logremos poner de lado la coyuntura y seamos capaces de generar estos acuerdos mínimos de...",
+      "color": "#7f8c8d",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Anticorrupción → Democracia e Instituciones"
+        }
+      ]
+    },
+    {
+      "id": 227,
+      "tema": "Economía",
+      "inicio": 6736.9,
+      "fin": 6764.2,
+      "inicio_fmt": "1:52:17",
+      "fin_fmt": "1:52:44",
+      "duracion_seg": 27.3,
+      "extracto": "quedado sin trabajo, y quiero que sepan que entiendo el sufrimiento y duele. Pero también sé de qué estamos hechos los peruanos, sé de nuestra fuerza, nuestra determinación y valentía para superar situaciones difíciles. Por eso tengo la certeza que saldremos adelante si estamos...",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Democracia e Instituciones → Economía"
+        }
+      ]
+    },
+    {
+      "id": 228,
+      "tema": "Otros",
+      "inicio": 6764.2,
+      "fin": 6820.9,
+      "inicio_fmt": "1:52:44",
+      "fin_fmt": "1:53:41",
+      "duracion_seg": 56.8,
+      "extracto": "unidos, vamos a salir adelante. ¿Qué no podemos los peruanos? Hoy solo tengo palabras de reconocimiento y aliento para ustedes. Hoy, 28 de julio del 2020, declaro que nada nos derrotará, que al final prevaleceremos, y cuando la posteridad, en días mejores, recuerde este momento,...",
+      "color": "#666",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Otros"
+        },
+        {
+          "tipo": "anuncio",
+          "descripcion": "Anuncio de medida o inversión"
         }
       ]
     }

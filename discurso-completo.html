@@ -32,7 +32,7 @@
       <a class="nav-link" href="#verificacion">Verificación</a>
     </div>
     <!-- Botón descargar discurso: reemplaza el href por la URL del PDF -->
-    <a class="nav-download" href="./data/discurso-pedro-castillo.pdf" target="_blank" rel="noopener">
+    <a class="nav-download" href="https://cdn.www.gob.pe/uploads/document/file/1057525/Mensaje_a_la_Nacion_28_de_Julio_2020.pdf" target="_blank" rel="noopener">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
       Descargar discurso
     </a>
@@ -96,7 +96,8 @@
       <!-- Temas -->
       <div class="rz-cell rz-cell--center rz-cell--divL">
         <h3 class="rz-metric-title">Temas</h3>
-        <div class="rz-bignum">16</div>
+        <!-- Editable a mano: cambia el número y la unidad según convenga -->
+        <div class="rz-bignum">10</div>
         <div class="rz-bignum-unit">bloques</div>
       </div>
 
@@ -963,30 +964,32 @@
 </div>
 
 <!-- Audio element (oculto) -->
-<audio id="audio-el" src="audio/discurso.mp3" preload="auto"></audio>
+<audio id="audio-el" src="/data/2020/Mensaje a la Nación del presidente Martín Vizcarra por Fiestas Patrias 2020.mp3" preload="auto"></audio>
 
 <!-- ══════════════════════════════════════════════════════════ -->
 <!--  JAVASCRIPT                                               -->
 <!-- ══════════════════════════════════════════════════════════ -->
 <!-- Datos editables -->
-<script src="./js/datos-discurso.js?v1"></script>
-<script src="./js/momentos.js?v1"></script>
-<script src="./js/fact-checking.js?v2"></script>
+<script src="./js/datos-discurso.js?v3"></script>
+<script src="./js/datos-resumen.js?v1"></script>
+<script src="./js/momentos.js?v3"></script>
+<script src="./js/fact-checking.js?v3"></script>
 <!-- Motor del timeline (núcleo) -->
 <script src="./js/main.js?v7"></script>
 <!-- Módulos por sección (orden de ejecución) -->
-<script src="./js/explorador.js?v1"></script>
-<script src="./js/hero-stats.js?v1"></script>
-<script src="./js/modulo-a-distribucion.js?v1"></script>
-<script src="./js/modulo-b-momentos.js?v1"></script>
-<script src="./js/modulo-a-rediseno.js?v1"></script>
-<script src="./js/nav.js?v1"></script>
-<script src="./js/gestos.js?v1"></script>
-<script src="./js/stories.js?v1"></script>
-<script src="./js/fact-checking-ui.js?v2"></script>
+<script src="./js/explorador.js?v3"></script>
+<script src="./js/hero-stats.js?v3"></script>
+<script src="./js/modulo-a-distribucion.js?v3"></script>
+<script src="./js/modulo-b-momentos.js?v3"></script>
+<script src="./js/resumen-inmediato.js?v4"></script>
+<script src="./js/modulo-a-rediseno.js?v3"></script>
+<script src="./js/nav.js?v3"></script>
+<script src="./js/gestos.js?v3"></script>
+<script src="./js/stories.js?v3"></script>
+<script src="./js/fact-checking-ui.js?v3"></script>
 <!-- Gráficos -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
-<script src="./js/datos-graficos.js?v1"></script>
-<script src="./js/graficos.js?v1"></script>
+<script src="./js/datos-graficos.js?v3"></script>
+<script src="./js/graficos.js?v3"></script>
 </body>
 </html>

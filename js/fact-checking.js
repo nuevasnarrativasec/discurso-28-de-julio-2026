@@ -1,117 +1,123 @@
 /* ═══════════════════════════════════════════════════════════════════
-   FACT-CHECKING — CALIFICACIONES + AFIRMACIONES (CONTENIDO EDITABLE)
+   FACT-CHECKING — calificaciones fijas + afirmaciones.
+   Cada afirmación admite 'enlace' (URL a nota externa) y 'enlace_texto'.
    ═══════════════════════════════════════════════════════════════════ */
-
-/* ── 1) LAS 3 CALIFICACIONES ─────────────────────────────────────────
-   Son los recuadros de color (que además funcionan como filtros).
-   El contador de cada uno se calcula solo. Puedes editar 'label' y 'desc'.
-   NO cambies 'id' ni 'color' salvo que sepas lo que haces:
-     id     → valor que usarás en cada afirmación (campo 'veredicto').
-     color  → verde | naranja | rojo (define el color del recuadro/badge).
-     label  → texto grande en mayúsculas.
-     desc   → texto descriptivo que va DEBAJO, dentro del recuadro.
-──────────────────────────────────────────────────────────────────── */
 window.FACT_CALIFICACIONES = [
   {
-    id:    'verdadero',
-    color: 'verde',
-    label: 'Verdadero',
-    desc:  'La afirmación está respaldada por datos oficiales.'
+    "id": "verdadero",
+    "color": "verde",
+    "label": "Verdadero",
+    "desc": "La afirmación está respaldada por datos oficiales."
   },
   {
-    id:    'enganoso',
-    color: 'naranja',
-    label: 'Engañoso',
-    desc:  'Mezcla datos reales con omisiones o imprecisiones que distorsionan su significado.'
+    "id": "enganoso",
+    "color": "naranja",
+    "label": "Engañoso",
+    "desc": "Mezcla datos reales con omisiones o imprecisiones que distorsionan su significado."
   },
   {
-    id:    'falso',
-    color: 'rojo',
-    label: 'Falso',
-    desc:  'Contradice información verificada.'
+    "id": "falso",
+    "color": "rojo",
+    "label": "Falso",
+    "desc": "Contradice información verificada."
   }
 ];
 
-/* ── 2) LAS AFIRMACIONES (acordeones) ───────────────────────────────
-   Un objeto {} por afirmación. Campos:
-     tiempo       Marca de tiempo. Ej: '18:30'
-     afirmacion   La frase analizada (título del acordeón).
-     veredicto    Debe ser uno de los 'id' de arriba:
-                    'verdadero' | 'enganoso' | 'falso'
-     descripcion  Texto que aparece al abrir el acordeón (el análisis).
-     enlace       (Opcional) URL a la nota externa con el análisis ampliado.
-                  Si lo dejas vacío o lo omites, no aparece ningún enlace.
-                  Ej: 'https://tumedio.com/nota/analisis-pbi'
-     enlace_texto (Opcional) Texto del enlace. Por defecto: 'Leer el análisis completo'
-
-   Reglas: no borres comas, llaves {} ni corchetes []. Apóstrofo → \'
-──────────────────────────────────────────────────────────────────── */
 window.FACTS = [
-
   {
-    tiempo:      '18:30',
-    afirmacion:  'El PBI creció 4.5% en el último año',
-    veredicto:   'verdadero',
-    descripcion: 'Las cifras del Banco Central de Reserva confirman un crecimiento del Producto Bruto Interno en el rango señalado. El dato es consistente con los reportes trimestrales oficiales.',
-    enlace:      'https://elcomercio.pe/',
-    enlace_texto: 'Leer el análisis completo'
+    "tiempo": "10:34",
+    "afirmacion": "Comenzaré por reseñar las acciones realizadas en el marco de la lucha contra la pandemia, así como los esfuerzos realizados por los sectores del Ejecutivo en…",
+    "veredicto": "verdadero",
+    "descripcion": "",
+    "enlace": "https://elcomercio.pe",
+    "enlace_texto": "Mira más aquí"
   },
   {
-    tiempo:      '29:15',
-    afirmacion:  'Se han construido 30 hospitales en los últimos dos años',
-    veredicto:   'enganoso',
-    descripcion: 'Se iniciaron obras en 30 establecimientos de salud, pero solo una parte está operativa a la fecha; presentar la cifra como hospitales terminados distorsiona el avance real.',
-    enlace:      'https://elcomercio.pe/',
-    enlace_texto: 'Leer el análisis completo'
-  
+    "tiempo": "12:01",
+    "afirmacion": "Fuimos uno de los primeros países en tomar esta medida, la cual fue acatada mayoritariamente, lográndose una reducción de hasta el 84% de la movilidad social…",
+    "veredicto": "verdadero",
+    "descripcion": "",
+    "enlace": "",
+    "enlace_texto": ""
   },
   {
-    tiempo:      '22:45',
-    afirmacion:  'La inversión extranjera aumentó en un 35%',
-    veredicto:   'falso',
-    descripcion: 'Las estadísticas de ProInversión no respaldan esa magnitud. La variación real del período es considerablemente menor a la afirmada.',
-    enlace:      'https://elcomercio.pe/',
-    enlace_texto: 'Leer el análisis completo'
+    "tiempo": "15:05",
+    "afirmacion": "en Ayacucho, Puno, Huancavelica, Huango, Cusco, Piura, Pasco, Junín, Lima, San Martín, beneficiando a más de un millón 655 mil peruanos.",
+    "veredicto": "enganoso",
+    "descripcion": "",
+    "enlace": "",
+    "enlace_texto": ""
   },
   {
-    tiempo:      '56:20',
-    afirmacion:  'El índice de pobreza se redujo en 5 puntos porcentuales',
-    veredicto:   'enganoso',
-    descripcion: 'Hubo una reducción de la pobreza, pero de menor magnitud; la cifra citada omite el margen de medición del INEI y sobreestima el avance.',
-    enlace:      'https://elcomercio.pe/',
-    enlace_texto: 'Leer el análisis completo'
+    "tiempo": "15:18",
+    "afirmacion": "Asimismo, en los próximos meses entrarán en funcionamiento el Hospital de Pacasmayo en La Libertad, el Hospital de Putín en Puno, el Hospital de Chalhuahuacho…",
+    "veredicto": "enganoso",
+    "descripcion": "",
+    "enlace": "",
+    "enlace_texto": ""
   },
   {
-    tiempo:      '11:40',
-    afirmacion:  'El empleo formal aumentó 6.9% interanual a mayo',
-    veredicto:   'verdadero',
-    descripcion: 'El dato coincide con los registros de planilla electrónica del Ministerio de Trabajo para el período indicado.',
-    enlace:      'https://elcomercio.pe/',
-    enlace_texto: 'Leer el análisis completo'
+    "tiempo": "20:34",
+    "afirmacion": "donación, y distribución de las vacunas contra el COVID. Vamos a multiplicar las gestiones externas en los ámbitos bilateral y multilateral para que el Perú…",
+    "veredicto": "falso",
+    "descripcion": "",
+    "enlace": "",
+    "enlace_texto": ""
   },
   {
-    tiempo:      '48:05',
-    afirmacion:  'Se entregaron becas a jóvenes en todas las regiones',
-    veredicto:   'enganoso',
-    descripcion: 'El programa tuvo cobertura nacional, pero la distribución fue muy desigual y algunas regiones recibieron un número marginal de beneficiarios.',
-    enlace:      'https://elcomercio.pe/',
-    enlace_texto: 'Leer el análisis completo'
+    "tiempo": "24:23",
+    "afirmacion": "Durante la cuarentena hemos seguido con el monitoreo y ya se reiniciaron las visitas domiciliarias a miles de niños menores de 36 meses para prevenir y tratar…",
+    "veredicto": "falso",
+    "descripcion": "",
+    "enlace": "",
+    "enlace_texto": ""
   },
   {
-    tiempo:      '1:02:10',
-    afirmacion:  'La producción agrícola alcanzó un récord histórico',
-    veredicto:   'verdadero',
-    descripcion: 'Los volúmenes reportados por el Ministerio de Desarrollo Agrario superan los máximos registrados en campañas anteriores.',
-    enlace:      'https://elcomercio.pe/',
-    enlace_texto: 'Leer el análisis completo'
+    "tiempo": "29:27",
+    "afirmacion": "millones de afiliados a nivel nacional. Anuncio que para julio del dos mil veintiuno, todas las peruanas y peruanos estarán afiliados al",
+    "veredicto": "enganoso",
+    "descripcion": "",
+    "enlace": "",
+    "enlace_texto": ""
   },
   {
-    tiempo:      '39:50',
-    afirmacion:  'La deuda pública se mantuvo estable respecto al PBI',
-    veredicto:   'falso',
-    descripcion: 'Los indicadores del Marco Macroeconómico Multianual muestran un incremento del ratio deuda/PBI en el período, contrario a lo afirmado.',
-    enlace:      'https://elcomercio.pe/',
-    enlace_texto: 'Leer el análisis completo'
+    "tiempo": "32:21",
+    "afirmacion": "sistema de salud. Seamos hidalgos y objetivos en este momento. Durante décadas la salud no ha sido una prioridad. Durante décadas la salud no ha estado en la…",
+    "veredicto": "falso",
+    "descripcion": "",
+    "enlace": "",
+    "enlace_texto": ""
+  },
+  {
+    "tiempo": "41:53",
+    "afirmacion": "territorio nacional. A la fecha, el 96% de las familias peruanas han reportado que sus hijos acceden a aprendo en casa. Asimismo, para que nuestros jóvenes no…",
+    "veredicto": "falso",
+    "descripcion": "",
+    "enlace": "",
+    "enlace_texto": ""
+  },
+  {
+    "tiempo": "42:28",
+    "afirmacion": "educación puede cambiar vidas. Hemos incrementado los beneficios de beca 18 en 56%, solo entre el 2019 y 2020, brindándole a nuestros jóvenes de menores…",
+    "veredicto": "falso",
+    "descripcion": "",
+    "enlace": "",
+    "enlace_texto": ""
+  },
+  {
+    "tiempo": "48:34",
+    "afirmacion": "las inclemencias de las heladas. Por ello, nuestro gobierno presentó una estrategia de entrega periódica de frazadas. Cada vez que viene el invierno, gobiernos…",
+    "veredicto": "falso",
+    "descripcion": "",
+    "enlace": "",
+    "enlace_texto": ""
+  },
+  {
+    "tiempo": "49:50",
+    "afirmacion": "Sobre la violencia a la mujer, uno de los principales objetivos de mi gestión es desterrar la violencia contra la mujer y erradicar esa cultura machista que…",
+    "veredicto": "falso",
+    "descripcion": "",
+    "enlace": "",
+    "enlace_texto": ""
   }
-
 ];
