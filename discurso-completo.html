@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css?v7">
+    <link rel="stylesheet" href="./css/style.css?v8">
     <!--Ivy font-->
     <link rel="stylesheet" href="https://use.typekit.net/otp2meg.css">
 </head>
@@ -20,7 +20,7 @@
 <!--  NAV                                                      -->
 <!-- ══════════════════════════════════════════════════════════ -->
 <nav class="main-nav">
-  <a class="nav-brand" href="#inicio">El discurso en datos</a>
+  <a class="nav-brand" href="#inicio">Explorar</a>
   <div class="nav-right">
     <div class="nav-links">
       <a class="nav-link" href="#resumen">Resumen</a>
@@ -44,7 +44,10 @@
 <!-- ══════════════════════════════════════════════════════════ -->
 <section class="hero-collage" id="inicio">
   <div class="hero-collage-inner">
-    <img class="hero-collage-bg" src="./img/bg-home.jpg" alt="Collage de recortes fotográficos del discurso presidencial" fetchpriority="high">
+    <picture>
+      <source media="(max-width: 640px)" srcset="./img/bg-home-movil.jpg">
+      <img class="hero-collage-bg" src="./img/bg-home.jpg" alt="Collage de recortes fotográficos del discurso presidencial" fetchpriority="high">
+    </picture>
     <div class="hero-collage-text">
       <h1 class="hero-collage-title">El discurso<br>en datos</h1>
       <p class="hero-collage-sub"><em>Keiko Fujimori</em> y su primer discurso</p>

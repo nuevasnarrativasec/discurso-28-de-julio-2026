@@ -957,14 +957,18 @@
       font-size: 12px;
       margin: 5px auto;
     }
-    /* Móvil: apila imagen + texto en flujo normal */
+    /* Móvil: la imagen es vertical (bg-home-movil.jpg) con el collage arriba y
+       papel en blanco abajo; el texto se sube para caer sobre esa zona. */
     @media (max-width: 640px) {
       .hero-collage { padding: 12px 16px 20px; }
       .hero-collage-text {
-        position: static;
+        position: relative;
+        z-index: 2;
         transform: none;
         width: 100%;
-        margin-top: 4px;
+        margin-top: -68%;   /* sube el texto sobre la zona de papel del collage vertical */
+        text-align: center;
+        left: 0;
       }
       .hero-collage-title { font-size: 40px; }
       .hero-collage-sub { font-size: 20px; }
