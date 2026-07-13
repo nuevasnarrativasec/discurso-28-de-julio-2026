@@ -1991,6 +1991,10 @@
     .modF-acc-time { display: block; font-size: 12px; color: var(--ink-faint); margin-bottom: 6px; font-variant-numeric: tabular-nums; }
     .modF-acc-claim { display: block; font-family: "ivypresto-headline",'Georgia',serif; font-size: 19px; font-weight: 700; line-height: 1.25; color: var(--ink-faint); transition: color 0.2s; }
     .modF-acc-head:hover .modF-acc-claim { color: var(--ink-muted); }
+    /* Móvil: el veredicto va DEBAJO de la frase, no en dos columnas */
+    @media (max-width: 600px) {
+      .modF-acc-head { flex-direction: column; align-items: flex-start; gap: 12px; }
+    }
     /* Estado abierto → cabecera como tarjeta blanca elevada */
     .modF-acc-item.is-open .modF-acc-head {
       background: #fff; border-color: var(--ink);
