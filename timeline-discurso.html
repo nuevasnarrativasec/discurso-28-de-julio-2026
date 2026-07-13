@@ -481,6 +481,17 @@
       .bar-row { grid-template-columns: 90px 1fr 32px; }
       .player-tema, .player-vol-wrap, .player-speed { display: none; }
       .section-title { font-size: 22px; }
+
+      /* Scroll horizontal del timeline para evitar descuadres en móvil */
+      .timeline-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 8px;
+      }
+      .timeline-wrap .time-axis,
+      .timeline-wrap .timeline-rows {
+        min-width: 640px;
+      }
     }
 
     /* ─── Explorador del Discurso ───────────────────────── */

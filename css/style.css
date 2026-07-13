@@ -495,6 +495,34 @@
       .bar-row { grid-template-columns: 90px 1fr 32px; }
       .player-tema, .player-vol-wrap, .player-speed { display: none; }
       .section-title { font-size: 22px; }
+
+      /* Scroll horizontal del timeline para evitar descuadres en móvil */
+      .timeline-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 8px;
+      }
+      .timeline-wrap .time-axis,
+      .timeline-wrap .timeline-rows {
+        min-width: 640px;
+      }
+      .metodo-inner .metodo-title{
+            font-size: clamp(21px, 3.4vw, 26px);
+      }
+      .modF-filter-desc{
+        max-width: inherit !important;
+      }
+      .rz-quote-feature .rz-quote-card{
+        margin: 0 auto;
+      }
+      #cita-destacada-2.rz-quote-feature--rev .rz-quote-card{
+        left: inherit;
+        right: inherit;
+        transform: none;
+      }
+        #cita-destacada-2.rz-quote-feature--rev.rz-quote-card.rz-quote-feature--rev.rz-quote-card-inner{
+          clip-path: none !important;
+        }
     }
 
     /* ─── Explorador del Discurso ───────────────────────── */
@@ -811,8 +839,30 @@
     @media (max-width: 600px) {
       .nav-links { display: none; }
       .nav-right::before { display: none; }
-      .nav-download { margin-left: 0; padding: 9px 14px; font-size: 10px; letter-spacing: 0.06em; }
+      .nav-download { margin-left: 0; padding: 9px 7px; font-size: 10px; letter-spacing: 0.06em; }
       .nav-brand { font-size: 18px; }
+      .modA-section{
+          padding: 72px 24px;
+      }
+      .rz-cell{
+            padding: 36px 0 !important;
+      }
+      .data-block-head{
+            padding: 0 20px;
+      }
+      .data-section .data-block-head,
+      .exp-body{
+        padding: 0;
+      }
+      .modF-ausente-col .modF-ausente-fig{
+         height: 100px;
+      }
+        .modF-ausente-col .modF-ausente-fig img{             
+              max-width: 30%;
+        }
+      .rz-quote-card .rz-quote-card-inner{
+        clip-path: none !important;
+      }
     }
 
     /* ─── Hero collage ──────────────────────────────────────── */
@@ -1808,7 +1858,7 @@
     .modE-marco-desc { font-size: 12px; color: var(--ink-muted); line-height: 1.55; }
 
     /* ─── Módulo 06 — Verificación y Fact-Checking ─────────────── */
-    .modF-section { padding: 60px 24px 72px; background: var(--bg); border-bottom: 1px solid var(--border); }
+    .modF-section { padding: 60px 24px 20px; background: var(--bg); border-bottom: 1px solid var(--border); }
     .modF-inner { max-width: 600px; margin: 0 auto; }
     .modF-verdicts-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; margin: 40px 0 52px; }
     @media (max-width: 700px) { .modF-verdicts-grid { grid-template-columns: repeat(2,1fr); } }
@@ -1907,7 +1957,7 @@
     .modF-ausente-fig.is-empty .modF-ausente-ph { display: block; font-size: 12px; color: var(--ink-faint); letter-spacing: 0.04em; }
     .modF-ausente-name { font-family: var(--font-serif); font-size: 18px; font-weight: 700; color: var(--ink); line-height: 1.2; }
     @media (max-width: 700px) {
-      .modF-ausentes-grid { grid-template-columns: 1fr; gap: 28px; }
+      .modF-ausentes-grid { grid-template-columns: 1fr; gap: 10px; }
       .modF-ausente-col { padding: 0 12px; }
       .modF-ausente-col + .modF-ausente-col { border-left: none; border-top: 1px dashed #d6d1c6; padding-top: 28px; }
     }
@@ -1941,7 +1991,7 @@
     }
     .metodo-body { max-width: 800px; margin: 0 auto; }
     .metodo-text {
-      font-size: 16px;
+      font-size: 15px;
       line-height: 1.75;
       color: var(--ink);
       margin: 0;
