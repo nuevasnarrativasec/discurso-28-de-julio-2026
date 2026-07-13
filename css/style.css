@@ -871,11 +871,34 @@
       .main-nav { padding: 0 20px; }
       .nav-link { padding: 6px 12px; font-size: 10px; letter-spacing: 0.08em; }
     }
+    /* Sub-nav móvil (enlaces bajo el hero): oculta salvo en móvil */
+    .mobile-subnav { display: none; }
+
     @media (max-width: 600px) {
       .nav-links { display: none; }
       .nav-right::before { display: none; }
       .nav-download { margin-left: 0; padding: 9px 7px; font-size: 10px; letter-spacing: 0.06em; }
       .nav-brand { font-size: 18px; }
+
+      /* Barra de secciones: sticky bajo la barra superior + scroll horizontal */
+      .mobile-subnav {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 0;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        position: sticky;
+        top: 66px;                 /* debajo de la .main-nav (height:66px) */
+        z-index: 190;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        padding: 8px 16px;
+        scrollbar-width: none;      /* Firefox */
+      }
+      .mobile-subnav::-webkit-scrollbar { display: none; } /* WebKit */
+      .mobile-subnav .nav-link { flex: 0 0 auto; }
       .modA-section{
           padding: 72px 24px;
       }
