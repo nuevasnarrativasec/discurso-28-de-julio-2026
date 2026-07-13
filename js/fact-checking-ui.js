@@ -65,6 +65,12 @@
       '</button>' +
       '<div class="modF-acc-body"><div class="modF-acc-body-inner">' +
         '<p class="modF-acc-desc">' + escapeHtml(f.descripcion || '') + '</p>' +
+        (f.enlace
+          ? '<a class="modF-acc-link" href="' + escapeHtml(f.enlace).replace(/"/g, '&quot;') + '"' +
+            ' target="_blank" rel="noopener noreferrer">' +
+            escapeHtml(f.enlace_texto || 'Leer el análisis completo') +
+            '<span class="modF-acc-link-arrow" aria-hidden="true">→</span></a>'
+          : '') +
       '</div></div>';
     var head = item.querySelector('.modF-acc-head');
     var body = item.querySelector('.modF-acc-body');
