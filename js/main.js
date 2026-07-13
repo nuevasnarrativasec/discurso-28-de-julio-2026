@@ -10,6 +10,12 @@ const audio       = document.getElementById('audio-el');
 let audioLoaded   = true;
 let selectedBlock = null;   // bloque con panel abierto
 let playingBlock  = null;   // bloque que está sonando ahora
+let seekTargetSec = null;   // destino de un salto en curso (mientras el audio bufferea)
+let pendingPlay   = false;  // se pidió reproducir y se espera a que haya buffer suficiente
+let bufferTimeout = null;   // timeout de seguridad para arrancar aunque el buffer tarde
+let followBlock   = null;   // bloque cuya reproducción inició el panel (los bloques tienen
+                            // huecos/solapes, así que no basta con la posición exacta)
+const BUFFER_TIMEOUT_MS = 7000;  // margen máx. de espera antes de forzar la reproducción
 const SPEEDS      = [0.75, 1, 1.25, 1.5, 2];
 let speedIdx      = 1;
 const DURACION    = DATA.meta.duracion_total_seg;
@@ -49,13 +55,52 @@ document.getElementById('axis-hint').classList.add('visible');
 // ─────────────────────────────────────────────────────────────
 function togglePlay() {
   if (!audioLoaded) return;
+  cancelPendingPlay();            // control manual anula un salto pendiente
   audio.paused ? audio.play() : audio.pause();
 }
 
-function seekTo(sec) {
+function seekTo(sec, block = null) {
   if (!audioLoaded) return;
-  audio.currentTime = Math.max(0, Math.min(sec, audio.duration || DURACION));
-  if (audio.paused) audio.play();
+  const dest = Math.max(0, Math.min(sec, audio.duration || DURACION));
+  seekTargetSec = dest;           // recordar la intención hasta que termine el seek/buffer
+  followBlock   = block;          // bloque asociado (null = salto libre: scrubber/eje/teclas)
+  audio.currentTime = dest;
+  requestPlay();                  // reproducir cuando haya buffer (con timeout de seguridad)
+}
+
+// ── Gate de reproducción ──────────────────────────────────────
+// Al saltar a una zona no descargada, esperamos a tener datos suficientes
+// antes de sonar; así se evita el arranque mudo o entrecortado. Un timeout
+// de seguridad arranca igual si la descarga tarda demasiado.
+function audioListo() {
+  // HAVE_FUTURE_DATA (3) o más, y sin un seek en curso
+  return audio.readyState >= 3 && !audio.seeking;
+}
+
+function requestPlay() {
+  pendingPlay = true;
+  clearTimeout(bufferTimeout);
+  bufferTimeout = setTimeout(forcePlay, BUFFER_TIMEOUT_MS);
+  updateBtnPlayLabel();           // mostrar "Cargando…" de inmediato
+  tryStartPlayback();             // por si ya hay buffer suficiente
+}
+
+function tryStartPlayback() {
+  if (!pendingPlay || !audioListo()) return;
+  pendingPlay = false;
+  clearTimeout(bufferTimeout);
+  audio.play();
+}
+
+function forcePlay() {
+  if (!pendingPlay) return;
+  pendingPlay = false;
+  audio.play();                   // arrancar aunque el buffer no sea ideal
+}
+
+function cancelPendingPlay() {
+  pendingPlay = false;
+  clearTimeout(bufferTimeout);
 }
 
 function seekRelative(delta) { seekTo((audio.currentTime || 0) + delta); }
@@ -158,6 +203,15 @@ audio.addEventListener('loadedmetadata', () => {
   document.getElementById('player-total').textContent = fmt(audio.duration);
 });
 
+// Buffering / seek: al saltar a zonas aún no descargadas, el botón se
+// mantiene coherente. seekTargetSec se limpia cuando el audio ya llegó.
+audio.addEventListener('seeking', updateBtnPlayLabel);
+audio.addEventListener('seeked',  () => { seekTargetSec = null; tryStartPlayback(); updateBtnPlayLabel(); });
+audio.addEventListener('waiting', updateBtnPlayLabel);
+audio.addEventListener('playing', () => { seekTargetSec = null; updateBtnPlayLabel(); });
+audio.addEventListener('canplay',        () => { tryStartPlayback(); updateBtnPlayLabel(); });
+audio.addEventListener('canplaythrough', () => { tryStartPlayback(); updateBtnPlayLabel(); });
+
 audio.addEventListener('play',  () => {
   document.getElementById('icon-play').style.display  = 'none';
   document.getElementById('icon-pause').style.display = '';
@@ -171,12 +225,15 @@ audio.addEventListener('pause', () => {
 audio.addEventListener('ended', () => {
   document.getElementById('icon-play').style.display  = '';
   document.getElementById('icon-pause').style.display = 'none';
+  cancelPendingPlay();
+  followBlock = null;
   if (playingBlock) {
     document.querySelectorAll(`.tema-block[data-id="${playingBlock.id}"]`)
       .forEach(el => el.classList.remove('playing'));
     playingBlock = null;
   }
   playhead.style.display = 'none';
+  updateBtnPlayLabel();
 });
 
 // ─────────────────────────────────────────────────────────────
@@ -391,12 +448,31 @@ const dTema     = document.getElementById('d-tema');
 const dTime     = document.getElementById('d-time');
 const dExtracto = document.getElementById('d-extracto');
 const btnPlay   = document.getElementById('btn-play-block');
+const dLoading  = document.getElementById('d-loading');
 
-// Refleja en el botón del panel si el bloque seleccionado está sonando
+// Refleja en el botón del panel si el bloque seleccionado está sonando.
+// Usa el destino del salto (seekTargetSec) mientras el audio bufferea, para
+// no depender de que audio.currentTime ya haya alcanzado la zona pedida.
 function updateBtnPlayLabel() {
   if (!btnPlay || !selectedBlock) return;
-  const enEste  = (bloqueEnTiempo(audio.currentTime) || {}).id === selectedBlock.id;
-  const sonando = !audio.paused && enEste;
+  const refTime = seekTargetSec != null ? seekTargetSec : audio.currentTime;
+  // "Es este bloque" si la posición cae dentro de él (partición imperfecta: huecos y
+  // solapes) O si es el bloque cuya reproducción inició el panel. Lo segundo evita que
+  // el botón revierta a "Ir al audio" cuando el salto aterriza en un hueco/solape.
+  const esEste = ((bloqueEnTiempo(refTime) || {}).id === selectedBlock.id) ||
+                 (followBlock != null && followBlock.id === selectedBlock.id);
+
+  // Estado de carga: se pidió este bloque y aún se está buscando/bufferando la zona
+  const cargando = esEste && (pendingPlay || (!audio.paused && (audio.seeking || audio.readyState < 3)));
+  if (dLoading) dLoading.hidden = !cargando;
+
+  if (cargando) {
+    btnPlay.classList.add('is-playing');
+    btnPlay.textContent = '⏳ Cargando…';
+    return;
+  }
+
+  const sonando = !audio.paused && esEste;
   btnPlay.classList.toggle('is-playing', sonando);
   btnPlay.textContent = sonando ? '❚❚ Pausar audio' : '▶ Ir al audio';
 }
@@ -418,13 +494,24 @@ function abrirDetalle(bloque, eventoFocus, seekAudio) {
 
   // Botón del panel — funciona como play / pausa del bloque
   btnPlay.onclick = () => {
-    const enEsteBloque = (bloqueEnTiempo(audio.currentTime) || {}).id === bloque.id;
-    if (!audio.paused && enEsteBloque) {
+    // Estamos en este bloque (o saltando hacia él). Igual que en el label, se
+    // considera "este bloque" también si es el que el panel está reproduciendo.
+    const refTime = seekTargetSec != null ? seekTargetSec : audio.currentTime;
+    const enEsteBloque = ((bloqueEnTiempo(refTime) || {}).id === bloque.id) ||
+                         (followBlock != null && followBlock.id === bloque.id);
+
+    if (pendingPlay && enEsteBloque) {
+      // Cargando este bloque → cancelar la reproducción pendiente
+      cancelPendingPlay();
+      audio.pause();
+      updateBtnPlayLabel();
+    } else if (!audio.paused && enEsteBloque) {
       audio.pause();
     } else if (audio.paused && enEsteBloque) {
+      followBlock = bloque;
       audio.play();
     } else {
-      seekTo(bloque.inicio);
+      seekTo(bloque.inicio, bloque);
     }
   };
   updateBtnPlayLabel();
@@ -433,7 +520,7 @@ function abrirDetalle(bloque, eventoFocus, seekAudio) {
 
   // Seek al audio si se pide
   if (seekAudio) {
-    seekTo(bloque.inicio);
+    seekTo(bloque.inicio, bloque);
   }
 
   if (seekAudio) {
@@ -445,6 +532,7 @@ function cerrarDetalle() {
   panel.classList.remove('visible');
   document.querySelectorAll('.tema-block.selected').forEach(el => el.classList.remove('selected'));
   selectedBlock = null;
+  if (dLoading) dLoading.hidden = true;
 }
 
 // Keyboard: espacio = play/pause, escape = cerrar panel

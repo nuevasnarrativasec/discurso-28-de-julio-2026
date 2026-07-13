@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css?v4">
+    <link rel="stylesheet" href="./css/style.css?v5">
     <!--Ivy font-->
     <link rel="stylesheet" href="https://use.typekit.net/otp2meg.css">
 </head>
@@ -538,6 +538,7 @@
                 <div class="detail-time-row">
                 <span class="detail-time" id="d-time"></span>
                 <button class="btn-play-block no-audio" id="btn-play-block">▶ Ir al audio</button>
+                <span class="detail-loading" id="d-loading" hidden><span class="dl-spinner"></span>Preparando audio…</span>
                 </div>
             </div>
             <button class="detail-close" onclick="cerrarDetalle()">×</button>
@@ -931,7 +932,7 @@
 <script src="./js/momentos.js?v1"></script>
 <script src="./js/fact-checking.js?v1"></script>
 <!-- Motor del timeline (núcleo) -->
-<script src="./js/main.js?v4"></script>
+<script src="./js/main.js?v7"></script>
 <!-- Módulos por sección (orden de ejecución) -->
 <script src="./js/explorador.js?v1"></script>
 <script src="./js/hero-stats.js?v1"></script>
