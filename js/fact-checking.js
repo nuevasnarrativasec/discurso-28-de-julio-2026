@@ -30,7 +30,7 @@ window.FACTS = [
     "veredicto": "verdadero",
     "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation ",
     "enlace": "https://elcomercio.pe",
-    "enlace_texto": "Mira más aquí"
+    "enlace_texto": "Ir a la nota"
   },
   {
     "tiempo": "12:01",
@@ -38,7 +38,7 @@ window.FACTS = [
     "veredicto": "verdadero",
     "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation ",
     "enlace": "https://elcomercio.pe",
-    "enlace_texto": "Mira más aquí"
+    "enlace_texto": "Ir a la nota"
   },
   {
     "tiempo": "15:05",
@@ -46,7 +46,7 @@ window.FACTS = [
     "veredicto": "enganoso",
     "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation ",
     "enlace": "https://elcomercio.pe",
-    "enlace_texto": "Mira más aquí"
+    "enlace_texto": "Ir a la nota"
   },
   {
     "tiempo": "15:18",
@@ -54,7 +54,7 @@ window.FACTS = [
     "veredicto": "enganoso",
     "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation ",
     "enlace": "https://elcomercio.pe",
-    "enlace_texto": "Mira más aquí"
+    "enlace_texto": "Ir a la nota"
   },
   {
     "tiempo": "20:34",
@@ -62,7 +62,7 @@ window.FACTS = [
     "veredicto": "falso",
     "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation ",
     "enlace": "https://elcomercio.pe",
-    "enlace_texto": "Mira más aquí"
+    "enlace_texto": "Ir a la nota"
   },
   {
     "tiempo": "24:23",
@@ -70,7 +70,7 @@ window.FACTS = [
     "veredicto": "falso",
     "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation ",
     "enlace": "https://elcomercio.pe",
-    "enlace_texto": "Mira más aquí"
+    "enlace_texto": "Ir a la nota"
   },
   {
     "tiempo": "29:27",
@@ -78,7 +78,7 @@ window.FACTS = [
     "veredicto": "enganoso",
     "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation ",
     "enlace": "https://elcomercio.pe",
-    "enlace_texto": "Mira más aquí"
+    "enlace_texto": "Ir a la nota"
   },
   {
     "tiempo": "32:21",
@@ -86,7 +86,7 @@ window.FACTS = [
     "veredicto": "falso",
     "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation ",
     "enlace": "https://elcomercio.pe",
-    "enlace_texto": "Mira más aquí"
+    "enlace_texto": "Ir a la nota"
   },
   {
     "tiempo": "41:53",
@@ -94,7 +94,7 @@ window.FACTS = [
     "veredicto": "falso",
     "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation ",
     "enlace": "https://elcomercio.pe",
-    "enlace_texto": "Mira más aquí"
+    "enlace_texto": "Ir a la nota"
   },
   {
     "tiempo": "42:28",
@@ -102,7 +102,7 @@ window.FACTS = [
     "veredicto": "falso",
     "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation ",
     "enlace": "https://elcomercio.pe",
-    "enlace_texto": "Mira más aquí"
+    "enlace_texto": "Ir a la nota"
   },
   {
     "tiempo": "48:34",
@@ -110,7 +110,7 @@ window.FACTS = [
     "veredicto": "falso",
     "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation ",
     "enlace": "https://elcomercio.pe",
-    "enlace_texto": "Mira más aquí"
+    "enlace_texto": "Ir a la nota"
   },
   {
     "tiempo": "49:50",
@@ -118,6 +118,6 @@ window.FACTS = [
     "veredicto": "falso",
     "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation ",
     "enlace": "https://elcomercio.pe",
-    "enlace_texto": "Mira más aquí"
+    "enlace_texto": "Ir a la nota"
   }
 ];
