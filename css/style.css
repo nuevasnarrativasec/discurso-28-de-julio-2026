@@ -2094,6 +2094,29 @@
     }
     .metodo-text + .metodo-text { margin-top: 22px; }
 
+    .metodo-toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 22px 0 0;
+      padding: 0;
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--accent, #b3372c);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .metodo-toggle:hover { opacity: 0.8; }
+    .metodo-toggle-icon { flex: none; transition: transform 0.25s ease; }
+    .metodo-toggle[aria-expanded="true"] .metodo-toggle-icon { transform: rotate(180deg); }
+    .metodo-more { margin-top: 22px; }
+    .metodo-more[hidden] { display: none; }
+    .metodo-more h6 { margin-top: 15px; }
+
     /* ═══════════════════════════════════════════════════════════
        REDISEÑO — Dashboard de métricas (Resumen Inmediato)
        ═══════════════════════════════════════════════════════════ */
