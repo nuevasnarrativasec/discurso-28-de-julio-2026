@@ -971,7 +971,7 @@
       font-family: var(--font-sans);
       color: #000;
       line-height: 1.6;
-      font-size: clamp(11px, 1.15vw, 14px);
+      font-size: clamp(11px, 1.15vw, 16px);
       max-width: 42ch;
       margin: 0 auto;
     }
@@ -1255,7 +1255,7 @@
       line-height: 1.1;
     }
     .mod-sub {
-      font-size: 14px;
+      font-size: 16px;
       color: var(--ink-muted);
       line-height: 1.6;
       max-width: 640px;
@@ -1263,7 +1263,7 @@
       margin-bottom: 20px;
     }
     .mod-intro {
-      font-size: 15px;
+      font-size: 16px;
       color: var(--ink-muted);
       line-height: 1.7;
       max-width: 720px;
@@ -1314,7 +1314,7 @@
       margin-bottom: 8px;
     }
     .data-block-text {
-      font-size: 15px;
+      font-size: 16px;
       line-height: 1.7;
       color: var(--ink-muted);
       margin-bottom: 0;
