@@ -84,8 +84,8 @@
     var data = cfg.datos.slice().sort(function (a, b) { return b.valor - a.valor; });
     var color = cfg.color || '#2f80b4';
     var rowH = 30;
-    var m = { top: 16, right: 54, bottom: 46, left: 312 };
-    var W = 960, ih = data.length * rowH, H = ih + m.top + m.bottom;
+    var m = { top: 16, right: 60, bottom: 46, left: 366 };
+    var W = 1020, ih = data.length * rowH, H = ih + m.top + m.bottom;
     var iw = W - m.left - m.right;
 
     var svg = d3.select(box).append('svg')
@@ -162,7 +162,8 @@
       .attr('fill', color).attr('fill-opacity', 0.92)
       .attr('stroke', '#fff').attr('stroke-width', 1.5);
 
-    node.append('text')
+    var label = node.append('text')
+      .attr('class', 'g-net-label')
       .text(function (d) { return d.id; })
       .attr('text-anchor', 'middle')
       .attr('dy', function (d) { return r(d.valor) + 15; })
@@ -191,12 +192,18 @@
       .force('center', d3.forceCenter(W / 2, H / 2))
       .force('collide', d3.forceCollide().radius(function (d) { return r(d.valor) + 40; }))
       .on('tick', function () {
+        node.each(function (d) {
+          var rad = r(d.valor);
+          // Deja margen para el radio del círculo y para la etiqueta (abajo)
+          d.x = Math.max(rad + 12, Math.min(W - rad - 12, d.x));
+          d.y = Math.max(rad + 16, Math.min(H - rad - 24, d.y));
+        });
         link.attr('x1', function (d) { return d.source.x; }).attr('y1', function (d) { return d.source.y; })
             .attr('x2', function (d) { return d.target.x; }).attr('y2', function (d) { return d.target.y; });
-        node.attr('transform', function (d) {
-          d.x = Math.max(70, Math.min(W - 70, d.x));
-          d.y = Math.max(34, Math.min(H - 40, d.y));
-          return 'translate(' + d.x + ',' + d.y + ')';
+        node.attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')'; });
+        // Ancla la etiqueta hacia adentro en los bordes para que no se corte
+        label.attr('text-anchor', function (d) {
+          return d.x < W * 0.24 ? 'start' : (d.x > W * 0.76 ? 'end' : 'middle');
         });
       });
 
@@ -222,5 +229,6 @@
   var conx = document.getElementById('g-conexiones');
   if (pais) barrasVerticales(pais, G.paisImagina);
   if (prio) barrasHorizontales(prio, G.prioridades);
-  if (conx) red(conx, G.conexiones);
+  // El mapa de red se construye (y anima) solo cuando entra al viewport
+  if (conx) whenVisible(conx, function () { red(conx, G.conexiones); });
 })();

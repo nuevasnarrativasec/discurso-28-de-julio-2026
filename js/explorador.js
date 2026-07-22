@@ -178,7 +178,9 @@
         ? `<span class="exp-badge-sep">·</span><span class="exp-badge-region">${escHtml(b._regiones.join(', '))}</span>`
         : '';
 
-      const extractoHL = highlightText(b.extracto, q);
+      // Texto tal cual el audio del fragmento, entre comillas (sin puntos suspensivos añadidos)
+      const verbatim = (b.extracto || '').replace(/\s*(\.{2,}|…)\s*$/, '').trim();
+      const extractoHL = highlightText(verbatim, q);
 
       return `<div class="exp-card" data-id="${b.id}">
         <div class="exp-card-left">
@@ -188,7 +190,7 @@
             <span class="exp-badge-tema" style="color:${b.color}">${escHtml(b.tema)}</span>
             ${regionStr}
           </div>
-          <p class="exp-card-extracto">${extractoHL}…</p>
+          <p class="exp-card-extracto">“${extractoHL}”</p>
           <div class="exp-card-time">${b.inicio_fmt} — ${b.fin_fmt}</div>
         </div>
         <div class="exp-card-right">
