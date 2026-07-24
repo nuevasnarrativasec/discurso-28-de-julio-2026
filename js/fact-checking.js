@@ -1,122 +1,149 @@
 /* ═══════════════════════════════════════════════════════════════════
-   FACT-CHECKING — calificaciones fijas + afirmaciones.
-   Cada afirmación admite 'enlace' (URL a nota externa) y 'enlace_texto'.
+   ANÁLISIS DE VIABILIDAD DE PROMESAS
+   ───────────────────────────────────────────────────────────────────
+   5 calificaciones (viable, ya-existe, no-manos, obligacion-legal,
+   inviable). Cada promesa se asigna a una calificación mediante el
+   campo 'calificacion' y admite:
+     - tiempo        (opcional)  → marca de tiempo del discurso
+     - titulo        (requerido) → título de la promesa (serif)
+     - descripcion   (requerido) → análisis / detalle
+     - enlace        (opcional)  → URL a nota externa
+     - enlace_texto  (opcional)  → texto del enlace
    ═══════════════════════════════════════════════════════════════════ */
+
+/* Definición de las 5 calificaciones (orden = orden de aparición).
+   'color' referencia la clase de estilo del acordeón en style.css. */
 window.FACT_CALIFICACIONES = [
   {
-    "id": "verdadero",
-    "color": "verde",
-    "label": "Verdadero",
-    "desc": "La afirmación está respaldada por datos oficiales."
+    "id": "viable",
+    "color": "azul",
+    "label": "Viable",
+    "desc": "Anuncio que puede ejecutarse dentro del período de gobierno con los recursos y el marco normativo existentes."
   },
   {
-    "id": "enganoso",
+    "id": "ya-existe",
+    "color": "ambar",
+    "label": "Ya existe y no propone algo nuevo",
+    "desc": "Describe una política, programa o servicio que el Estado ya viene implementando, sin plantear una mejora medible o una meta distinta."
+  },
+  {
+    "id": "no-manos",
     "color": "naranja",
-    "label": "Engañoso",
-    "desc": "Mezcla datos reales con omisiones o imprecisiones que distorsionan su significado."
+    "label": "No está en sus manos",
+    "desc": "Compromiso cuya ejecución recae en otras instituciones del Estado, gobiernos regionales o locales, o poderes distintos al Ejecutivo."
   },
   {
-    "id": "falso",
+    "id": "obligacion-legal",
     "color": "rojo",
-    "label": "Falso",
-    "desc": "Contradice información verificada."
+    "label": "Es una obligación legal",
+    "desc": "Acción que la normativa vigente ya le impone al Ejecutivo, independientemente de que sea anunciada como novedad."
+  },
+  {
+    "id": "inviable",
+    "color": "granate",
+    "label": "Inviable",
+    "desc": "Compromiso que enfrenta obstáculos legales, presupuestales o institucionales que impiden su realización."
   }
 ];
 
+/* Promesas analizadas.
+   NOTA: contenido de ejemplo (placeholder). Reemplazar por las promesas
+   reales manteniendo la estructura de campos. */
 window.FACTS = [
+  /* ─── VIABLE ─────────────────────────────────────────────── */
   {
-    "tiempo": "10:34",
-    "afirmacion": '"Comenzaré por reseñar las acciones realizadas en el marco de la lucha contra la pandemia, así como los esfuerzos realizados por los sectores del Ejecutivo"',
-    "veredicto": "verdadero",
-    "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation ",
+    "calificacion": "viable",
+    "tiempo": "15:25",
+    "titulo": "La inversión extranjera aumentó en un 35%",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
     "enlace": "https://elcomercio.pe",
     "enlace_texto": "Ir a la nota"
   },
   {
-    "tiempo": "12:01",
-    "afirmacion": '"Fuimos uno de los primeros países en tomar esta medida, la cual fue acatada mayoritariamente, lográndose una reducción de hasta el 84% de la movilidad social…"',
-    "veredicto": "verdadero",
-    "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation ",
+    "calificacion": "viable",
+    "tiempo": "15:25",
+    "titulo": "Se han construido 30 hospitales en los últimos dos años",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
     "enlace": "https://elcomercio.pe",
     "enlace_texto": "Ir a la nota"
   },
   {
-    "tiempo": "15:05",
-    "afirmacion": '"en Ayacucho, Puno, Huancavelica, Huango, Cusco, Piura, Pasco, Junín, Lima, San Martín, beneficiando a más de un millón 655 mil peruanos."',
-    "veredicto": "enganoso",
-    "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation ",
+    "calificacion": "viable",
+    "tiempo": "15:25",
+    "titulo": "Se ampliará la cobertura de agua potable a zonas rurales",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+    "enlace": "https://elcomercio.pe",
+    "enlace_texto": "Ir a la nota"
+  },
+
+  /* ─── YA EXISTE Y NO PROPONE ALGO NUEVO ──────────────────── */
+  {
+    "calificacion": "ya-existe",
+    "tiempo": "22:10",
+    "titulo": "Se entregarán frazadas ante las heladas cada invierno",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
     "enlace": "https://elcomercio.pe",
     "enlace_texto": "Ir a la nota"
   },
   {
-    "tiempo": "15:18",
-    "afirmacion": '"Asimismo, en los próximos meses entrarán en funcionamiento el Hospital de Pacasmayo en La Libertad, el Hospital de Putín en Puno, el Hospital de Chalhuahuacho…"',
-    "veredicto": "enganoso",
-    "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation ",
-    "enlace": "https://elcomercio.pe",
-    "enlace_texto": "Ir a la nota"
-  },
-  {
-    "tiempo": "20:34",
-    "afirmacion": '"donación, y distribución de las vacunas contra el COVID. Vamos a multiplicar las gestiones externas en los ámbitos bilateral y multilateral para que el Perú…"',
-    "veredicto": "falso",
-    "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation ",
-    "enlace": "https://elcomercio.pe",
-    "enlace_texto": "Ir a la nota"
-  },
-  {
+    "calificacion": "ya-existe",
     "tiempo": "24:23",
-    "afirmacion": '"Durante la cuarentena hemos seguido con el monitoreo y ya se reiniciaron las visitas domiciliarias a miles de niños menores de 36 meses para prevenir y tratar…"',
-    "veredicto": "falso",
-    "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation ",
+    "titulo": "Continuarán las visitas domiciliarias a menores de 36 meses",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
     "enlace": "https://elcomercio.pe",
     "enlace_texto": "Ir a la nota"
   },
+
+  /* ─── NO ESTÁ EN SUS MANOS ───────────────────────────────── */
   {
+    "calificacion": "no-manos",
     "tiempo": "29:27",
-    "afirmacion": '"millones de afiliados a nivel nacional. Anuncio que para julio del dos mil veintiuno, todas las peruanas y peruanos estarán afiliados al"',
-    "veredicto": "enganoso",
-    "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation ",
+    "titulo": "Todos los peruanos estarán afiliados a un seguro de salud",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
     "enlace": "https://elcomercio.pe",
     "enlace_texto": "Ir a la nota"
   },
   {
-    "tiempo": "32:21",
-    "afirmacion": '"sistema de salud. Seamos hidalgos y objetivos en este momento. Durante décadas la salud no ha sido una prioridad. Durante décadas la salud no ha estado en la…"',
-    "veredicto": "falso",
-    "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation ",
+    "calificacion": "no-manos",
+    "tiempo": "33:40",
+    "titulo": "Se avanzará con el proceso de concesiones de transporte",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
     "enlace": "https://elcomercio.pe",
     "enlace_texto": "Ir a la nota"
   },
+
+  /* ─── ES UNA OBLIGACIÓN LEGAL ────────────────────────────── */
   {
+    "calificacion": "obligacion-legal",
     "tiempo": "41:53",
-    "afirmacion": '"territorio nacional. A la fecha, el 96% de las familias peruanas han reportado que sus hijos acceden a aprendo en casa. Asimismo, para que nuestros jóvenes no…"',
-    "veredicto": "falso",
-    "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation ",
+    "titulo": "Se garantizará el acceso a la educación a distancia",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
     "enlace": "https://elcomercio.pe",
     "enlace_texto": "Ir a la nota"
   },
   {
-    "tiempo": "42:28",
-    "afirmacion": '"educación puede cambiar vidas. Hemos incrementado los beneficios de beca 18 en 56%, solo entre el 2019 y 2020, brindándole a nuestros jóvenes de menores…"',
-    "veredicto": "falso",
-    "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation ",
-    "enlace": "https://elcomercio.pe",
-    "enlace_texto": "Ir a la nota"
-  },
-  {
-    "tiempo": "48:34",
-    "afirmacion": '"las inclemencias de las heladas. Por ello, nuestro gobierno presentó una estrategia de entrega periódica de frazadas. Cada vez que viene el invierno, gobiernos…"',
-    "veredicto": "falso",
-    "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation ",
-    "enlace": "https://elcomercio.pe",
-    "enlace_texto": "Ir a la nota"
-  },
-  {
+    "calificacion": "obligacion-legal",
     "tiempo": "49:50",
-    "afirmacion": '"Sobre la violencia a la mujer, uno de los principales objetivos de mi gestión es desterrar la violencia contra la mujer y erradicar esa cultura machista que…"',
-    "veredicto": "falso",
-    "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation ",
+    "titulo": "Se erradicará la violencia contra la mujer",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+    "enlace": "https://elcomercio.pe",
+    "enlace_texto": "Ir a la nota"
+  },
+
+  /* ─── INVIABLE ───────────────────────────────────────────── */
+  {
+    "calificacion": "inviable",
+    "tiempo": "20:34",
+    "titulo": "Se multiplicarán las gestiones para adquirir vacunas",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+    "enlace": "https://elcomercio.pe",
+    "enlace_texto": "Ir a la nota"
+  },
+  {
+    "calificacion": "inviable",
+    "tiempo": "42:28",
+    "titulo": "Se incrementarán los beneficios de Beca 18 en 56%",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
     "enlace": "https://elcomercio.pe",
     "enlace_texto": "Ir a la nota"
   }

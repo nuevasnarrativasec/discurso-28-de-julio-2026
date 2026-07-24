@@ -854,21 +854,12 @@
   <div class="modF-inner">
     <div class="tl-header-centered">
       <span class="tl-header-rule"></span>
-      <h2 class="tl-title-centered">Análisis de viabilidad</h2>
+      <h2 class="tl-title-centered">Análisis de viabilidad de promesas</h2>
     </div>
-    <p class="mod-sub tl-sub-bold">Contrastamos en vivo las cifras y datos del discurso de 28 de julio con fuentes oficiales.</p>
-    <p class="mod-intro tl-intro-plain">No todos los anuncios dependen únicamente del Ejecutivo. Esta sección evalúa cuáles pueden ejecutarse con el marco legal vigente, cuáles requieren otras decisiones del Estado y cuáles enfrentan restricciones normativas o presupuestales.</p>
+    <p class="mod-sub tl-sub-bold">Evaluamos los compromisos anunciados el 28 de julio según su viabilidad legal, presupuestal e institucional.</p>
+    <p class="mod-intro tl-intro-plain">Detrás de cada anuncio presidencial hay condiciones legales, presupuestales e institucionales que determinan si puede cumplirse. Esta sección examina los compromisos del primer mensaje a la nación de Keiko Fujimori: qué implica cada uno, qué condiciones requiere y qué tan factible es su implementación durante la gestión.</p>
 
-    <!-- Filtros por veredicto (contadores calculados por JS) -->
-    <div class="modF-filter-hint">
-      <img src="./img/icon-clic-bloque.png" alt="" width="100%" style="max-width: 15px;">
-      Selecciona para filtrar
-    </div>
-    <div class="modF-filters" id="modF-filters"><!-- filtros inyectados por JS --></div>
-
-    <div class="modF-divider"></div>
-
-    <!-- Afirmaciones verificadas (acordeones) -->
+    <!-- Acordeones por calificación de viabilidad (inyectados por JS) -->
     <div class="modF-acc-list" id="modF-acc-list"><!-- acordeones inyectados por JS --></div>
 
     <!-- Temas ausentes de alta importancia -->
@@ -945,15 +936,15 @@
           <p class="metodo-text">
             Todos los resultados, clasificaciones y textos generados durante el proceso fueron revisados y validados por periodistas de El Comercio antes de su publicación. Las visualizaciones y métricas presentadas describen la estructura y los principales énfasis del discurso a partir del texto oficial, y constituyen una herramienta de análisis periodístico, no una valoración sobre la pertinencia o el impacto de las medidas anunciadas.
           </p>
-          <h6>Metodología del fact-checking</h6>
+          <h6>Metodología del análisis de viabilidad de promesas:</h6>
           <p class="metodo-text">
-              Para verificar las afirmaciones del primer mensaje a la nación de Keiko Fujimori, El Comercio empleó un proceso de dos etapas. En primer lugar, el equipo utilizó el Verificador EC, una herramienta de inteligencia artificial desarrollada por este diario, que analizó el discurso en tiempo real e identificó las declaraciones susceptibles de verificación siguiendo los criterios del <b>International Fact-Checking Network (IFCN)</b>: se consideró verificable toda frase que contuviera una cifra o dato estadístico; que incluyera una acusación atribuida a una persona o institución; que partiera de un lugar común que pudiera ser falso; que pretendiera rigor sin citar la fuente; o que estableciera una comparación entre datos, períodos o situaciones.
+              Para evaluar los compromisos anunciados en el primer mensaje a la nación de Keiko Fujimori, <b>El Comercio</b> empleó un proceso de dos etapas. En primer lugar, el equipo utilizó el Verificador EC, una herramienta de inteligencia artificial desarrollada por este diario, que analizó el discurso en tiempo real e identificó las frases que constituyen compromisos o promesas de gobierno.
           </p>
           <p class="metodo-text">
-              Las afirmaciones identificadas fueron revisadas y verificadas por el equipo periodístico de El Comercio con base en fuentes oficiales del Estado peruano, así como en medios de referencia nacionales e internacionales.
+              Las promesas identificadas fueron analizadas por el equipo periodístico de <b>El Comercio</b> con base en la normativa vigente, el presupuesto público, las competencias del Ejecutivo y fuentes oficiales del Estado peruano.
           </p>
           <p class="metodo-text">
-              <b>El Comercio</b> aplicó tres calificaciones: <b>verdadero, falso y engañoso</b> (contiene elementos de verdad, pero presentados de forma incorrecta o incompleta, lo que podría inducir al error).
+              <b>El Comercio</b> aplicó cinco calificaciones: <b>viable</b> (anuncio que puede ejecutarse dentro del período de gobierno con los recursos y el marco normativo existentes), <b>inviable</b> (compromiso que enfrenta obstáculos legales, presupuestales o institucionales que impiden su realización), <b>es una obligación legal</b> (acción que la normativa vigente ya le impone al Ejecutivo, independientemente de que sea anunciada como novedad), <b>no está en sus manos</b> (compromiso cuya ejecución recae en otras instituciones del Estado, gobiernos regionales o locales, o poderes distintos al Ejecutivo) y <b>ya existe y no propone algo nuevo</b> (anuncio que describe una política, programa o servicio que el Estado ya viene implementando, sin plantear una mejora medible o una meta distinta).
           </p>
         </div>
       </div>
@@ -973,7 +964,7 @@
                     <p>Lorena Obregón</p>
                 </li>
                 <li>
-                    <h4>Edición:</h4>
+                    <h4>Edición de textos:</h4>
                     <p>Héctor Villalobos</p>
                 </li>
                 <li>
@@ -1017,7 +1008,7 @@
 <script src="./js/datos-discurso.js?v3"></script>
 <script src="./js/datos-resumen.js?v1"></script>
 <script src="./js/momentos.js?v3"></script>
-<script src="./js/fact-checking.js?v7"></script>
+<script src="./js/fact-checking.js?v8"></script>
 <!-- Motor del timeline (núcleo) -->
 <script src="./js/main.js?v7"></script>
 <!-- Módulos por sección (orden de ejecución) -->
@@ -1030,7 +1021,7 @@
 <script src="./js/nav.js?v5"></script>
 <script src="./js/gestos.js?v3"></script>
 <script src="./js/stories.js?v3"></script>
-<script src="./js/fact-checking-ui.js?v5"></script>
+<script src="./js/fact-checking-ui.js?v6"></script>
 <!-- Gráficos -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
 <script src="./js/datos-graficos.js?v3"></script>

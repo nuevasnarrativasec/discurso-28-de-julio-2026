@@ -1,83 +1,83 @@
 // ═══════════════════════════════════════════════════════════════
-//  MÓDULO F — Fact-checking: filtros clicables + acordeones
+//  MÓDULO F — Viabilidad de promesas: 5 acordeones por calificación
 // ═══════════════════════════════════════════════════════════════
 (function() {
-  var filtersBox = document.getElementById('modF-filters');
-  var listBox    = document.getElementById('modF-acc-list');
-  if (!filtersBox || !listBox) return;
-  var FACTS = (window.FACTS && window.FACTS.length) ? window.FACTS : [];
-  if (!FACTS.length) return;
+  var listBox = document.getElementById('modF-acc-list');
+  if (!listBox) return;
 
-  function escapeHtml(s) {
-    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  }
+  var FACTS = (window.FACTS && window.FACTS.length) ? window.FACTS : [];
+
   // Calificaciones (config editable en fact-checking.js)
   var CALIF = (window.FACT_CALIFICACIONES && window.FACT_CALIFICACIONES.length)
     ? window.FACT_CALIFICACIONES
     : [
-        { id: 'verdadero', color: 'verde',   label: 'Verdadero', desc: '' },
-        { id: 'enganoso',  color: 'naranja', label: 'Engañoso',  desc: '' },
-        { id: 'falso',     color: 'rojo',    label: 'Falso',     desc: '' }
+        { id: 'viable',           color: 'azul',    label: 'Viable' },
+        { id: 'ya-existe',        color: 'ambar',   label: 'Ya existe y no propone algo nuevo' },
+        { id: 'no-manos',         color: 'naranja', label: 'No está en sus manos' },
+        { id: 'obligacion-legal', color: 'rojo',    label: 'Es una obligación legal' },
+        { id: 'inviable',         color: 'granate', label: 'Inviable' }
       ];
-  var META = {};
-  CALIF.forEach(function(c) { META[c.id] = { cls: c.color, label: c.label, desc: c.desc || '' }; });
 
-  // ── Filtros (con contadores calculados) ───────────────────
-  var counts = {};
-  CALIF.forEach(function(c) { counts[c.id] = 0; });
+  function escapeHtml(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  // Compatibilidad: la calificación puede venir en 'calificacion' o 'veredicto'
+  function califOf(f) {
+    return String(f.calificacion || f.veredicto || '').toLowerCase();
+  }
+
+  // Agrupar promesas por calificación
+  var grupos = {};
+  CALIF.forEach(function(c) { grupos[c.id] = []; });
   FACTS.forEach(function(f) {
-    var v = (f.veredicto || '').toLowerCase();
-    if (counts[v] != null) counts[v]++;
+    var id = califOf(f);
+    if (grupos[id]) grupos[id].push(f);
   });
-  var activo = null;   // veredicto filtrado actualmente (o null = todos)
 
+  // ── Construir un acordeón por calificación ────────────────
   CALIF.forEach(function(c) {
-    var v = c.id;
-    var btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'modF-filter ' + c.color;
-    btn.setAttribute('data-veredicto', v);
-    btn.innerHTML =
-      '<span class="modF-filter-count">' + counts[v] + '</span>' +
-      '<span class="modF-filter-label">' + escapeHtml(c.label) + '</span>' +
-      (c.desc ? '<span class="modF-filter-desc">' + escapeHtml(c.desc) + '</span>' : '');
-    btn.addEventListener('click', function() {
-      activo = (activo === v) ? null : v;   // toggle
-      aplicarFiltro();
-    });
-    filtersBox.appendChild(btn);
-  });
+    var promesas = grupos[c.id] || [];
 
-  // ── Acordeones ────────────────────────────────────────────
-  FACTS.forEach(function(f, i) {
-    var v = (f.veredicto || '').toLowerCase();
-    var m = META[v] || { cls: '', label: f.veredicto || '' };
+    var promesasHtml = promesas.map(function(f, idx) {
+      var last = (idx === promesas.length - 1);
+      return (
+        '<article class="modF-prom' + (last ? ' is-last' : '') + '">' +
+          (f.tiempo ? '<span class="modF-prom-time">' + escapeHtml(f.tiempo) + '</span>' : '') +
+          '<h4 class="modF-prom-title">' + escapeHtml(f.titulo || f.afirmacion || '') + '</h4>' +
+          '<p class="modF-prom-desc">' + escapeHtml(f.descripcion || '') + '</p>' +
+          (f.enlace
+            ? '<a class="modF-prom-link" href="' + escapeHtml(f.enlace).replace(/"/g, '&quot;') + '"' +
+              ' target="_blank" rel="noopener noreferrer">' +
+              escapeHtml(f.enlace_texto || 'Leer el análisis completo') +
+              '<span class="modF-prom-link-arrow" aria-hidden="true">→</span></a>'
+            : '') +
+        '</article>'
+      );
+    }).join('');
+
+    var vacio = '<p class="modF-acc-empty">Sin promesas registradas en esta categoría.</p>';
+
     var item = document.createElement('div');
-    item.className = 'modF-acc-item';
-    item.setAttribute('data-veredicto', v);
+    item.className = 'modF-acc-item ' + c.color;
+    item.setAttribute('data-calif', c.id);
     item.innerHTML =
       '<button class="modF-acc-head" type="button" aria-expanded="false">' +
-        '<span class="modF-acc-headtext">' +
-          '<span class="modF-acc-time">' + escapeHtml(f.tiempo || '') + '</span>' +
-          '<span class="modF-acc-claim">' + escapeHtml(f.afirmacion || '') + '</span>' +
-        '</span>' +
-        '<span class="modF-badge ' + m.cls + '">' + escapeHtml(m.label) + '</span>' +
+        '<span class="modF-acc-label">' + escapeHtml(c.label) + '</span>' +
+        '<span class="modF-acc-count">' + promesas.length + '</span>' +
+        '<span class="modF-acc-toggle" aria-hidden="true"></span>' +
       '</button>' +
       '<div class="modF-acc-body"><div class="modF-acc-body-inner">' +
-        '<p class="modF-acc-desc">' + escapeHtml(f.descripcion || '') + '</p>' +
-        (f.enlace
-          ? '<a class="modF-acc-link" href="' + escapeHtml(f.enlace).replace(/"/g, '&quot;') + '"' +
-            ' target="_blank" rel="noopener noreferrer">' +
-            escapeHtml(f.enlace_texto || 'Leer el análisis completo') +
-            '<span class="modF-acc-link-arrow" aria-hidden="true">→</span></a>'
-          : '') +
+        (promesas.length ? promesasHtml : vacio) +
       '</div></div>';
+
     var head = item.querySelector('.modF-acc-head');
     var body = item.querySelector('.modF-acc-body');
     head.addEventListener('click', function() { toggle(item, body, head); });
     listBox.appendChild(item);
   });
 
+  // ── Mecánica de apertura / cierre ─────────────────────────
   function abrir(item, body, head) {
     item.classList.add('is-open');
     head.setAttribute('aria-expanded', 'true');
@@ -97,36 +97,16 @@
     abrir(item, body, head);
   }
 
-  function aplicarFiltro() {
-    filtersBox.querySelectorAll('.modF-filter').forEach(function(btn) {
-      var v = btn.getAttribute('data-veredicto');
-      btn.classList.toggle('is-active', activo === v);
-      btn.classList.toggle('is-dim', activo !== null && activo !== v);
-    });
-    listBox.querySelectorAll('.modF-acc-item').forEach(function(item) {
-      var v = item.getAttribute('data-veredicto');
-      var visible = (activo === null || activo === v);
-      item.style.display = visible ? '' : 'none';
-      if (!visible && item.classList.contains('is-open')) {
-        cerrar(item, item.querySelector('.modF-acc-body'), item.querySelector('.modF-acc-head'));
-      }
-    });
-    // Abrir por defecto el primer acordeón visible
-    listBox.querySelectorAll('.modF-acc-item.is-open').forEach(function(otro) {
-      cerrar(otro, otro.querySelector('.modF-acc-body'), otro.querySelector('.modF-acc-head'));
-    });
-    var visibles = Array.prototype.filter.call(
-      listBox.querySelectorAll('.modF-acc-item'),
-      function(it) { return it.style.display !== 'none'; }
-    );
-    if (visibles[0]) abrir(visibles[0], visibles[0].querySelector('.modF-acc-body'), visibles[0].querySelector('.modF-acc-head'));
+  // Abrir la primera calificación con contenido
+  var primero = Array.prototype.filter.call(
+    listBox.querySelectorAll('.modF-acc-item'),
+    function(it) { return !it.querySelector('.modF-acc-empty'); }
+  )[0] || listBox.querySelector('.modF-acc-item');
+  if (primero) {
+    abrir(primero, primero.querySelector('.modF-acc-body'), primero.querySelector('.modF-acc-head'));
   }
 
-  // Abrir la primera afirmación por defecto
-  var primero = listBox.querySelector('.modF-acc-item');
-  if (primero) abrir(primero, primero.querySelector('.modF-acc-body'), primero.querySelector('.modF-acc-head'));
-
-  // Recalcular alturas al redimensionar (por si cambia el ancho del texto)
+  // Recalcular altura del abierto al redimensionar
   window.addEventListener('resize', function() {
     var open = listBox.querySelector('.modF-acc-item.is-open .modF-acc-body');
     if (open) open.style.maxHeight = open.scrollHeight + 'px';
