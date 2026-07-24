@@ -20,6 +20,23 @@
     return (dec ? v.toFixed(dec) : Math.round(v).toString());
   }
 
+  var GRAD_SEQ = 0;
+  /* Crea un degradé lineal (userSpaceOnUse) y devuelve el fill 'url(#id)'.
+     x1,y1 → x2,y2 definen la dirección; stops = array de colores. */
+  function makeGradient(svg, x1, y1, x2, y2, stops) {
+    var id = 'g-grad-' + (++GRAD_SEQ);
+    var lg = svg.append('defs').append('linearGradient')
+      .attr('id', id).attr('gradientUnits', 'userSpaceOnUse')
+      .attr('x1', x1).attr('y1', y1).attr('x2', x2).attr('y2', y2);
+    var n = stops.length;
+    stops.forEach(function (c, i) {
+      lg.append('stop')
+        .attr('offset', (n === 1 ? 0 : (i / (n - 1)) * 100) + '%')
+        .attr('stop-color', c);
+    });
+    return 'url(#' + id + ')';
+  }
+
   /* ── 1) BARRAS VERTICALES ─────────────────────────────────────── */
   function barrasVerticales(box, cfg) {
     if (!cfg || !cfg.datos) return;
@@ -55,11 +72,18 @@
       .attr('fill', '#222').style('font-size', '13px')
       .attr('transform', 'rotate(-25)').attr('text-anchor', 'end').attr('dx', '-4').attr('dy', '8');
 
+    // Relleno: degradé vertical (arriba claro → abajo oscuro) o color plano.
+    // Coordenadas en el sistema de 'g' (userSpaceOnUse): y=0 arriba, y=ih abajo.
+    var fill = color;
+    if (cfg.gradiente && cfg.gradiente.stops) {
+      fill = makeGradient(svg, 0, 0, 0, ih, cfg.gradiente.stops);
+    }
+
     // Barras
     var bars = g.selectAll('.g-bar').data(data).join('rect')
       .attr('x', function (d) { return x(d.label); })
       .attr('width', x.bandwidth())
-      .attr('y', ih).attr('height', 0).attr('fill', color);
+      .attr('y', ih).attr('height', 0).attr('fill', fill);
 
     // Valores encima
     var vals = g.selectAll('.g-val').data(data).join('text')
@@ -113,10 +137,17 @@
     // Línea vertical del eje Y
     g.append('line').attr('x1', 0).attr('x2', 0).attr('y1', 0).attr('y2', ih).attr('stroke', AXIS);
 
+    // Relleno: degradé horizontal (izquierda oscuro → derecha claro) o color plano.
+    // Coordenadas en el sistema de 'g' (userSpaceOnUse): x=0 izquierda, x=iw derecha.
+    var fill = color;
+    if (cfg.gradiente && cfg.gradiente.stops) {
+      fill = makeGradient(svg, 0, 0, iw, 0, cfg.gradiente.stops);
+    }
+
     // Barras
     var bars = g.selectAll('.g-hbar').data(data).join('rect')
       .attr('x', 0).attr('y', function (d) { return y(d.label); })
-      .attr('height', y.bandwidth()).attr('width', 0).attr('fill', color);
+      .attr('height', y.bandwidth()).attr('width', 0).attr('fill', fill);
 
     // Valores al final
     var vals = g.selectAll('.g-hval').data(data).join('text')
