@@ -7,7 +7,7 @@ window.GRAFICOS = {
     "sufijo": "%",
     "decimales": 1,
     "color": "#2f80b4",
-    "gradiente": { "dir": "vertical", "stops": ["#3f8ae8", "#1b4fb4", "#0b1a5e"] },
+    "gradiente": { "dir": "vertical", "stops": ["#4fa6f0", "#2c62b6", "#0b1a5e"] },
     "datos": [
       {
         "label": "Bienestar",
