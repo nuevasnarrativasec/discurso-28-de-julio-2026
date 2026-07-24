@@ -2025,7 +2025,7 @@
     .modF-acc-item.is-open .modF-acc-toggle::after { opacity: 0; transform: translate(-50%,-50%) rotate(90deg); }
 
     /* Colores por calificación */
-    .modF-acc-item.azul    .modF-acc-head { --hdr-bg: linear-gradient(180deg,#3a63b4,#2f56a6); --hdr-fg: #1a1a1a; }
+    .modF-acc-item.azul    .modF-acc-head { --hdr-bg: linear-gradient(180deg,#3a63b4,#2f56a6); --hdr-fg: #fff; }
     .modF-acc-item.ambar   .modF-acc-head { --hdr-bg: linear-gradient(180deg,#f3b551,#e9a637); --hdr-fg: #1a1a1a; }
     .modF-acc-item.naranja .modF-acc-head { --hdr-bg: linear-gradient(180deg,#e35f2f,#d55024); --hdr-fg: #1a1a1a; }
     .modF-acc-item.rojo    .modF-acc-head { --hdr-bg: linear-gradient(180deg,#d83c2f,#c8322a); --hdr-fg: #1a1a1a; }

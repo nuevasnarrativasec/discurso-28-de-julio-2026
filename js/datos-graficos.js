@@ -110,6 +110,7 @@ window.GRAFICOS = {
   },
   "conexiones": {
     "color": "#2f80b4",
+    "gradiente": { "dir": "linear", "stops": ["#4f93e6", "#2360bf", "#0c2a78"] },
     "nodos": [
       {
         "id": "Salud y Sistema Sanitario",

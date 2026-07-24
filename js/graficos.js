@@ -181,6 +181,22 @@
       .attr('class', 'g-net-svg').attr('viewBox', '0 0 ' + W + ' ' + H)
       .attr('width', '100%').attr('height', H).style('font-family', FONT);
 
+    // Relleno de los nodos: degradé lineal diagonal (claro arriba-izq → oscuro
+    // abajo-der) o color plano. objectBoundingBox → escala a cada círculo.
+    var nodeFill = color;
+    if (cfg.gradiente && cfg.gradiente.stops) {
+      var rid = 'g-grad-net';
+      var rg = svg.append('defs').append('linearGradient')
+        .attr('id', rid).attr('x1', 0).attr('y1', 0).attr('x2', 1).attr('y2', 1);
+      var ns = cfg.gradiente.stops;
+      ns.forEach(function (c, i) {
+        rg.append('stop')
+          .attr('offset', (ns.length === 1 ? 0 : (i / (ns.length - 1)) * 100) + '%')
+          .attr('stop-color', c);
+      });
+      nodeFill = 'url(#' + rid + ')';
+    }
+
     var link = svg.append('g')
       .attr('stroke', '#b7b1a4').attr('stroke-opacity', 0.85)
       .selectAll('line').data(enlaces).join('line')
@@ -190,7 +206,7 @@
 
     node.append('circle')
       .attr('r', function (d) { return r(d.valor); })
-      .attr('fill', color).attr('fill-opacity', 0.92)
+      .attr('fill', nodeFill).attr('fill-opacity', nodeFill === color ? 0.92 : 1)
       .attr('stroke', '#fff').attr('stroke-width', 1.5);
 
     var label = node.append('text')
