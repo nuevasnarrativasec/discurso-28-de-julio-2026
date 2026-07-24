@@ -36,7 +36,7 @@ window.GRAFICOS = {
     "sufijo": "",
     "decimales": 0,
     "color": "#2f80b4",
-    "gradiente": { "dir": "horizontal", "stops": ["#3b1a86", "#6b3fc9", "#a98cf5"] },
+    "gradiente": { "dir": "horizontal", "stops": ["#32572f", "#5b9856", "#8eec87"] },
     "datos": [
       {
         "label": "Salud y Sistema Sanitario",
