@@ -6,61 +6,73 @@ const DATA = {
     "titulo": "Mensaje a la Nación — 28 de julio de 2026",
     "duracion_total_seg": 2706,
     "duracion_total_fmt": "45:06",
-    "procesado": "2026-07-28T20:08:37"
+    "procesado": "2026-07-28T21:19:52"
   },
   "resumen_temas": [
     {
       "tema": "Economía",
-      "porcentaje": 26.4,
-      "duracion_seg": 713,
+      "porcentaje": 25.8,
+      "duracion_seg": 698,
       "color": "#1a1a2e"
     },
     {
       "tema": "Otros",
-      "porcentaje": 19.3,
-      "duracion_seg": 521,
+      "porcentaje": 17.9,
+      "duracion_seg": 485,
       "color": "#666"
     },
     {
       "tema": "Democracia e Instituciones",
-      "porcentaje": 13.4,
-      "duracion_seg": 362,
+      "porcentaje": 12.8,
+      "duracion_seg": 346,
       "color": "#7f8c8d"
     },
     {
       "tema": "Infraestructura",
       "porcentaje": 12.6,
-      "duracion_seg": 341,
+      "duracion_seg": 340,
       "color": "#8e44ad"
     },
     {
       "tema": "Seguridad",
-      "porcentaje": 8.9,
-      "duracion_seg": 242,
+      "porcentaje": 8.2,
+      "duracion_seg": 223,
       "color": "#c0392b"
     },
     {
-      "tema": "Anticorrupción",
-      "porcentaje": 7.2,
-      "duracion_seg": 195,
+      "tema": "Reforma del Estado",
+      "porcentaje": 6.6,
+      "duracion_seg": 180,
       "color": "#e67e22"
     },
     {
-      "tema": "Agricultura",
-      "porcentaje": 4.8,
-      "duracion_seg": 129,
-      "color": "#d35400"
-    },
-    {
       "tema": "Educación",
-      "porcentaje": 4.6,
-      "duracion_seg": 125,
+      "porcentaje": 4.5,
+      "duracion_seg": 121,
       "color": "#27ae60"
     },
     {
+      "tema": "Agricultura",
+      "porcentaje": 4.2,
+      "duracion_seg": 114,
+      "color": "#d35400"
+    },
+    {
+      "tema": "Fenómeno El Niño",
+      "porcentaje": 3.6,
+      "duracion_seg": 98,
+      "color": "#0891b2"
+    },
+    {
+      "tema": "Salud",
+      "porcentaje": 1.5,
+      "duracion_seg": 41,
+      "color": "#2980b9"
+    },
+    {
       "tema": "Regiones",
-      "porcentaje": 1.3,
-      "duracion_seg": 36,
+      "porcentaje": 0.7,
+      "duracion_seg": 18,
       "color": "#16a085"
     },
     {
@@ -204,7 +216,7 @@ const DATA = {
     },
     {
       "id": 8,
-      "tema": "Anticorrupción",
+      "tema": "Reforma del Estado",
       "inicio": 289.0,
       "fin": 314.0,
       "inicio_fmt": "04:49",
@@ -215,7 +227,7 @@ const DATA = {
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Economía → Anticorrupción"
+          "descripcion": "De Economía → Reforma del Estado"
         }
       ]
     },
@@ -232,7 +244,7 @@ const DATA = {
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Infraestructura"
+          "descripcion": "De Reforma del Estado → Infraestructura"
         }
       ]
     },
@@ -409,16 +421,33 @@ const DATA = {
       "id": 19,
       "tema": "Economía",
       "inicio": 540.0,
-      "fin": 569.0,
+      "fin": 557.0,
       "inicio_fmt": "09:00",
-      "fin_fmt": "09:29",
-      "duracion_seg": 29.0,
-      "extracto": "que ha generado que el Perú tenga hoy la mayor desigualdad de ingresos en toda América Latina. Mientras 3 de cada 10 compatriotas no tienen certeza de contar con los alimentos necesarios diariamente. Y como consecuencia de ello, el 35% de los niños de 6 a 35 meses sufre anemia.",
+      "fin_fmt": "09:17",
+      "duracion_seg": 17.0,
+      "extracto": "que ha generado que el Perú tenga hoy la mayor desigualdad de ingresos en toda América Latina. Mientras 3 de cada 10 compatriotas no tienen certeza de contar con los alimentos necesarios diariamente.",
       "color": "#1a1a2e",
       "eventos": [
         {
           "tipo": "cambio_tema",
           "descripcion": "De Seguridad → Economía"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "tema": "Salud",
+      "inicio": 558.0,
+      "fin": 573.0,
+      "inicio_fmt": "09:18",
+      "fin_fmt": "09:33",
+      "duracion_seg": 15.0,
+      "extracto": "Y como consecuencia de ello, el 35% de los niños de 6 a 35 meses sufre anemia. Esto es realmente inmoral.",
+      "color": "#2980b9",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Salud"
         },
         {
           "tipo": "cifra",
@@ -427,24 +456,24 @@ const DATA = {
       ]
     },
     {
-      "id": 20,
-      "tema": "Otros",
-      "inicio": 570.0,
+      "id": 21,
+      "tema": "Fenómeno El Niño",
+      "inicio": 574.0,
       "fin": 596.0,
-      "inicio_fmt": "09:30",
+      "inicio_fmt": "09:34",
       "fin_fmt": "09:56",
-      "duracion_seg": 26.0,
-      "extracto": "Esto es realmente inmoral. Por otro lado, el cambio climático y el acecho constante del fenómeno del niño no son problemas del futuro, son amenazas del presente que cada año destruyen cultivos, aíslan pueblos enteros, rompen carreteras",
-      "color": "#666",
+      "duracion_seg": 22.0,
+      "extracto": "Por otro lado, el cambio climático y el acecho constante del fenómeno del niño no son problemas del futuro, son amenazas del presente que cada año destruyen cultivos, aíslan pueblos enteros, rompen carreteras",
+      "color": "#0891b2",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Economía → Otros"
+          "descripcion": "De Salud → Fenómeno El Niño"
         }
       ]
     },
     {
-      "id": 21,
+      "id": 22,
       "tema": "Agricultura",
       "inicio": 597.0,
       "fin": 623.5,
@@ -456,12 +485,12 @@ const DATA = {
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Otros → Agricultura"
+          "descripcion": "De Fenómeno El Niño → Agricultura"
         }
       ]
     },
     {
-      "id": 22,
+      "id": 23,
       "tema": "Otros",
       "inicio": 624.0,
       "fin": 690.4,
@@ -478,8 +507,8 @@ const DATA = {
       ]
     },
     {
-      "id": 23,
-      "tema": "Anticorrupción",
+      "id": 24,
+      "tema": "Reforma del Estado",
       "inicio": 690.4,
       "fin": 709.2,
       "inicio_fmt": "11:30",
@@ -490,12 +519,12 @@ const DATA = {
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Otros → Anticorrupción"
+          "descripcion": "De Otros → Reforma del Estado"
         }
       ]
     },
     {
-      "id": 24,
+      "id": 25,
       "tema": "Economía",
       "inicio": 709.2,
       "fin": 764.5,
@@ -507,7 +536,7 @@ const DATA = {
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Economía"
+          "descripcion": "De Reforma del Estado → Economía"
         },
         {
           "tipo": "anuncio",
@@ -516,7 +545,7 @@ const DATA = {
       ]
     },
     {
-      "id": 25,
+      "id": 26,
       "tema": "Economía",
       "inicio": 764.5,
       "fin": 788.3,
@@ -528,7 +557,7 @@ const DATA = {
       "eventos": []
     },
     {
-      "id": 26,
+      "id": 27,
       "tema": "Otros",
       "inicio": 788.3,
       "fin": 804.5,
@@ -549,8 +578,8 @@ const DATA = {
       ]
     },
     {
-      "id": 27,
-      "tema": "Anticorrupción",
+      "id": 28,
+      "tema": "Reforma del Estado",
       "inicio": 804.5,
       "fin": 814.8,
       "inicio_fmt": "13:25",
@@ -561,58 +590,92 @@ const DATA = {
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Otros → Anticorrupción"
-        }
-      ]
-    },
-    {
-      "id": 28,
-      "tema": "Seguridad",
-      "inicio": 814.8,
-      "fin": 852.4,
-      "inicio_fmt": "13:35",
-      "fin_fmt": "14:12",
-      "duracion_seg": 37.6,
-      "extracto": "El primer objetivo, emergencias y seguridad ciudadana. Toda gran obra requiere un orden de prioridades. Tenemos miedo por nuestras vidas al salir a la calle o que nuestras casas se inunden en pocos meses. En el plazo inmediato, mi gobierno estará concentrado en dos frentes de...",
-      "color": "#c0392b",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Seguridad"
+          "descripcion": "De Otros → Reforma del Estado"
         }
       ]
     },
     {
       "id": 29,
-      "tema": "Anticorrupción",
-      "inicio": 852.4,
-      "fin": 876.2,
-      "inicio_fmt": "14:12",
-      "fin_fmt": "14:36",
-      "duracion_seg": 23.8,
-      "extracto": "El clima no espera los tiempos de la burocracia. Por eso implementaremos un plan de contingencia nacional frente al fenómeno El Niño que romperá con la lógica de la reacción tardía para pasar a la era de la prevención oportuna. Iniciaremos de inmediato la descolmatación masiva...",
-      "color": "#e67e22",
+      "tema": "Seguridad",
+      "inicio": 814.8,
+      "fin": 835.6,
+      "inicio_fmt": "13:35",
+      "fin_fmt": "13:56",
+      "duracion_seg": 20.8,
+      "extracto": "El primer objetivo, emergencias y seguridad ciudadana. Toda gran obra requiere un orden de prioridades. Tenemos miedo por nuestras vidas al salir a la calle o que nuestras casas se inunden en pocos meses.",
+      "color": "#c0392b",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Anticorrupción"
+          "descripcion": "De Reforma del Estado → Seguridad"
         }
       ]
     },
     {
       "id": 30,
-      "tema": "Otros",
-      "inicio": 876.2,
-      "fin": 901.8,
-      "inicio_fmt": "14:36",
-      "fin_fmt": "15:02",
-      "duracion_seg": 25.6,
-      "extracto": "la construcción de defensas ribereñas con criterios técnicos modernos y la protección de las cuencas. Destinaremos maquinaria pesada a los puntos críticos e implementaremos un sistema logístico de respuesta rápida para asegurar el abastecimiento de alimentos, agua, medicinas en...",
-      "color": "#666",
+      "tema": "Fenómeno El Niño",
+      "inicio": 835.6,
+      "fin": 843.6,
+      "inicio_fmt": "13:56",
+      "fin_fmt": "14:04",
+      "duracion_seg": 8.0,
+      "extracto": "En el plazo inmediato, mi gobierno estará concentrado en dos frentes de emergencia nacional.",
+      "color": "#0891b2",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Otros"
+          "descripcion": "De Seguridad → Fenómeno El Niño"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "tema": "Seguridad",
+      "inicio": 843.6,
+      "fin": 852.4,
+      "inicio_fmt": "14:04",
+      "fin_fmt": "14:12",
+      "duracion_seg": 8.8,
+      "extracto": "Mitigación del fenómeno El Niño y seguridad ciudadana. Para ello emplearemos recursos extraordinarios.",
+      "color": "#c0392b",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Fenómeno El Niño → Seguridad"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "tema": "Reforma del Estado",
+      "inicio": 852.4,
+      "fin": 861.2,
+      "inicio_fmt": "14:12",
+      "fin_fmt": "14:21",
+      "duracion_seg": 8.8,
+      "extracto": "El clima no espera los tiempos de la burocracia. Por eso implementaremos un plan de contingencia nacional",
+      "color": "#e67e22",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Seguridad → Reforma del Estado"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "tema": "Fenómeno El Niño",
+      "inicio": 861.2,
+      "fin": 901.8,
+      "inicio_fmt": "14:21",
+      "fin_fmt": "15:02",
+      "duracion_seg": 40.6,
+      "extracto": "frente al fenómeno El Niño que romperá con la lógica de la reacción tardía para pasar a la era de la prevención oportuna. Iniciaremos de inmediato la descolmatación masiva de los ríos, la construcción de defensas ribereñas con criterios técnicos modernos y la protección de las...",
+      "color": "#0891b2",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Reforma del Estado → Fenómeno El Niño"
         },
         {
           "tipo": "anuncio",
@@ -621,7 +684,7 @@ const DATA = {
       ]
     },
     {
-      "id": 31,
+      "id": 34,
       "tema": "Agricultura",
       "inicio": 901.8,
       "fin": 940.9,
@@ -633,7 +696,7 @@ const DATA = {
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Otros → Agricultura"
+          "descripcion": "De Fenómeno El Niño → Agricultura"
         },
         {
           "tipo": "anuncio",
@@ -642,7 +705,7 @@ const DATA = {
       ]
     },
     {
-      "id": 32,
+      "id": 35,
       "tema": "Seguridad",
       "inicio": 940.9,
       "fin": 949.3,
@@ -659,7 +722,7 @@ const DATA = {
       ]
     },
     {
-      "id": 33,
+      "id": 36,
       "tema": "Democracia e Instituciones",
       "inicio": 949.3,
       "fin": 960.3,
@@ -676,7 +739,7 @@ const DATA = {
       ]
     },
     {
-      "id": 34,
+      "id": 37,
       "tema": "Seguridad",
       "inicio": 960.3,
       "fin": 1025.0,
@@ -693,7 +756,7 @@ const DATA = {
       ]
     },
     {
-      "id": 35,
+      "id": 38,
       "tema": "Otros",
       "inicio": 1025.0,
       "fin": 1035.3,
@@ -710,7 +773,7 @@ const DATA = {
       ]
     },
     {
-      "id": 36,
+      "id": 39,
       "tema": "Economía",
       "inicio": 1035.3,
       "fin": 1046.5,
@@ -727,7 +790,7 @@ const DATA = {
       ]
     },
     {
-      "id": 37,
+      "id": 40,
       "tema": "Seguridad",
       "inicio": 1046.5,
       "fin": 1101.9,
@@ -744,7 +807,7 @@ const DATA = {
       ]
     },
     {
-      "id": 38,
+      "id": 41,
       "tema": "Democracia e Instituciones",
       "inicio": 1101.9,
       "fin": 1130.2,
@@ -761,7 +824,7 @@ const DATA = {
       ]
     },
     {
-      "id": 39,
+      "id": 42,
       "tema": "Otros",
       "inicio": 1130.2,
       "fin": 1147.9,
@@ -778,14 +841,14 @@ const DATA = {
       ]
     },
     {
-      "id": 40,
+      "id": 43,
       "tema": "Seguridad",
       "inicio": 1147.9,
-      "fin": 1180.8,
+      "fin": 1169.8,
       "inicio_fmt": "19:08",
-      "fin_fmt": "19:41",
-      "duracion_seg": 32.9,
-      "extracto": "para que las cárceles vuelvan a ser centros de reclusión y no centros de operaciones del crimen organizado. Finalmente, para enfrentar los retos urgentes que nos trae el fenómeno del niño y la inseguridad ciudadana, emitiremos decretos de urgencia",
+      "fin_fmt": "19:30",
+      "duracion_seg": 21.9,
+      "extracto": "para que las cárceles vuelvan a ser centros de reclusión y no centros de operaciones del crimen organizado.",
       "color": "#c0392b",
       "eventos": [
         {
@@ -795,24 +858,58 @@ const DATA = {
       ]
     },
     {
-      "id": 41,
-      "tema": "Democracia e Instituciones",
-      "inicio": 1180.8,
-      "fin": 1210.0,
-      "inicio_fmt": "19:41",
-      "fin_fmt": "20:10",
-      "duracion_seg": 29.2,
-      "extracto": "y solicitaremos al Congreso facultades delegadas. Además, para los trabajos de prevención y reconstrucción convocaremos a los gobiernos subnacionales. a sumarse a estos esfuerzos. Y para enfrentar la delincuencia, coordinaremos con el Poder",
-      "color": "#7f8c8d",
+      "id": 44,
+      "tema": "Fenómeno El Niño",
+      "inicio": 1169.8,
+      "fin": 1180.8,
+      "inicio_fmt": "19:30",
+      "fin_fmt": "19:41",
+      "duracion_seg": 11.0,
+      "extracto": "Finalmente, para enfrentar los retos urgentes que nos trae el fenómeno del niño y la inseguridad ciudadana, emitiremos decretos de urgencia",
+      "color": "#0891b2",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Seguridad → Democracia e Instituciones"
+          "descripcion": "De Seguridad → Fenómeno El Niño"
         }
       ]
     },
     {
-      "id": 42,
+      "id": 45,
+      "tema": "Democracia e Instituciones",
+      "inicio": 1180.8,
+      "fin": 1193.3,
+      "inicio_fmt": "19:41",
+      "fin_fmt": "19:53",
+      "duracion_seg": 12.6,
+      "extracto": "y solicitaremos al Congreso facultades delegadas.",
+      "color": "#7f8c8d",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Fenómeno El Niño → Democracia e Instituciones"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "tema": "Fenómeno El Niño",
+      "inicio": 1193.3,
+      "fin": 1210.0,
+      "inicio_fmt": "19:53",
+      "fin_fmt": "20:10",
+      "duracion_seg": 16.7,
+      "extracto": "Además, para los trabajos de prevención y reconstrucción convocaremos a los gobiernos subnacionales. a sumarse a estos esfuerzos. Y para enfrentar la delincuencia, coordinaremos con el Poder",
+      "color": "#0891b2",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Democracia e Instituciones → Fenómeno El Niño"
+        }
+      ]
+    },
+    {
+      "id": 47,
       "tema": "Democracia e Instituciones",
       "inicio": 1210.0,
       "fin": 1233.0,
@@ -821,16 +918,21 @@ const DATA = {
       "duracion_seg": 23.0,
       "extracto": "Judicial y el Ministerio Público para aprobar las primeras reformas operativas, procesales, y penitenciarias. Nuestro segundo objetivo nacional será mejorar la calidad de vida de los peruanos. Desde la gestación estableceremos metas nacionales",
       "color": "#7f8c8d",
-      "eventos": []
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Fenómeno El Niño → Democracia e Instituciones"
+        }
+      ]
     },
     {
-      "id": 43,
+      "id": 48,
       "tema": "Otros",
       "inicio": 1233.0,
-      "fin": 1327.0,
+      "fin": 1292.0,
       "inicio_fmt": "20:33",
-      "fin_fmt": "22:07",
-      "duracion_seg": 94.0,
+      "fin_fmt": "21:32",
+      "duracion_seg": 59.0,
       "extracto": "claras para que la para que la acción del Estado cierre las enormes brechas sociales y territoriales que todavía dividen al país. Para alcanzar este objetivo, reorganizaremos los programas sociales y los servicios públicos alrededor de tres grandes políticas de Estado. En primer...",
       "color": "#666",
       "eventos": [
@@ -841,28 +943,41 @@ const DATA = {
       ]
     },
     {
-      "id": 44,
-      "tema": "Regiones",
-      "inicio": 1327.0,
-      "fin": 1345.0,
-      "inicio_fmt": "22:07",
-      "fin_fmt": "22:25",
-      "duracion_seg": 18.0,
-      "extracto": "la Amazonía, y las comunidades indígenas, donde las desigualdades históricas demandan una respuesta inmediata y contundente. Para la etapa escolar, relanzaremos el PRONA para garantizar que los",
-      "color": "#16a085",
+      "id": 49,
+      "tema": "Salud",
+      "inicio": 1292.0,
+      "fin": 1318.0,
+      "inicio_fmt": "21:32",
+      "fin_fmt": "21:58",
+      "duracion_seg": 26.0,
+      "extracto": "años sufre desnutrición crónica y el treinta y cinco por ciento sufre anemia. Reduciremos ambas cifras a la mitad concentrando el esfuerzo en las poblaciones vulnerables. Reduciremos también la pobreza de los niños de cero a once",
+      "color": "#2980b9",
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Otros → Regiones"
-        },
-        {
-          "tipo": "mencion_regional",
-          "descripcion": "Menciona: Amazonía"
+          "descripcion": "De Otros → Salud"
         }
       ]
     },
     {
-      "id": 45,
+      "id": 50,
+      "tema": "Otros",
+      "inicio": 1318.0,
+      "fin": 1345.0,
+      "inicio_fmt": "21:58",
+      "fin_fmt": "22:25",
+      "duracion_seg": 27.0,
+      "extracto": "años, de más del veintidós por ciento a la mitad, y desplegaremos una intervención especial en las zonas rurales, la Amazonía, y las comunidades indígenas, donde las desigualdades históricas demandan una respuesta inmediata y contundente. Para la etapa escolar, relanzaremos el...",
+      "color": "#666",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Salud → Otros"
+        }
+      ]
+    },
+    {
+      "id": 51,
       "tema": "Educación",
       "inicio": 1345.0,
       "fin": 1365.0,
@@ -874,12 +989,12 @@ const DATA = {
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Regiones → Educación"
+          "descripcion": "De Otros → Educación"
         }
       ]
     },
     {
-      "id": 46,
+      "id": 52,
       "tema": "Otros",
       "inicio": 1365.0,
       "fin": 1390.0,
@@ -896,7 +1011,7 @@ const DATA = {
       ]
     },
     {
-      "id": 47,
+      "id": 53,
       "tema": "Educación",
       "inicio": 1390.0,
       "fin": 1451.0,
@@ -917,14 +1032,14 @@ const DATA = {
       ]
     },
     {
-      "id": 48,
+      "id": 54,
       "tema": "Agricultura",
       "inicio": 1451.0,
-      "fin": 1478.0,
+      "fin": 1472.0,
       "inicio_fmt": "24:11",
-      "fin_fmt": "24:38",
-      "duracion_seg": 27.0,
-      "extracto": "mientras que en el ámbito rural se eleva a más del dieciocho por ciento. Finalmente, utilizaremos herramientas digitales y sistemas de información integrados para identificar con mayor precisión a los hogares en situación de pobreza y vulnerabilidad. El estado deberá reconocer...",
+      "fin_fmt": "24:32",
+      "duracion_seg": 21.0,
+      "extracto": "mientras que en el ámbito rural se eleva a más del dieciocho por ciento. Finalmente, utilizaremos herramientas digitales y sistemas de información integrados para identificar con mayor precisión a los hogares en situación de pobreza y vulnerabilidad. El",
       "color": "#d35400",
       "eventos": [
         {
@@ -934,65 +1049,14 @@ const DATA = {
       ]
     },
     {
-      "id": 49,
-      "tema": "Educación",
-      "inicio": 1478.0,
-      "fin": 1505.0,
-      "inicio_fmt": "24:38",
-      "fin_fmt": "25:05",
-      "duracion_seg": 27.0,
-      "extracto": "educación, la ubicación, y las condiciones de cada familia para que la ayuda llegue a tiempo y no cuando ya sea demasiado tarde. Nuestro propósito será que ningún peruano quede desprotegido por el lugar donde",
-      "color": "#27ae60",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Agricultura → Educación"
-        }
-      ]
-    },
-    {
-      "id": 50,
-      "tema": "Economía",
-      "inicio": 1505.0,
-      "fin": 1547.0,
-      "inicio_fmt": "25:05",
-      "fin_fmt": "25:47",
-      "duracion_seg": 42.0,
-      "extracto": "vive, por la condición económica de su familia, o por la ausencia del estado. Proteger a nuestros niños y fortalecer a sus familias será proteger el futuro del Perú. La segunda política de estado a la que llamaremos jóvenes con futuro tendrá como objetivo impulsar la inserción...",
-      "color": "#1a1a2e",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Educación → Economía"
-        }
-      ]
-    },
-    {
-      "id": 51,
-      "tema": "Agricultura",
-      "inicio": 1547.0,
-      "fin": 1570.0,
-      "inicio_fmt": "25:47",
-      "fin_fmt": "26:10",
-      "duracion_seg": 23.0,
-      "extracto": "capital semilla joven, y apoyo integral al emprendedor con el fin de reducir la tasa de desempleo juvenil de casi diez por ciento a la mitad. Para que más jóvenes accedan a estudios superiores. Quiero dirigirme a los jóvenes para",
-      "color": "#d35400",
-      "eventos": [
-        {
-          "tipo": "cambio_tema",
-          "descripcion": "De Economía → Agricultura"
-        }
-      ]
-    },
-    {
-      "id": 52,
+      "id": 55,
       "tema": "Otros",
-      "inicio": 1570.0,
-      "fin": 1623.0,
-      "inicio_fmt": "26:10",
-      "fin_fmt": "27:03",
-      "duracion_seg": 53.0,
-      "extracto": "decirles desde aquí, desde este lugar, y desde este momento de mi vida, que somos más fuertes de lo que pensamos, que podemos más de lo que creemos, que la y la perseverancia la construimos día a día porque créanme siempre podemos volver a levantarnos para volver a comenzar una...",
+      "inicio": 1472.0,
+      "fin": 1505.0,
+      "inicio_fmt": "24:32",
+      "fin_fmt": "25:05",
+      "duracion_seg": 33.0,
+      "extracto": "estado deberá reconocer oportunamente los cambios en la ubicación y las condiciones de cada familia para que la ayuda llegue a tiempo y no cuando ya sea demasiado tarde. Nuestro propósito será que ningún peruano quede desprotegido por el lugar donde",
       "color": "#666",
       "eventos": [
         {
@@ -1002,14 +1066,82 @@ const DATA = {
       ]
     },
     {
-      "id": 53,
+      "id": 56,
+      "tema": "Economía",
+      "inicio": 1505.0,
+      "fin": 1545.0,
+      "inicio_fmt": "25:05",
+      "fin_fmt": "25:45",
+      "duracion_seg": 40.0,
+      "extracto": "vive, por la condición económica de su familia, o por la ausencia del estado. Proteger a nuestros niños y fortalecer a sus familias será proteger el futuro del Perú. La segunda política de estado a la que llamaremos jóvenes con futuro tendrá como objetivo impulsar la inserción...",
+      "color": "#1a1a2e",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Otros → Economía"
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "tema": "Agricultura",
+      "inicio": 1545.0,
+      "fin": 1558.0,
+      "inicio_fmt": "25:45",
+      "fin_fmt": "25:58",
+      "duracion_seg": 13.0,
+      "extracto": "productivos, capital semilla joven, y apoyo integral al emprendedor, con el fin de reducir la tasa de desempleo juvenil de casi diez por ciento",
+      "color": "#d35400",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Economía → Agricultura"
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "tema": "Educación",
+      "inicio": 1558.0,
+      "fin": 1581.0,
+      "inicio_fmt": "25:58",
+      "fin_fmt": "26:21",
+      "duracion_seg": 23.0,
+      "extracto": "a la mitad. Ampliaremos beca para que más jóvenes accedan a estudios superiores. Quiero dirigirme a los jóvenes para decirles desde aquí, desde este lugar, y desde este momento de mi vida, que somos más fuertes",
+      "color": "#27ae60",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Agricultura → Educación"
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "tema": "Otros",
+      "inicio": 1581.0,
+      "fin": 1623.0,
+      "inicio_fmt": "26:21",
+      "fin_fmt": "27:03",
+      "duracion_seg": 42.0,
+      "extracto": "de lo que pensamos, que podemos más de lo que creemos, que la y la perseverancia la construimos día a día porque créanme, siempre podemos volver a levantarnos para volver a comenzar una sociedad que mira con esperanza a sus jóvenes, también debe mirar con gratitud y respeto a...",
+      "color": "#666",
+      "eventos": [
+        {
+          "tipo": "cambio_tema",
+          "descripcion": "De Educación → Otros"
+        }
+      ]
+    },
+    {
+      "id": 60,
       "tema": "Infraestructura",
       "inicio": 1623.0,
       "fin": 1646.0,
       "inicio_fmt": "27:03",
       "fin_fmt": "27:26",
       "duracion_seg": 23.0,
-      "extracto": "antes el camino para ello crearemos una tercera política de estado para la protección de los adultos mayores a la que denominaremos cuidando la experiencia impulsaremos una política de protección integral al adulto mayor que garantice educación, acompañamiento,",
+      "extracto": "antes el camino. Para ello crearemos una tercera política de estado para la protección de los adultos mayores, a la que denominaremos cuidando la experiencia. Impulsaremos una política de protección integral al adulto mayor que garantice educación, acompañamiento,",
       "color": "#8e44ad",
       "eventos": [
         {
@@ -1023,14 +1155,14 @@ const DATA = {
       ]
     },
     {
-      "id": 54,
+      "id": 61,
       "tema": "Economía",
       "inicio": 1646.0,
       "fin": 1669.0,
       "inicio_fmt": "27:26",
       "fin_fmt": "27:49",
       "duracion_seg": 23.0,
-      "extracto": "seguridad económica, espacios de integración, y una vida digna. Garantizaremos la aplicación progresiva de una pensión universal para que los adultos mayores para esos adultos mayores en situación de pobreza iniciaremos duplicando el monto",
+      "extracto": "seguridad económica, espacios de integración, y una vida digna. Garantizaremos la aplicación progresiva de una pensión universal para que los adultos mayores para esos adultos mayores en situación de pobreza. Iniciaremos duplicando el monto",
       "color": "#1a1a2e",
       "eventos": [
         {
@@ -1040,14 +1172,14 @@ const DATA = {
       ]
     },
     {
-      "id": 55,
+      "id": 62,
       "tema": "Otros",
       "inicio": 1669.0,
-      "fin": 1714.0,
+      "fin": 1715.0,
       "inicio_fmt": "27:49",
-      "fin_fmt": "28:34",
-      "duracion_seg": 45.0,
-      "extracto": "de pensión sesenta y cinco millones de pesos de trescientos cincuenta bimestral a setecientos bimestrales para los adultos mayores en situación de pobreza extrema desplegaremos brigadas móviles de afiliación en las zonas rurales, amazónicas, altoandinas, y fronterizas en el...",
+      "fin_fmt": "28:35",
+      "duracion_seg": 46.0,
+      "extracto": "de pensión sesenta y cinco millones de pesos. de trescientos cincuenta bimestral a setecientos bimestrales para los adultos mayores en situación de pobreza extrema. Desplegaremos brigadas móviles de afiliación en las zonas rurales, amazónicas, altoandinas, y fronterizas. El país...",
       "color": "#666",
       "eventos": [
         {
@@ -1057,14 +1189,14 @@ const DATA = {
       ]
     },
     {
-      "id": 56,
+      "id": 63,
       "tema": "Economía",
-      "inicio": 1714.0,
+      "inicio": 1715.0,
       "fin": 1736.0,
-      "inicio_fmt": "28:34",
+      "inicio_fmt": "28:35",
       "fin_fmt": "28:56",
-      "duracion_seg": 22.0,
-      "extracto": "para apuntalar el crecimiento para apuntalar el crecimiento de nuestro capital humano y la es necesario incrementar la calidad y disponibilidad de",
+      "duracion_seg": 21.0,
+      "extracto": "crecimiento para apuntalar el crecimiento de nuestro capital humano y la es necesario incrementar la calidad y disponibilidad de",
       "color": "#1a1a2e",
       "eventos": [
         {
@@ -1074,7 +1206,7 @@ const DATA = {
       ]
     },
     {
-      "id": 57,
+      "id": 64,
       "tema": "Infraestructura",
       "inicio": 1736.0,
       "fin": 1763.0,
@@ -1091,7 +1223,7 @@ const DATA = {
       ]
     },
     {
-      "id": 58,
+      "id": 65,
       "tema": "Infraestructura",
       "inicio": 1763.0,
       "fin": 1776.0,
@@ -1103,13 +1235,13 @@ const DATA = {
       "eventos": []
     },
     {
-      "id": 59,
+      "id": 66,
       "tema": "Agricultura",
       "inicio": 1776.0,
-      "fin": 1789.0,
+      "fin": 1790.0,
       "inicio_fmt": "29:36",
-      "fin_fmt": "29:49",
-      "duracion_seg": 13.0,
+      "fin_fmt": "29:50",
+      "duracion_seg": 14.0,
       "extracto": "canales de riego, tuberías, y estaciones de bombeo. Expandiremos el acceso al agua potable con plantas de tratamiento y sistemas de conectaremos al Perú con",
       "color": "#d35400",
       "eventos": [
@@ -1120,13 +1252,13 @@ const DATA = {
       ]
     },
     {
-      "id": 60,
+      "id": 67,
       "tema": "Infraestructura",
-      "inicio": 1789.0,
+      "inicio": 1790.0,
       "fin": 1825.0,
-      "inicio_fmt": "29:49",
+      "inicio_fmt": "29:50",
       "fin_fmt": "30:25",
-      "duracion_seg": 36.0,
+      "duracion_seg": 35.0,
       "extracto": "carreteras y otras vías modernas y seguras reduciendo los tiempos de viaje y costos logísticos fortaleciendo la producción y los mercados de los pueblos indígenas. Todas estas obras sentarán las bases y los cimientos para el verdadero desarrollo de todo el Perú. Quisiera...",
       "color": "#8e44ad",
       "eventos": [
@@ -1145,7 +1277,7 @@ const DATA = {
       ]
     },
     {
-      "id": 61,
+      "id": 68,
       "tema": "Infraestructura",
       "inicio": 1825.0,
       "fin": 1908.0,
@@ -1170,7 +1302,7 @@ const DATA = {
       ]
     },
     {
-      "id": 62,
+      "id": 69,
       "tema": "Infraestructura",
       "inicio": 1908.0,
       "fin": 1941.0,
@@ -1191,7 +1323,7 @@ const DATA = {
       ]
     },
     {
-      "id": 63,
+      "id": 70,
       "tema": "Economía",
       "inicio": 1941.0,
       "fin": 1963.0,
@@ -1208,8 +1340,8 @@ const DATA = {
       ]
     },
     {
-      "id": 64,
-      "tema": "Anticorrupción",
+      "id": 71,
+      "tema": "Reforma del Estado",
       "inicio": 1963.0,
       "fin": 2015.0,
       "inicio_fmt": "32:43",
@@ -1220,7 +1352,7 @@ const DATA = {
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Economía → Anticorrupción"
+          "descripcion": "De Economía → Reforma del Estado"
         },
         {
           "tipo": "anuncio",
@@ -1229,7 +1361,7 @@ const DATA = {
       ]
     },
     {
-      "id": 65,
+      "id": 72,
       "tema": "Economía",
       "inicio": 2015.0,
       "fin": 2039.0,
@@ -1241,7 +1373,7 @@ const DATA = {
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Economía"
+          "descripcion": "De Reforma del Estado → Economía"
         },
         {
           "tipo": "anuncio",
@@ -1250,8 +1382,8 @@ const DATA = {
       ]
     },
     {
-      "id": 66,
-      "tema": "Anticorrupción",
+      "id": 73,
+      "tema": "Reforma del Estado",
       "inicio": 2039.0,
       "fin": 2075.0,
       "inicio_fmt": "33:59",
@@ -1262,7 +1394,7 @@ const DATA = {
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Economía → Anticorrupción"
+          "descripcion": "De Economía → Reforma del Estado"
         },
         {
           "tipo": "cifra",
@@ -1271,7 +1403,7 @@ const DATA = {
       ]
     },
     {
-      "id": 67,
+      "id": 74,
       "tema": "Infraestructura",
       "inicio": 2075.0,
       "fin": 2093.0,
@@ -1283,12 +1415,12 @@ const DATA = {
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Infraestructura"
+          "descripcion": "De Reforma del Estado → Infraestructura"
         }
       ]
     },
     {
-      "id": 68,
+      "id": 75,
       "tema": "Economía",
       "inicio": 2093.0,
       "fin": 2116.0,
@@ -1305,8 +1437,8 @@ const DATA = {
       ]
     },
     {
-      "id": 69,
-      "tema": "Anticorrupción",
+      "id": 76,
+      "tema": "Reforma del Estado",
       "inicio": 2116.0,
       "fin": 2145.0,
       "inicio_fmt": "35:16",
@@ -1317,12 +1449,12 @@ const DATA = {
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Economía → Anticorrupción"
+          "descripcion": "De Economía → Reforma del Estado"
         }
       ]
     },
     {
-      "id": 70,
+      "id": 77,
       "tema": "Economía",
       "inicio": 2145.0,
       "fin": 2288.0,
@@ -1334,12 +1466,12 @@ const DATA = {
       "eventos": [
         {
           "tipo": "cambio_tema",
-          "descripcion": "De Anticorrupción → Economía"
+          "descripcion": "De Reforma del Estado → Economía"
         }
       ]
     },
     {
-      "id": 71,
+      "id": 78,
       "tema": "Economía",
       "inicio": 2288.0,
       "fin": 2310.0,
@@ -1351,7 +1483,7 @@ const DATA = {
       "eventos": []
     },
     {
-      "id": 72,
+      "id": 79,
       "tema": "Otros",
       "inicio": 2310.0,
       "fin": 2324.0,
@@ -1368,7 +1500,7 @@ const DATA = {
       ]
     },
     {
-      "id": 73,
+      "id": 80,
       "tema": "Economía",
       "inicio": 2324.0,
       "fin": 2337.0,
@@ -1385,7 +1517,7 @@ const DATA = {
       ]
     },
     {
-      "id": 74,
+      "id": 81,
       "tema": "Democracia e Instituciones",
       "inicio": 2337.0,
       "fin": 2359.0,
@@ -1402,7 +1534,7 @@ const DATA = {
       ]
     },
     {
-      "id": 75,
+      "id": 82,
       "tema": "Regiones",
       "inicio": 2359.0,
       "fin": 2377.0,
@@ -1423,7 +1555,7 @@ const DATA = {
       ]
     },
     {
-      "id": 76,
+      "id": 83,
       "tema": "Democracia e Instituciones",
       "inicio": 2377.0,
       "fin": 2423.9,
@@ -1440,7 +1572,7 @@ const DATA = {
       ]
     },
     {
-      "id": 77,
+      "id": 84,
       "tema": "Economía",
       "inicio": 2423.9,
       "fin": 2435.9,
@@ -1457,7 +1589,7 @@ const DATA = {
       ]
     },
     {
-      "id": 78,
+      "id": 85,
       "tema": "Política Exterior",
       "inicio": 2435.9,
       "fin": 2446.9,
@@ -1474,7 +1606,7 @@ const DATA = {
       ]
     },
     {
-      "id": 79,
+      "id": 86,
       "tema": "Economía",
       "inicio": 2446.9,
       "fin": 2480.0,
@@ -1491,7 +1623,7 @@ const DATA = {
       ]
     },
     {
-      "id": 80,
+      "id": 87,
       "tema": "Economía",
       "inicio": 2480.0,
       "fin": 2488.0,
@@ -1503,7 +1635,7 @@ const DATA = {
       "eventos": []
     },
     {
-      "id": 81,
+      "id": 88,
       "tema": "Infraestructura",
       "inicio": 2488.0,
       "fin": 2531.0,
@@ -1520,7 +1652,7 @@ const DATA = {
       ]
     },
     {
-      "id": 82,
+      "id": 89,
       "tema": "Democracia e Instituciones",
       "inicio": 2531.0,
       "fin": 2565.0,
@@ -1537,7 +1669,7 @@ const DATA = {
       ]
     },
     {
-      "id": 83,
+      "id": 90,
       "tema": "Seguridad",
       "inicio": 2565.0,
       "fin": 2580.1,
@@ -1554,7 +1686,7 @@ const DATA = {
       ]
     },
     {
-      "id": 84,
+      "id": 91,
       "tema": "Economía",
       "inicio": 2580.1,
       "fin": 2604.1,
@@ -1571,7 +1703,7 @@ const DATA = {
       ]
     },
     {
-      "id": 85,
+      "id": 92,
       "tema": "Economía",
       "inicio": 2604.1,
       "fin": 2630.1,
@@ -1583,7 +1715,7 @@ const DATA = {
       "eventos": []
     },
     {
-      "id": 86,
+      "id": 93,
       "tema": "Democracia e Instituciones",
       "inicio": 2630.1,
       "fin": 2652.1,
@@ -1600,7 +1732,7 @@ const DATA = {
       ]
     },
     {
-      "id": 87,
+      "id": 94,
       "tema": "Otros",
       "inicio": 2652.1,
       "fin": 2688.1,
@@ -1617,7 +1749,7 @@ const DATA = {
       ]
     },
     {
-      "id": 88,
+      "id": 95,
       "tema": "Economía",
       "inicio": 2688.1,
       "fin": 2697.1,
@@ -1634,7 +1766,7 @@ const DATA = {
       ]
     },
     {
-      "id": 89,
+      "id": 96,
       "tema": "Democracia e Instituciones",
       "inicio": 2697.1,
       "fin": 2706.1,
