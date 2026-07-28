@@ -1216,8 +1216,16 @@
     .stviewer-nav.next { right: 0; width: 66%; }
 
     @media (max-width: 640px) {
-      .stviewer-stage { width: 100vw; height: 100vh; max-height: none; border-radius: 0; }
-      .stviewer-close { top: 12px; }
+      /* El video no ocupa toda la pantalla: deja margen arriba (para la cabecera alta
+         del ARC) y abajo, de modo que el botón de cerrar quede siempre accesible. */
+      .stviewer { align-items: flex-start; padding: 14vh 0 4vh; box-sizing: border-box; }
+      .stviewer-stage {
+        width: min(88vw, calc(72vh * 9 / 16));
+        height: min(72vh, 88vw * 16 / 9);
+        max-height: 72vh;
+        border-radius: 14px;
+      }
+      .stviewer-close { top: 8px; right: 8px; }
       .footer-section .footer-content ul{
             display: block;
               margin: 0 auto;

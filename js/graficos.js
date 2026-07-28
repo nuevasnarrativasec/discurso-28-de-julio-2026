@@ -20,6 +20,24 @@
   function fmt(v, dec) {
     return (dec ? v.toFixed(dec) : Math.round(v).toString());
   }
+  // Reparte un texto en hasta maxLines líneas (equilibrando por longitud)
+  function wrapWords(text, maxLines) {
+    var words = String(text).split(/\s+/);
+    if (words.length <= 1) return [String(text)];
+    var target = Math.ceil(String(text).length / maxLines);
+    var lines = [], cur = '';
+    words.forEach(function (w) {
+      if (!cur) cur = w;
+      else if ((cur + ' ' + w).length <= target || lines.length === maxLines - 1) cur += ' ' + w;
+      else { lines.push(cur); cur = w; }
+    });
+    if (cur) lines.push(cur);
+    if (lines.length > maxLines) {
+      lines[maxLines - 1] = lines.slice(maxLines - 1).join(' ');
+      lines = lines.slice(0, maxLines);
+    }
+    return lines;
+  }
 
   var GRAD_SEQ = 0;
   /* Crea un degradé lineal (userSpaceOnUse) y devuelve el fill 'url(#id)'.
@@ -267,12 +285,22 @@
 
     var label = node.append('text')
       .attr('class', 'g-net-label')
-      .text(function (d) { return d.id; })
       .attr('text-anchor', 'middle')
-      .attr('dy', function (d) { return r(d.valor) + 15; })
-      .style('font-size', '12.5px').attr('fill', '#222')
+      .style('font-size', IS_MOBILE ? '13px' : '12.5px').attr('fill', '#222')
       .attr('paint-order', 'stroke').attr('stroke', 'rgba(248,246,241,0.9)').attr('stroke-width', 3.5)
       .attr('stroke-linejoin', 'round');
+    // Texto de la etiqueta: 1 línea en escritorio, hasta 3 líneas en móvil (evita solapes)
+    label.each(function (d) {
+      var t = d3.select(this);
+      var baseDy = r(d.valor) + 15;
+      var lines = IS_MOBILE ? wrapWords(d.id, d.id.length > 24 ? 3 : 2) : [d.id];
+      lines.forEach(function (ln, i) {
+        t.append('tspan')
+          .attr('x', 0)
+          .attr('dy', i === 0 ? baseDy : '1.15em')
+          .text(ln);
+      });
+    });
 
     // Resaltado de vecinos
     var adj = {};
