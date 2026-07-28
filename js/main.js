@@ -551,6 +551,9 @@ function cerrarDetalle() {
 
 // Keyboard: espacio = play/pause, escape = cerrar panel
 document.addEventListener('keydown', e => {
+  // Si el visor de historias (stories) está abierto, no interceptar teclas aquí
+  // (evita que las flechas activen/salten el player principal del discurso)
+  if (document.querySelector('.stviewer.open')) return;
   if (e.code === 'Space' && e.target === document.body) {
     e.preventDefault();
     togglePlay();

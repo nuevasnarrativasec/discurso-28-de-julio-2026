@@ -163,10 +163,11 @@
 
   function open(i) {
     if (!viewer) build();
+    buildBars(EDITORES.length);   // barra superior tipo Instagram: un segmento por editor
     document.body.style.overflow = 'hidden';
     viewer.classList.add('open');
     document.addEventListener('keydown', onKey);
-    curE = -1;                 // fuerza la reconstrucción de barras
+    curE = -1;
     go(i, 0);
   }
   function close() {
@@ -204,16 +205,14 @@
     if (si < 0) si = 0;
     if (si >= vids.length) si = vids.length - 1;
 
-    var editorChanged = (ei !== curE);
     curE = ei; curS = si;
-    if (editorChanged) buildBars(vids.length);
 
     headTxt.innerHTML = '<b>' + e.handle + '</b> <span>· ' + e.categoria + '</span>';
     headAv.innerHTML = e.avatar ? '<img src="' + e.avatar + '" alt="" onerror="this.remove()">' : '';
 
-    // Estado de las barras: llenas antes del segmento actual, vacías después
+    // Barra superior (un segmento por editor): llenas antes del editor actual, vacías después
     var bars = barsEl.querySelectorAll('.stviewer-bar > span');
-    bars.forEach(function(s, idx){ s.style.transition = 'none'; s.style.width = idx < si ? '100%' : '0%'; });
+    bars.forEach(function(s, idx){ s.style.transition = 'none'; s.style.width = idx < ei ? '100%' : '0%'; });
 
     stopProgress();
     usingFallback = false;
@@ -243,7 +242,7 @@
 
   // ── Progreso unificado (respeta la pausa) ───────────────────
   function activeBar() {
-    return barsEl.querySelectorAll('.stviewer-bar > span')[curS] || null;
+    return barsEl.querySelectorAll('.stviewer-bar > span')[curE] || null;
   }
   function startProgress() {
     stopProgress();
