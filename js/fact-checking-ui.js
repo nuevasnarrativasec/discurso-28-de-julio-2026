@@ -13,7 +13,7 @@
     : [
         { id: 'viable',           color: 'azul',    label: 'Viable' },
         { id: 'ya-existe',        color: 'ambar',   label: 'Ya existe y no propone algo nuevo' },
-        { id: 'no-manos',         color: 'naranja', label: 'No está en sus manos' },
+        { id: 'no-manos',         color: 'naranja', label: 'No depende únicamente del Ejecutivo' },
         { id: 'obligacion-legal', color: 'rojo',    label: 'Es una obligación legal' },
         { id: 'inviable',         color: 'granate', label: 'Inviable' }
       ];
@@ -41,17 +41,44 @@
 
     var promesasHtml = promesas.map(function(f, idx) {
       var last = (idx === promesas.length - 1);
+
+      // Fuentes: arreglo de { texto, url }, listadas una debajo de otra.
+      // Compatibilidad: si aún viniera el par antiguo enlace/enlace_texto,
+      // se normaliza a una única fuente.
+      var fuentes = (f.fuentes && f.fuentes.length)
+        ? f.fuentes
+        : (f.enlace ? [{ texto: f.enlace_texto, url: f.enlace }] : []);
+
+      var fuentesHtml = '';
+      if (fuentes.length) {
+        fuentesHtml =
+          '<div class="modF-prom-fuentes">' +
+            '<span class="modF-prom-fuentes-label">' +
+              (fuentes.length > 1 ? 'Fuentes' : 'Fuente') +
+            '</span>' +
+            fuentes.map(function(src) {
+              var url = escapeHtml(src.url || '').replace(/"/g, '&quot;');
+              return (
+                '<div class="modF-prom-fuente">' +
+                  (src.texto
+                    ? '<span class="modF-prom-fuente-nombre">' + escapeHtml(src.texto) + '</span>'
+                    : '') +
+                  '<a class="modF-prom-link" href="' + url + '"' +
+                    ' target="_blank" rel="noopener noreferrer">' +
+                    'Ir a la fuente' +
+                    '<span class="modF-prom-link-arrow" aria-hidden="true">→</span></a>' +
+                '</div>'
+              );
+            }).join('') +
+          '</div>';
+      }
+
       return (
         '<article class="modF-prom' + (last ? ' is-last' : '') + '">' +
           (f.tiempo ? '<span class="modF-prom-time">' + escapeHtml(f.tiempo) + '</span>' : '') +
           '<h4 class="modF-prom-title">' + escapeHtml(f.titulo || f.afirmacion || '') + '</h4>' +
           '<p class="modF-prom-desc">' + escapeHtml(f.descripcion || '') + '</p>' +
-          (f.enlace
-            ? '<a class="modF-prom-link" href="' + escapeHtml(f.enlace).replace(/"/g, '&quot;') + '"' +
-              ' target="_blank" rel="noopener noreferrer">' +
-              escapeHtml(f.enlace_texto || 'Leer el análisis completo') +
-              '<span class="modF-prom-link-arrow" aria-hidden="true">→</span></a>'
-            : '') +
+          fuentesHtml +
         '</article>'
       );
     }).join('');
