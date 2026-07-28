@@ -7,7 +7,6 @@
   const TIPOS = [
     { id: 'anuncio',  label: 'Anuncio',  color: '#e67e22', dot: '#e67e22' },
     { id: 'cifra',    label: 'Cifra',    color: '#2980b9', dot: '#2980b9' },
-    { id: 'contexto', label: 'Contexto', color: '#7f8c8d', dot: '#7f8c8d' },
   ];
 
   // ── Preprocesar bloques ───────────────────────────────────────
@@ -17,7 +16,6 @@
     const tipos = [];
     if (tiposEv.includes('anuncio')) tipos.push('anuncio');
     if (tiposEv.includes('cifra'))   tipos.push('cifra');
-    if (tipos.length === 0)          tipos.push('contexto');
 
     const regiones = [];
     (b.eventos || []).forEach(e => {
@@ -187,7 +185,7 @@
         <div class="exp-card-left">
           <div class="exp-card-badges">
             ${badgeTipos}
-            <span class="exp-badge-sep">|</span>
+            ${badgeTipos ? '<span class="exp-badge-sep">|</span>' : ''}
             <span class="exp-badge-tema" style="color:${b.color}">${escHtml(b.tema)}</span>
             ${regionStr}
           </div>
