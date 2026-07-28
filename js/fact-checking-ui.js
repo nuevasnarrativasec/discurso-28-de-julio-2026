@@ -12,7 +12,7 @@
     ? window.FACT_CALIFICACIONES
     : [
         { id: 'viable',           color: 'azul',    label: 'Viable' },
-        { id: 'ya-existe',        color: 'ambar',   label: 'Ya existe y no propone algo nuevo' },
+        { id: 'ya-existe',        color: 'ambar',   label: 'Ya existe un mecanismo similar' },
         { id: 'no-manos',         color: 'naranja', label: 'No depende únicamente del Ejecutivo' },
         { id: 'obligacion-legal', color: 'rojo',    label: 'Es una obligación legal' },
         { id: 'inviable',         color: 'granate', label: 'Inviable' }
