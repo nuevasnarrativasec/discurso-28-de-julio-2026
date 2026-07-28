@@ -4,8 +4,8 @@
 const DATA = {
   "meta": {
     "titulo": "Mensaje a la Nación — 28 de julio de 2026",
-    "duracion_total_seg": 6821,
-    "duracion_total_fmt": "1:53:41",
+    "duracion_total_seg": 2700,
+    "duracion_total_fmt": "45:00",
     "procesado": "2026-07-13T21:33:12"
   },
   "resumen_temas": [
