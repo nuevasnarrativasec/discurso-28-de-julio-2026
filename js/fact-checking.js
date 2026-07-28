@@ -23,7 +23,7 @@ window.FACT_CALIFICACIONES = [
   {
     "id": "ya-existe",
     "color": "ambar",
-    "label": "Ya existe y no propone algo nuevo",
+    "label": "Ya existe un mecanismo similar",
     "desc": "Describe una política, programa o servicio que el Estado ya viene implementando, sin plantear una mejora medible o una meta distinta."
   },
   {
