@@ -16,7 +16,7 @@
     var seg = D.meta.duracion_total_seg || 0;
     var h = Math.floor(seg / 3600);
     var m = Math.round((seg % 3600) / 60);
-    var txt = h > 0 ? (h + 'h' + (m < 10 ? '0' + m : m) + 'm') : (m + 'm');
+    var txt = h > 0 ? (h + 'h' + (m < 10 ? '0' + m : m) + 'min') : (m + 'min');
     var donut = metrics.querySelector('.rz-donut-val');
     if (donut) donut.textContent = txt;
   }

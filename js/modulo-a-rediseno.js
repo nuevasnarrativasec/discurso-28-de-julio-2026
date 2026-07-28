@@ -10,6 +10,7 @@
   if (barsBox && typeof DATA !== 'undefined' && DATA.resumen_temas) {
     var temas = DATA.resumen_temas;
     temas.forEach(function(t) {
+      if (t.tema === 'Otros') return;  // se oculta la barra "Otros" de la distribución
       var nombre = t.tema.replace('Democracia e Instituciones', 'Democracia');
       var row = document.createElement('div');
       row.className = 'rz-tb-row';

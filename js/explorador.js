@@ -25,7 +25,8 @@
         const desc = e.descripcion.replace('Menciona: ', '');
         desc.split(', ').forEach(r => {
           const rr = r.trim();
-          if (rr && !regiones.includes(rr)) regiones.push(rr);
+          // Amazonía es macrorregión/selva, no un departamento: se excluye del Buscador
+          if (rr && rr !== 'Amazonía' && rr !== 'Amazonia' && !regiones.includes(rr)) regiones.push(rr);
         });
       }
     });

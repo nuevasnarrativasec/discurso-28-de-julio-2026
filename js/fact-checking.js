@@ -55,7 +55,6 @@ window.FACTS = [
     "titulo": "Implementaremos un sistema logístico de respuesta rápida.",
     "descripcion": "La organización de la capacidad estatal de respuesta como un sistema logístico dedicado es un diseño de gestión nuevo, ejecutable por el Ejecutivo con sus competencias e instituciones actuales: puede disponerse mediante la articulación de Provías, los sectores y el INDECI en el marco del SINAGERD, con maquinaria propia, arrendada o reasignada, y convenios con los gobiernos regionales para las vías de su competencia. No requiere reforma legal previa.",
     "fuentes": [
-      { "texto": "Provías Nacional — MTC", "url": "https://www.gob.pe/provias-nacional" },
       { "texto": "INDECI", "url": "https://www.gob.pe/indeci" },
       { "texto": "Ley N.° 32513, Presupuesto 2026", "url": "https://www.mef.gob.pe" }
     ]
