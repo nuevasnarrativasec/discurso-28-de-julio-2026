@@ -8053,7 +8053,14 @@ DATA.bloques.forEach(b => {
 
 const rowsContainer = document.getElementById('timeline-rows');
 
-DATA.resumen_temas.forEach(({ tema }) => {
+DATA.resumen_temas
+  .slice()
+  .sort((a, b) => {
+    if (a.tema === 'Otros') return 1;
+    if (b.tema === 'Otros') return -1;
+    return a.tema.localeCompare(b.tema, 'es', { sensitivity: 'base' });
+  })
+  .forEach(({ tema }) => {
   const bloques = temaMap[tema];
   if (!bloques) return;
 
@@ -8133,7 +8140,14 @@ function aplicarFiltros() {
 
 // Generar chips de tema
 const chipsTemaContainer = document.getElementById('filter-chips-tema');
-DATA.resumen_temas.forEach(t => {
+DATA.resumen_temas
+  .slice()
+  .sort((a, b) => {
+    if (a.tema === 'Otros') return 1;
+    if (b.tema === 'Otros') return -1;
+    return a.tema.localeCompare(b.tema, 'es', { sensitivity: 'base' });
+  })
+  .forEach(t => {
   const chip = document.createElement('button');
   chip.className = 'chip-tema';
   chip.dataset.tema = t.tema;

@@ -300,7 +300,14 @@ const rowsContainer = document.getElementById('timeline-rows');
 const CLUSTER_GAP = DURACION * 0.009;   // separación máx. entre puntos de un grupo
 const CLUSTER_PAD = DURACION * 0.0045;  // margen horizontal de la cápsula
 
-DATA.resumen_temas.forEach(({ tema, color }) => {
+DATA.resumen_temas
+  .slice()
+  .sort((a, b) => {
+    if (a.tema === 'Otros') return 1;
+    if (b.tema === 'Otros') return -1;
+    return a.tema.localeCompare(b.tema, 'es', { sensitivity: 'base' });
+  })
+  .forEach(({ tema, color }) => {
   const bloques = temaMap[tema];
   if (!bloques) return;
 
@@ -408,7 +415,14 @@ function aplicarFiltros() {
 
 // Generar chips de tema
 const chipsTemaContainer = document.getElementById('filter-chips-tema');
-DATA.resumen_temas.forEach(t => {
+DATA.resumen_temas
+  .slice()
+  .sort((a, b) => {
+    if (a.tema === 'Otros') return 1;
+    if (b.tema === 'Otros') return -1;
+    return a.tema.localeCompare(b.tema, 'es', { sensitivity: 'base' });
+  })
+  .forEach(t => {
   const chip = document.createElement('button');
   chip.className = 'chip-tema';
   chip.dataset.tema = t.tema;
