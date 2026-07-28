@@ -9,8 +9,9 @@
   var barsBox = document.getElementById('rz-theme-bars');
   if (barsBox && typeof DATA !== 'undefined' && DATA.resumen_temas) {
     var temas = DATA.resumen_temas;
+    var otrosColor = '#666';
     temas.forEach(function(t) {
-      if (t.tema === 'Otros') return;  // se oculta la barra "Otros" de la distribución
+      if (t.tema === 'Otros') { if (t.color) otrosColor = t.color; return; }  // "Otros" se agrega al final
       var nombre = t.tema.replace('Democracia e Instituciones', 'Democracia');
       var row = document.createElement('div');
       row.className = 'rz-tb-row';
@@ -22,6 +23,17 @@
         '<span class="rz-tb-pct">' + t.porcentaje + '%</span>';
       barsBox.appendChild(row);
     });
+
+    // "Otros" se muestra al final con un valor fijo de 20.4%
+    var rowOtros = document.createElement('div');
+    rowOtros.className = 'rz-tb-row';
+    rowOtros.innerHTML =
+      '<span class="rz-tb-name">Otros</span>' +
+      '<div class="rz-tb-track">' +
+        '<span class="rz-tb-fill" data-w="20.4" style="background:' + otrosColor + '"></span>' +
+      '</div>' +
+      '<span class="rz-tb-pct">20.4%</span>';
+    barsBox.appendChild(rowOtros);
   }
 
   function animate() {

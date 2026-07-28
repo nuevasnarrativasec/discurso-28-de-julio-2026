@@ -55,7 +55,11 @@
     var ot = R.orientacion_temporal;
     var total = (ot.pasado || 0) + (ot.presente || 0) + (ot.futuro || 0);
     var pct = function (v) { return total ? Math.round(v / total * 100) : 0; };
-    var vals = { 'Pasado': pct(ot.pasado || 0), 'Presente': pct(ot.presente || 0), 'Futuro': pct(ot.futuro || 0) };
+    var pPasado = pct(ot.pasado || 0);
+    var pPresente = pct(ot.presente || 0);
+    // Futuro absorbe el resto para que los tres sumen 100% exacto (evita el 101% por redondeo)
+    var pFuturo = total ? (100 - pPasado - pPresente) : 0;
+    var vals = { 'Pasado': pPasado, 'Presente': pPresente, 'Futuro': pFuturo };
     metrics.querySelectorAll('.rz-ref-row').forEach(function (row) {
       var name = (row.querySelector('.rz-ref-name') || {}).textContent;
       if (!(name in vals)) return;
