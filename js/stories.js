@@ -7,8 +7,8 @@
 (function() {
   var EDITORES = [
     { handle: 'Hector Villalobos', categoria: 'Política',  avatar: './img/hector-villalobos.jpg',  video: './video/editores/politica.mp4'  },
-    { handle: 'Maro Villalobos', categoria: 'Economía',  avatar: './img/maro-villalobos.jpg',  video: './video/editores/economia.mp4'  },
-    { handle: 'Juan Pablo León', categoria: 'Nacional',  avatar: './img/juan-pablo-leon.jpg',  video: './video/editores/nacional.mp4'  },
+    { handle: 'Paola Villar', categoria: 'Economía',  avatar: './img/paola-villar.jpg',  video: './video/editores/economia.mp4'  },
+    { handle: 'Martín Acosta', categoria: 'Nacional',  avatar: './img/martin-acosta.jpg',  video: './video/editores/nacional.mp4'  },
     { handle: 'Ariana Lira', categoria: 'ECData',    avatar: './img/ariana-lira.jpg',    video: './video/editores/ecdata.mp4'    }
     
   ];
