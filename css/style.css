@@ -2087,13 +2087,13 @@
     .modF-ausentes-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
     .modF-ausente-col { text-align: center; padding: 8px 12px; }
     .modF-ausente-col + .modF-ausente-col { border-left: 1px dashed #d6d1c6; }
-    .modF-ausente-fig { margin: 0 auto 22px; height: 160px; display: flex; align-items: center; justify-content: center; }
-    .modF-ausente-fig img { max-width: 55%; max-height: 160px; display: block; }
+    .modF-ausente-fig { margin: 0 auto 22px; height: 80px; display: flex; align-items: center; justify-content: center; }
+    .modF-ausente-fig img { max-width: 30%; max-height: 160px; display: block; }
     .modF-ausente-ph { display: none; }
     .modF-ausente-fig.is-empty { width: 190px; border: 1px dashed var(--border); border-radius: 12px; background: #faf8f4; }
     .modF-ausente-fig.is-empty img { display: none; }
     .modF-ausente-fig.is-empty .modF-ausente-ph { display: block; font-size: 12px; color: var(--ink-faint); letter-spacing: 0.04em; }
-    .modF-ausente-name { font-family: var(--font-serif); font-size: 18px; font-weight: 700; color: var(--ink); line-height: 1.2; }
+    .modF-ausente-name { text-align: left; font-family: var(--font-serif); font-size: 18px; font-weight: 700; color: var(--ink); line-height: 1.2; }
     .descripcion-tema-ausente{
           margin: 10px auto;
     text-align: left;

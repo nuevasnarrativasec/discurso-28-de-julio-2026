@@ -7,6 +7,7 @@ window.GRAFICOS = {
     "sufijo": "%",
     "decimales": 1,
     "color": "#2f80b4",
+    "gradiente": { "dir": "vertical", "stops": ["#4fa6f0", "#2c62b6", "#0b1a5e"] },
     "datos": [
       {
         "label": "Desarrollo",
@@ -35,6 +36,7 @@ window.GRAFICOS = {
     "sufijo": "",
     "decimales": 0,
     "color": "#2f80b4",
+    "gradiente": { "dir": "horizontal", "stops": ["#32572f", "#5b9856", "#8eec87"] },
     "datos": [
       {
         "label": "Economía y Crecimiento",
@@ -104,6 +106,7 @@ window.GRAFICOS = {
   },
   "conexiones": {
     "color": "#2f80b4",
+    "gradiente": { "dir": "linear", "stops": ["#4f93e6", "#2360bf", "#0c2a78"] },
     "nodos": [
       {
         "id": "Economía y Crecimiento",
