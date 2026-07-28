@@ -1,36 +1,23 @@
 /* ═══════════════════════════════════════════════════════════════════
-   RESUMEN INMEDIATO — métricas del bloque superior (generado por Colab)
+   RESUMEN INMEDIATO — métricas del bloque superior (análisis PDF 2026)
    ═══════════════════════════════════════════════════════════════════ */
 window.RESUMEN = {
-  "palabras": 12953,
+  "palabras": 4127,
   "orientacion_temporal": {
-    "pasado": 268,
-    "presente": 726,
-    "futuro": 80
+    "pasado": 34,
+    "presente": 245,
+    "futuro": 73
   },
   "regiones": {
-    "Amazonas": 1,
-    "Áncash": 1,
     "Apurímac": 1,
-    "Arequipa": 2,
-    "Ayacucho": 3,
-    "Cajamarca": 1,
-    "Callao": 4,
-    "Cusco": 2,
+    "Arequipa": 1,
+    "Ayacucho": 1,
+    "Callao": 1,
     "Huancavelica": 1,
-    "Huánuco": 1,
     "Ica": 1,
-    "Junín": 2,
-    "La Libertad": 3,
-    "Lima": 8,
-    "Loreto": 1,
-    "Madre de Dios": 1,
-    "Moquegua": 3,
-    "Pasco": 1,
-    "Piura": 1,
-    "Puno": 4,
-    "San Martín": 3,
-    "Tacna": 1,
-    "Tumbes": 1
+    "Junín": 1,
+    "La Libertad": 1,
+    "Lima": 4,
+    "Piura": 1
   }
 };

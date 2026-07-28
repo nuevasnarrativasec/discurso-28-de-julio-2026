@@ -30,9 +30,23 @@
     if (wc) wc.innerHTML = R.palabras.toLocaleString('es-PE') + ' <span>palabras</span>';
     var fill = metrics.querySelector('.rz-wc-fill');
     if (fill) {
-      var lo = Math.log(100), hi = Math.log(20000);
-      var frac = (Math.log(Math.max(100, R.palabras)) - lo) / (hi - lo);
-      fill.style.width = Math.max(0, Math.min(1, frac)) * 100 + '%';
+      // Las marcas (100·500·1,000·5,000·10,000·20,000) están repartidas de forma
+      // UNIFORME en la barra (space-between), no en escala log continua. Para que el
+      // fill quede alineado con ellas, interpolamos por tramos: cada marca ocupa una
+      // posición fija equiespaciada y dentro de cada tramo la interpolación es log.
+      var ticks = [100, 500, 1000, 5000, 10000, 20000];
+      var seg = ticks.length - 1;
+      var w = Math.max(ticks[0], Math.min(ticks[seg], R.palabras));
+      var frac = 1;
+      for (var i = 0; i < seg; i++) {
+        if (w <= ticks[i + 1]) {
+          var inner = (Math.log(w) - Math.log(ticks[i])) /
+                      (Math.log(ticks[i + 1]) - Math.log(ticks[i]));
+          frac = (i + inner) / seg;
+          break;
+        }
+      }
+      fill.style.width = (Math.max(0, Math.min(1, frac)) * 100).toFixed(1) + '%';
     }
   }
 

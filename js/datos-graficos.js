@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════
-   DISCURSO EN DATA — datos de los gráficos (generado por el Colab)
+   DISCURSO EN DATA — datos de los gráficos (análisis PDF 2026)
    ═══════════════════════════════════════════════════════════════════ */
 window.GRAFICOS = {
   "paisImagina": {
@@ -7,27 +7,34 @@ window.GRAFICOS = {
     "sufijo": "%",
     "decimales": 1,
     "color": "#2f80b4",
-    "gradiente": { "dir": "vertical", "stops": ["#4fa6f0", "#2c62b6", "#0b1a5e"] },
+    "gradiente": {
+      "dir": "vertical",
+      "stops": [
+        "#4fa6f0",
+        "#2c62b6",
+        "#0b1a5e"
+      ]
+    },
     "datos": [
       {
-        "label": "Bienestar",
-        "valor": 39.7
+        "label": "Desarrollo",
+        "valor": 43.1
       },
       {
-        "label": "Desarrollo",
-        "valor": 32.3
+        "label": "Bienestar",
+        "valor": 21.1
       },
       {
         "label": "Orden",
-        "valor": 10.6
+        "valor": 15.8
       },
       {
         "label": "Democracia",
-        "valor": 10.2
+        "valor": 15.3
       },
       {
         "label": "Sostenibilidad",
-        "valor": 7.2
+        "valor": 4.8
       }
     ]
   },
@@ -36,225 +43,166 @@ window.GRAFICOS = {
     "sufijo": "",
     "decimales": 0,
     "color": "#2f80b4",
-    "gradiente": { "dir": "horizontal", "stops": ["#32572f", "#5b9856", "#8eec87"] },
+    "gradiente": {
+      "dir": "horizontal",
+      "stops": [
+        "#32572f",
+        "#5b9856",
+        "#8eec87"
+      ]
+    },
     "datos": [
       {
-        "label": "Salud y Sistema Sanitario",
-        "valor": 156
-      },
-      {
         "label": "Economía y Crecimiento",
-        "valor": 136
-      },
-      {
-        "label": "Inclusión Social, Pobreza y Vivienda",
-        "valor": 62
+        "valor": 52
       },
       {
         "label": "Infraestructura, Transporte y Conectividad",
-        "valor": 44
+        "valor": 29
       },
       {
-        "label": "Gobernabilidad e Institucionalidad Democrática",
-        "valor": 43
-      },
-      {
-        "label": "Educación",
-        "valor": 41
-      },
-      {
-        "label": "Ciencia, Tecnología e Innovación",
-        "valor": 35
-      },
-      {
-        "label": "Justicia y Estado de Derecho",
-        "valor": 34
-      },
-      {
-        "label": "Modernización del Estado y Anticorrupción",
-        "valor": 27
+        "label": "Inclusión Social, Pobreza y Vivienda",
+        "valor": 21
       },
       {
         "label": "Seguridad Ciudadana y Crimen Organizado",
-        "valor": 22
-      },
-      {
-        "label": "Gestión del Riesgo y Resiliencia Climática",
-        "valor": 22
-      },
-      {
-        "label": "Ambiente y Sostenibilidad",
         "valor": 20
       },
       {
-        "label": "Defensa y Soberanía",
-        "valor": 18
+        "label": "Gobernabilidad e Institucionalidad Democrática",
+        "valor": 14
       },
       {
-        "label": "Agricultura y Desarrollo Rural",
-        "valor": 17
+        "label": "Modernización del Estado y Anticorrupción",
+        "valor": 14
       },
       {
-        "label": "Energía y Minería",
+        "label": "Justicia y Estado de Derecho",
+        "valor": 12
+      },
+      {
+        "label": "Educación",
         "valor": 10
       },
       {
-        "label": "Cultura, Identidad y Turismo",
+        "label": "Agricultura y Desarrollo Rural",
         "valor": 8
       },
       {
+        "label": "Gestión del Riesgo y Resiliencia Climática",
+        "valor": 7
+      },
+      {
+        "label": "Salud y Sistema Sanitario",
+        "valor": 5
+      },
+      {
+        "label": "Ciencia, Tecnología e Innovación",
+        "valor": 5
+      },
+      {
+        "label": "Energía y Minería",
+        "valor": 4
+      },
+      {
         "label": "Relaciones Exteriores",
+        "valor": 4
+      },
+      {
+        "label": "Ambiente y Sostenibilidad",
+        "valor": 3
+      },
+      {
+        "label": "Defensa y Soberanía",
         "valor": 1
       }
     ]
   },
   "conexiones": {
     "color": "#2f80b4",
-    "gradiente": { "dir": "linear", "stops": ["#4f93e6", "#2360bf", "#0c2a78"] },
+    "gradiente": {
+      "dir": "linear",
+      "stops": [
+        "#4f93e6",
+        "#2360bf",
+        "#0c2a78"
+      ]
+    },
     "nodos": [
       {
-        "id": "Salud y Sistema Sanitario",
-        "valor": 156
-      },
-      {
         "id": "Economía y Crecimiento",
-        "valor": 136
-      },
-      {
-        "id": "Inclusión Social, Pobreza y Vivienda",
-        "valor": 62
+        "valor": 52
       },
       {
         "id": "Infraestructura, Transporte y Conectividad",
-        "valor": 44
+        "valor": 29
       },
       {
-        "id": "Gobernabilidad e Institucionalidad Democrática",
-        "valor": 43
-      },
-      {
-        "id": "Educación",
-        "valor": 41
-      },
-      {
-        "id": "Ciencia, Tecnología e Innovación",
-        "valor": 35
-      },
-      {
-        "id": "Justicia y Estado de Derecho",
-        "valor": 34
-      },
-      {
-        "id": "Modernización del Estado y Anticorrupción",
-        "valor": 27
+        "id": "Inclusión Social, Pobreza y Vivienda",
+        "valor": 21
       },
       {
         "id": "Seguridad Ciudadana y Crimen Organizado",
-        "valor": 22
-      },
-      {
-        "id": "Gestión del Riesgo y Resiliencia Climática",
-        "valor": 22
-      },
-      {
-        "id": "Ambiente y Sostenibilidad",
         "valor": 20
       },
       {
-        "id": "Defensa y Soberanía",
-        "valor": 18
+        "id": "Gobernabilidad e Institucionalidad Democrática",
+        "valor": 14
       },
       {
-        "id": "Agricultura y Desarrollo Rural",
-        "valor": 17
+        "id": "Modernización del Estado y Anticorrupción",
+        "valor": 14
       },
       {
-        "id": "Energía y Minería",
+        "id": "Justicia y Estado de Derecho",
+        "valor": 12
+      },
+      {
+        "id": "Educación",
         "valor": 10
       },
       {
-        "id": "Cultura, Identidad y Turismo",
+        "id": "Agricultura y Desarrollo Rural",
         "valor": 8
       },
       {
+        "id": "Gestión del Riesgo y Resiliencia Climática",
+        "valor": 7
+      },
+      {
+        "id": "Salud y Sistema Sanitario",
+        "valor": 5
+      },
+      {
+        "id": "Ciencia, Tecnología e Innovación",
+        "valor": 5
+      },
+      {
+        "id": "Energía y Minería",
+        "valor": 4
+      },
+      {
         "id": "Relaciones Exteriores",
+        "valor": 4
+      },
+      {
+        "id": "Ambiente y Sostenibilidad",
+        "valor": 3
+      },
+      {
+        "id": "Defensa y Soberanía",
         "valor": 1
       }
     ],
     "enlaces": [
       {
         "origen": "Economía y Crecimiento",
-        "destino": "Salud y Sistema Sanitario",
-        "peso": 8
-      },
-      {
-        "origen": "Educación",
-        "destino": "Salud y Sistema Sanitario",
-        "peso": 6
-      },
-      {
-        "origen": "Economía y Crecimiento",
-        "destino": "Educación",
-        "peso": 4
-      },
-      {
-        "origen": "Ambiente y Sostenibilidad",
-        "destino": "Economía y Crecimiento",
-        "peso": 3
-      },
-      {
-        "origen": "Educación",
-        "destino": "Inclusión Social, Pobreza y Vivienda",
-        "peso": 3
-      },
-      {
-        "origen": "Defensa y Soberanía",
-        "destino": "Salud y Sistema Sanitario",
-        "peso": 3
-      },
-      {
-        "origen": "Economía y Crecimiento",
-        "destino": "Infraestructura, Transporte y Conectividad",
-        "peso": 3
-      },
-      {
-        "origen": "Ciencia, Tecnología e Innovación",
-        "destino": "Economía y Crecimiento",
-        "peso": 3
-      },
-      {
-        "origen": "Ciencia, Tecnología e Innovación",
-        "destino": "Modernización del Estado y Anticorrupción",
-        "peso": 3
-      },
-      {
-        "origen": "Economía y Crecimiento",
-        "destino": "Energía y Minería",
-        "peso": 3
-      },
-      {
-        "origen": "Agricultura y Desarrollo Rural",
-        "destino": "Economía y Crecimiento",
-        "peso": 3
-      },
-      {
-        "origen": "Gobernabilidad e Institucionalidad Democrática",
         "destino": "Justicia y Estado de Derecho",
         "peso": 2
       },
       {
-        "origen": "Educación",
-        "destino": "Infraestructura, Transporte y Conectividad",
-        "peso": 2
-      },
-      {
         "origen": "Economía y Crecimiento",
-        "destino": "Inclusión Social, Pobreza y Vivienda",
-        "peso": 2
-      },
-      {
-        "origen": "Agricultura y Desarrollo Rural",
-        "destino": "Infraestructura, Transporte y Conectividad",
+        "destino": "Relaciones Exteriores",
         "peso": 2
       },
       {
@@ -263,24 +211,49 @@ window.GRAFICOS = {
         "peso": 2
       },
       {
-        "origen": "Defensa y Soberanía",
-        "destino": "Seguridad Ciudadana y Crimen Organizado",
-        "peso": 2
-      },
-      {
-        "origen": "Ambiente y Sostenibilidad",
-        "destino": "Energía y Minería",
-        "peso": 2
+        "origen": "Infraestructura, Transporte y Conectividad",
+        "destino": "Modernización del Estado y Anticorrupción",
+        "peso": 1
       },
       {
         "origen": "Gestión del Riesgo y Resiliencia Climática",
-        "destino": "Infraestructura, Transporte y Conectividad",
-        "peso": 2
+        "destino": "Inclusión Social, Pobreza y Vivienda",
+        "peso": 1
       },
       {
         "origen": "Agricultura y Desarrollo Rural",
+        "destino": "Infraestructura, Transporte y Conectividad",
+        "peso": 1
+      },
+      {
+        "origen": "Educación",
+        "destino": "Infraestructura, Transporte y Conectividad",
+        "peso": 1
+      },
+      {
+        "origen": "Defensa y Soberanía",
         "destino": "Gestión del Riesgo y Resiliencia Climática",
-        "peso": 2
+        "peso": 1
+      },
+      {
+        "origen": "Energía y Minería",
+        "destino": "Infraestructura, Transporte y Conectividad",
+        "peso": 1
+      },
+      {
+        "origen": "Justicia y Estado de Derecho",
+        "destino": "Seguridad Ciudadana y Crimen Organizado",
+        "peso": 1
+      },
+      {
+        "origen": "Ambiente y Sostenibilidad",
+        "destino": "Economía y Crecimiento",
+        "peso": 1
+      },
+      {
+        "origen": "Ambiente y Sostenibilidad",
+        "destino": "Justicia y Estado de Derecho",
+        "peso": 1
       }
     ]
   }
