@@ -124,14 +124,7 @@
     abrir(item, body, head);
   }
 
-  // Abrir la primera calificación con contenido
-  var primero = Array.prototype.filter.call(
-    listBox.querySelectorAll('.modF-acc-item'),
-    function(it) { return !it.querySelector('.modF-acc-empty'); }
-  )[0] || listBox.querySelector('.modF-acc-item');
-  if (primero) {
-    abrir(primero, primero.querySelector('.modF-acc-body'), primero.querySelector('.modF-acc-head'));
-  }
+  // Los acordeones inician colapsados (ninguno desplegado por defecto).
 
   // Recalcular altura del abierto al redimensionar
   window.addEventListener('resize', function() {

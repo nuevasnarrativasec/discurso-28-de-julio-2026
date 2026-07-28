@@ -8,6 +8,7 @@
   var G = window.GRAFICOS || {};
   var FONT = "'Roboto','Helvetica Neue',Arial,sans-serif";
   var AXIS = '#333', GRID = '#e6e1d6', MUTED = '#555';
+  var IS_MOBILE = (window.matchMedia && window.matchMedia('(max-width: 640px)').matches);
 
   function whenVisible(node, cb) {
     if (!('IntersectionObserver' in window)) { cb(); return; }
@@ -41,8 +42,8 @@
   function barrasVerticales(box, cfg) {
     if (!cfg || !cfg.datos) return;
     var data = cfg.datos, color = cfg.color || '#2f80b4';
-    var W = 760, H = 420;
-    var m = { top: 34, right: 20, bottom: 78, left: 60 };
+    var W = IS_MOBILE ? 440 : 760, H = IS_MOBILE ? 440 : 420;
+    var m = IS_MOBILE ? { top: 30, right: 16, bottom: 92, left: 52 } : { top: 34, right: 20, bottom: 78, left: 60 };
     var iw = W - m.left - m.right, ih = H - m.top - m.bottom;
 
     var svg = d3.select(box).append('svg')
@@ -54,14 +55,14 @@
 
     // Eje Y
     var yAxis = g.append('g').call(d3.axisLeft(y).ticks(8).tickSizeOuter(0));
-    yAxis.selectAll('text').attr('fill', MUTED).style('font-size', '12px');
+    yAxis.selectAll('text').attr('fill', MUTED).style('font-size', IS_MOBILE ? '15px' : '12px');
     yAxis.selectAll('.tick line').attr('stroke', GRID);
     yAxis.select('.domain').attr('stroke', AXIS);
     // Título eje Y
     g.append('text')
       .attr('transform', 'rotate(-90)')
       .attr('x', -ih / 2).attr('y', -46)
-      .attr('text-anchor', 'middle').attr('fill', MUTED).style('font-size', '13px')
+      .attr('text-anchor', 'middle').attr('fill', MUTED).style('font-size', IS_MOBILE ? '15px' : '13px')
       .text(cfg.ejeY || '');
 
     // Eje X con labels rotados
@@ -69,7 +70,7 @@
     xAxis.select('.domain').attr('stroke', AXIS);
     xAxis.selectAll('.tick line').attr('stroke', AXIS);
     xAxis.selectAll('text')
-      .attr('fill', '#222').style('font-size', '13px')
+      .attr('fill', '#222').style('font-size', IS_MOBILE ? '16px' : '13px')
       .attr('transform', 'rotate(-25)').attr('text-anchor', 'end').attr('dx', '-4').attr('dy', '8');
 
     // Relleno: degradé vertical (arriba claro → abajo oscuro) o color plano.
@@ -89,7 +90,7 @@
     var vals = g.selectAll('.g-val').data(data).join('text')
       .attr('x', function (d) { return x(d.label) + x.bandwidth() / 2; })
       .attr('y', ih).attr('text-anchor', 'middle')
-      .attr('fill', '#111').style('font-size', '14px').style('font-weight', '700')
+      .attr('fill', '#111').style('font-size', IS_MOBILE ? '17px' : '14px').style('font-weight', '700')
       .attr('opacity', 0)
       .text(function (d) { return fmt(d.valor, cfg.decimales) + (cfg.sufijo || ''); });
 
@@ -107,6 +108,7 @@
     if (!cfg || !cfg.datos) return;
     var data = cfg.datos.slice().sort(function (a, b) { return b.valor - a.valor; });
     var color = cfg.color || '#2f80b4';
+    if (IS_MOBILE) { barrasHorizontalesMobile(box, cfg, data, color); return; }
     var rowH = 30;
     var m = { top: 16, right: 60, bottom: 46, left: 366 };
     var W = 1020, ih = data.length * rowH, H = ih + m.top + m.bottom;
@@ -123,16 +125,16 @@
     var xAxis = g.append('g').attr('transform', 'translate(0,' + ih + ')').call(d3.axisBottom(x).ticks(5).tickSizeOuter(0));
     xAxis.select('.domain').attr('stroke', AXIS);
     xAxis.selectAll('.tick line').attr('stroke', AXIS);
-    xAxis.selectAll('text').attr('fill', MUTED).style('font-size', '12px');
+    xAxis.selectAll('text').attr('fill', MUTED).style('font-size', '14px');
     // Título eje X
     g.append('text').attr('x', iw / 2).attr('y', ih + 40)
-      .attr('text-anchor', 'middle').attr('fill', MUTED).style('font-size', '13px')
+      .attr('text-anchor', 'middle').attr('fill', MUTED).style('font-size', '15px')
       .text(cfg.ejeX || '');
 
     // Eje Y (labels de categoría)
     var yAxis = g.append('g').call(d3.axisLeft(y).tickSize(0));
     yAxis.select('.domain').remove();
-    yAxis.selectAll('text').attr('fill', '#222').style('font-size', '13px');
+    yAxis.selectAll('text').attr('fill', '#222').style('font-size', '15px');
 
     // Línea vertical del eje Y
     g.append('line').attr('x1', 0).attr('x2', 0).attr('y1', 0).attr('y2', ih).attr('stroke', AXIS);
@@ -152,7 +154,7 @@
     // Valores al final
     var vals = g.selectAll('.g-hval').data(data).join('text')
       .attr('x', 0).attr('y', function (d) { return y(d.label) + y.bandwidth() / 2; })
-      .attr('dy', '0.35em').attr('fill', '#111').style('font-size', '13px').style('font-weight', '600')
+      .attr('dy', '0.35em').attr('fill', '#111').style('font-size', '15px').style('font-weight', '600')
       .attr('opacity', 0)
       .text(function (d) { return fmt(d.valor, cfg.decimales) + (cfg.sufijo || ''); });
 
@@ -161,6 +163,60 @@
         .attr('width', function (d) { return x(d.valor); });
       vals.transition().duration(900).delay(function (_, i) { return i * 40; })
         .attr('x', function (d) { return x(d.valor) + 8; }).attr('opacity', 1);
+    });
+  }
+
+  /* ── 2b) BARRAS HORIZONTALES — versión MÓVIL (etiqueta sobre la barra) ── */
+  function barrasHorizontalesMobile(box, cfg, data, color) {
+    var W = 560;
+    var m = { top: 12, right: 46, bottom: 44, left: 14 };
+    var rowH = 50, BAR_H = 18;
+    var ih = data.length * rowH;
+    var H = ih + m.top + m.bottom;
+    var iw = W - m.left - m.right;
+
+    var svg = d3.select(box).append('svg')
+      .attr('viewBox', '0 0 ' + W + ' ' + H).style('font-family', FONT);
+    var g = svg.append('g').attr('transform', 'translate(' + m.left + ',' + m.top + ')');
+
+    var x = d3.scaleLinear().domain([0, d3.max(data, function (d) { return d.valor; })]).nice().range([0, iw]);
+
+    var fill = color;
+    if (cfg.gradiente && cfg.gradiente.stops) {
+      fill = makeGradient(svg, 0, 0, iw, 0, cfg.gradiente.stops);
+    }
+
+    var rows = g.selectAll('.g-hrow').data(data).enter().append('g')
+      .attr('transform', function (d, i) { return 'translate(0,' + (i * rowH) + ')'; });
+
+    // Etiqueta de categoría (encima de la barra, a todo el ancho)
+    rows.append('text')
+      .attr('x', 0).attr('y', 15)
+      .attr('fill', '#222').style('font-size', '19px').style('font-weight', '500')
+      .text(function (d) { return d.label; });
+
+    // Barra
+    var bars = rows.append('rect')
+      .attr('x', 0).attr('y', 23).attr('height', BAR_H)
+      .attr('width', 0).attr('fill', fill);
+
+    // Valor al final de la barra
+    var vals = rows.append('text')
+      .attr('x', 0).attr('y', 23 + BAR_H / 2).attr('dy', '0.35em')
+      .attr('fill', '#111').style('font-size', '18px').style('font-weight', '700')
+      .attr('opacity', 0)
+      .text(function (d) { return fmt(d.valor, cfg.decimales) + (cfg.sufijo || ''); });
+
+    // Título del eje X abajo
+    g.append('text').attr('x', iw / 2).attr('y', ih + 30)
+      .attr('text-anchor', 'middle').attr('fill', MUTED).style('font-size', '16px')
+      .text(cfg.ejeX || '');
+
+    whenVisible(box, function () {
+      bars.transition().duration(800).delay(function (_, i) { return i * 40; })
+        .attr('width', function (d) { return Math.max(2, x(d.valor)); });
+      vals.transition().duration(800).delay(function (_, i) { return i * 40; })
+        .attr('x', function (d) { return Math.max(2, x(d.valor)) + 6; }).attr('opacity', 1);
     });
   }
 

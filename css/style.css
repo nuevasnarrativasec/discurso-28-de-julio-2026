@@ -1359,7 +1359,7 @@
 
     /* Contenedor cuando ya hay gráfico real (sin trama de placeholder) */
     .chart-ph-box.is-chart {
-      display: block; align-items: stretch; max-width: 760px;
+      display: block; align-items: stretch; max-width: 790px;
       /*background: var(--surface);*/ /*border: 1px solid var(--border);*/
       border-radius: 8px; padding: 26px 24px;
     }
