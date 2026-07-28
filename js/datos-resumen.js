@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════
-   RESUMEN INMEDIATO — métricas del bloque superior (análisis PDF 2026)
+   RESUMEN INMEDIATO — métricas del bloque superior (generado por Colab)
    ═══════════════════════════════════════════════════════════════════ */
 window.RESUMEN = {
   "palabras": 4127,

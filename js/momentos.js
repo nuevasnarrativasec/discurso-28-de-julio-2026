@@ -3,48 +3,48 @@
    ═══════════════════════════════════════════════════════════════════ */
 window.MOMENTOS = [
   {
-    "tiempo": "22:28 — 24:22",
-    "titulo": "Informe sobre la pandemia en Perú",
-    "descripcion": "Se presenta el primer informe sobre cifras de la pandemia en Perú, realizado de manera progresiva durante el enfrentamiento al virus.",
-    "cita": "la pandemia. No hay nada que ocultar, por ello, a diferencia de otros países que hacen el recuento al final de la enfermedad, el Perú lo está haciendo a medida que enfrente el virus, por eso se acaba de presentar el primer informe sobre las cifras y así continuará hasta el final...",
+    "tiempo": "00:00 — 01:49",
+    "titulo": "Saludo a autoridades y dignatarios",
+    "descripcion": "El orador dirige un saludo formal a diversas autoridades nacionales e internacionales presentes.",
+    "cita": "Señor Presidente del Congreso y de la Cámara de Senadores Dr. Miguel Ángel Torres Morales. Señor Presidente de la Cámara de Diputados General Oscar Reto Potero. Su Majestad Felipe VI, Rey de España. Excelentísimos señores Presidentes de la República de Argentina, Bolivia, Chile,...",
     "resaltar": "",
     "audio": "",
-    "inicio_seg": 1348
+    "inicio_seg": 0
   },
   {
-    "tiempo": "27:30 — 29:27",
-    "titulo": "Compromiso con el sistema de salud",
-    "descripcion": "Se destaca la importancia de fortalecer el sistema de salud para enfrentar retos futuros, con un compromiso que precede a la pandemia.",
-    "cita": "sistema de salud que nos permita afrontar en mejores condiciones los retos sanitarios del futuro. Nunca antes la salud ha estado de manera tan clara en el centro de nuestras preocupaciones y prioridades, pero nuestro compromiso no empezó con la pandemia del covid-diecinueve,...",
+    "tiempo": "11:49 — 12:45",
+    "titulo": "Compromiso con déficit social",
+    "descripcion": "Se expresa la intención de cerrar el déficit social y transformar la convivencia nacional, además de retomar el crecimiento económico.",
+    "cita": "No basta con retomar el crecimiento económico. Mi meta principal es cerrar el enorme déficit social que afecta a millones de peruanos. Por ello, nuestra visión es la de transformar las bases de nuestra convivencia nacional. Retomaremos el crecimiento económico que genera...",
     "resaltar": "",
     "audio": "",
-    "inicio_seg": 1650
+    "inicio_seg": 709
   },
   {
-    "tiempo": "32:21 — 33:30",
-    "titulo": "Salud como prioridad histórica",
-    "descripcion": "Se reconoce que la salud fue postergada durante décadas y se plantea la oportunidad de corregir este error histórico.",
-    "cita": "sistema de salud. Seamos conscientes, durante décadas la salud no ha sido una prioridad. Durante décadas la salud no ha estado en la agenda pública. Durante décadas la salud fue olvidada y postergada. Hoy tenemos la oportunidad de corregir ese error histórico y saldar la deuda...",
+    "tiempo": "20:33 — 22:07",
+    "titulo": "Políticas para cerrar brechas sociales",
+    "descripcion": "Se plantea reorganizar programas sociales y servicios públicos en torno a tres grandes políticas de Estado para reducir desigualdades.",
+    "cita": "claras para que la para que la acción del Estado cierre las enormes brechas sociales y territoriales que todavía dividen al país. Para alcanzar este objetivo, reorganizaremos los programas sociales y los servicios públicos alrededor de tres grandes políticas de Estado. En primer...",
     "resaltar": "",
     "audio": "",
-    "inicio_seg": 1941
+    "inicio_seg": 1233
   },
   {
-    "tiempo": "1:13:02 — 1:14:50",
-    "titulo": "Impulso a la inversión minera",
-    "descripcion": "El gobierno trabaja en un nuevo reglamento para procedimientos mineros que promueva la inversión privada y el respeto a derechos.",
-    "cita": "inversión que tiene el Perú, después de veintiocho años, este gobierno asumió el reto y viene gestionando la aprobación de un nuevo reglamento de procedimientos mineros a fin de que brinden predictibilidad e impulso a la inversión privada, y promuevan el respeto a los derechos...",
+    "tiempo": "23:10 — 24:11",
+    "titulo": "Mejoras en educación y formación docente",
+    "descripcion": "Se anuncia un programa para fortalecer la formación docente y mejorar las escuelas con recursos y herramientas digitales.",
+    "cita": "fortalecer la formación docente. Trabajaremos un programa de expansión y mejoramiento de las escuelas con herramientas digitales de enseñanza, kits escolares con mochilas, chompas, material educativo, para cuya provisión para cuya provisión impulsaremos una política de compra a...",
     "resaltar": "",
     "audio": "",
-    "inicio_seg": 4382
+    "inicio_seg": 1390
   },
   {
-    "tiempo": "1:45:11 — 1:46:34",
-    "titulo": "Reflexión sobre el legado futuro",
-    "descripcion": "Se invita a reflexionar sobre el legado que se dejará, atendiendo las urgencias y necesidades actuales.",
-    "cita": "días, en este magno recinto, ninguno de los aquí presentes presencialmente o virtualmente ha sido un abono. Por lo que creo que este debe ser un momento de reflexión en el que además de atender las muchas urgencias y necesidades, pensemos cuál va a ser el legado que vamos a...",
+    "tiempo": "35:45 — 38:08",
+    "titulo": "Objetivo de estabilidad fiscal responsable",
+    "descripcion": "Se plantea ordenar las cuentas públicas, eliminar gastos innecesarios y usar los recursos estatales con responsabilidad para asegurar estabilidad fiscal.",
+    "cita": "fiscal, y ese será nuestro quinto objetivo. Ordenaremos las cuentas públicas, eliminaremos el gasto innecesario, y utilizaremos cada sol del estado con mucha responsabilidad. La estabilidad fiscal no es solo una cifra, es la condición necesaria para crecer, para generar...",
     "resaltar": "",
     "audio": "",
-    "inicio_seg": 6311
+    "inicio_seg": 2145
   }
 ];
