@@ -8,13 +8,13 @@
 (function() {
   var EDITORES = [
     { handle: 'Hector Villalobos', categoria: 'Política',  avatar: 'https://nuevasnarrativasec.github.io/discurso-28-de-julio-2026/img/hector-villalobos.jpg',
-      videos: ['./video/editores/politica-1.mp4', './video/editores/politica-2.mp4'] },
+      videos: ['./video/editores/politica-1.mp4'] },
     { handle: 'Paola Villar', categoria: 'Economía',  avatar: 'https://nuevasnarrativasec.github.io/discurso-28-de-julio-2026/img/paola-villar.jpg',
-      videos: ['./video/editores/economia-1.mp4', './video/editores/economia-2.mp4'] },
+      videos: ['./video/editores/economia-1.mp4'] },
     { handle: 'Martín Acosta', categoria: 'Nacional',  avatar: 'https://nuevasnarrativasec.github.io/discurso-28-de-julio-2026/img/martin-acosta.jpg',
-      videos: ['./video/editores/nacional-1.mp4', './video/editores/nacional-2.mp4'] },
+      videos: ['./video/editores/nacional-1.mp4'] },
     { handle: 'Ariana Lira', categoria: 'ECData',    avatar: 'https://nuevasnarrativasec.github.io/discurso-28-de-julio-2026/img/ariana-lira.jpg',
-      videos: ['./video/editores/ecdata-1.mp4', './video/editores/ecdata-2.mp4'] }
+      videos: ['./video/editores/ecdata-1.mp4'] }
   ];
   var FALLBACK_SECS = 6;    // duración de la barra si el video no carga
   var HOLD_MS = 220;        // umbral para distinguir "tap" de "mantener presionado"

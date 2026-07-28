@@ -11,7 +11,7 @@ window.GRAFICOS = {
     "datos": [
       {
         "label": "Desarrollo",
-        "valor": 43.1
+        "valor": 43
       },
       {
         "label": "Bienestar",
