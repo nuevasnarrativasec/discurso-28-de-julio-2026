@@ -2094,6 +2094,10 @@
     .modF-ausente-fig.is-empty img { display: none; }
     .modF-ausente-fig.is-empty .modF-ausente-ph { display: block; font-size: 12px; color: var(--ink-faint); letter-spacing: 0.04em; }
     .modF-ausente-name { font-family: var(--font-serif); font-size: 18px; font-weight: 700; color: var(--ink); line-height: 1.2; }
+    .descripcion-tema-ausente{
+          margin: 10px auto;
+    text-align: left;
+    }
     @media (max-width: 700px) {
       .modF-ausentes-grid { grid-template-columns: 1fr; gap: 10px; }
       .modF-ausente-col { padding: 0 12px; }
