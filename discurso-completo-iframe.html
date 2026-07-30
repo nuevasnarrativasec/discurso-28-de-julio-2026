@@ -88,6 +88,15 @@
         html.is-embed{
             overflow-y: auto !important;      /* el html es el único scroller */
             height: 100%;
+            /* Oculta la barra propia del iframe (queda solo la de ARC).
+               El scroll sigue activo con rueda, trackpad, touch y teclado. */
+            scrollbar-width: none;            /* Firefox */
+            -ms-overflow-style: none;         /* Edge/IE antiguos */
+        }
+        html.is-embed::-webkit-scrollbar{     /* Chrome, Safari, Edge */
+            width: 0 !important;
+            height: 0 !important;
+            display: none !important;
         }
         html.is-embed body{
             overflow-y: visible !important;   /* el body NO crea una segunda barra */
